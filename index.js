@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const token = BOT_TOKEN;
 const PREFIX = '!';
 
 //var version = package.version; 
@@ -49,4 +48,4 @@ function image(message){
 }
 
 
-bot.login(token);
+client.login(process.env.BOT_TOKEN);
