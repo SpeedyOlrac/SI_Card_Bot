@@ -16,7 +16,8 @@
   "dependencies": {
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
-    "request": "2.81.0"
+    "request": "2.81.0",
+    "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {},
   "repository": {

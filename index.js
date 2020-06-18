@@ -1,9 +1,10 @@
 require('dotenv').config(); 
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+var http = new XMLHttpRequest();
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-
-//var version = package.version; 
+const PREFIX = "!";
 
 bot.on('ready', () => {
 
@@ -14,8 +15,8 @@ bot.on('message', msg =>{
     let args = msg.content.substring(PREFIX.length).split(" ");
 
     switch(args[0]){
-        case '':
-            msg.channel.sendMessage('pong!');
+        case 'ping':
+            msg.channel.send('pong!');
             break;
 
         case 'embed':
@@ -27,17 +28,16 @@ bot.on('message', msg =>{
 
         //Help, list of options
         case 'help':
-            msg.channel.send("List of commands: \br \
-                !search [search words], !card [card name], \
-                \br !faq, !faq [search words]");
+            msg.channel.send("List of commands: \
+            \n !search [search words], !card [card name], \
+            \n !faqs, !faqs [search words]");
 
         //Search the Sick card catalog
         case 'search':
-            if(args[1] == "help"){
-                msg.channel.sendMessage(
-                    "Gather Dahan, \"Dahan and\" major elements:plant \
-                    \br elements:earth, description:\"add 1 presence\", \
-                    \br range:sacred range:>=2 cost:<5 target:!any")
+            if(args[1] == 'help'){
+                msg.channel.send("Gather Dahan, \"Dahan and\" major elements:plant \
+                \n elements:earth, description:\"add 1 presence\", \
+                \n range:sacred range:>=2 cost:<5 target:!any");
             }
             var site_name = "https://sick.oberien.de/?query=" + cleanInput(args);
             if(UrlExists(site_name)){
@@ -51,23 +51,24 @@ bot.on('message', msg =>{
         
         //Show a card if spelled right
         case 'card':
-            var site_name = "https://sick.oberien.de/imgs/powers/" + cleanInput(args).replace(/,/g, '_') + '.webp' ;
-            if(UrlExists(site_name)){
+            var site_name = "https://sick.oberien.de/imgs/powers/" + cleanInput(args).replace(/,/g, '_') + '.webp';
+            //if(UrlExists(site_name)){
                 msg.channel.send(site_name);
-            }
-            else{
-                msg.channel.send("Incorrect name, try using !search");
-            }
+            //}
+            //else{
+            //    msg.channel.send("Incorrect name, try using !search");
+            //}
             break;
 
         //look up on the faq, will accpect anything
-        case 'faq':
+        case 'faqs':
             if (!args[1]){
                 msg.channel.send("https://querki.net/u/darker/spirit-island-faq/#!.3y28a87");
                 break;
             }
             var site_name = "https://querki.net/u/darker/spirit-island-faq/#!Search-Results?query=\"\"" + 
-                    cleanInput(args) + "\"\" ";
+                    cleanInput(args).replace(/,/g, ' ') + "%22%22" ;
+            console.log(site_name);
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
             }
@@ -75,15 +76,15 @@ bot.on('message', msg =>{
                 msg.channel.send("Incorrect name, try again");
             }
             break;        
-
-            
     }
 });
 
 function UrlExists(url) {
-    var http = new XMLHttpRequest();
+    //var http = new XMLHttpRequest();
     http.open('HEAD', url, false);
     http.send();
+    console.log(http.status);
+    //return http.status != 404
     if (http.status != 404)
         return true;
     else
@@ -93,9 +94,8 @@ function UrlExists(url) {
 function cleanInput(args){
     args.shift();
     var card_name = args.toString().toLowerCase();
-    return card_name.replace(/,/g, ' ');
+    return card_name;
 
 }
-
 
 bot.login();
