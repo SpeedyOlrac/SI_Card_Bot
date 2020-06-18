@@ -2,7 +2,6 @@ require('dotenv').config();
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const PREFIX = '!';
 
 //var version = package.version; 
 
@@ -19,10 +18,6 @@ bot.on('message', msg =>{
             msg.channel.sendMessage('pong!');
             break;
 
-        case ' ':
-            msg.channel.sendMessage('');
-            break;
-            
         case 'embed':
             const Embed = new Discord.MessageEmbed()
             .setTitle('Card')
@@ -30,21 +25,75 @@ bot.on('message', msg =>{
             msg.channel.send(Embed);
             break;
 
-        case 'card':
-            args.shift();
-            var card_name = args.toString().toLowerCase();
-           // var card_name = card_name.toLowerCase();
-            var site_name = "https://sick.oberien.de/imgs/powers/" + card_name.replace(/,/g, '_') + '.webp' ;
-            msg.channel.send(site_name);
+        //Help, list of options
+        case 'help':
+            msg.channel.send("List of commands: \br \
+                !search [search words], !card [card name], \
+                \br !faq, !faq [search words]");
 
+        //Search the Sick card catalog
+        case 'search':
+            if(args[1] == "help"){
+                msg.channel.sendMessage(
+                    "Gather Dahan, \"Dahan and\" major elements:plant \
+                    \br elements:earth, description:\"add 1 presence\", \
+                    \br range:sacred range:>=2 cost:<5 target:!any")
+            }
+            var site_name = "https://sick.oberien.de/?query=" + cleanInput(args);
+            if(UrlExists(site_name)){
+                msg.channel.send(site_name);
+            }
+            else{
+                ms.channel.send("incorrect Syntax, try !search help");
+            }
+            break;
+            
+        
+        //Show a card if spelled right
+        case 'card':
+            var site_name = "https://sick.oberien.de/imgs/powers/" + cleanInput(args).replace(/,/g, '_') + '.webp' ;
+            if(UrlExists(site_name)){
+                msg.channel.send(site_name);
+            }
+            else{
+                msg.channel.send("Incorrect name, try using !search");
+            }
             break;
 
+        //look up on the faq, will accpect anything
+        case 'faq':
+            if (!args[1]){
+                msg.channel.send("https://querki.net/u/darker/spirit-island-faq/#!.3y28a87");
+                break;
+            }
+            var site_name = "https://querki.net/u/darker/spirit-island-faq/#!Search-Results?query=\"\"" + 
+                    cleanInput(args) + "\"\" ";
+            if(UrlExists(site_name)){
+                msg.channel.send(site_name);
+            }
+            else{
+                msg.channel.send("Incorrect name, try again");
+            }
+            break;        
+
+            
     }
 });
 
-function image(message){
+function UrlExists(url) {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    if (http.status != 404)
+        return true;
+    else
+        return false;
+}
 
-
+function cleanInput(args){
+    args.shift();
+    var card_name = args.toString().toLowerCase();
+    return card_name.replace(/,/g, ' ');
 
 }
 
