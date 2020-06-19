@@ -69,7 +69,7 @@ bot.on('message', msg =>{
                 break;
             }
             var site_name = "https://querki.net/u/darker/spirit-island-faq/#!Search-Results?query=\"\"" + 
-                    cleanInput(args).replace(/,/g, ' ') + "%22%22" ;
+                    cleanInput(args).replace(/,/g, '%20') + "%22%22" ;
             console.log(site_name);
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
