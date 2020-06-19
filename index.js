@@ -1,6 +1,4 @@
 require('dotenv').config(); 
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-var http = new XMLHttpRequest();
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
@@ -82,12 +80,11 @@ bot.on('message', msg =>{
 });
 
 function UrlExists(url) {
-    //var http = new XMLHttpRequest();
-    http.open('HEAD', url, false);
-    http.send();
-    console.log(http.status);
+    let response = await fetch(url);
+    let result = await response.json();
+    console.log(result.status);
     //return http.status != 404
-    if (http.status != 404)
+    if (response.ok)
         return true;
     else
         return false;
