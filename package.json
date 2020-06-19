@@ -1,6 +1,6 @@
 {
   "name": "si_bot",
-  "version": "0.2.0",
+  "version": "0.4.2",
   "description": "Spirit Island Catalong bot",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
     "request": "2.81.0",
-    "xmlhttprequest": "^1.8.0"
+    "XMLHttpRequest": "^1.8.0"
   },
   "devDependencies": {},
   "repository": {

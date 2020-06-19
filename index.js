@@ -35,11 +35,13 @@ bot.on('message', msg =>{
         //Search the Sick card catalog
         case 'search':
             if(args[1] == 'help'){
-                msg.channel.send("Gather Dahan, \"Dahan and\" major elements:plant \
+                msg.channel.send("Examples: \
+                \n Gather Dahan, \"Dahan and\" major elements:plant \
                 \n elements:earth, description:\"add 1 presence\", \
                 \n range:sacred range:>=2 cost:<5 target:!any");
+                break;
             }
-            var site_name = "https://sick.oberien.de/?query=" + cleanInput(args);
+            var site_name = "https://sick.oberien.de/?query=" + cleanInput(args).replace(/ /g, "%20");
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
             }
