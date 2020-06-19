@@ -1,6 +1,8 @@
 require('dotenv').config(); 
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+const fetch = require("node-fetch");
+const to = require('await-to-js').default;
 
 const PREFIX = "!";
 
@@ -39,7 +41,7 @@ bot.on('message', msg =>{
                 \n range:sacred range:>=2 cost:<5 target:!any");
                 break;
             }
-            var site_name = "https://sick.oberien.de/?query=" + cleanInput(args).replace(/ /g, "%20");
+            var site_name = "https://sick.oberien.de/?query=" + cleanInput(args).replace(/,/g, "%20");
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
             }
@@ -52,12 +54,12 @@ bot.on('message', msg =>{
         //Show a card if spelled right
         case 'card':
             var site_name = "https://sick.oberien.de/imgs/powers/" + cleanInput(args).replace(/,/g, '_') + '.webp';
-            //if(UrlExists(site_name)){
+            if(UrlExists(site_name)){
                 msg.channel.send(site_name);
-            //}
-            //else{
-            //    msg.channel.send("Incorrect name, try using !search");
-            //}
+            }
+            else{
+                msg.channel.send("Incorrect name, try using !search");
+            }
             break;
 
         //look up on the faq, will accpect anything
@@ -79,15 +81,23 @@ bot.on('message', msg =>{
     }
 });
 
-function UrlExists(url) {
-    let response = await fetch(url);
-    let result = await response.json();
-    console.log(result.status);
-    //return http.status != 404
-    if (response.ok)
+async function UrlExists(url) {
+    
+    var status = await to(fetch(url)
+    .then(function(response){
+       console.log(response.headers.get('Content-Type'));
+        if (response.headers.get('Content-Type') == "image/webp"){
+            console.log("true, image");
+            return true;
+        }
+        if (!response.ok){
+            console.log("false, 404");
+
+            return false;
+        }
+        console.log("true, workign site");
         return true;
-    else
-        return false;
+    }));
 }
 
 function cleanInput(args){

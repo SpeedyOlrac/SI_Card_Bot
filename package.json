@@ -1,6 +1,6 @@
 {
   "name": "si_bot",
-  "version": "0.4.2",
+  "version": "0.4.4",
   "description": "Spirit Island Catalong bot",
   "main": "index.js",
   "scripts": {
@@ -14,8 +14,10 @@
   "author": "SpeedyOlrac",
   "license": "ISC",
   "dependencies": {
+    "await-to-js": "^2.1.1",
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.0",
     "request": "2.81.0"
   },
   "devDependencies": {},
