@@ -52,7 +52,7 @@ bot.on('message', msg =>{
             
         
         //Show a card if spelled right
-        case 'card':
+        case 'card' || 'power':
             var site_name = "https://sick.oberien.de/imgs/powers/" + cleanInput(args).replace(/,/g, '_') + '.webp';
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
@@ -61,6 +61,18 @@ bot.on('message', msg =>{
                 msg.channel.send("Incorrect name, try using !search");
             }
             break;
+            
+        case 'event':
+            var site_name = "https://sick.oberien.de/imgs/events/" + cleanInput(args).replace(/,/g, '_') + '.webp';
+            if(UrlExists(site_name)){
+                msg.channel.send(site_name);
+            }
+            else{
+                msg.channel.send("Incorrect name, try using !search");
+            }
+            break;
+            
+        case
 
         //look up on the faq, will accpect anything
         case 'faqs':
