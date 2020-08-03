@@ -115,6 +115,7 @@ async function UrlExists(url) {
 function cleanInput(args){
     args.shift();
     var card_name = args.toString().toLowerCase();
+    card_name.replace(/'/g, '');
     return card_name;
 
 }
