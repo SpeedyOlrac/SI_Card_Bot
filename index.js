@@ -52,7 +52,8 @@ bot.on('message', msg =>{
             
         
         //Show a card if spelled right
-        case 'card' || 'power':
+        case 'card' :
+        case 'power':
             var site_name = "https://sick.oberien.de/imgs/powers/" + cleanInput(args).replace(/,/g, '_') + '.webp';
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
