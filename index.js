@@ -62,7 +62,7 @@ bot.on('message', msg =>{
             }
             break;
             
-        case 'event':
+        case 'events':
             var site_name = "https://sick.oberien.de/imgs/events/" + cleanInput(args).replace(/,/g, '_') + '.webp';
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
@@ -72,7 +72,6 @@ bot.on('message', msg =>{
             }
             break;
             
-        case
 
         //look up on the faq, will accpect anything
         case 'faqs':
