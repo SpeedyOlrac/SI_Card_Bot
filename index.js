@@ -95,7 +95,7 @@ bot.on('message', msg =>{
 
         case'random':
             if(args[1]){
-                msg.channel.send(Picking(args[1], args[2], args[3]));
+                Picking(args[1], args[2], args[3]);
             }
             else{
                 msg.channel.send("So you want a random [spirit] or [adversary]?")
@@ -164,34 +164,37 @@ function Picking(selection, diffmin = 0, diffmax = 11){
          ];
 
         let emote = [
-            '\'<:SpiritRampant:729608434365759510>\'',
-            '\'<:SpiritBODAN:729607979317461042>\'',
-            '\'<:SpiritDownpour:729607988662370344>\'',
-            '\'<:SpiritFinder:729608181407416360>\'',
-            '\'<:SpiritFractured:729608364706889779>\'',
-            '\'<:SpiritTrickster:729608576334823485>\'',
-            '\'<:SpiritWildfire:729608618655219802>\'',
-            '\'<:SpiritKeeper:729608378783105105>\'',
-            '\'<:SpiritLightning:729608388958355516>\'',
-            '\'<:SpiritLure:729608402090590268>\'',
-            '\'<:SpiritManyMinds:729608412580806698>\'',
-            '\' <:SpiritOceans:729608424425390140>\'',
-            '\'<:SpiritRivers:729608447913623552>\'',
-            '\'<:SpiritSnek:729608507388854292>\'',
-            '\'<:SpiritShadows:729608460378964059>\'',
-            '\'<:SpiritFangs:729608010405773432>\'',
-            '\'<:SpiritShifting:729608473028853770>\'',
-            '\'<:SpiritShroud:729608494386380811>\'',
-            '\' <:SpiritStarlight:729608519833223200>\'',
-            '\'<:SpiritStone:729608539966013442>\'',
-            '\'<:SpiritThunderspeaker:737369744428105739>\'',
-            '\'<:SpiritVengeance:729608583846821959>\'',
-            '\'<:SpiritEarth:729607999441731614>\'',
-            '\'<:SpiritVolcano:729608598715367474>\''     
+            '<:SpiritRampant:729608434365759510>',
+            '<:SpiritBODAN:729607979317461042>',
+            '<:SpiritDownpour:729607988662370344>',
+            '<:SpiritFinder:729608181407416360>',
+            '<:SpiritFractured:729608364706889779>',
+            '<:SpiritTrickster:729608576334823485>',
+            '<:SpiritWildfire:729608618655219802>',
+            '<:SpiritKeeper:729608378783105105>',
+            '<:SpiritLightning:729608388958355516>',
+            '<:SpiritLure:729608402090590268>',
+            '<:SpiritManyMinds:729608412580806698>',
+            '<:SpiritOceans:729608424425390140>',
+            '<:SpiritRivers:729608447913623552>',
+            '<:SpiritSnek:729608507388854292>',
+            '<:SpiritShadows:729608460378964059>',
+            '<:SpiritFangs:729608010405773432>',
+            '<:SpiritShifting:729608473028853770>',
+            '<:SpiritShroud:729608494386380811>',
+            ' <:SpiritStarlight:729608519833223200>',
+            '<:SpiritStone:729608539966013442>',
+            '<:SpiritThunderspeaker:737369744428105739>',
+            '<:SpiritVengeance:729608583846821959>',
+            '<:SpiritEarth:729607999441731614>',
+            '<:SpiritVolcano:729608598715367474>'   
         ];
         let n = Math.floor(Math.random() * spirits.length);
 
-        return spirits[n] + " " + emote[n];
+        msg.channel.send(spirits[n]);
+        msg.channel.send(emote[n]);
+
+        return;
     }
 
     else if(selection == 'adversary'){
@@ -209,7 +212,8 @@ function Picking(selection, diffmin = 0, diffmax = 11){
         ];
 
         
-        return adversary[Math.floor(Math.random() * adversary.length)][0];
+        msg.channel.send(adversary[Math.floor(Math.random() * adversary.length)][0]);
+        return;
     }
     else return;
 
