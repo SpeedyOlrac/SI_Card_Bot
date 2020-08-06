@@ -106,8 +106,7 @@ bot.on('message', msg =>{
             }
                     break;
             }
-    }
-);
+    }});
 
 async function UrlExists(url) {
     
