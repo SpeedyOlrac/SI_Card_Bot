@@ -90,6 +90,16 @@ bot.on('message', msg =>{
                 msg.channel.send("Incorrect name, try again");
             }
             break;        
+
+        case'random':
+            if(args[1]){
+              msg.channel.send(Picking(args[1], args[2], args[3]));
+            }
+            else{
+                msg.channel.send("So you want a random [spirit] or [adversary]?")
+            }
+                    break;
+            }
     }
 });
 
@@ -120,5 +130,86 @@ function cleanInput(args){
     return card_name;
 
 }
+
+function Picking(selection, diffmin = 0, diffmax = 11){
+    if(selection == 'spirit'){
+        let spirits = [
+            'A Spread of Rampant Green',
+            'Bringer of Dreams and Nightmares',
+            'Downpour Drenches the World',
+            'Finder of Paths Unseen',
+            'Fractured Days Split the Sky',
+            'Grinning Trickster Stirs Up Trouble',
+            'Heart of the Wildfire',
+            'Keeper of the Forbidden Wilds',
+            'Lightning\'s Swift Strike',
+            'Lure of the Deep Wilderness',
+            'Many Minds Move as One',
+            'Ocean\'s Hungry Grasp',
+            'River Surges in Sunlight',
+            'Serpent Slumbering Beneath the Island',
+            'Shadows Flicker Like Flame',
+            'Sharp Fangs Behind the Leaves',
+            'Shifting Memory of Ages',
+            'Shroud of Silent Mist',
+            'Starlight Seeks Its Form',
+            'Stone\'s Unyielding Defiance',
+            'Thunderspeaker',
+            'Vengeance as a Burning Plague',
+            'Vital Strength of the Earth',
+            'Volcano Looming High'
+         ];
+
+        let emote = [
+            ':SpiritRampant:',
+            ':SpiritBODAN:',
+            ':SpiritDownpour:',
+            ':SpiritFinder:',
+            ':SpiritFractured::',
+            ':SpiritTrickster:',
+            ':SpiritWildfire:',
+            ':SpiritKeeper:',
+            ':SpiritLightning:',
+            ':SpiritLure:',
+            ':SpiritManyMinds:',
+            ':SpiritOceans:',
+            ':SpiritRivers: ',
+            ':SpiritSnek:',
+            ':SpiritShadows:',
+            ':SpiritFangs:',
+            ':SpiritShifting:',
+            ':SpiritShroud:',
+            ':SpiritStarlight:',
+            ':SpiritStone:',
+            ':SpiritThunderspeaker:',
+            ':SpiritVengeance:',
+            ':SpiritEarth:',
+            ':SpiritVolcano:'     
+        ];
+        let n = Math.floor(Math.random() * spirits.length);
+
+        return selection[n] + " " + emote[n];
+    }
+
+    else if(selection == 'adversary'){
+        
+        // adversary is [name, escaltion diff, diff 1 ...]
+        let adversary = [
+            ['Brandenburg-Prussia', 1, 2, 4, 6, 7, 9, 10  ],
+            ['England', 1, 3, 4, 6, 7, 9, 10],
+            ['France (Plantation Colony)', 2, 3, 5, 7, 8, 9, 10 ],
+            ['Hapsburg Dynasty', 2, 3, 5, 6, 8, 9, 10],
+            ['Russia', 1, 3, 4, 6, 7, 9, 11],
+            ['Scotland',1, 4, 6, 7, 8, 10],
+            ['Sweden', 1, 2, 3, 5, 6, 7, 8 ]
+
+        ];
+
+        
+        return adversary[Math.floor(Math.random() * adversary.length)][0];
+    }
+    else return;
+
+} 
 
 bot.login();
