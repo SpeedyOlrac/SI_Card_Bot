@@ -30,7 +30,9 @@ bot.on('message', msg =>{
         case 'help':
             msg.channel.send("List of commands: \
             \n !search [search words], !card [card name], \
-            \n !faqs, !faqs [search words]");
+            \n !faqs (search words), \
+            \n !events [event name] \
+            \n !random [spirit/adversary] (diffculty) "  );
 
         //Search the Sick card catalog
         case 'search':
@@ -189,7 +191,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
         ];
         let n = Math.floor(Math.random() * spirits.length);
 
-        return selection[n] + " " + emote[n];
+        return n + selection[n] + " " + emote[n];
     }
 
     else if(selection == 'adversary'){
