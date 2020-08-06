@@ -95,7 +95,12 @@ bot.on('message', msg =>{
 
         case'random':
             if(args[1]){
-                Picking(args[1], args[2], args[3]);
+               let answer = Picking(args[1], args[2], args[3]);
+               msg.channel.send(answer[0]);
+               if(answer[1]){
+                msg.channel.send(answer[1]);
+               }
+                 msg.channel.send(emote[n]);
             }
             else{
                 msg.channel.send("So you want a random [spirit] or [adversary]?")
@@ -190,11 +195,8 @@ function Picking(selection, diffmin = 0, diffmax = 11){
             '<:SpiritVolcano:729608598715367474>'   
         ];
         let n = Math.floor(Math.random() * spirits.length);
-
-        msg.channel.send(spirits[n]);
-        msg.channel.send(emote[n]);
-
-        return;
+        let answer = [spirits[n], emote[n]];
+        return answer;
     }
 
     else if(selection == 'adversary'){
@@ -211,9 +213,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
 
         ];
 
-        
-        msg.channel.send(adversary[Math.floor(Math.random() * adversary.length)][0]);
-        return;
+        return adversary[Math.floor(Math.random() * adversary.length)][0];
     }
     else return;
 
