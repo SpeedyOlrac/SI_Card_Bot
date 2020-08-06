@@ -191,7 +191,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
         ];
         let n = Math.floor(Math.random() * spirits.length);
 
-        return n + selection[n] + " " + emote[n];
+        return spirits[n] + " " + emote[n];
     }
 
     else if(selection == 'adversary'){
