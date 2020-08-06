@@ -93,7 +93,7 @@ bot.on('message', msg =>{
 
         case'random':
             if(args[1]){
-              msg.channel.send(Picking(args[1], args[2], args[3]));
+                msg.channel.send(Picking(args[1], args[2], args[3]));
             }
             else{
                 msg.channel.send("So you want a random [spirit] or [adversary]?")
@@ -101,7 +101,7 @@ bot.on('message', msg =>{
                     break;
             }
     }
-});
+);
 
 async function UrlExists(url) {
     
@@ -131,6 +131,7 @@ function cleanInput(args){
 
 }
 
+//Method to randomize spirit and adversaries
 function Picking(selection, diffmin = 0, diffmax = 11){
     if(selection == 'spirit'){
         let spirits = [
