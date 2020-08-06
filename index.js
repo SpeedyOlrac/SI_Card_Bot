@@ -99,9 +99,8 @@ bot.on('message', msg =>{
                msg.channel.send(answer[0]);
                if(answer[1]){
                 msg.channel.send(answer[1]);
-               }
-                 msg.channel.send(emote[n]);
-            }
+                }
+
             else{
                 msg.channel.send("So you want a random [spirit] or [adversary]?")
             }
@@ -195,7 +194,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
             '<:SpiritVolcano:729608598715367474>'   
         ];
         let n = Math.floor(Math.random() * spirits.length);
-        let answer = [spirits[n], emote[n]];
+        let answer = spirits[n];// emote[n]];
         return answer;
     }
 
