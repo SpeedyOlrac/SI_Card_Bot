@@ -210,6 +210,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
             ['Sweden',':flag_se:',  1, 2, 3, 5, 6, 7, 8 ]
         ];
 
+        let name = Math.floor(Math.random() * adversary.length)
         let level = "";
         let n = Math.floor(Math.random() * 7);
         if (n = 0){
@@ -220,9 +221,9 @@ function Picking(selection, diffmin = 0, diffmax = 11){
         }
 
         let diff = n+3;
-        let answer = adversary[Math.floor(Math.random() * adversary.length)][0] +
-                        " " + n + " (diffculty " + adversary[n+2] + ")";
-        return [answer, adversary[1] ];
+        let answer = adversary[name][0] +
+                        " " + n + " (diffculty " + adversary[name][n+2] + ")";
+        return [answer, adversary[name][1] ];
     }
     else return;
 
