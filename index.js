@@ -213,7 +213,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
         let name = Math.floor(Math.random() * adversary.length)
         let level = "";
         let n = Math.floor(Math.random() * 7);
-        if (n = 0){
+        if (n == 0){
             level = "Escalation";
         }
         else{
