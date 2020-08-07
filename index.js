@@ -193,7 +193,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
             '<:SpiritVolcano:729608598715367474>'   
         ];
         let n = Math.floor(Math.random() * spirits.length);
-        let answer = spirits[n];// emote[n]];
+        let answer = [spirits[n], emote[n]];
         return answer;
     }
 
@@ -211,7 +211,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
 
         ];
 
-        return adversary[Math.floor(Math.random() * adversary.length)][0];
+        return [adversary[Math.floor(Math.random() * adversary.length)][0], 1 ];
     }
     else return;
 
