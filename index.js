@@ -185,7 +185,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
             '<:SpiritFangs:729608010405773432>',
             '<:SpiritShifting:729608473028853770>',
             '<:SpiritShroud:729608494386380811>',
-            ' <:SpiritStarlight:729608519833223200>',
+            '<:SpiritStarlight:729608519833223200>',
             '<:SpiritStone:729608539966013442>',
             '<:SpiritThunderspeaker:737369744428105739>',
             '<:SpiritVengeance:729608583846821959>',
@@ -201,17 +201,28 @@ function Picking(selection, diffmin = 0, diffmax = 11){
         
         // adversary is [name, escaltion diff, diff 1 ...]
         let adversary = [
-            ['Brandenburg-Prussia', 1, 2, 4, 6, 7, 9, 10  ],
-            ['England', 1, 3, 4, 6, 7, 9, 10],
-            ['France (Plantation Colony)', 2, 3, 5, 7, 8, 9, 10 ],
-            ['Hapsburg Dynasty', 2, 3, 5, 6, 8, 9, 10],
-            ['Russia', 1, 3, 4, 6, 7, 9, 11],
-            ['Scotland',1, 4, 6, 7, 8, 10],
-            ['Sweden', 1, 2, 3, 5, 6, 7, 8 ]
-
+            ['Brandenburg-Prussia', '<:Prussia:741092407935893555>', 1, 2, 4, 6, 7, 9, 10  ],
+            ['England', ':england:', 1, 3, 4, 6, 7, 9, 10],
+            ['France (Plantation Colony)', '<:france:741093435028668558>', 2, 3, 5, 7, 8, 9, 10 ],
+            ['Hapsburg Dynasty', '<:hapsburg:741091437000654851> ', 2, 3, 5, 6, 8, 9, 10],
+            ['Russia', ':flag_ru:' , 1, 3, 4, 6, 7, 9, 11],
+            ['Scotland', ':scotland:',1, 4, 6, 7, 8, 10],
+            ['Sweden',':flag_se:',  1, 2, 3, 5, 6, 7, 8 ]
         ];
 
-        return [adversary[Math.floor(Math.random() * adversary.length)][0], 1 ];
+        let level = "";
+        let n = Math.floor(Math.random() * 7);
+        if (n = 0){
+            level = "Escalation";
+        }
+        else{
+            level = n;
+        }
+
+        let diff = n+3;
+        let answer = adversary[Math.floor(Math.random() * adversary.length)][0] +
+                        " " + n + " (diffculty " + adversary[n+2] + ")";
+        return [answer, adversary[1] ];
     }
     else return;
 
