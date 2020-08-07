@@ -220,9 +220,9 @@ function Picking(selection, diffmin = 0, diffmax = 11){
             level = n;
         }
 
-        let diff = n+3;
+        let diff = n + 2;
         let answer = adversary[name][0] +
-                        " " + n + " (diffculty " + adversary[name][n+2] + ")";
+                        " " + level + " (diffculty " + adversary[name][diff] + ")";
         return [answer, adversary[name][1] ];
     }
     else return;
