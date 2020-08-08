@@ -136,6 +136,7 @@ bot.on('message', msg =>{
         case 'spirit':
             var list = args.shift();
             var target = "Sorry could not find the spirit you where looking for.";
+            console.log("Entered the spirit case.");
 
             outer_loop:
             for(var l = 0; l < list.length; l++){
@@ -146,7 +147,7 @@ bot.on('message', msg =>{
                     } 
                 }               
             }
-                
+            console.log(target);
             msg.channel.send(target);
             break;
 
