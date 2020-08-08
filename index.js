@@ -135,20 +135,19 @@ bot.on('message', msg =>{
 
         case 'spirit':
             let list = cleanInput(args);
-            let target = "Sorry could not find the spirit you where looking for. Try tryping key words";
+            let target = "Sorry could not find the spirit you where looking for.";
 
-            fast:
-            list.forEach(element => {
-                for( let i = 0; i < list.length; i++){
-                     if (element.length > 3 && spirits[i].search(element) >= 0){
-                        target = list[i];
-                        break fast;
+            outer_loop:
+            for(var l = 0; s < list.length; l++){
+                for( var i = 0; i < list.length; i++){
+                     if (element.length > 3 && spirits[i].search(list[l]) >= 0){
+                        target = spirits[i];
+                        break outer_loop;
                     } 
                 }               
-             });  
+            }
                 
             msg.channel.send(target);
-
             break;
 
     }});
