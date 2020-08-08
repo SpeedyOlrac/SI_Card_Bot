@@ -92,7 +92,7 @@ bot.on('message', msg =>{
             }
             break;
 
-        case "fear":
+        case 'fear':
             var site_name = "https://sick.oberien.de/fears/powers/" + cleanInput(args).replace(/,/g, '_') + '.webp';
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
