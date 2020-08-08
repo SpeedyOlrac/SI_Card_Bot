@@ -142,11 +142,13 @@ bot.on('message', msg =>{
             for(var l = 0; l < list.length; l++){
                 for( var i = 0; i < list.length; i++){
                      if (element.length > 3 && spirits[i].search(list[l]) >= 0){
+                         console.log(spirits[i];)
                         target = spirits[i];
                         break outer_loop;
                     } 
                 }               
             }
+
             console.log(target);
             msg.channel.send(target);
             break;
