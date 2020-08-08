@@ -134,11 +134,11 @@ bot.on('message', msg =>{
             break;
 
         case 'spirit':
-            let list = cleanInput(args);
-            let target = "Sorry could not find the spirit you where looking for.";
+            var list = args.shift();
+            var target = "Sorry could not find the spirit you where looking for.";
 
             outer_loop:
-            for(var l = 0; s < list.length; l++){
+            for(var l = 0; l < list.length; l++){
                 for( var i = 0; i < list.length; i++){
                      if (element.length > 3 && spirits[i].search(list[l]) >= 0){
                         target = spirits[i];
@@ -165,7 +165,6 @@ async function UrlExists(url) {
             console.log("false, 404");
             return false;
         }
-        console.log("true, workign site");
         return true;
     }));
 }
