@@ -14,17 +14,34 @@ bot.on('ready', () => {
 bot.on('message', msg =>{
     let args = msg.content.substring(PREFIX.length).split(" ");
 
-    switch(args[0]){
-        case 'ping':
-            msg.channel.send('pong!');
-            break;
+    let spirits = [
+        'A Spread of Rampant Green',
+        'Bringer of Dreams and Nightmares',
+        'Downpour Drenches the World',
+        'Finder of Paths Unseen',
+        'Fractured Days Split the Sky',
+        'Grinning Trickster Stirs Up Trouble',
+        'Heart of the Wildfire',
+        'Keeper of the Forbidden Wilds',
+        'Lightning\'s Swift Strike',
+        'Lure of the Deep Wilderness',
+        'Many Minds Move as One',
+        'Ocean\'s Hungry Grasp',
+        'River Surges in Sunlight',
+        'Serpent Slumbering Beneath the Island',
+        'Shadows Flicker Like Flame',
+        'Sharp Fangs Behind the Leaves',
+        'Shifting Memory of Ages',
+        'Shroud of Silent Mist',
+        'Starlight Seeks Its Form',
+        'Stone\'s Unyielding Defiance',
+        'Thunderspeaker',
+        'Vengeance as a Burning Plague',
+        'Vital Strength of the Earth',
+        'Volcano Looming High'
+     ];
 
-        case 'embed':
-            const Embed = new Discord.MessageEmbed()
-            .setTitle('Card')
-            .setImage('https://sick.oberien.de/imgs/powers/boon_of_vigor.webp');
-            msg.channel.send(Embed);
-            break;
+    switch(args[0]){
 
         //Help, list of options
         case 'help':
@@ -74,6 +91,16 @@ bot.on('message', msg =>{
                 msg.channel.send("Incorrect name, try using !search");
             }
             break;
+
+        case "fear":
+            var site_name = "https://sick.oberien.de/fears/powers/" + cleanInput(args).replace(/,/g, '_') + '.webp';
+            if(UrlExists(site_name)){
+                msg.channel.send(site_name);
+            }
+            else{
+                msg.channel.send("Incorrect name, try using !search");
+            }
+            break;
             
 
         //look up on the faq, will accpect anything
@@ -91,21 +118,39 @@ bot.on('message', msg =>{
             else{
                 msg.channel.send("Incorrect name, try again");
             }
-            break;        
+            break;       
 
         case'random':
             if(args[1]){
-               let answer = Picking(args[1], args[2], args[3]);
+               let answer = Picking(args[1], spirits, args[2], args[3]);
                msg.channel.send(answer[0]);
                if(answer[1]){
                 msg.channel.send(answer[1]);
                 }
-
+            }
             else{
-                msg.channel.send("So you want a random [spirit] or [adversary]?")
+                msg.channel.send("Do you want a random [spirit] or [adversary]?")
             }
-                    break;
-            }
+            break;
+
+        case 'spirit':
+            let list = cleanInput(args);
+            let target = "Sorry could not find the spirit you where looking for. Try tryping key words";
+
+            fast:
+            list.forEach(element => {
+                for( let i = 0; i < list.length; i++){
+                     if (element.length > 3 && spirits[i].search(element) >= 0){
+                        target = list[i];
+                        break fast;
+                    } 
+                }               
+             });  
+                
+            msg.channel.send(target);
+
+            break;
+
     }});
 
 async function UrlExists(url) {
@@ -119,7 +164,6 @@ async function UrlExists(url) {
         }
         if (!response.ok){
             console.log("false, 404");
-
             return false;
         }
         console.log("true, workign site");
@@ -137,34 +181,9 @@ function cleanInput(args){
 }
 
 //Method to randomize spirit and adversaries
-function Picking(selection, diffmin = 0, diffmax = 11){
+function Picking(selection, spirit, diffmin = 0, diffmax = 11){
     if(selection == 'spirit'){
-        let spirits = [
-            'A Spread of Rampant Green',
-            'Bringer of Dreams and Nightmares',
-            'Downpour Drenches the World',
-            'Finder of Paths Unseen',
-            'Fractured Days Split the Sky',
-            'Grinning Trickster Stirs Up Trouble',
-            'Heart of the Wildfire',
-            'Keeper of the Forbidden Wilds',
-            'Lightning\'s Swift Strike',
-            'Lure of the Deep Wilderness',
-            'Many Minds Move as One',
-            'Ocean\'s Hungry Grasp',
-            'River Surges in Sunlight',
-            'Serpent Slumbering Beneath the Island',
-            'Shadows Flicker Like Flame',
-            'Sharp Fangs Behind the Leaves',
-            'Shifting Memory of Ages',
-            'Shroud of Silent Mist',
-            'Starlight Seeks Its Form',
-            'Stone\'s Unyielding Defiance',
-            'Thunderspeaker',
-            'Vengeance as a Burning Plague',
-            'Vital Strength of the Earth',
-            'Volcano Looming High'
-         ];
+
 
         let emote = [
             '<:SpiritRampant:729608434365759510>',
@@ -225,7 +244,10 @@ function Picking(selection, diffmin = 0, diffmax = 11){
                         " " + level + " (diffculty " + adversary[name][diff] + ")";
         return [answer, adversary[name][1] ];
     }
-    else return;
+    else {
+        msg.channel.send("Do you want a random [spirit] or [adversary]?");
+        return;
+        }
 
 } 
 
