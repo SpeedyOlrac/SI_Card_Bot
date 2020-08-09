@@ -140,10 +140,10 @@ bot.on('message', msg =>{
 
             outer_loop:
             for(var l = 0; l < list.length; l++){
-                for( var i = 0; i < list.length; i++){
-                     if (list.length > 3 && spirits[i].search(list[l]) >= 0){
-                         console.log(spirits[i]);
-                        target = spirits[i];
+                for( var s = 0; s < spirits.length; s++){
+                     if (list.length > 3 && spirits[s].search(/list[l]/i) != -1){
+                         console.log(spirits[s].search(list[l]));
+                        target = spirits[s];
                         break outer_loop;
                     } 
                 }               
