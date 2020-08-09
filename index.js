@@ -140,8 +140,11 @@ bot.on('message', msg =>{
             console.log("Entered the spirit case.");
 
             outer_loop:
+            console.log(list.length);
             for(var l = 1; l < list.length; l++){
+                
                 for( var s = 0; s < spirits.length; s++){
+                    console.log("Entered the spirit loop " + s);
                      if (list[l].length > 3 && spirits[s].search(/list[l]/i) != -1){
                          console.log(spirits[s].search(list[l]));
                         target = spirits[s];
