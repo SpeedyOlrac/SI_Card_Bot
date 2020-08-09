@@ -137,20 +137,19 @@ bot.on('message', msg =>{
             var list = args;
             console.log(list);
             var target = "Sorry could not find the spirit you where looking for.";
-            console.log("Entered the spirit case.");
 
             outer_loop:
             console.log(list.length + " " + spirits.length);
             for(var l = 1; l < list.length; l++){
-                
                 for( var s = 0; s < spirits.length; s++){
-                    for(var name = 0; name < spirits[s].length; name++){
-
-                        console.log(list[l].toLowerCase + " " + spirits[s][name]);
-                        if (list[l].length > 3 && spirits[s][name].toLowerCase == list[l].toLowerCase){                        
-                        target = spirits[s];
-                        break ;//outer_loop;
-                    } 
+                    var name = spirits[s].split(" ");
+                    for(var n = 0; n < name.length; n++){
+                        
+                        console.log(list[l] + " " + name);
+                        if (list[l].length > 3 && name[n] == list[l]){                        
+                            target = spirits[s];
+                            break ;//outer_loop;
+                         } 
                 }               
             }
 
