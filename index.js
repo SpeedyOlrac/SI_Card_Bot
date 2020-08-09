@@ -146,7 +146,7 @@ bot.on('message', msg =>{
                     for(var n = 0; n < name.length; n++){
 
                         console.log(list[l] + " " + name);
-                        if (list[l].length > 3 && name[n].toLowerCase == list[l].toLowerCase){                        
+                        if (list[l].length > 3 && name[n].toLowerCase() == list[l].toLowerCase()){                        
                             target = spirits[s];
                             break ;//outer_loop;
                          } 
