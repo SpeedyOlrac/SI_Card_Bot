@@ -144,8 +144,10 @@ bot.on('message', msg =>{
             for(var l = 1; l < list.length; l++){
                 
                 for( var s = 0; s < spirits.length; s++){
-                    console.log(list[l].toLocaleLowerCase);
-                     if (list[l].length > 3 && spirits[s].toLowerCase == list[l].toLocaleLowerCase){                        
+                    for(var name = 0; name < spirits[s].length; name++){
+
+                        console.log(list[l].toLowerCase + " " + spirits[s][name]);
+                        if (list[l].length > 3 && spirits[s][name].toLowerCase == list[l].toLowerCase){                        
                         target = spirits[s];
                         break ;//outer_loop;
                     } 
@@ -156,7 +158,7 @@ bot.on('message', msg =>{
             msg.channel.send(target);
             break;
 
-    }});
+        }}});
 
 async function UrlExists(url) {
     
