@@ -144,7 +144,7 @@ bot.on('message', msg =>{
             for(var l = 1; l < list.length; l++){
                 
                 for( var s = 0; s < spirits.length; s++){
-                    console.log("Entered the spirit loop " + s);
+                    console.log("Entered the spirit loop " + spirits[s].search(/list[l]/i));
                      if (list[l].length > 3 && spirits[s].search(/list[l]/i) != -1){
                          console.log(spirits[s].search(list[l]));
                         target = spirits[s];
