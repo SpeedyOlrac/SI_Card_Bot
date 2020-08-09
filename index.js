@@ -144,9 +144,9 @@ bot.on('message', msg =>{
                 for( var s = 0; s < spirits.length; s++){
                     var name = spirits[s].split(" ");
                     for(var n = 0; n < name.length; n++){
-                        
+
                         console.log(list[l] + " " + name);
-                        if (list[l].length > 3 && name[n] == list[l]){                        
+                        if (list[l].length > 3 && name[n].toLowerCase == list[l].toLowerCase){                        
                             target = spirits[s];
                             break ;//outer_loop;
                          } 
