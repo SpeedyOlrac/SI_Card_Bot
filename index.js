@@ -135,6 +135,7 @@ bot.on('message', msg =>{
 
         case 'spirit':
             var list = args.shift();
+            console.log(list);
             var target = "Sorry could not find the spirit you where looking for.";
             console.log("Entered the spirit case.");
 
