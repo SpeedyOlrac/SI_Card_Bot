@@ -159,13 +159,13 @@ bot.on('message', msg =>{
                 var website = "https://raw.githubusercontent.com/SpeedyOlrac/SI_Card_Bot/master/SpiritPanelsSmall/";
 
                 if(args[1].toLowerCase() != 'back'){
-                    msg.channel(website + target.replace(/\s/g, '') +"panel.jpg.");
+                    msg.channel.send(website + target.replace(/\s/g, '') +"panel.jpg.");
                 }
                 if(args[1].toLowerCase() != 'front' ){
-                    msg.channel(website + target.replace(/\s/g, '') +"panel1.jpg."); 
+                    msg.channel.send(website + target.replace(/\s/g, '') +"panel1.jpg."); 
                 }
             }
-            
+
             else{
                 msg.channel.send(target);
             }
