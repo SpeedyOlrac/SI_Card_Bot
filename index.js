@@ -137,6 +137,7 @@ bot.on('message', msg =>{
             var list = args;
             console.log(list);
             var target = "Sorry could not find the spirit you where looking for.";
+            var found = false;
 
             outer_loop:
             console.log(list.length + " " + spirits.length);
@@ -146,18 +147,32 @@ bot.on('message', msg =>{
                     for(var n = 0; n < name.length; n++){
 
                         console.log(list[l] + " " + name);
-                        if (list[l].length > 3 && name[n].toLowerCase() == list[l].toLowerCase()){                        
+                        if (!found && list[l].length > 3 && name[n].toLowerCase() == list[l].toLowerCase()){                        
                             target = spirits[s];
+                            found = true;
                             break ;//outer_loop;
                          } 
                 }               
             }
 
-            console.log(target);
-            msg.channel.send(target);
-            break;
+            if(found){
+                var website = "https://raw.githubusercontent.com/SpeedyOlrac/SI_Card_Bot/master/SpiritPanelsSmall/";
 
-        }}});
+                if(args[1].toLowerCase() != 'back'){
+                    msg.channel(website + target.replace(/\s/g, '') +"panel.jpg.");
+                }
+                if(args[1].toLowerCase() != 'front' ){
+                    msg.channel(website + target.replace(/\s/g, '') +"panel1.jpg."); 
+                }
+            }
+            
+            else{
+                msg.channel.send(target);
+            }
+
+            break;
+        }
+    }});
 
 async function UrlExists(url) {
     
