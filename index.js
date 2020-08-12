@@ -33,33 +33,6 @@ bot.on('message', msg =>{
 
     let args = msg.content.substring(PREFIX.length).split(" ");
 
-    let spirits = [
-        'A Spread of Rampant Green',
-        'Bringer of Dreams and Nightmares',
-        'Downpour Drenches the World',
-        'Finder of Paths Unseen',
-        'Fractured Days Split the Sky',
-        'Grinning Trickster Stirs Up Trouble',
-        'Heart of the Wildfire',
-        'Keeper of the Forbidden Wilds',
-        'Lightning\'s Swift Strike',
-        'Lure of the Deep Wilderness',
-        'Many Minds Move as One',
-        'Ocean\'s Hungry Grasp',
-        'River Surges in Sunlight',
-        'Serpent Slumbering Beneath the Island',
-        'Shadows Flicker Like Flame',
-        'Sharp Fangs Behind the Leaves',
-        'Shifting Memory of Ages',
-        'Shroud of Silent Mist',
-        'Starlight Seeks Its Form',
-        'Stone\'s Unyielding Defiance',
-        'Thunderspeaker',
-        'Vengeance as a Burning Plague',
-        'Vital Strength of the Earth',
-        'Volcano Looming High'
-     ];
-
 
     switch(args[0]){
 
@@ -151,7 +124,7 @@ bot.on('message', msg =>{
         //Selects a random spirit or adversary. Return a name and a emote of the selection.
         case'random':
             if(args[1]){
-               let answer = Picking(args[1], spirits, args[2], args[3]);
+               let answer = Picking(args[1], Names.spirits, args[2], args[3]);
                msg.channel.send(answer[0]);
                if(answer[1]){
                 msg.channel.send(answer[1]);
@@ -173,15 +146,15 @@ bot.on('message', msg =>{
             var found = false;
 
             outer_loop:
-            console.log(list.length + " " + spirits.length);
+            console.log(list.length + " " + Names.spirits.length);
             for(var l = 1; l < list.length; l++){
-                for( var s = 0; s < spirits.length; s++){
-                    var name = spirits[s].split(" ");
+                for( var s = 0; s < Names.spirits.length; s++){
+                    var name = Names.spirits[s].split(" ");
                     for(var n = 0; n < name.length; n++){
 
                         console.log(list[l] + " " + name);
                         if (!found && list[l].length > 3 && name[n].toLowerCase() == list[l].toLowerCase()){                        
-                            target = spirits[s];
+                            target = Names.spirits[s];
                             found = true;
                             break ;//outer_loop;
                          } 
