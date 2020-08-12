@@ -29,7 +29,7 @@ bot.on('message', msg =>{
 
     //Checks if using the Correct Prefix, might have to change to a - oneday
 
-    if(!message.content.startsWith(PREFIX) ){ return;}
+    //if(!message.content.startsWith(PREFIX) ){ return;}
 
     let args = msg.content.substring(PREFIX.length).split(" ");
 
