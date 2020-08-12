@@ -191,7 +191,7 @@ async function UrlExists(url) {
 //modify text so it fuction can prosses it
 function cleanInput(args){
 
-    var card_name = args.shift();
+    args.shift();
     card_name = card_name.toString().toLowerCase();
     card_name = card_name.replace("-", "");
     card_name = card_name.replace("\'", "");
