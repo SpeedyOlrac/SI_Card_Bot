@@ -17,7 +17,7 @@ const Names = require('./Names');
 
 */
 
-const PREFIX = "!" ;
+const PREFIX = "-" ;
 
 bot.on('ready', () => {
 
