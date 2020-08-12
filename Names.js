@@ -29,6 +29,57 @@ var spirits = [
  ];
 
 
+ var emote = [
+    '<:SpiritRampant:729608434365759510>',
+    '<:SpiritBODAN:729607979317461042>',
+    '<:SpiritDownpour:729607988662370344>',
+    '<:SpiritFinder:729608181407416360>',
+    '<:SpiritFractured:729608364706889779>',
+    '<:SpiritTrickster:729608576334823485>',
+    '<:SpiritWildfire:729608618655219802>',
+    '<:SpiritKeeper:729608378783105105>',
+    '<:SpiritLightning:729608388958355516>',
+    '<:SpiritLure:729608402090590268>',
+    '<:SpiritManyMinds:729608412580806698>',
+    '<:SpiritOceans:729608424425390140>',
+    '<:SpiritRivers:729608447913623552>',
+    '<:SpiritSnek:729608507388854292>',
+    '<:SpiritShadows:729608460378964059>',
+    '<:SpiritFangs:729608010405773432>',
+    '<:SpiritShifting:729608473028853770>',
+    '<:SpiritShroud:729608494386380811>',
+    '<:SpiritStarlight:729608519833223200>',
+    '<:SpiritStone:729608539966013442>',
+    '<:SpiritThunderspeaker:737369744428105739>',
+    '<:SpiritVengeance:729608583846821959>',
+    '<:SpiritEarth:729607999441731614>',
+    '<:SpiritVolcano:729608598715367474>'   
+];
+
+var adversary = [
+    ['Brandenburg-Prussia', '<:Prussia:741092407935893555>', 1, 2, 4, 6, 7, 9, 10  ],
+    ['England', ':england:', 1, 3, 4, 6, 7, 9, 10],
+    ['France (Plantation Colony)', '<:france:741093435028668558>', 2, 3, 5, 7, 8, 9, 10 ],
+    ['Hapsburg Dynasty', '<:hapsburg:741091437000654851> ', 2, 3, 5, 6, 8, 9, 10],
+    ['Russia', ':flag_ru:' , 1, 3, 4, 6, 7, 9, 11],
+    ['Scotland', ':scotland:',1, 4, 6, 7, 8, 10],
+    ['Sweden',':flag_se:',  1, 2, 3, 5, 6, 7, 8 ]
+];
+
+var help = "List of commands: \
+\n !search [search words]\
+\n !card [card name], !power [card name] \
+\n !faqs (search words), \
+\n !events [event name] \
+\n !fear [fear name] \
+\n !random [spirit/adversary] (diffculty)   \
+\n !spirit (front/back) [keywords] ";
+
+var sHelp = "Examples: \
+\n Gather Dahan, \"Dahan and\" major elements:plant \
+\n elements:earth, description:\"add 1 presence\", \
+\n range:sacred range:>=2 cost:<5 target:!any";
+
 /*
 https://imgur.com/nlpGjjH
 https://imgur.com/5iTl68l
@@ -88,6 +139,9 @@ https://imgur.com/JtdpxCr
 
 
 exports.spirits = spirits;
+exports.emote = emote;
+exports.adversary = adversary;
+exports.help = help;
 
 
 
