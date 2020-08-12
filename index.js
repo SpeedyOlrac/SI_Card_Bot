@@ -22,7 +22,7 @@ const PREFIX = "!" ;
 bot.on('ready', () => {
 
     console.log('This bot is online');
-    console.log(Spirit.spirits);
+    console.log(Spirit.spirits[0]);
 });
 
 bot.on('message', msg =>{
@@ -263,7 +263,7 @@ function Picking(selection, spirit, diffmin = 0, diffmax = 11){
             '<:SpiritStone:729608539966013442>',
             '<:SpiritThunderspeaker:737369744428105739>',
             '<:SpiritVengeance:729608583846821959>',
-            '<:SpiritEarth:729607999441731614>',
+            '<:SpiritEarth:729607999441731614> ',
             '<:SpiritVolcano:729608598715367474>'   
         ];
         let n = Math.floor(Math.random() * spirits.length);
