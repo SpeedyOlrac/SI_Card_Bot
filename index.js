@@ -22,14 +22,14 @@ const PREFIX = "!" ;
 bot.on('ready', () => {
 
     console.log('This bot is online');
-    console.log(Spirit);
+    console.log(Spirit.spirits);
 });
 
 bot.on('message', msg =>{
 
     //Checks if using the Correct Prefix, might have to change to a - oneday
 
-    if(!message.content.startsWith(PREFIX) || message.author.bot) return;
+    if(!message.content.startsWith(PREFIX) || message.author.bot){ return;}
 
     let args = msg.content.substring(PREFIX.length).split(" ");
 
