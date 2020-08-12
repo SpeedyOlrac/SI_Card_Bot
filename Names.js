@@ -63,18 +63,18 @@ var adversary = [
 ];
 
 var help = "List of commands: \
-\n -search [search words]\
-\n -card [card name], !power [card name] \
-\n -faqs (search words), \
-\n -events [event name] \
-\n -fear [fear name] \
-\n -random [spirit/adversary] (diffculty)   \
-\n -spirit (front/back) [keywords] ";
+    \n -search [search words]\
+    \n -card [card name], !power [card name] \
+    \n -faqs (search words), \
+    \n -events [event name] \
+    \n -fear [fear name] \
+    \n -random [spirit/adversary]   \
+    \n -spirit (front/back) [keywords] ";
 
 var sHelp = "Examples: \
-\n Gather Dahan, \"Dahan and\" major elements:plant \
-\n elements:earth, description:\"add 1 presence\", \
-\n range:sacred range:>=2 cost:<5 target:!any";
+    \n Gather Dahan, \"Dahan and\" major elements:plant \
+    \n elements:earth, description:\"add 1 presence\", \
+    \n range:sacred range:>=2 cost:<5 target:!any";
 
 
 var panel = [
