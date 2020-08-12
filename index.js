@@ -39,6 +39,7 @@ bot.on('message', msg =>{
         //Help, list of options bot can preform
         case 'help':
             msg.channel.send(Names.help);
+            break;
 
         //Search the Sick card catalog
         case 'search':
@@ -46,6 +47,7 @@ bot.on('message', msg =>{
                 msg.channel.send(Names.sHelp);
                 break;
             }
+
             var site_name = "https://sick.oberien.de/?query=" + cleanInput(args).replace(/,/g, "%20");
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
