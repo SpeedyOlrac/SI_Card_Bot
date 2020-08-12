@@ -3,15 +3,34 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const fetch = require("node-fetch");
 const to = require('await-to-js').default;
+const Spirit = require('./Names.js');
 
-const PREFIX = "!";
+
+/*
+    Author: Carlo I Gonzalez "SpeedyOlrac"
+    Desciption: THis bot is made to help spirit island card and spirit panel look ups.
+        Now has random Spirit and adversary fuctions.
+        Creates link to the Spirit ISland FAQ page.
+
+
+    Version 1.2
+
+*/
+
+//const PREFIX = "!" ;
 
 bot.on('ready', () => {
 
     console.log('This bot is online');
+    console.log(Spirit);
 });
 
 bot.on('message', msg =>{
+
+    //Checks if using the Correct Prefix, might have to change to a - oneday
+
+    if(!message.content.startsWith(PREFIX) || message.author.bot) return;
+
     let args = msg.content.substring(PREFIX.length).split(" ");
 
     let spirits = [
@@ -41,15 +60,19 @@ bot.on('message', msg =>{
         'Volcano Looming High'
      ];
 
+
     switch(args[0]){
 
-        //Help, list of options
+        //Help, list of options bot can preform
         case 'help':
             msg.channel.send("List of commands: \
-            \n !search [search words], !card [card name], \
+            \n !search [search words]\
+            \n !card [card name], !power [card name] \
             \n !faqs (search words), \
             \n !events [event name] \
-            \n !random [spirit/adversary] (diffculty) "  );
+            \n !fear [fear name] \
+            \n !random [spirit/adversary] (diffculty)   \
+            \n !spirit (front/back) [keywords] ");
 
         //Search the Sick card catalog
         case 'search':
@@ -65,12 +88,13 @@ bot.on('message', msg =>{
                 msg.channel.send(site_name);
             }
             else{
-                ms.channel.send("incorrect Syntax, try !search help");
+                ms.channel.send("Incorrect Syntax, try !search help");
             }
             break;
             
         
-        //Show a card if spelled right
+        //Looks up the SicK website using inputed name. Correct name returns a website
+        // Returns an error is a 404 page is returned
         case 'card' :
         case 'power':
             var site_name = "https://sick.oberien.de/imgs/powers/" + cleanInput(args).replace(/,/g, '_') + '.webp';
@@ -82,6 +106,8 @@ bot.on('message', msg =>{
             }
             break;
             
+        //Looks up the SicK website using inputed name.Correct name returns a website
+        // Returns an error is a 404 page is returned
         case 'events':
             var site_name = "https://sick.oberien.de/imgs/events/" + cleanInput(args).replace(/,/g, '_') + '.webp';
             if(UrlExists(site_name)){
@@ -91,7 +117,9 @@ bot.on('message', msg =>{
                 msg.channel.send("Incorrect name, try using !search");
             }
             break;
-
+        
+         //Looks up the SicK website using inputed name. Correct name returns a website
+         //Returns an error is a 404 page is returned
         case 'fear':
             var site_name = "https://sick.oberien.de/imgs/fears/" + cleanInput(args).replace(/,/g, '_') + '.webp';
             if(UrlExists(site_name)){
@@ -103,7 +131,7 @@ bot.on('message', msg =>{
             break;
             
 
-        //look up on the faq, will accpect anything
+        //Look up on the faq, will accpect anything. Returns website search. 
         case 'faqs':
             if (!args[1]){
                 msg.channel.send("https://querki.net/u/darker/spirit-island-faq/#!.3y28a87");
@@ -120,6 +148,7 @@ bot.on('message', msg =>{
             }
             break;       
 
+        //Selects a random spirit or adversary. Return a name and a emote of the selection.
         case'random':
             if(args[1]){
                let answer = Picking(args[1], spirits, args[2], args[3]);
@@ -132,6 +161,10 @@ bot.on('message', msg =>{
                 msg.channel.send("Do you want a random [spirit] or [adversary]?")
             }
             break;
+
+        //TODO, find workable website with images
+        //Looks for a spirit using limited word search, one part of the name has to be correct.
+        //Returns a both Spirit Panel unless user specifies front or back.
 
         case 'spirit':
             var list = args;
@@ -174,6 +207,8 @@ bot.on('message', msg =>{
         }
     }});
 
+
+// Async website check
 async function UrlExists(url) {
     
     var status = await to(fetch(url)
@@ -191,9 +226,9 @@ async function UrlExists(url) {
     }));
 }
 
+//modify text so it fuction can prosses it
 function cleanInput(args){
-    args.shift();
-    var card_name = args.toString().toLowerCase();
+    var card_name = args.shift().toString().toLowerCase();
     card_name = card_name.replace("-", "");
     card_name = card_name.replace("\'", "");
     return card_name;
