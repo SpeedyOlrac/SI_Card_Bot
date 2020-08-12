@@ -144,7 +144,7 @@ bot.on('message', msg =>{
 
                         console.log(list[l] + " " + name);
                         if (!found && list[l].length > 3 && name[n].toLowerCase() == list[l].toLowerCase()){                        
-                            target = Names.spirits[s];
+                            target = s;
                             found = true;
                             break ;//outer_loop;
                          } 
@@ -154,10 +154,10 @@ bot.on('message', msg =>{
 
             if(found){
                 if(args[1].toLowerCase() != 'back'){
-                    msg.channel.send(Names.panel[0]);
+                    msg.channel.send(Names.panel[s][0]);
                 }
                 if(args[1].toLowerCase() != 'front' ){
-                    msg.channel.send(Names.panel[0]); 
+                    msg.channel.send(Names.panel[s][1]); 
                 }
             }
             else{
