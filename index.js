@@ -192,10 +192,8 @@ async function UrlExists(url) {
 function cleanInput(args){
 
     args.shift();
-    card_name = card_name.toString().toLowerCase();
-    card_name = card_name.replace("-", "");
-    card_name = card_name.replace("\'", "");
-    return card_name;
+    var card_name = args.toString().toLowerCase();
+    return card_name.replace("-", "").replace("\'", "");
 }
 
 //Method to randomize spirit and adversaries
