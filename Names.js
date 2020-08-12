@@ -1,6 +1,3 @@
-
-
- 
 var spirits = [
     'A Spread of Rampant Green',
     'Bringer of Dreams and Nightmares',
@@ -27,7 +24,6 @@ var spirits = [
     'Vital Strength of the Earth',
     'Volcano Looming High'
  ];
-
 
  var emote = [
     '<:SpiritRampant:729608434365759510>',
@@ -80,68 +76,40 @@ var sHelp = "Examples: \
 \n elements:earth, description:\"add 1 presence\", \
 \n range:sacred range:>=2 cost:<5 target:!any";
 
-/*
-https://imgur.com/nlpGjjH
-https://imgur.com/5iTl68l
-https://imgur.com/XOC05vn
-https://imgur.com/wgs13CF
-https://imgur.com/KZwtr5W
-https://imgur.com/5xnsvD8
-https://imgur.com/RqlC8ZP
-https://imgur.com/PztVF5L
-https://imgur.com/4hnimN9
-https://imgur.com/eZbTaHA
-https://imgur.com/9hiaoWd
-https://imgur.com/pCuo4XJ
-https://imgur.com/2UujxIG
-https://imgur.com/MQDsVg9
-https://imgur.com/sE5Iasm
-https://imgur.com/oyk2ZwH
-https://imgur.com/uxw6S5D
-https://imgur.com/H1Xrzxw
-https://imgur.com/IoL5BHz
-https://imgur.com/BB48p9Q
-https://imgur.com/FmVImnv
-https://imgur.com/cE7YZ3L
-https://imgur.com/PgT7Kyj
-https://imgur.com/uv0mMRV
-https://imgur.com/pmdjfxu
-https://imgur.com/wGPod8z
-https://imgur.com/RZh8Y8g
-https://imgur.com/rrLWF5o
-https://imgur.com/XIG39qe
-https://imgur.com/UVEIJfA
-https://imgur.com/OmSNTeL
-https://imgur.com/WLcU0w9
-https://imgur.com/yXE6oHw
-https://imgur.com/ZKAblG3
-https://imgur.com/owZAHJY
-https://imgur.com/XvJYfqH
-https://imgur.com/i6YLeWv
-https://imgur.com/AJjfgOS
-https://imgur.com/PBwq5KE
-https://imgur.com/Y8lVu5J
-https://imgur.com/A4FRUV5
-https://imgur.com/VUOjO0v
-https://imgur.com/CShexIA
-https://imgur.com/7z7V6Ol
-https://imgur.com/g0S3eN8
-https://imgur.com/UxZyTv2
-https://imgur.com/iK9NTsz
-https://imgur.com/JtdpxCr
 
-
-
-*/
-
-
-
+var panel = [
+    [ "https://i.imgur.com/nlpGjjH", "https://i.imgur.com/iK9NTsz"],
+    [ "https://i.imgur.com/UxZyTv2", "https://i.imgur.com/VUOjO0v"], 
+    [ "https://i.imgur.com/AJjfgOS", "https://i.imgur.com/CShexIA"],
+    [ "https://i.imgur.com/owZAHJY", "https://i.imgur.com/JtdpxCr"],
+    [ "https://i.imgur.com/g0S3eN8", "https://i.imgur.com/7z7V6Ol"],
+    [ "https://i.imgur.com/XvJYfqH", "https://i.imgur.com/i6YLeWv"],
+    [ "https://i.imgur.com/A4FRUV5", "https://i.imgur.com/Y8lVu5J"],
+    [ "https://i.imgur.com/PBwq5KE", "https://i.imgur.com/ZKAblG3"],
+    [ "https://i.imgur.com/yXE6oHw", "https://i.imgur.com/WLcU0w9"],
+    [ "https://i.imgur.com/OmSNTeL", "https://i.imgur.com/wGPod8z"],
+    [ "https://i.imgur.com/RZh8Y8g", "https://i.imgur.com/XIG39qe"],
+    [ "https://i.imgur.com/rrLWF5o", "https://i.imgur.com/rrLWF5o"],
+    [ "https://i.imgur.com/pmdjfxu", "https://i.imgur.com/uv0mMRV"],
+    [ "https://i.imgur.com/uv0mMRV", "https://i.imgur.com/cE7YZ3L"],
+    [ "https://i.imgur.com/cE7YZ3L", "https://i.imgur.com/oyk2ZwH"],
+    [ "https://i.imgur.com/uxw6S5D", "https://i.imgur.com/IoL5BHz"],
+    [ "https://i.imgur.com/H1Xrzxw", "https://i.imgur.com/BB48p9Q"],
+    [ "https://i.imgur.com/MQDsVg9", "https://i.imgur.com/sE5Iasm"],
+    [ "https://i.imgur.com/2UujxIG", "https://i.imgur.com/pCuo4XJ"],
+    [ "https://i.imgur.com/9hiaoWd", "https://i.imgur.com/RqlC8ZP"],
+    [ "https://i.imgur.com/5xnsvD8", "https://i.imgur.com/PztVF5L"],
+    [ "https://i.imgur.com/PztVF5L", "https://i.imgur.com/4hnimN9"],
+    [ "https://i.imgur.com/wgs13CF", "https://i.imgur.com/5iTl68l"],
+    [ "https://i.imgur.com/KZwtr5W", "https://i.imgur.com/XOC05vn"]   //volcano 
+];
 
 
 exports.spirits = spirits;
 exports.emote = emote;
 exports.adversary = adversary;
 exports.help = help;
+exports.panel = panel;
 
 
 

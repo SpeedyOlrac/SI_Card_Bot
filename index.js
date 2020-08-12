@@ -153,13 +153,11 @@ bot.on('message', msg =>{
             }
 
             if(found){
-                var website = "https://raw.githubusercontent.com/SpeedyOlrac/SI_Card_Bot/master/SpiritPanelsSmall/";
-
                 if(args[1].toLowerCase() != 'back'){
-                    msg.channel.send(website + target.replace(/\s/g, '') +"Panel.jpg.");
+                    msg.channel.send(Names.panel[0]);
                 }
                 if(args[1].toLowerCase() != 'front' ){
-                    msg.channel.send(website + target.replace(/\s/g, '') +"Panel1.jpg."); 
+                    msg.channel.send(Names.panel[0]); 
                 }
             }
             else{
@@ -194,7 +192,6 @@ function cleanInput(args){
     card_name = card_name.replace("-", "");
     card_name = card_name.replace("\'", "");
     return card_name;
-
 }
 
 //Method to randomize spirit and adversaries
@@ -220,17 +217,15 @@ function Picking(selection, spirit, diffmin = 0, diffmax = 11){
         else{
             level = n;
         }
-
         let diff = n + 2;
         let answer = Names.adversary[name][0] +
-                        " " + level + " (diffculty " + Names.adversary[name][diff] + ")";
+                    " " + level + " (diffculty " + Names.adversary[name][diff] + ")";
         return [answer, Names.adversary[name][1] ];
     }
     else {
         msg.channel.send("Do you want a random [spirit] or [adversary]?");
         return;
         }
-
 } 
 
 bot.login();
