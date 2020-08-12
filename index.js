@@ -17,7 +17,7 @@ const Spirit = require('./Names.js');
 
 */
 
-//const PREFIX = "!" ;
+const PREFIX = "!" ;
 
 bot.on('ready', () => {
 
