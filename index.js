@@ -154,10 +154,10 @@ bot.on('message', msg =>{
 
             if(found){
                 if(args[1].toLowerCase() != 'back'){
-                    msg.channel.send(Names.panel[s][0]);
+                    msg.channel.send(Names.panel[target][0]);
                 }
                 if(args[1].toLowerCase() != 'front' ){
-                    msg.channel.send(Names.panel[s][1]); 
+                    msg.channel.send(Names.panel[target][1]); 
                 }
             }
             else{
