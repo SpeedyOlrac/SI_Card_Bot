@@ -223,7 +223,8 @@ function getCardName(input, availableNames)
 
   for(var name of availableNames)
   {
-    var distance = levenshtein(target, name);
+    var sizeDiff = name.length > target.length ? name.length - target.length : 0;
+    var distance = levenshtein(target, name) - (sizeDiff * 0.8);
     if(distance < closestDistance){
       closestDistance = distance;
       result = name;
