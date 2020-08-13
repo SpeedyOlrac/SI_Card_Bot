@@ -65,8 +65,8 @@ bot.on('message',async(msg) =>{
                 msg.channel.send(Names.sHelp);
                 break;
             }
-
-            var site_name = "https://sick.oberien.de/?query=" + cleanInput(args).replace(/,/g, "%20");
+            args.shift();
+            var site_name = "https://sick.oberien.de/?query=" + args.toString().replace(/,/g, "%20");
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
             }
@@ -215,14 +215,13 @@ async function UrlExists(url) {
     }));
 }
 
-function getCardName(args, availableNames){
+function getCardName(input, availableNames)
+{
   var result = null;
   var closestDistance = 999;
   for(var name of availableNames)
   {
-
-    var distance = levenshtein(cleanInput(args), name);
-
+    var distance = levenshtein(cleanInput(input), name);
     if(distance < closestDistance){
       closestDistance = distance;
       result = name;
@@ -242,15 +241,12 @@ function cleanInput(args){
 //Method to randomize spirit and adversaries
 function Picking(selection, spirit, diffmin = 0, diffmax = 11){
     if(selection == 'spirit'){
-
-
         let n = Math.floor(Math.random() * Names.spirits.length);
         let answer = [Names.spirits[n], Names.emote[n]];
         return answer;
     }
 
     else if(selection == 'adversary'){
-        
         // adversary is [name, escaltion diff, diff 1 ...]
 
         let name = Math.floor(Math.random() * Names.adversary.length)
