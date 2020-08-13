@@ -215,13 +215,14 @@ async function UrlExists(url) {
     }));
 }
 
-function getCardName(input, availableNames)
-{
+function getCardName(args, availableNames){
   var result = null;
   var closestDistance = 999;
   for(var name of availableNames)
   {
-    var distance = levenshtein(cleanInput(input), name);
+
+    var distance = levenshtein(cleanInput(args), name);
+
     if(distance < closestDistance){
       closestDistance = distance;
       result = name;
