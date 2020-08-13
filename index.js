@@ -221,7 +221,7 @@ function getCardName(input, availableNames)
   var closestDistance = 999;
   for(var name of availableNames)
   {
-    var distance = levenshtein(input.toString.replace(",", " "), name);
+    var distance = levenshtein(cleanInput(input), name);
     if(distance < closestDistance){
       closestDistance = distance;
       result = name;
