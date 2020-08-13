@@ -12,9 +12,8 @@ const levenshtein = require('js-levenshtein');
     Desciption: THis bot is made to help spirit island card and spirit panel look ups.
         Now has random Spirit and adversary fuctions.
         Creates link to the Spirit ISland FAQ page.
-
-
-    Version 1.2
+        Added a better search
+    Version 1.3
 
 */
 
