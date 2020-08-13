@@ -4,7 +4,8 @@ const bot = new Discord.Client();
 const fetch = require("node-fetch");
 const to = require('await-to-js').default;
 const Names = require('./Names');
-
+const ImageNames = requires('./ImageNames');
+const levenshtein = require('js-levenshtein');
 
 /*
     Author: Carlo I Gonzalez "SpeedyOlrac"
@@ -62,7 +63,7 @@ bot.on('message', msg =>{
         // Returns an error is a 404 page is returned
         case 'card' :
         case 'power':
-            var site_name = "https://sick.oberien.de/imgs/powers/" + cleanInput(args).replace(/,/g, '_') + '.webp';
+            var site_name = "https://sick.oberien.de/imgs/powers/" + getCardName(args, ImageNames.power) + '.webp';
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
             }
@@ -74,7 +75,7 @@ bot.on('message', msg =>{
         //Looks up the SicK website using inputed name.Correct name returns a website
         // Returns an error is a 404 page is returned
         case 'event':
-            var site_name = "https://sick.oberien.de/imgs/events/" + cleanInput(args).replace(/,/g, '_') + '.webp';
+            var site_name = "https://sick.oberien.de/imgs/events/" + getCardName(args, ImageNames.event) + '.webp';
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
             }
@@ -86,7 +87,7 @@ bot.on('message', msg =>{
          //Looks up the SicK website using inputed name. Correct name returns a website
          //Returns an error is a 404 page is returned
         case 'fear':
-            var site_name = "https://sick.oberien.de/imgs/fears/" + cleanInput(args).replace(/,/g, '_') + '.webp';
+            var site_name = "https://sick.oberien.de/imgs/fears/" + getCardName(args, ImageNames.fear) + '.webp';
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
             }
@@ -186,6 +187,21 @@ async function UrlExists(url) {
         }
         return true;
     }));
+}
+
+function getCardName(input, availableNames)
+{
+  var result = null;
+  var closestDistance = 999;
+  for(var name of availableNames)
+  {
+    var distance = levenshtein(input, name);
+    if(distance < closestDistance){
+      closestDistance = distance;
+      result = name;
+    }
+  }
+  return result;
 }
 
 //modify text so it fuction can prosses it
