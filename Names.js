@@ -104,9 +104,44 @@ var panel = [
     [ "https://imgur.com/KZwtr5W", "https://imgur.com/XOC05vn"]   //volcano 
 ];
 
-
 var role ="React to this message with the :FlagBlank: emoji to be assigned \
      the @LFG Role and be notified of games in #looking-for-a-game";
+
+var unqiues =[
+    "Lightning's Boon",
+    "Harbingers of the Lightning",
+    "Flash Floods",    
+    "Wash Away",   
+    "Boon of Vigor",    
+    "River's Bounty",   
+    "Concealing Shadows",
+    "Favors Called Due", 
+    "Mantle of Dread",
+    "Crops Wither and Fade",   
+    "Guard the Healing Land",    
+    "A Year of Perfect Stillness"   
+    "Rituals of Destruction",   
+    "Draw of the Fruitful Earth",    
+    "Manifestation of Power and Glory", 
+    "Words of Warning",  
+    "Sudden Ambush",
+    "Voice of Thunder", 
+    "Call of the Deeps", 
+    "Grasping Tide"   
+    "Swallow the Land-Dwellers", 
+    "Tidal Boon",  
+    "Predatory Nightmares", 
+    "Dread Apparitions",   
+    "Call on Midnight's Dreams",  
+    "Dreams of the Dahan",  
+    "Overgrow in a Night",   
+    "Gift of Proliferation"   
+    "Fields Choked with Growth",  
+    "Stem the Flow of Fresh Water"
+    ];
+
+//  (([^"]*), )
+
 
 exports.spirits = spirits;
 exports.emote = emote;
@@ -114,6 +149,7 @@ exports.adversary = adversary;
 exports.help = help;
 exports.panel = panel;
 exports.role = role;
+exports.unqiues = unqiues;
 
 
 
