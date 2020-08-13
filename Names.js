@@ -109,14 +109,13 @@ var role ="React to this message with the :FlagBlank: emoji to be assigned \
 
      //  (([^"]*), )
 
-
 exports.spirits = spirits;
 exports.emote = emote;
 exports.adversary = adversary;
 exports.help = help;
 exports.panel = panel;
 exports.role = role;
-exports.unqiues = unqiues;
+//exports.unqiues = unqiues;
 
 
 
