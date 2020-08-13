@@ -61,7 +61,7 @@ bot.on('message', msg =>{
         // Returns an error is a 404 page is returned
         case 'card' :
         case 'power':
-            var site_name = "https://sick.oberien.de/imgs/powers/" + cleanInput(args) + '.webp'; //getCardName(args, ImageNames.power)
+            var site_name = "https://sick.oberien.de/imgs/powers/" + cleanInput(args).replace(/,/g, '_') + '.webp'; //getCardName(args, ImageNames.power)
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
             }
@@ -73,7 +73,7 @@ bot.on('message', msg =>{
         //Looks up the SicK website using inputed name.Correct name returns a website
         // Returns an error is a 404 page is returned
         case 'event':
-            var site_name = "https://sick.oberien.de/imgs/events/" + cleanInput(args) + '.webp'; //getCardName(args, ImageNames.event)
+            var site_name = "https://sick.oberien.de/imgs/events/" + cleanInput(args).replace(/,/g, '_') + '.webp'; //getCardName(args, ImageNames.event)
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
             }
@@ -85,7 +85,7 @@ bot.on('message', msg =>{
          //Looks up the SicK website using inputed name. Correct name returns a website
          //Returns an error is a 404 page is returned
         case 'fear':
-            var site_name = "https://sick.oberien.de/imgs/fears/" + cleanInput(args) + '.webp'; //getCardName(args, ImageNames.fear) 
+            var site_name = "https://sick.oberien.de/imgs/fears/" + cleanInput(args).replace(/,/g, '_') + '.webp'; //getCardName(args, ImageNames.fear) 
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
             }
