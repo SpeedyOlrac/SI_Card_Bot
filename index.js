@@ -22,7 +22,6 @@ const PREFIX = "-" ;
 bot.on('ready', () => {
 
     console.log('This bot is online');
-    console.log(Names.spirits);
 });
 
 bot.on('message', msg =>{
@@ -62,7 +61,7 @@ bot.on('message', msg =>{
         // Returns an error is a 404 page is returned
         case 'card' :
         case 'power':
-            var site_name = "https://sick.oberien.de/imgs/powers/" + getCardName(args, ImageNames.power) + '.webp';
+            var site_name = "https://sick.oberien.de/imgs/powers/" + cleanInput(args) + '.webp'; //getCardName(args, ImageNames.power)
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
             }
@@ -74,7 +73,7 @@ bot.on('message', msg =>{
         //Looks up the SicK website using inputed name.Correct name returns a website
         // Returns an error is a 404 page is returned
         case 'event':
-            var site_name = "https://sick.oberien.de/imgs/events/" + getCardName(args, ImageNames.event) + '.webp';
+            var site_name = "https://sick.oberien.de/imgs/events/" + cleanInput(args) + '.webp'; //getCardName(args, ImageNames.event)
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
             }
@@ -86,7 +85,7 @@ bot.on('message', msg =>{
          //Looks up the SicK website using inputed name. Correct name returns a website
          //Returns an error is a 404 page is returned
         case 'fear':
-            var site_name = "https://sick.oberien.de/imgs/fears/" + getCardName(args, ImageNames.fear) + '.webp';
+            var site_name = "https://sick.oberien.de/imgs/fears/" + cleanInput(args) + '.webp'; //getCardName(args, ImageNames.fear) 
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
             }
@@ -240,7 +239,6 @@ function Picking(selection, spirit, diffmin = 0, diffmax = 11){
         return [answer, Names.adversary[name][1] ];
     }
     else {
-        msg.channel.send("Do you want a random [spirit] or [adversary]?");
         return;
         }
 } 
