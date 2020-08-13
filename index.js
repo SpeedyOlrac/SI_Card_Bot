@@ -18,20 +18,39 @@ const levenshtein = require('js-levenshtein');
 */
 
 const PREFIX = "-" ;
+var LFGRole = "";
 
 bot.on('ready', () => {
 
     console.log('This bot is online');
 });
 
-bot.on('message', msg =>{
+/*
+bot.on('messageReactionAdd', async(reaction, user) => {
+    console.log(reaction);
+
+    let applyRole = async () => {
+        let emojiName = reaction.emoji.name;
+        let role = reaction.message.guild.roles
+
+    }
+    
+    if (reaction.message.partial){
+        let m = await reaction.message.fetch
+    }
+    else{
+
+    }
+});
+*/
+
+bot.on('message',async(msg) =>{
 
     //Checks if using the Correct Prefix, might have to change to a - oneday
 
     if(!msg.content.startsWith(PREFIX) ){ return;}
 
     let args = msg.content.substring(PREFIX.length).split(" ");
-
 
     switch(args[0]){
 
@@ -55,13 +74,12 @@ bot.on('message', msg =>{
                 ms.channel.send("Incorrect Syntax, try !search help");
             }
             break;
-            
         
         //Looks up the SicK website using inputed name. Correct name returns a website
         // Returns an error is a 404 page is returned
         case 'card' :
         case 'power':
-            var site_name = "https://sick.oberien.de/imgs/powers/" + cleanInput(args).replace(/,/g, '_') + '.webp'; //getCardName(args, ImageNames.power)
+            var site_name = "https://sick.oberien.de/imgs/powers/" + getCardName(args, ImageNames.power)  + '.webp'; //cleanInput(args).replace(/,/g, '_')
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
             }
@@ -73,7 +91,7 @@ bot.on('message', msg =>{
         //Looks up the SicK website using inputed name.Correct name returns a website
         // Returns an error is a 404 page is returned
         case 'event':
-            var site_name = "https://sick.oberien.de/imgs/events/" + cleanInput(args).replace(/,/g, '_') + '.webp'; //getCardName(args, ImageNames.event)
+            var site_name = "https://sick.oberien.de/imgs/events/" + getCardName(args, ImageNames.event) + '.webp'; //
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
             }
@@ -85,7 +103,7 @@ bot.on('message', msg =>{
          //Looks up the SicK website using inputed name. Correct name returns a website
          //Returns an error is a 404 page is returned
         case 'fear':
-            var site_name = "https://sick.oberien.de/imgs/fears/" + cleanInput(args).replace(/,/g, '_') + '.webp'; //getCardName(args, ImageNames.fear) 
+            var site_name = "https://sick.oberien.de/imgs/fears/" + getCardName(args, ImageNames.fear)  + '.webp'; //
             if(UrlExists(site_name)){
                 msg.channel.send(site_name);
             }
@@ -164,9 +182,19 @@ bot.on('message', msg =>{
             else{
                 msg.channel.send(target);
             }
+            break;
+        
+
+        case 'rolebot':
+            if (args[1] == 'number'){
+                let LFGRole = args[1];
+                return;
+            }
+
+            message.member.roles.add(LFGRole);
 
             break;
-    }});
+}});
 
 
 // Async website check
@@ -192,7 +220,9 @@ function getCardName(args, availableNames){
   var closestDistance = 999;
   for(var name of availableNames)
   {
+
     var distance = levenshtein(cleanInput(args), name);
+
     if(distance < closestDistance){
       closestDistance = distance;
       result = name;
@@ -206,7 +236,7 @@ function cleanInput(args){
 
     args.shift();
     var card_name = args.toString().toLowerCase();
-    return card_name.replace("-", "").replace("\'", "");
+    return card_name.replace("-", "").replace("\'", "").replace(",", "_");
 }
 
 //Method to randomize spirit and adversaries
