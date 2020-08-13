@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 const fetch = require("node-fetch");
 const to = require('await-to-js').default;
 const Names = require('./Names');
-const ImageNames = requires('./ImageNames');
+const ImageNames = require('./ImageNames');
 const levenshtein = require('js-levenshtein');
 
 /*
