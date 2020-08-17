@@ -19,31 +19,97 @@ const levenshtein = require('js-levenshtein');
 
 const PREFIX = "-" ;
 var LFGRole = "";
+var roleID = "<@&743228206806728766>";
+var messageID = '743535158795173898';
+var emojiID = "<:FlagBlank:742199330018164776>";
 
 bot.on('ready', () => {
 
     console.log('This bot is online');
 });
-
-/*
-bot.on('messageReactionAdd', async(reaction, user) => {
-    console.log(reaction);
-
+ 
+client.on('messageReactionAdd', async (reaction, user) => {
+    
     let applyRole = async () => {
         let emojiName = reaction.emoji.name;
-        let role = reaction.message.guild.roles
-
+        //let role = reaction.message.guild.roles.find(role => role.name.toLowerCase() === emojiName.toLowerCase());
+        let member = reaction.message.guild.members.find(member => member.id === user.id);
+        try {
+            if(roleID && member) {
+                console.log("Role and member found.");
+                await member.roles.add(roleID);
+                console.log("Done.");
+            }
+        }
+        catch(err) {
+            console.log(err);
+        }
     }
-    
-    if (reaction.message.partial){
-        let m = await reaction.message.fetch
+    if(reaction.message.partial)
+    {
+        try {
+            let msg = await reaction.message.fetch(); 
+            console.log(msg.id);
+            if(msg.id === messageID)
+            {
+                console.log("Cached")
+                applyRole();
+            }
+        }
+        catch(err) {
+            console.log(err);
+        }
     }
-    else{
-
+    else 
+    {
+        console.log("Not a partial.");
+        if(reaction.message.id === messageID) {
+            console.log(true);
+            applyRole();
+        }
     }
 });
-*/
 
+client.on('messageReactionRemove', async (reaction, user) => {
+    let removeRole = async () => {
+        if ( reaction.emoji.name != emojiID){ return };
+        //let role = reaction.message.guild.roles.find(role => role.name.toLowerCase() === emojiName.toLowerCase());
+        let member = reaction.message.guild.members.find(member => member.id === user.id);
+        try {
+            if(roleID && member) {
+                console.log("Role and member found.");
+                await member.roles.remove(roleID);
+                console.log("Done.");
+            }
+        }
+        catch(err) {
+            console.log(err);
+        }
+    }
+    if(reaction.message.partial)
+    {
+        try {
+            let msg = await reaction.message.fetch(); 
+            console.log(msg.id);
+            if(msg.id === messageID)
+            {
+                console.log("Cached")
+                removeRole();
+            }
+        }
+        catch(err) {
+            console.log(err);
+        }
+    }
+    else 
+    {
+        console.log("Not a partial.");
+        if(reaction.message.id === messageID) {
+            console.log(true);
+            removeRole();
+        }
+    }
+})
 bot.on('message',async(msg) =>{
 
     //Checks if using the Correct Prefix, might have to change to a - oneday

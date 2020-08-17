@@ -89,9 +89,9 @@ var panel = [
     [ "https://imgur.com/yXE6oHw", "https://imgur.com/WLcU0w9"],
     [ "https://imgur.com/OmSNTeL", "https://imgur.com/wGPod8z"],
     [ "https://imgur.com/RZh8Y8g", "https://imgur.com/XIG39qe"],
-    [ "https://imgur.com/rrLWF5o", "https://imgur.com/rrLWF5o"],
+    [ "https://imgur.com/rrLWF5o", "https://imgur.com/UVEIJfA"],
     [ "https://imgur.com/pmdjfxu", "https://imgur.com/uv0mMRV"],
-    [ "https://imgur.com/uv0mMRV", "https://imgur.com/cE7YZ3L"],
+    [ "https://imgur.com/PgT7Kyj", "https://imgur.com/cE7YZ3L"],
     [ "https://imgur.com/cE7YZ3L", "https://imgur.com/oyk2ZwH"],
     [ "https://imgur.com/uxw6S5D", "https://imgur.com/IoL5BHz"],
     [ "https://imgur.com/H1Xrzxw", "https://imgur.com/BB48p9Q"],
@@ -99,7 +99,7 @@ var panel = [
     [ "https://imgur.com/2UujxIG", "https://imgur.com/pCuo4XJ"],
     [ "https://imgur.com/9hiaoWd", "https://imgur.com/RqlC8ZP"],
     [ "https://imgur.com/5xnsvD8", "https://imgur.com/PztVF5L"],
-    [ "https://imgur.com/PztVF5L", "https://imgur.com/4hnimN9"],
+    [ "https://imgur.com/eZbTaHA", "https://imgur.com/4hnimN9"],
     [ "https://imgur.com/wgs13CF", "https://imgur.com/5iTl68l"],
     [ "https://imgur.com/KZwtr5W", "https://imgur.com/XOC05vn"]   //volcano 
 ];
