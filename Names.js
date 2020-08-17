@@ -64,8 +64,11 @@ var adversary = [
 
 var help = "List of commands: \
     \n -search [search words]\
-    \n -card [card name], !power [card name] \
-    \n -faqs (search words), \
+    \n -card [card name], -power [card name] \
+    \n -minor [card name] \
+    \n -major [card name] \
+    \n -unique [card name] \
+    \n -faqs (search words) \
     \n -event [event name] \
     \n -fear [fear name] \
     \n -random [spirit/adversary]   \

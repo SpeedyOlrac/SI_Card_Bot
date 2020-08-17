@@ -137,7 +137,7 @@ bot.on('message',async(msg) =>{
                 msg.channel.send(site_name);
             }
             else{
-                ms.channel.send("Incorrect Syntax, try !search help");
+                msg.channel.send("Incorrect Syntax, try !search help");
             }
             break;
         
@@ -145,39 +145,38 @@ bot.on('message',async(msg) =>{
         // Returns an error is a 404 page is returned
         case 'card' :
         case 'power':
-            var site_name = "https://sick.oberien.de/imgs/powers/" + getCardName(args, ImageNames.power)  + '.webp'; //cleanInput(args).replace(/,/g, '_')
-            if(UrlExists(site_name)){
-                msg.channel.send(site_name);
-            }
-            else{
-                msg.channel.send("Incorrect name, try using !search");
-            }
+            sendCardLink(msg, args, ImageNames.power, "https://sick.oberien.de/imgs/powers/");
             break;
             
         //Looks up the SicK website using inputed name.Correct name returns a website
         // Returns an error is a 404 page is returned
         case 'event':
-            var site_name = "https://sick.oberien.de/imgs/events/" + getCardName(args, ImageNames.event) + '.webp'; //
-            if(UrlExists(site_name)){
-                msg.channel.send(site_name);
-            }
-            else{
-                msg.channel.send("Incorrect name, try using !search");
-            }
+            sendCardLink(msg, args, ImageNames.event, "https://sick.oberien.de/imgs/events/");
             break;
         
-         //Looks up the SicK website using inputed name. Correct name returns a website
-         //Returns an error is a 404 page is returned
+        //Looks up the SicK website using inputed name. Correct name returns a website
+        //Returns an error is a 404 page is returned
         case 'fear':
-            var site_name = "https://sick.oberien.de/imgs/fears/" + getCardName(args, ImageNames.fear)  + '.webp'; //
-            if(UrlExists(site_name)){
-                msg.channel.send(site_name);
-            }
-            else{
-                msg.channel.send("Incorrect name, try using !search");
-            }
+            sendCardLink(msg, args, ImageNames.fear, "https://sick.oberien.de/imgs/fears/");
             break;
             
+        //Looks up the SicK website using inputed name.Correct name returns a website
+        // Returns an error is a 404 page is returned
+        case 'minor':
+            sendCardLink(msg, args, ImageNames.minor, "https://sick.oberien.de/imgs/powers/");
+            break;
+
+        //Looks up the SicK website using inputed name.Correct name returns a website
+        // Returns an error is a 404 page is returned
+        case 'major':
+            sendCardLink(msg, args, ImageNames.major, "https://sick.oberien.de/imgs/powers/");
+            break;
+        
+        //Looks up the SicK website using inputed name.Correct name returns a website
+        // Returns an error is a 404 page is returned
+        case 'unique':
+            sendCardLink(msg, args, ImageNames.unique, "https://sick.oberien.de/imgs/powers/");
+            break;
 
         //Look up on the faq, will accpect anything. Returns website search. 
         case 'faqs':
@@ -262,6 +261,16 @@ bot.on('message',async(msg) =>{
             break;
 }});
 
+
+function sendCardLink(msg, input, availableNames, basePath)
+{
+  var cardName = getCardName(input, availableNames);
+  if(cardName){
+    msg.channel.send(basePath + cardName  + '.webp');
+  }else{
+    msg.channel.send("Incorrect name, try using !search");
+  }
+}
 
 // Async website check
 async function UrlExists(url) {
