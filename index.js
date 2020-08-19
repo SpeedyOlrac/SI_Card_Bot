@@ -297,7 +297,7 @@ async function UrlExists(url) {
             return false;
         }
         return true;
-    }));
+    }))
 }
 
 function getCardName(input, availableNames)
