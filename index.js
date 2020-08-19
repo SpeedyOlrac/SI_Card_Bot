@@ -6,6 +6,9 @@ const to = require('await-to-js').default;
 const Names = require('./Names');
 const ImageNames = require('./ImageNames');
 const levenshtein = require('js-levenshtein');
+const fs = require('fs');
+
+
 
 /*
     Author: Carlo I Gonzalez "SpeedyOlrac"
@@ -17,7 +20,14 @@ const levenshtein = require('js-levenshtein');
 
 */
 
-const PREFIX = "-" ;
+const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+
+for (const file of commandFiles) {
+	const command = require(`./commands/${file}`);
+    client.commands.set(command.name, command);
+}
+
+const PREFIX = "-" ; 
 var LFGRole = "";
 var roleID = "<@&743228206806728766>";
 var messageID = '743535158795173898';
@@ -121,6 +131,16 @@ bot.on('message', async msg =>{
     if(!msg.content.startsWith(PREFIX) ){ return;}
 
     let args = msg.content.substring(PREFIX.length).split(" ");
+    
+    if (bot.commands.has(command)) {
+
+        try {
+	        bot.commands.get(command).execute(message, args);
+        } catch (error) {
+	    console.error(error);
+	    message.reply('there was an error trying to execute that command!');
+    }
+ 
 
     switch(args[0]){
 
