@@ -227,11 +227,12 @@ bot.on('message', async msg =>{
               if(answer[1]){
                 
                 botMessage2 = await msg.channel.send(answer[1]);
+                /*
                 await delay(15);
                 msg.delete();
                 botMessage1.delete();
                 botMessage2.delete();
-
+                */
               }
             }
             else{
