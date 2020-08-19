@@ -289,7 +289,7 @@ bot.on('message', async msg =>{
             message.member.roles.add(LFGRole);
 
             break;
-    }})
+    }});
 
 function sendCardLink(msg, input, availableNames, basePath)
 {
@@ -374,7 +374,7 @@ function Picking(selection, spirit, diffmin = 0, diffmax = 11){
         }
 } 
 
-function delay(seconds) {
+async function delay(seconds) {
 
   return new Promise(res => setTimeout(res, seconds*1000));
 
