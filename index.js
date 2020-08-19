@@ -203,7 +203,7 @@ bot.on('message', async msg =>{
         case'random':
             if(args[1]){
               let answer = Picking(args[1], Names.spirits, args[2], args[3]);
-              botMessage1 = msg.channel.send(answer[0]);
+              botMessage1 = await msg.channel.send(answer[0]);
               if(answer[1]){
                 
                 botMessage2 = await msg.channel.send(answer[1]);
