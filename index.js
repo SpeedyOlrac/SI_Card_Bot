@@ -114,7 +114,7 @@ bot.on('messageReactionRemove', async (reaction, user) => {
 })
 */
 
-bot.on('message',async(msg) =>{
+bot.on('message',async msg =>{
 
     //Checks if using the Correct Prefix, might have to change to a - oneday
 
@@ -206,9 +206,9 @@ bot.on('message',async(msg) =>{
               botMessage1 = msg.channel.send(answer[0]);
               if(answer[1]){
                 botMessage2 = await msg.channel.send(answer[1]);
-                await delay(15);
-                botMessage1.delete({timeout: 15000}).catch(console.error);
-                botMessage2.delete({timeout: 15000}).catch(console.error);
+                //await delay(15);
+                await botMessage1.message.delete({timeout:15000}).catch(console.error);
+                await botMessage2.message.delete({timeout: 15000}).catch(console.error);
               }
             }
             else{
