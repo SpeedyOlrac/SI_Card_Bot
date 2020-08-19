@@ -8,6 +8,8 @@ const ImageNames = require('./ImageNames');
 const levenshtein = require('js-levenshtein');
 const fs = require('fs');
 
+bot.commands = new Discord.Collection();
+
 
 
 /*
@@ -24,7 +26,7 @@ const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('
 
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
-    client.commands.set(command.name, command);
+    bot.commands.set(command.name, command);
 }
 
 const PREFIX = "-" ; 
