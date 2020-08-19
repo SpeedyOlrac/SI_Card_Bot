@@ -136,11 +136,11 @@ bot.on('message', async msg =>{
 
         try {
 	        bot.commands.get(command).execute(message, args);
-        } catch (error) {
-	    console.error(error);
-	    message.reply('there was an error trying to execute that command!');
+            } catch (error) {
+            console.error(error);
+            message.reply('there was an error trying to execute that command!');
+        }
     }
- 
 
     switch(args[0]){
 
@@ -317,7 +317,7 @@ async function UrlExists(url) {
             return false;
         }
         return true;
-    }))
+    }));
 }
 
 function getCardName(input, availableNames)
