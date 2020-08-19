@@ -205,10 +205,12 @@ bot.on('message', async msg =>{
               let answer = Picking(args[1], Names.spirits, args[2], args[3]);
               botMessage1 = msg.channel.send(answer[0]);
               if(answer[1]){
-                botMessage2 = await msg.channel.send(answer[1]);
-                //await delay(15);
-                await botMessage1.message.delete({timeout:15000}).catch(console.error);
-                await botMessage2.message.delete({timeout: 15000}).catch(console.error);
+                
+                var botMessage = await msg.channel.send(answer[1]);
+                await delay(15);
+                msg.delete();
+                botMessage.delete();
+
               }
             }
             else{
@@ -354,7 +356,9 @@ function Picking(selection, spirit, diffmin = 0, diffmax = 11){
 } 
 
 function delay(seconds) {
-  new Promise(res => setTimeout(res, seconds*15000));
+
+  return new Promise(res => setTimeout(res, seconds*1000));
+
 } 
 
 bot.login();
