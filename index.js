@@ -289,8 +289,7 @@ bot.on('message', async msg =>{
             message.member.roles.add(LFGRole);
 
             break;
-}));
-}
+    }})
 
 function sendCardLink(msg, input, availableNames, basePath)
 {
@@ -305,8 +304,7 @@ function sendCardLink(msg, input, availableNames, basePath)
 // Async website check
 async function UrlExists(url) {
     
-    var status = await to(fetch(url)
-    .then(function(response){
+    var status = await to(fetch(url).then(function(response){
        console.log(response.headers.get('Content-Type'));
         if (response.headers.get('Content-Type') == "image/webp"){
             console.log("true, image");
