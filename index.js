@@ -114,7 +114,7 @@ bot.on('messageReactionRemove', async (reaction, user) => {
 })
 */
 
-bot.on('message',async(msg) =>{
+bot.on('message', async msg =>{
 
     //Checks if using the Correct Prefix, might have to change to a - oneday
 
@@ -203,12 +203,14 @@ bot.on('message',async(msg) =>{
         case'random':
             if(args[1]){
               let answer = Picking(args[1], Names.spirits, args[2], args[3]);
-              msg.channel.send(answer[0]);
+              botMessage1 = msg.channel.send(answer[0]);
               if(answer[1]){
+                
                 var botMessage = await msg.channel.send(answer[1]);
                 await delay(15);
                 msg.delete();
                 botMessage.delete();
+
               }
             }
             else{
@@ -354,7 +356,9 @@ function Picking(selection, spirit, diffmin = 0, diffmax = 11){
 } 
 
 function delay(seconds) {
+
   return new Promise(res => setTimeout(res, seconds*1000));
+
 } 
 
 bot.login();
