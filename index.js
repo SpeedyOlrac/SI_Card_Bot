@@ -205,10 +205,16 @@ bot.on('message',async(msg) =>{
               let answer = Picking(args[1], Names.spirits, args[2], args[3]);
               msg.channel.send(answer[0]);
               if(answer[1]){
-                var botMessage = await msg.channel.send(answer[1]);
-                await delay(15);
-                msg.delete();
-                botMessage.delete();
+                //var botMessage = await msg.channel.send(answer[1]);
+                //await delay(15);
+                //msg.delete();
+                //botMessage.delete();
+                (msg.channel.send(answer[1])).then(botMessage => {
+                  setTimeout(function(){
+                    msg.delete();
+                    botMessage.delete();
+                  }, 15000);
+                });
               }
             }
             else{
