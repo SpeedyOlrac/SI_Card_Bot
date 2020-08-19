@@ -202,11 +202,14 @@ bot.on('message',async(msg) =>{
         //Selects a random spirit or adversary. Return a name and a emote of the selection.
         case'random':
             if(args[1]){
-               let answer = Picking(args[1], Names.spirits, args[2], args[3]);
-               msg.channel.send(answer[0]);
-               if(answer[1]){
-                msg.channel.send(answer[1]);
-                }
+              let answer = Picking(args[1], Names.spirits, args[2], args[3]);
+              msg.channel.send(answer[0]);
+              if(answer[1]){
+                botMessage = await msg.channel.send(answer[1]);
+                await delay(15);
+                msg.delete();
+                botMessage.delete();
+              }
             }
             else{
                 msg.channel.send("Do you want a random [spirit] or [adversary]?")
@@ -348,6 +351,10 @@ function Picking(selection, spirit, diffmin = 0, diffmax = 11){
     else {
         return;
         }
+} 
+
+function delay(seconds) {
+  new Promise(res => setTimeout(res, seconds*1000));
 } 
 
 bot.login();
