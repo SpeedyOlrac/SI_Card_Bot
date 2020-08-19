@@ -289,8 +289,8 @@ bot.on('message', async msg =>{
             message.member.roles.add(LFGRole);
 
             break;
-}});
-
+}));
+}
 
 function sendCardLink(msg, input, availableNames, basePath)
 {
