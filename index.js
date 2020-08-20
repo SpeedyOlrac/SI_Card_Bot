@@ -123,10 +123,13 @@ client.on('messageReactionRemove', async (reaction, user) => {
     }
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 */
 
 bot.on('message', async msg =>{
 =======
+=======
+>>>>>>> parent of 13a2d8d... Reaction role slight update
 bot.on('message',async(msg) =>{
 >>>>>>> parent of 13a2d8d... Reaction role slight update
 
