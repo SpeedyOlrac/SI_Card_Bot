@@ -378,6 +378,7 @@ function Picking(selection, spirit, diffmin = 0, diffmax = 11){
         }
 } 
 
+/*
 async function delay(seconds) {
 
   return new Promise(res => setTimeout(res, seconds*1000));
@@ -385,3 +386,4 @@ async function delay(seconds) {
 } 
 
 bot.login();
+*/
