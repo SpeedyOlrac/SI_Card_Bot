@@ -231,6 +231,7 @@ bot.on('message', async msg =>{
                 
                 botMessage2 = await msg.channel.send(answer[1]);
                 /*
+                
                 await delay(15);
                 msg.delete();
                 botMessage1.delete();
@@ -379,6 +380,7 @@ function Picking(selection, spirit, diffmin = 0, diffmax = 11){
 } 
 
 /*
+
 async function delay(seconds) {
 
   return new Promise(res => setTimeout(res, seconds*1000));
