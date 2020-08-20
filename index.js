@@ -39,9 +39,8 @@ bot.on('ready', () => {
 
     console.log('This bot is online');
 });
-
-/*
-bot.on('messageReactionAdd', async (reaction, user) => {
+ 
+client.on('messageReactionAdd', async (reaction, user) => {
     
     let applyRole = async () => {
         let emojiName = reaction.emoji.name;
@@ -83,8 +82,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     }
 });
 
-
-bot.on('messageReactionRemove', async (reaction, user) => {
+client.on('messageReactionRemove', async (reaction, user) => {
     let removeRole = async () => {
         if ( reaction.emoji.name != emojiID){ return };
         //let role = reaction.message.guild.roles.find(role => role.name.toLowerCase() === emojiName.toLowerCase());
@@ -124,9 +122,13 @@ bot.on('messageReactionRemove', async (reaction, user) => {
         }
     }
 })
+<<<<<<< HEAD
 */
 
 bot.on('message', async msg =>{
+=======
+bot.on('message',async(msg) =>{
+>>>>>>> parent of 13a2d8d... Reaction role slight update
 
     //Checks if using the Correct Prefix, might have to change to a - oneday
 
