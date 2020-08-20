@@ -10,7 +10,7 @@ const fs = require('fs');
 
 bot.commands = new Discord.Collection();
 
-
+//test push
 
 /*
     Author: Carlo I Gonzalez "SpeedyOlrac"
