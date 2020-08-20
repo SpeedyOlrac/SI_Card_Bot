@@ -132,7 +132,8 @@ bot.on('message', async msg =>{
 
     if(!msg.content.startsWith(PREFIX) ){ return;}
 
-    let args = msg.content.substring(PREFIX.length).split(" ");
+    const args = message.content.slice(prefix.length).trim().split(/ +/);
+	const command = args.shift().toLowerCase();
     
     if (bot.commands.has(command)) {
 
