@@ -39,100 +39,10 @@ bot.on('ready', () => {
 
     console.log('This bot is online');
 });
- 
-client.on('messageReactionAdd', async (reaction, user) => {
-    
-    let applyRole = async () => {
-        let emojiName = reaction.emoji.name;
-        //let role = reaction.message.guild.roles.find(role => role.name.toLowerCase() === emojiName.toLowerCase());
-        let member = reaction.message.guild.members.find(member => member.id === user.id);
-        try {
-            if(roleID && member) {
-                console.log("Role and member found.");
-                await member.roles.add(roleID);
-                console.log("Done.");
-            }
-        }
-        catch(err) {
-            console.log(err);
-        }
-    }
-    if(reaction.message.partial)
-    {
-        try {
-            let msg = await reaction.message.fetch(); 
-            console.log(msg.id);
-            if(msg.id === messageID)
-            {
-                console.log("Cached")
-                applyRole();
-            }
-        }
-        catch(err) {
-            console.log(err);
-        }
-    }
-    else 
-    {
-        console.log("Not a partial.");
-        if(reaction.message.id === messageID) {
-            console.log(true);
-            applyRole();
-        }
-    }
-});
 
-client.on('messageReactionRemove', async (reaction, user) => {
-    let removeRole = async () => {
-        if ( reaction.emoji.name != emojiID){ return };
-        //let role = reaction.message.guild.roles.find(role => role.name.toLowerCase() === emojiName.toLowerCase());
-        let member = reaction.message.guild.members.find(member => member.id === user.id);
-        try {
-            if(roleID && member) {
-                console.log("Role and member found.");
-                await member.roles.remove(roleID);
-                console.log("Done.");
-            }
-        }
-        catch(err) {
-            console.log(err);
-        }
-    }
-    if(reaction.message.partial)
-    {
-        try {
-            let msg = await reaction.message.fetch(); 
-            console.log(msg.id);
-            if(msg.id === messageID)
-            {
-                console.log("Cached")
-                removeRole();
-            }
-        }
-        catch(err) {
-            console.log(err);
-        }
-    }
-    else 
-    {
-        console.log("Not a partial.");
-        if(reaction.message.id === messageID) {
-            console.log(true);
-            removeRole();
-        }
-    }
-})
-<<<<<<< HEAD
-<<<<<<< HEAD
-*/
 
 bot.on('message', async msg =>{
-=======
-=======
->>>>>>> parent of 13a2d8d... Reaction role slight update
-bot.on('message',async(msg) =>{
->>>>>>> parent of 13a2d8d... Reaction role slight update
-
+	
     //Checks if using the Correct Prefix, might have to change to a - oneday
 
     if(!msg.content.startsWith(PREFIX) ){ return;}
@@ -140,7 +50,7 @@ bot.on('message',async(msg) =>{
     const args = message.content.slice(prefix.length).trim().split(/ +/);
 	const command = args.shift().toLowerCase();
     
-    if (bot.commands.has(command)) {
+    /*if (bot.commands.has(command)) {
 
         try {
 	        bot.commands.get(command).execute(message, args);
@@ -149,7 +59,7 @@ bot.on('message',async(msg) =>{
             message.reply('there was an error trying to execute that command!');
         }
     }
-
+*/
     switch(args[0]){
 
         //Help, list of options bot can preform
@@ -384,13 +294,12 @@ function Picking(selection, spirit, diffmin = 0, diffmax = 11){
         }
 } 
 
-/*
 
-async function delay(seconds) {
+
+function delay(seconds) {
 
   return new Promise(res => setTimeout(res, seconds*1000));
 
 } 
 
 bot.login();
-*/
