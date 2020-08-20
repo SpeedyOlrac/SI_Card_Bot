@@ -41,7 +41,7 @@ bot.on('ready', () => {
 });
 
 
-bot.on('message', async msg =>{
+bot.on('message', msg =>{
 	
     //Checks if using the Correct Prefix, might have to change to a - oneday
 
