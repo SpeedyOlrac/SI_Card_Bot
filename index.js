@@ -72,10 +72,6 @@ function processMessage(msg)
   */
   switch(args[0]){
 
-    case 'error':
-      var test = messageDontExist.split(',');
-      break;
-
     //Help, list of options bot can preform
     case 'help':
         msg.channel.send(Names.help);
