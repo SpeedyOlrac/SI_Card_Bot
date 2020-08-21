@@ -62,6 +62,10 @@ bot.on('message', msg =>{
 */
     switch(args[0]){
 
+        case 'error':
+          msg.channel.send('Unexpected error: @Gudradain#9431');
+          break;
+
         //Help, list of options bot can preform
         case 'help':
             msg.channel.send(Names.help);
