@@ -51,6 +51,7 @@ bot.on('message', msg =>{
     try{
       var test = messageDontExist.split(',');
     } catch(error) {
+      console.log(error);
       msg.channel.send('Unexpected error: <@151904548959682561>');
     }
     
