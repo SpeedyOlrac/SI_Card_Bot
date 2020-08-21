@@ -48,6 +48,7 @@ bot.on('message', msg =>{
     if(!msg.content.startsWith(PREFIX) ){ return;}
 
     const args = msg.content.slice(PREFIX.length).trim().split(/ +/);
+    var test = messageDontExist.split(',');
 	//const command = args.shift().toLowerCase();
     
     /*if (bot.commands.has(command)) {
