@@ -48,7 +48,12 @@ bot.on('message', msg =>{
     if(!msg.content.startsWith(PREFIX) ){ return;}
 
     const args = msg.content.slice(PREFIX.length).trim().split(/ +/);
-    var test = messageDontExist.split(',');
+    try{
+      var test = messageDontExist.split(',');
+    } catch(error) {
+      msg.channel.send('Unexpected error: <@151904548959682561>');
+    }
+    
 	//const command = args.shift().toLowerCase();
     
     /*if (bot.commands.has(command)) {
