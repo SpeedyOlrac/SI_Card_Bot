@@ -1,6 +1,9 @@
 const fs = require('fs');
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const bot = new Discord.Client({
+	partials: ['MESSAGE', 'REACTION']
+});
+
 //const { prefix, token } = require('./config.json');
 bot.commands = new Discord.Collection();
 const PREFIX = "$";
@@ -28,26 +31,33 @@ bot.on('message', async msg => {
 	console.log(command);
 	
 	if (!bot.commands.has(command)) return console.log("command not in list");
-
 	try {
 		await bot.commands.get(command).execute(msg, args);
 	} catch (error) {
 		console.error(error);
 		msg.reply('there was an error trying to execute that command!');
 	}
+
 });
 
+
+
+const adminID = '176329826641117186';
+const messageID = '747213166026555433';
+const roleID = ['@&743228206806728766'];
+const emojiID = ['742199330018164776'];
 
 bot.on('messageReactionAdd', async (reaction, user) => {
     
     let applyRole = async () => {
-        let emojiName = reaction.emoji.name;
-        //let role = reaction.message.guild.roles.find(role => role.name.toLowerCase() === emojiName.toLowerCase());
+		let emojiName = reaction.emoji.name;
+		console.log(emojiName);
+        let role = roleID[emojiID.indexOf(emojiName)];
         let member = reaction.message.guild.members.find(member => member.id === user.id);
         try {
-            if(roleID && member) {
+            if(role && member) {
                 console.log("Role and member found.");
-                await member.roles.add(roleID);
+                await member.roles.add(role);
                 console.log("Done.");
             }
         }
