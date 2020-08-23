@@ -15,7 +15,8 @@ module.exports = {
 
         if(msg.author == adminID){
                 
-            (await msg.channel.send(roleMessage)).react(LFG);
+            (await msg.channel.send(roleMessage)).react('742199330018164776');
+            await msg.delete();
     }
 	},
 };
