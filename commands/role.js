@@ -10,12 +10,12 @@ module.exports = {
 	name: 'role',
 	description: 'adding a role',
 	public: true, //has to be true to show as a command
-	execute(msg, args) {
+	async execute(msg, args) {
 
         if(msg.author == adminID){
             var reactionMsg = msg.channel.send(roleMessage);
-            reactionMsg.react('<:FlagBlank:742199330018164776>');
-            msg.delete();
+            await reactionMsg.react('<:FlagBlank:742199330018164776>');
+            await msg.delete();
         }
 	},
 };
