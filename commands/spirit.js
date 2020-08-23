@@ -16,7 +16,7 @@ module.exports = {
             for( var s = 0; s < Names.spirits.length; s++){
                 var name = Names.spirits[s].split(" ");
                 for(var n = 0; n < name.length; n++){
-                    if (!found && args[l].length > 3 && name[n].toLowerCase() == list[l].toLowerCase()){                        
+                    if (!found && args[l].length > 3 && name[n].toLowerCase() == args[l].toLowerCase()){                        
                         target =  s;
                         found = true;
                         break ;//outer_loop;
