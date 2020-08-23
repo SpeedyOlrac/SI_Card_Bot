@@ -11,8 +11,6 @@
 */
 
 
-
-
 require('dotenv').config(); 
 const fs = require('fs');
 const Discord = require('discord.js');
@@ -50,7 +48,7 @@ bot.on('message', async msg => {
 		await bot.commands.get(command).execute(msg, args);
 	} catch (error) {
 		console.error(error);
-		msg.reply('there was an error trying to execute that command!');
+		//msg.reply('there was an error trying to execute that command!');
 	}
 });
 
