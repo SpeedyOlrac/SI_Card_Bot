@@ -2,6 +2,7 @@ const fetch = require("node-fetch");
 const to = require('await-to-js').default;
 const Names = require ('./Names.js')
 
+
 module.exports = {
 	name: 'spirit',
 	description: 'Event Search',
@@ -12,7 +13,7 @@ module.exports = {
         var found = false;
 
         outer_loop:
-        console.log(list.length + " " + Names.spirits.length);
+        //console.log(list.length + " " + Names.spirits.length);
         for(var l = 1; l < list.length; l++){
             for( var s = 0; s < Names.spirits.length; s++){
                 var name = Names.spirits[s].split(" ");
@@ -36,6 +37,5 @@ module.exports = {
         else{
             msg.channel.send(target);
         }
-        break;
     }
 }
