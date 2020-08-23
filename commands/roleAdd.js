@@ -1,7 +1,7 @@
 // can be used as template
 //save as command as commandName.js
 
-
+const adminID = '176329826641117186';
 
 module.exports = {
 	name: 'template',
