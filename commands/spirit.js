@@ -8,18 +8,17 @@ module.exports = {
 	description: 'Event Search',
 	public: true,
 	execute(msg, args) {
-        var list = args;
         var target = "Sorry could not find the spirit you where looking for.";
         var found = false;
 
         outer_loop:
         //console.log(list.length + " " + Names.spirits.length);
-        for(var l = 1; l < list.length; l++){
+        for(var l = 0; l < args.length; l++){
             for( var s = 0; s < Names.spirits.length; s++){
                 var name = Names.spirits[s].split(" ");
                 for(var n = 0; n < name.length; n++){
                     if (!found && list[l].length > 3 && name[n].toLowerCase() == list[l].toLowerCase()){                        
-                        target = s;
+                        target =  s;
                         found = true;
                         break ;//outer_loop;
                     } 
