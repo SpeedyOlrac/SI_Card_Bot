@@ -14,7 +14,7 @@ module.exports = {
 
         if(msg.author == adminID){
             var reactionMsg = msg.channel.send(roleMessage);
-            await reactionMsg.react('<:FlagBlank:742199330018164776>');
+            await reactionMsg.message.react('<:FlagBlank:742199330018164776>');
             await msg.delete();
         }
 	},
