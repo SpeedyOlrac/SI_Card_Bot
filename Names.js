@@ -62,17 +62,7 @@ var adversary = [
     ['Sweden',':flag_se:',  1, 2, 3, 5, 6, 7, 8 ]
 ];
 
-var help = "List of commands: \
-    \n -search [search words]\
-    \n -card [card name], -power [card name] \
-    \n -minor [card name] \
-    \n -major [card name] \
-    \n -unique [card name] \
-    \n -faqs (search words) \
-    \n -event [event name] \
-    \n -fear [fear name] \
-    \n -random [spirit/adversary]   \
-    \n -spirit (front/back) [keywords] ";
+var help = ;
 
 var sHelp = "Examples: \
     \n Gather Dahan, \"Dahan and\" major elements:plant \
@@ -81,7 +71,7 @@ var sHelp = "Examples: \
 
 
 var panel = [
-    [ "https://imgur.com/nlpGjjH", "https://imgur.com/iK9NTsz"],
+    [ "https://imgur.com/nlpGjjH", "https://imgur.com/iK9NTsz"], //Rampant
     [ "https://imgur.com/UxZyTv2", "https://imgur.com/VUOjO0v"], 
     [ "https://imgur.com/AJjfgOS", "https://imgur.com/CShexIA"],
     [ "https://imgur.com/owZAHJY", "https://imgur.com/JtdpxCr"],
@@ -91,11 +81,11 @@ var panel = [
     [ "https://imgur.com/PBwq5KE", "https://imgur.com/ZKAblG3"],
     [ "https://imgur.com/yXE6oHw", "https://imgur.com/WLcU0w9"],
     [ "https://imgur.com/OmSNTeL", "https://imgur.com/wGPod8z"],
-    [ "https://imgur.com/RZh8Y8g", "https://imgur.com/XIG39qe"],
+    [ "https://imgur.com/RZh8Y8g", "https://imgur.com/XIG39qe"],//many minds
     [ "https://imgur.com/rrLWF5o", "https://imgur.com/UVEIJfA"],
     [ "https://imgur.com/pmdjfxu", "https://imgur.com/uv0mMRV"],
     [ "https://imgur.com/PgT7Kyj", "https://imgur.com/cE7YZ3L"],
-    [ "https://imgur.com/cE7YZ3L", "https://imgur.com/oyk2ZwH"],
+    [ "https://imgur.com/FmVImnv", "https://imgur.com/oyk2ZwH"],
     [ "https://imgur.com/uxw6S5D", "https://imgur.com/IoL5BHz"],
     [ "https://imgur.com/H1Xrzxw", "https://imgur.com/BB48p9Q"],
     [ "https://imgur.com/MQDsVg9", "https://imgur.com/sE5Iasm"],

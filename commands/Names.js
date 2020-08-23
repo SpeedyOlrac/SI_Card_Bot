@@ -62,22 +62,6 @@ var adversary = [
     ['Sweden',':flag_se:',  1, 2, 3, 5, 6, 7, 8 ]
 ];
 
-var help = "List of commands: \
-    \n -search [search words]\
-    \n -card [card name], -power [card name] \
-    \n -minor [card name] \
-    \n -major [card name] \
-    \n -unique [card name] \
-    \n -faqs (search words) \
-    \n -event [event name] \
-    \n -fear [fear name] \
-    \n -random [spirit/adversary]   \
-    \n -spirit (front/back) [keywords] ";
-
-var sHelp = "Examples: \
-    \n Gather Dahan, \"Dahan and\" major elements:plant \
-    \n elements:earth, description:\"add 1 presence\", \
-    \n range:sacred range:>=2 cost:<5 target:!any";
 
 
 var panel = [
@@ -115,9 +99,9 @@ var role ="React to this message with the :FlagBlank: emoji to be assigned \
 exports.spirits = spirits;
 exports.emote = emote;
 exports.adversary = adversary;
-exports.help = help;
 exports.panel = panel;
 exports.role = role;
+
 //exports.unqiues = unqiues;
 
 

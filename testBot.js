@@ -1,4 +1,3 @@
-require('dotenv').config(); 
 const fs = require('fs');
 const Discord = require('discord.js');
 const bot = new Discord.Client();
@@ -38,4 +37,4 @@ bot.on('message', async msg => {
 	}
 });
 
-bot.login();
+bot.login('NzQ2NTExNzIwOTIyNzQyODg3.X0BZNw.IPVgZtd2FC2naBt4_XEAyxwIOhQ');
