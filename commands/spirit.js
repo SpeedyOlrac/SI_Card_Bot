@@ -25,10 +25,10 @@ module.exports = {
             }               
         }
         if(found){
-            if(args[0].toLowerCase() != 'back' || args[args.length -1].toLowerCase() != 'back'  ){
+            if(args[0].toLowerCase() != 'back' && args[args.length -1].toLowerCase() != 'back'  ){
                 msg.channel.send(Names.panel[target][0]);
             }
-            if(args[0].toLowerCase() != 'front' || args[args.length -1].toLowerCase() != 'front' ){
+            if(args[0].toLowerCase() != 'front' && args[args.length -1].toLowerCase() != 'front' ){
                 msg.channel.send(Names.panel[target][1]); 
             }
         }
