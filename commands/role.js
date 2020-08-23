@@ -5,6 +5,7 @@ const adminID = '176329826641117186';
 const roleMessage = "Please react to recieve the Following Roles: \
                 \n <:FlagBlank:742199330018164776> for LFG ";
 
+const LFG = '<:FlagBlank:742199330018164776>';
 
 module.exports = {
 	name: 'role',
@@ -13,9 +14,8 @@ module.exports = {
 	async execute(msg, args) {
 
         if(msg.author == adminID){
-            var reactionMsg = msg.channel.send(roleMessage);
-            await reactionMsg.message.react('<:FlagBlank:742199330018164776>');
-            await msg.delete();
-        }
+                
+            (await msg.channel.send(roleMessage)).react(LFG);
+    }
 	},
 };
