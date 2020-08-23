@@ -1,10 +1,26 @@
+/*
+    Author: Carlo I Gonzalez "SpeedyOlrac"
+    Desciption: THis bot is made to help spirit island card and spirit panel look ups.
+        Now has random Spirit and adversary fuctions.
+        Creates link to the Spirit ISland FAQ page.
+        Expan Search to other commands
+    Version 2.0
+
+    Additional work by Gudradain
+
+*/
+
+
+
+
 require('dotenv').config(); 
 const fs = require('fs');
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 //const { prefix, token } = require('./config.json');
 bot.commands = new Discord.Collection();
-const PREFIX = "$";
+
+const PREFIX = "-";
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
@@ -17,7 +33,7 @@ for (const file of commandFiles) {
 //console.log(bot.commands);
 
 bot.once('ready', () => {
-	console.log('Ready!');
+	console.log('This bot is online');
 });
 
 bot.on('message', async msg => {
