@@ -6,7 +6,7 @@ module.exports = {
 	description: 'Get a random spirit or adversaries',
 	public: true,
 	async execute(msg, args) {
-            console.log(Names.spirits);
+            //console.log(Names.spirits);
             if(args[0]){
               let answer = Picking(args[0], Names.spirits, args[1], args[2]);
               botMessage1 = msg.channel.send(answer[0]);
