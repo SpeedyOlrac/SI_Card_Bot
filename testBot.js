@@ -129,4 +129,7 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     }
 });
 
-bot.login('NzQ2NTExNzIwOTIyNzQyODg3.X0BZNw.swCP3JkBpusJ7eGOytK1AVNcc6A');
+bot.login();
+
+//'NzQ2NTExNzIwOTIyNzQyODg3.X0BZNw.
+//swCP3JkBpusJ7eGOytK1AVNcc6A'
