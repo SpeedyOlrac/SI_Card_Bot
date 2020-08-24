@@ -106,7 +106,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 });
 
 bot.on('messageReactionRemove', async (reaction, user) => {
-    if (!messageID.indexOf(reaction.message.id)) return;
+    if (!messageID.indexOf(reaction.message.id)) return reaction.message.id;
 
     let removeRole = async () => {
 		let emojiName = reaction.emoji.id;
