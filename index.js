@@ -56,9 +56,9 @@ bot.on('message', async msg => {
 
 
 const adminID = '176329826641117186';
-const messageID = ['747213166026555433', '747220369857052842'];
-const roleID = ['743228206806728766', '498865006297743362'];//
-const emojiID = ['742199330018164776', '411249545394126854'];
+const messageID = ['747213166026555433', '747220369857052842']; //747213166026555433
+const roleID = ['743228206806728766', '498865006297743362'];//743228206806728766
+const emojiID = ['742199330018164776', '411249545394126854'];//742199330018164776
 
 bot.on('messageReactionAdd', async (reaction, user) => {
     
@@ -142,5 +142,7 @@ bot.on('messageReactionRemove', async (reaction, user) => {
         }
     }
 });
+
+
 
 bot.login();
