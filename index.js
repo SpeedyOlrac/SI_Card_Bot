@@ -14,11 +14,11 @@
 require('dotenv').config(); 
 const fs = require('fs');
 const Discord = require('discord.js');
-const bot = new Discord.Client();
-//const { prefix, token } = require('./config.json');
-bot.commands = new Discord.Collection({
+bot.commands = new Discord.Collection();
+const bot = new Discord.Client({
     partials: ['MESSAGE', 'REACTION']
 });
+
 
 const PREFIX = "-";
 
