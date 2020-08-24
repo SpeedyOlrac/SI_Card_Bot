@@ -56,16 +56,16 @@ bot.on('message', async msg => {
 
 
 const adminID = '176329826641117186';
-const messageID = ['747517049433227327', '747220369857052842']; //747517049433227327
+const messageID = ['747517049433227327', '747220369857052842']; //747517049433227327 
 const roleID = ['743228206806728766', '498865006297743362'];//743228206806728766
 const emojiID = ['742199330018164776', '411249545394126854'];//742199330018164776
 
 bot.on('messageReactionAdd', async (reaction, user) => {
     
-    if (!messageID.indexOf(reaction.message.id)) return;
-
     let applyRole = async () => {
-		let emojiName = reaction.emoji.id;
+        if (!messageID.indexOf(reaction.message.id)) return;
+    
+        let emojiName = reaction.emoji.id;
 		let role = roleID[emojiID.indexOf(emojiName)];
 		let member = reaction.message.guild.members.cache.find(member => member.id === user.id);
         try {
@@ -106,10 +106,12 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 });
 
 bot.on('messageReactionRemove', async (reaction, user) => {
-    if (!messageID.indexOf(reaction.message.id)) return reaction.message.id;
-
+    
     let removeRole = async () => {
-		let emojiName = reaction.emoji.id;
+        if (!messageID.indexOf(reaction.message.id)) return reaction.message.id;
+
+    
+        let emojiName = reaction.emoji.id;
 		let role = roleID[emojiID.indexOf(emojiName)];
 		let member = reaction.message.guild.members.cache.find(member => member.id === user.id);
         try {
