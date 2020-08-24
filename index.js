@@ -67,7 +67,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 		let role = roleID[emojiID.indexOf(emojiName)];
 		let member = reaction.message.guild.members.cache.find(member => member.id === user.id);
         try {
-            
+
             if(role && member && messageID.indexOf(reaction.message.id)) {
                 console.log("Role and member found.");
                 await member.roles.add(role);
@@ -137,6 +137,7 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     else 
     {
         console.log("Not a partial.");
+        console.log(messageID.indexOf(reaction.message.id ) + " " + reaction.message.id)
         if(messageID.indexOf(reaction.message.id )) {
             console.log(true);
             removeRole();
