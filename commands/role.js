@@ -2,7 +2,7 @@
 //save as command as commandName.js
 
 const adminID = '176329826641117186';
-const roleMessage = "Please react to recieve the Following Roles: \
+const roleMessage = "Please react to recieve the role: \
                 \n <:FlagBlank:742199330018164776> for LFG ";
 
 const LFG = '742199330018164776';

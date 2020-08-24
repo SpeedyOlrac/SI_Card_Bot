@@ -41,19 +41,17 @@ bot.on('message', async msg => {
 });
 
 
-
 const adminID = '176329826641117186';
-const messageID = '747213166026555433';
-const roleID = ['@&743228206806728766'];
-const emojiID = ['742199330018164776'];
+const messageID = ['747213166026555433', '747220369857052842'];
+const roleID = ['743228206806728766', '498865006297743362'];//
+const emojiID = ['742199330018164776', '411249545394126854'];
 
 bot.on('messageReactionAdd', async (reaction, user) => {
     
     let applyRole = async () => {
-		let emojiName = reaction.emoji.name;
-		console.log(emojiName);
-        let role = roleID[emojiID.indexOf(emojiName)];
-        let member = reaction.message.guild.members.find(member => member.id === user.id);
+		let emojiName = reaction.emoji.id;
+		let role = roleID[emojiID.indexOf(emojiName)];
+		let member = reaction.message.guild.members.cache.find(member => member.id === user.id);
         try {
             if(role && member) {
                 console.log("Role and member found.");
@@ -83,23 +81,22 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     else 
     {
         console.log("Not a partial.");
-        if(reaction.message.id === messageID) {
+        if(messageID.indexOf(reaction.message.id )) {
             console.log(true);
             applyRole();
         }
     }
 });
 
-
 bot.on('messageReactionRemove', async (reaction, user) => {
     let removeRole = async () => {
-        if ( reaction.emoji.name != emojiID){ return };
-        //let role = reaction.message.guild.roles.find(role => role.name.toLowerCase() === emojiName.toLowerCase());
-        let member = reaction.message.guild.members.find(member => member.id === user.id);
+		let emojiName = reaction.emoji.id;
+		let role = roleID[emojiID.indexOf(emojiName)];
+		let member = reaction.message.guild.members.cache.find(member => member.id === user.id);
         try {
             if(roleID && member) {
                 console.log("Role and member found.");
-                await member.roles.remove(roleID);
+                await member.roles.remove(role);
                 console.log("Done.");
             }
         }
@@ -125,11 +122,11 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     else 
     {
         console.log("Not a partial.");
-        if(reaction.message.id === messageID) {
+        if(messageID.indexOf(reaction.message.id )) {
             console.log(true);
             removeRole();
         }
     }
-})
+});
 
-bot.login('NzQ2NTExNzIwOTIyNzQyODg3.X0BZNw.WR68O2qRCdEnLme2hrGLiGKfKHI');
+bot.login('NzQ2NTExNzIwOTIyNzQyODg3.X0BZNw.swCP3JkBpusJ7eGOytK1AVNcc6A');

@@ -4,7 +4,7 @@
         Now has random Spirit and adversary fuctions.
         Creates link to the Spirit ISland FAQ page.
         Expan Search to other commands
-    Version 2.0
+    Version 2.0.2 role bot
 
     Additional work by Gudradain
 
@@ -50,6 +50,95 @@ bot.on('message', async msg => {
 		console.error(error);
 		//msg.reply('there was an error trying to execute that command!');
 	}
+});
+
+
+const adminID = '176329826641117186';
+const messageID = ['747213166026555433', '747220369857052842'];
+const roleID = ['743228206806728766', '498865006297743362'];//
+const emojiID = ['742199330018164776', '411249545394126854'];
+
+bot.on('messageReactionAdd', async (reaction, user) => {
+    
+    let applyRole = async () => {
+		let emojiName = reaction.emoji.id;
+		let role = roleID[emojiID.indexOf(emojiName)];
+		let member = reaction.message.guild.members.cache.find(member => member.id === user.id);
+        try {
+            if(role && member) {
+                console.log("Role and member found.");
+                await member.roles.add(role);
+                console.log("Done.");
+            }
+        }
+        catch(err) {
+            console.log(err);
+        }
+    }
+    if(reaction.message.partial)
+    {
+        try {
+            let msg = await reaction.message.fetch(); 
+            console.log(msg.id);
+            if(msg.id === messageID)
+            {
+                console.log("Cached")
+                applyRole();
+            }
+        }
+        catch(err) {
+            console.log(err);
+        }
+    }
+    else 
+    {
+        console.log("Not a partial.");
+        if(messageID.indexOf(reaction.message.id )) {
+            console.log(true);
+            applyRole();
+        }
+    }
+});
+
+bot.on('messageReactionRemove', async (reaction, user) => {
+    let removeRole = async () => {
+		let emojiName = reaction.emoji.id;
+		let role = roleID[emojiID.indexOf(emojiName)];
+		let member = reaction.message.guild.members.cache.find(member => member.id === user.id);
+        try {
+            if(roleID && member) {
+                console.log("Role and member found.");
+                await member.roles.remove(role);
+                console.log("Done.");
+            }
+        }
+        catch(err) {
+            console.log(err);
+        }
+    }
+    if(reaction.message.partial)
+    {
+        try {
+            let msg = await reaction.message.fetch(); 
+            console.log(msg.id);
+            if(msg.id === messageID)
+            {
+                console.log("Cached")
+                removeRole();
+            }
+        }
+        catch(err) {
+            console.log(err);
+        }
+    }
+    else 
+    {
+        console.log("Not a partial.");
+        if(messageID.indexOf(reaction.message.id )) {
+            console.log(true);
+            removeRole();
+        }
+    }
 });
 
 bot.login();
