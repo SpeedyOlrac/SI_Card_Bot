@@ -98,7 +98,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     else 
     {
         console.log("Not a partial.");
-        if(messageID.indexOf(reaction.message.id )) {
+        if(messageID.indexOf(reaction.message.id ) != -1) {
             console.log(true);
             applyRole();
         }
