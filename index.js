@@ -63,8 +63,8 @@ const emojiID = ['742199330018164776', '411249545394126854'];//74219933001816477
 bot.on('messageReactionAdd', async (reaction, user) => {
     
     let applyRole = async () => {
-        if (messageID.indexOf(reaction.message.id) == -1 ) return;
-    
+        if (messageID.indexOf(reaction.message.id) == -1) return console.log('incorrect message: ' + reaction.message.id);
+
         let emojiName = reaction.emoji.id;
 		let role = roleID[emojiID.indexOf(emojiName)];
 		let member = reaction.message.guild.members.cache.find(member => member.id === user.id);
@@ -108,7 +108,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 bot.on('messageReactionRemove', async (reaction, user) => {
     
     let removeRole = async () => {
-        if (messageID.indexOf(reaction.message.id == -1)) return reaction.message.id;
+        if (messageID.indexOf(reaction.message.id) == -1) return console.log('incorrect message: ' + reaction.message.id);
 
     
         let emojiName = reaction.emoji.id;
@@ -144,7 +144,7 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     {
         console.log("Not a partial.");
         console.log(messageID.indexOf(reaction.message.id ) + " " + reaction.message.id)
-        if(messageID.indexOf(reaction.message.id )) {
+        if(messageID.indexOf(reaction.message.id != -1 )) {
             console.log(true);
             removeRole();
         }
