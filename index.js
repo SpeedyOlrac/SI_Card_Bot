@@ -63,7 +63,7 @@ const emojiID = ['742199330018164776', '411249545394126854'];//74219933001816477
 bot.on('messageReactionAdd', async (reaction, user) => {
     
     let applyRole = async () => {
-        if (!messageID.indexOf(reaction.message.id)) return;
+        if (messageID.indexOf(reaction.message.id) == -1 ) return;
     
         let emojiName = reaction.emoji.id;
 		let role = roleID[emojiID.indexOf(emojiName)];
@@ -108,7 +108,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 bot.on('messageReactionRemove', async (reaction, user) => {
     
     let removeRole = async () => {
-        if (!messageID.indexOf(reaction.message.id)) return reaction.message.id;
+        if (messageID.indexOf(reaction.message.id == -1)) return reaction.message.id;
 
     
         let emojiName = reaction.emoji.id;
