@@ -53,13 +53,14 @@ var spirits = [
 ];
 
 var adversary = [
-    ['Brandenburg-Prussia', '<:Prussia:741092407935893555>', 1, 2, 4, 6, 7, 9, 10  ],
-    ['England', ':england:', 1, 3, 4, 6, 7, 9, 10],
-    ['France (Plantation Colony)', '<:france:741093435028668558>', 2, 3, 5, 7, 8, 9, 10 ],
-    ['Hapsburg Dynasty', '<:hapsburg:741091437000654851> ', 2, 3, 5, 6, 8, 9, 10],
-    ['Russia', ':flag_ru:' , 1, 3, 4, 6, 7, 9, 11],
-    ['Scotland', ':scotland:',1, 4, 6, 7, 8, 10],
-    ['Sweden',':flag_se:',  1, 2, 3, 5, 6, 7, 8 ]
+    ['Brandenburg-Prussia', '<:FlagPrussia:742198907332853831>', 1, 2, 4, 6, 7, 9, 10  ],
+    ['England', '<:FlagEngland:742199440126771250>', 1, 3, 4, 6, 7, 9, 10],
+    ['France (Plantation Colony)', '<:FlagRussia:742201076362641408>', 2, 3, 5, 7, 8, 9, 10 ],
+    ['Hapsburg Dynasty', '<:FlagHabsburg:742194656556744814>', 2, 3, 5, 6, 8, 9, 10],
+    ['Russia', '<:FlagFrance:742199211340070955> ' , 1, 3, 4, 6, 7, 9, 11],
+    ['Scotland', '<:FlagScotland:742201184164773891>',1, 4, 6, 7, 8, 10],
+    ['Sweden','<:FlagSweden:742194408325382174>',  1, 2, 3, 5, 6, 7, 8 ]
+    //     
 ];
 
 
