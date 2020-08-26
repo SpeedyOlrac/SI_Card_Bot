@@ -39,7 +39,7 @@ var spirits = [
     '<:SpiritManyMinds:729608412580806698>',
     '<:SpiritOceans:729608424425390140>',
     '<:SpiritRivers:729608447913623552>',
-    '<:SpiritSnek:729608507388854292>',
+    '<:SpiritSnek:747558396705767424>',  
     '<:SpiritShadows:729608460378964059>',
     '<:SpiritFangs:729608010405773432>',
     '<:SpiritShifting:729608473028853770>',
@@ -60,7 +60,7 @@ var adversary = [
     ['Russia', '<:FlagFrance:742199211340070955> ' , 1, 3, 4, 6, 7, 9, 11],
     ['Scotland', '<:FlagScotland:742201184164773891>',1, 4, 6, 7, 8, 10],
     ['Sweden','<:FlagSweden:742194408325382174>',  1, 2, 3, 5, 6, 7, 8 ]
-    //     
+
 ];
 
 
