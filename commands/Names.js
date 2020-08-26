@@ -26,31 +26,32 @@ var spirits = [
  ];
 
  var emote = [
-    '<:SpiritRampant:729608434365759510>',
-    '<:SpiritBODAN:729607979317461042>',
-    '<:SpiritDownpour:729607988662370344>',
-    '<:SpiritFinder:729608181407416360>',
-    '<:SpiritFractured:729608364706889779>',
-    '<:SpiritTrickster:729608576334823485>',
-    '<:SpiritWildfire:729608618655219802>',
-    '<:SpiritKeeper:729608378783105105>',
-    '<:SpiritLightning:729608388958355516>',
-    '<:SpiritLure:729608402090590268>',
-    '<:SpiritManyMinds:729608412580806698>',
-    '<:SpiritOceans:729608424425390140>',
-    '<:SpiritRivers:729608447913623552>',
+    '<:SpiritRampant:747558393295929475>',
+    '<:SpiritBodan:747570910751621121>',
+    '<:SpiritDownpour:747558401638268999>',
+    '<:SpiritFinder:747558403810787359>',
+    '<:SpiritFractured:747558406318981191>',
+    '<:SpiritTrickster:747570905709936723>',
+    '<:SpiritWildfire:747558405282988103>',
+    '<:SpiritKeeper:747558404943380491>',
+    '<:SpiritLightning:747558396546252944>',
+    '<:SpiritLure:747558396403646605>',
+    '<:SpiritManyMinds:747558400400818319>',
+    '<:SpiritOceans:747558407292190820>',
+    '<:SpiritRivers:747558402850422804>',
     '<:SpiritSnek:747558396705767424>',  
-    '<:SpiritShadows:729608460378964059>',
-    '<:SpiritFangs:729608010405773432>',
-    '<:SpiritShifting:729608473028853770>',
-    '<:SpiritShroud:729608494386380811>',
-    '<:SpiritStarlight:729608519833223200>',
-    '<:SpiritStone:729608539966013442>',
-    '<:SpiritThunderspeaker:737369744428105739>',
-    '<:SpiritVengeance:729608583846821959>',
-    '<:SpiritEarth:729607999441731614>',
-    '<:SpiritVolcano:729608598715367474>'   
-];
+    '<:SpiritShadows:747571324418916393>',
+    '<:SpiritFangs:747570910524997743>',
+    '<:SpiritShifting:747558402959605857>',
+    '<:SpiritShroud:747558393123962957>',
+    '<:SpiritStarlight:747558401424490588>',
+    '<:SpiritStone:747558407200047246>',
+    '<:SpiritThunderspeaker:747558392603738244> ',
+    '<:SpiritVengeance:747558391572070520>',
+    '<:SpiritEarth:747558396009512960>',
+    '<:SpiritVolcano:747558401139146834>'   
+
+   //
 
 var adversary = [
     ['Brandenburg-Prussia', '<:FlagPrussia:742198907332853831>', 1, 2, 4, 6, 7, 9, 10  ],
