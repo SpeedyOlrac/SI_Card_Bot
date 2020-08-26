@@ -46,12 +46,12 @@ var spirits = [
     '<:SpiritShroud:747558393123962957>',
     '<:SpiritStarlight:747558401424490588>',
     '<:SpiritStone:747558407200047246>',
-    '<:SpiritThunderspeaker:747558392603738244> ',
+    '<:SpiritThunderspeaker:747558392603738244>',
     '<:SpiritVengeance:747558391572070520>',
     '<:SpiritEarth:747558396009512960>',
     '<:SpiritVolcano:747558401139146834>'   
+ ];
 
-   //
 
 var adversary = [
     ['Brandenburg-Prussia', '<:FlagPrussia:742198907332853831>', 1, 2, 4, 6, 7, 9, 10  ],
