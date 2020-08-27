@@ -52,6 +52,32 @@ var spirits = [
     '<:SpiritVolcano:747558401139146834>'   
  ];
 
+var panel = [
+    [ "https://imgur.com/nlpGjjH", "https://imgur.com/iK9NTsz"], //Rampant
+    [ "https://imgur.com/UxZyTv2", "https://imgur.com/VUOjO0v"], 
+    [ "https://imgur.com/vZU2mVT", "https://imgur.com/CShexIA"],  //Downpour
+    [ "https://imgur.com/T9HLW7e", "https://imgur.com/JtdpxCr"],
+    [ "https://imgur.com/MDqxo4i", "https://imgur.com/7z7V6Ol"],  //days
+    [ "https://imgur.com/D2geoaL", "https://imgur.com/i6YLeWv"],
+    [ "https://imgur.com/A4FRUV5", "https://imgur.com/Y8lVu5J"],  //Wildfire
+    [ "https://imgur.com/PBwq5KE", "https://imgur.com/ZKAblG3"],
+    [ "https://imgur.com/yXE6oHw", "https://imgur.com/WLcU0w9"],  //Lighting
+    [ "https://imgur.com/Zx3UcPD", "https://imgur.com/wGPod8z"],
+    [ "https://imgur.com/bA3Rmp8", "https://imgur.com/XIG39qe"],  //many minds
+    [ "https://imgur.com/rrLWF5o", "https://imgur.com/UVEIJfA"],
+    [ "https://imgur.com/pmdjfxu", "https://imgur.com/uv0mMRV"],  //river
+    [ "https://imgur.com/PgT7Kyj", "https://imgur.com/cE7YZ3L"],
+    [ "https://imgur.com/FmVImnv", "https://imgur.com/oyk2ZwH"],  //shadow
+    [ "https://imgur.com/uxw6S5D", "https://imgur.com/IoL5BHz"],
+    [ "https://imgur.com/QbkXAHr", "https://imgur.com/BB48p9Q"],  //memory
+    [ "https://imgur.com/AgBKUYl", "https://imgur.com/sE5Iasm"],
+    [ "https://imgur.com/fkB6Y05", "https://imgur.com/pCuo4XJ"],
+    [ "https://imgur.com/FhEIqB6", "https://imgur.com/RqlC8ZP"],  //Stone
+    [ "https://imgur.com/5xnsvD8", "https://imgur.com/PztVF5L"],
+    [ "https://imgur.com/EgzpSLC", "https://imgur.com/4hnimN9"],  //Vengance
+    [ "https://imgur.com/wgs13CF", "https://imgur.com/5iTl68l"],
+    [ "https://imgur.com/sSs3uqa", "https://imgur.com/XOC05vn"]   //volcano 
+];
 
 var adversary = [
     ['Brandenburg-Prussia', '<:FlagPrussia:742198907332853831>', 1, 2, 4, 6, 7, 9, 10  ],
@@ -66,32 +92,7 @@ var adversary = [
 
 
 
-var panel = [
-    [ "https://imgur.com/nlpGjjH", "https://imgur.com/iK9NTsz"], //Rampant
-    [ "https://imgur.com/UxZyTv2", "https://imgur.com/VUOjO0v"], 
-    [ "https://imgur.com/AJjfgOS", "https://imgur.com/CShexIA"],
-    [ "https://imgur.com/owZAHJY", "https://imgur.com/JtdpxCr"],
-    [ "https://imgur.com/g0S3eN8", "https://imgur.com/7z7V6Ol"],
-    [ "https://imgur.com/XvJYfqH", "https://imgur.com/i6YLeWv"],
-    [ "https://imgur.com/A4FRUV5", "https://imgur.com/Y8lVu5J"],
-    [ "https://imgur.com/PBwq5KE", "https://imgur.com/ZKAblG3"],
-    [ "https://imgur.com/yXE6oHw", "https://imgur.com/WLcU0w9"],
-    [ "https://imgur.com/OmSNTeL", "https://imgur.com/wGPod8z"],
-    [ "https://imgur.com/RZh8Y8g", "https://imgur.com/XIG39qe"],//many minds
-    [ "https://imgur.com/rrLWF5o", "https://imgur.com/UVEIJfA"],
-    [ "https://imgur.com/pmdjfxu", "https://imgur.com/uv0mMRV"],
-    [ "https://imgur.com/PgT7Kyj", "https://imgur.com/cE7YZ3L"],
-    [ "https://imgur.com/FmVImnv", "https://imgur.com/oyk2ZwH"],
-    [ "https://imgur.com/uxw6S5D", "https://imgur.com/IoL5BHz"],
-    [ "https://imgur.com/H1Xrzxw", "https://imgur.com/BB48p9Q"],
-    [ "https://imgur.com/MQDsVg9", "https://imgur.com/sE5Iasm"],
-    [ "https://imgur.com/2UujxIG", "https://imgur.com/pCuo4XJ"],
-    [ "https://imgur.com/9hiaoWd", "https://imgur.com/RqlC8ZP"],
-    [ "https://imgur.com/5xnsvD8", "https://imgur.com/PztVF5L"],
-    [ "https://imgur.com/eZbTaHA", "https://imgur.com/4hnimN9"],
-    [ "https://imgur.com/wgs13CF", "https://imgur.com/5iTl68l"],
-    [ "https://imgur.com/KZwtr5W", "https://imgur.com/XOC05vn"]   //volcano 
-];
+
 
 var role ="React to this message with the :FlagBlank: emoji to be assigned \
      the @LFG Role and be notified of games in #looking-for-a-game";
