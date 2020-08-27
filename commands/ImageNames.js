@@ -25,9 +25,12 @@ var fear = ["fear_of_the_unseen", "scapegoats", "emigration_accelerates", "dahan
 
 var event = ["years_of_little_rain", "farmers_seek_the_dahan_for_aid", "new_species_spread", "war_touches_the_islands_shores", "sacred_sites_under_threat", "outpaced", "missionaries_arrive", "a_strange_madness_among_the_beasts", "seeking_the_interior", "wave_of_reconnaissance", "interesting_discoveries", "strange_tales_attract_explorers", "cultural_assimilation", "investigation_of_dangers", "distant_exploration", "rising_interest_in_the_island", "putting_down_roots", "search_for_new_lands", "invaders_surge_inland", "tightknit_communities", "wellprepared_explorers", "population_rises", "urban_development", "heavy_farming", "promising_farmland", "slave_rebellion"];
 
+var noJE = 'SICK does not have JE cards yet';
+
 exports.unique = unique;
 exports.minor = minor;
 exports.major = major;
 exports.power = [].concat(unique).concat(minor).concat(major);
 exports.fear = fear;
 exports.event = event;
+exports.noJE = noJE;
