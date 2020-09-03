@@ -5,9 +5,8 @@ module.exports = {
 	description: 'Get an adversaries',
 	public: true,
 	async execute(msg, args) {
-        console.log(args);
         var panel = "";
-        if (!Array.isArray(args[0]) || args.length == 0){
+        if (args.length == 0){
              panel = "Adversaries are \n Prussia, Engalnd, France, Habsburg, Russia, Scotland, Sweeden";
         }
         var found = false;
