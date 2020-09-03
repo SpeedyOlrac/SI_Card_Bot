@@ -37,11 +37,13 @@ function Picking(selection, spirit, diffmin = 0, diffmax = 11){
 
         let name = Math.floor(Math.random() * adversary.length)
         let level = "";
-        let level = Math.floor(Math.random() * 7);
-        if (level == 0){
+        let n = Math.floor(Math.random() * 7);
+        if (n == 0){
             level = "Base";
         }
-        
+        else{
+            level = n;
+        }
         let answer = adversary[name].name +
                     " " + level + " (diffculty " + adversary[name].diffculty[level] + ")";
         return [answer, adversary[name].emote ];
