@@ -7,7 +7,7 @@ module.exports = {
 	async execute(msg, args) {
         
         var panel = "";
-        if (Array.isArray(args[0])  && args[0].length == 0){
+        if (!Array.isArray(args[0]) || args[0].length == 0){
              panel = "Adversaries are \n Prussia, Engalnd, France, Habsburg, \
                          Russia, Scotland, Sweeden";
         }
