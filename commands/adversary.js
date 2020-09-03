@@ -1,4 +1,4 @@
-const adversary = require ('./AdversaryNames.js');
+const adversary = require ('./AdversaryNames.js').adversary;
 
 module.exports = {
 	name: 'adversary',
@@ -8,8 +8,7 @@ module.exports = {
         console.log(adversary);
         var panel = "";
         if (!Array.isArray(args[0]) || args[0].length == 0){
-             panel = "Adversaries are \n Prussia, Engalnd, France, Habsburg, \
-                         Russia, Scotland, Sweeden";
+             panel = "Adversaries are \n Prussia, Engalnd, France, Habsburg, Russia, Scotland, Sweeden";
         }
         var found = false;
         var list = [];

@@ -66,5 +66,4 @@ var sweden ={
     panel: "https://imgur.com/D6ZeLOV"    
 }
 
- exports.adversary = [].concat(prussia).concat(england).concat(france)
-                .concat(habsburg).concat(russia).concat(scotland).concat(sweden);
+ exports.adversary = [prussia, england, france, habsburg, russia, scotland, sweden]
