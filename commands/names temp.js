@@ -25,6 +25,156 @@ var spirits = [
     'Volcano Looming High'
  ];
 
+/*
+
+let contacts = new Map()
+contacts.set('Jessie', {phone: "213-555-1234", address: "123 N 1st Ave"})
+contacts.has('Jessie') // true
+contacts.get('Hilary') // undefined
+contacts.set('Hilary', {phone: "617-555-4321", address: "321 S 2nd St"})
+contacts.get('Jessie') // {phone: "213-555-1234", address: "123 N 1st Ave"}
+contacts.delete('Raymond') // false
+contacts.delete('Jessie') // true
+console.log(contacts.size) // 1
+
+*/
+
+let spirit = new Discord.Collection;
+
+spirit.set('Green', {
+    name:  'A Spread of Rampant Green',
+    emote: '<:SpiritRampant:747558393295929475>' ,
+    panel: [ "https://imgur.com/nlpGjjH", "https://imgur.com/iK9NTsz"],
+    aspect: null
+})
+
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+spirit.set('Green', {
+    name: 'A Spread of Rampant Green',
+    emote: ,
+    panel: ,
+    aspect: null
+})
+
  var emote = [
     '<:SpiritRampant:747558393295929475>',
     '<:SpiritBodan:747570910751621121>',
@@ -53,7 +203,7 @@ var spirits = [
  ];
 
 var panel = [
-    [ "https://imgur.com/nlpGjjH", "https://imgur.com/iK9NTsz"], //Rampant
+    
     [ "https://imgur.com/UxZyTv2", "https://imgur.com/VUOjO0v"], 
     [ "https://imgur.com/vZU2mVT", "https://imgur.com/CShexIA"],  //Downpour
     [ "https://imgur.com/T9HLW7e", "https://imgur.com/JtdpxCr"],
@@ -80,17 +230,15 @@ var panel = [
 ];
 
 var adversary = [
-    ['The Kingdom of Brandenburg-Prussia', '<:FlagPrussia:742198907332853831>', 1, 2, 4, 6, 7, 9, 10  ],
-    ['The Kingdom of England', '<:FlagEngland:742199440126771250>', 1, 3, 4, 6, 7, 9, 10, ],
-    ['The Kingdom of France ', '<:FlagRussia:742201076362641408>', 2, 3, 5, 7, 8, 9, 10 ],
-    ['The Habsburg Monarchy', '<:FlagHabsburg:742194656556744814>', 2, 3, 5, 6, 8, 9, 10],
-    ['The Tsardom of Russia', '<:FlagFrance:742199211340070955> ' , 1, 3, 4, 6, 7, 9, 11],
-    ['The Kingdom of Scotland', '<:FlagScotland:742201184164773891>',1, 4, 6, 7, 8, 10],
-    ['The kingdom of Sweden','<:FlagSweden:742194408325382174>',  1, 2, 3, 5, 6, 7, 8 ]
+    ['Brandenburg-Prussia', '<:FlagPrussia:742198907332853831>', 1, 2, 4, 6, 7, 9, 10  ],
+    ['England', '<:FlagEngland:742199440126771250>', 1, 3, 4, 6, 7, 9, 10],
+    ['France (Plantation Colony)', '<:FlagRussia:742201076362641408>', 2, 3, 5, 7, 8, 9, 10 ],
+    ['Hapsburg Dynasty', '<:FlagHabsburg:742194656556744814>', 2, 3, 5, 6, 8, 9, 10],
+    ['Russia', '<:FlagFrance:742199211340070955> ' , 1, 3, 4, 6, 7, 9, 11],
+    ['Scotland', '<:FlagScotland:742201184164773891>',1, 4, 6, 7, 8, 10],
+    ['Sweden','<:FlagSweden:742194408325382174>',  1, 2, 3, 5, 6, 7, 8 ]
 
 ];
-
-
 
 
 exports.aspect ={

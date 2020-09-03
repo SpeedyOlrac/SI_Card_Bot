@@ -1,5 +1,5 @@
 const Names = require ('./Names.js');
-
+const adversary = require('./AdversaryNames.js');
 
 module.exports = {
 	name: 'random',
@@ -35,19 +35,16 @@ function Picking(selection, spirit, diffmin = 0, diffmax = 11){
     else if(selection == 'adversary'){
         // adversary is [name, escaltion diff, diff 1 ...]
 
-        let name = Math.floor(Math.random() * Names.adversary.length)
+        let name = Math.floor(Math.random() * adversary.length)
         let level = "";
-        let n = Math.floor(Math.random() * 7);
-        if (n == 0){
-            level = "Escalation";
+        let level = Math.floor(Math.random() * 7);
+        if (level == 0){
+            level = "Base";
         }
-        else{
-            level = n;
-        }
-        let diff = n + 2;
-        let answer = Names.adversary[name][0] +
-                    " " + level + " (diffculty " + Names.adversary[name][diff] + ")";
-        return [answer, Names.adversary[name][1] ];
+        
+        let answer = adversary[name].name +
+                    " " + level + " (diffculty " + adversary[name].diffculty[level] + ")";
+        return [answer, adversary[name].emote ];
     }
     else {
         return;
