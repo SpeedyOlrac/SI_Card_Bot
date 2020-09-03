@@ -5,7 +5,7 @@ module.exports = {
 	description: 'Get an adversaries',
 	public: true,
 	async execute(msg, args) {
-        
+        console.log(adversary);
         var panel = "";
         if (!Array.isArray(args[0]) || args[0].length == 0){
              panel = "Adversaries are \n Prussia, Engalnd, France, Habsburg, \
@@ -14,11 +14,11 @@ module.exports = {
         var found = false;
         var list = [];
 
-        for(const ad of adversary ){
+        for(const n = 0; n < adversary.length; n++ ){
             //  list.concat(ad.name);
             //cardSearch.getcardname(args[0], list);
-            if(!found && ad.title == args[0].toLowerCase()){
-                panel = ad.panel;
+            if(!found && adversary[n].title == args[0].toLowerCase()){
+                panel = adversary[n].panel;
                 found = true;
             }
         }
