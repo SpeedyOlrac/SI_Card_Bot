@@ -17,11 +17,11 @@ module.exports = {
                 //  list.concat(ad.name);
                 //cardSearch.getcardname(args[0], list);
                 if(!found && ad.title == args[0].toLowerCase()){
-                    panel = adversary[n].panel;
+                    panel = ad.panel;
                     found = true;
                 }
             }
         }
-        
+
         msg.channel.send(panel);
     }};
