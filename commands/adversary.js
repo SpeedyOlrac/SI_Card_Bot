@@ -5,6 +5,7 @@ module.exports = {
 	description: 'Get an adversaries',
 	public: true,
 	async execute(msg, args) {
+        console.log(args.length);
         var panel = "";
         if (args.length == 0){
              panel = "Adversaries are \n Prussia, Engalnd, France, Habsburg, Russia, Scotland, Sweeden";
