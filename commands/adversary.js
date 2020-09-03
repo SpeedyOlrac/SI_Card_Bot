@@ -10,7 +10,7 @@ module.exports = {
         var found = false;
         var list = [];
         if (args.length == 0){
-             panel = "Adversaries are \n Prussia, Engalnd, France, Habsburg, Russia, Scotland, Sweeden";
+             panel = "Adversaries are \n Prussia, England, France, Habsburg, Russia, Scotland, Sweden";
         }
         else{
             for(const ad of adversary){
