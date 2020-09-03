@@ -1,7 +1,4 @@
 const adversary = require ('./AdversaryNames.js');
-const cardSearch = require (',/sendCardLink.js')
-
-
 
 module.exports = {
 	name: 'adversary',
