@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 const to = require('await-to-js').default;
 const Names = require ('./Names.js')
-const Names = require ('./spiritNames.js')
+const temp = require ('./spiritNames.js')
 
 module.exports = {
 	name: 'spirit',
