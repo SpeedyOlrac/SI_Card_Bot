@@ -91,8 +91,6 @@ var adversary = [
 ];
 
 
-
-
 exports.aspect ={
     earth: ["Might ", "Power  ", "Resilence "], //22
     shadow: ["Shifting  ", "Reach ",  "Foreboding ", "Amorphous "],  //14
@@ -100,12 +98,40 @@ exports.aspect ={
     river: ["Sunshine ", "Travel "]  // 12
 }
 
+var title = 
+    ['Green',
+    'BoDaN',
+    'Downpour',
+    'Finder',
+    'Fractured',
+    'Trickster',
+    'Wildfire',
+    'Keeper',
+    'Lightning',
+    'Lure',  
+    'ManyMinds',  //10
+    'Ocean',
+    'River',
+    'Serpent',
+    'Shadows',
+    'Fangs',
+    'Memory',
+    'Mist',
+    'Starlight',
+    'Stone',   
+    'Thunderspeaker',  //20
+    'Vengeance',
+    'Earth',
+    'Volcano'
+];
+
 
 var role ="React to this message with the :FlagBlank: emoji to be assigned \
      the @LFG Role and be notified of games in #looking-for-a-game";
 
      //  (([^"]*), )
 
+exports.title = title;
 exports.spirits = spirits;
 exports.emote = emote;
 exports.adversary = adversary;

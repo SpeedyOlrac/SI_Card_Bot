@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 var spirits = [
     'A Spread of Rampant Green',
     'Bringer of Dreams and Nightmares',
@@ -253,6 +261,8 @@ var role ="React to this message with the :FlagBlank: emoji to be assigned \
      the @LFG Role and be notified of games in #looking-for-a-game";
 
      //  (([^"]*), )
+
+spirit.
 
 exports.spirits = spirits;
 exports.emote = emote;

@@ -1,3 +1,5 @@
+const Discord = require('discord.js');
+
 var adversary = [
     ['The Kingdom of Brandenburg-Prussia', '<:FlagPrussia:742198907332853831>', 1, 2, 4, 6, 7, 9, 10  ],
     ['The Kingdom of England', '<:FlagEngland:742199440126771250>', 1, 3, 4, 6, 7, 9, 10, ],
@@ -7,7 +9,6 @@ var adversary = [
     ['The Kingdom of Scotland', '<:FlagScotland:742201184164773891>',1, 4, 6, 7, 8, 10],
     ['The kingdom of Sweden','<:FlagSweden:742194408325382174>',  1, 2, 3, 5, 6, 7, 8 ]
 ];
-
 
 
 var prussia ={
@@ -66,4 +67,17 @@ var sweden ={
     panel: "https://imgur.com/D6ZeLOV"    
 }
 
- exports.adversary = [prussia, england, france, habsburg, russia, scotland, sweden]
+let ad = new Discord.Collection;
+
+ad.set('prussia', france);
+ad.set('england', england);
+ad.set('france', france);
+ad.set('habsburg', habsburg);
+ad.set('russia', russia);
+ad.set('scotland', scotland);
+ad.set('sweden', sweden);
+
+exports.ad = ad;
+
+
+ exports.adversary = [prussia, england, france, habsburg, russia, scotland, sweden];

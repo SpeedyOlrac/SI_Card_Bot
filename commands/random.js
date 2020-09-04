@@ -1,5 +1,5 @@
-const Names = require ('./Names.js');
-const adversary = require('./AdversaryNames.js');
+const spirit = require ('./Names.js');
+const adversary = require('./AdversaryNames.js').ad;
 
 module.exports = {
 	name: 'random',
@@ -19,7 +19,6 @@ module.exports = {
               botMessage2.delete();
               */
               }
-            
             else{
                 msg.channel.send("Do you want a random [spirit] or [adversary]?")
             }
@@ -37,7 +36,7 @@ function Picking(selection, spirit, diffmin = 0, diffmax = 11){
 
         let name = Math.floor(Math.random() * adversary.length)
         let level = "";
-        let n = Math.floor(Math.random() * 7);
+        let n = Math.floor(Math.random() * adversary.length);
         if (n == 0){
             level = "Base";
         }

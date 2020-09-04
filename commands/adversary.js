@@ -1,11 +1,14 @@
 const adversary = require ('./AdversaryNames.js').adversary;
+const ad = require('./AdversaryNames.js').ad;
 
 module.exports = {
 	name: 'adversary',
 	description: 'Get an adversaries',
 	public: true,
 	async execute(msg, args) {
-        console.log(args.length);
+        let adv = ad;
+
+        msg.channel.send(adv.get('sweden').sweden.name + ` 1` );
         var panel = "";
         var found = false;
         var list = [];

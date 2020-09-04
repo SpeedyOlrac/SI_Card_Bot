@@ -1,0 +1,1 @@
+Green,BoDaN,Downpour,Finder,Fractured,Trickster,Wildfire,Keeper,Lightning,Lure,ManyMinds,Ocean,River,Serpent,Shadows,Fangs,Memory,Mist,Starlight,Stone,Thunderspeaker,Vengeance,Earth,Volcano

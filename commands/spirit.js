@@ -1,11 +1,11 @@
 const fetch = require("node-fetch");
 const to = require('await-to-js').default;
 const Names = require ('./Names.js')
-
+const Names = require ('./spiritNames.js')
 
 module.exports = {
 	name: 'spirit',
-	description: 'Event Search',
+	description: 'Spirit Search',
 	public: true,
 	execute(msg, args) {
         var target = "Sorry could not find the spirit you where looking for.";
