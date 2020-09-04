@@ -6,9 +6,9 @@ module.exports = {
 	description: 'Get an adversaries',
 	public: true,
 	async execute(msg, args) {
-        let adv = ad;
 
-        msg.channel.send(adv.get('sweden').sweden.name + ` 1` );
+        console.log( ad + ` 1` );
+          
         var panel = "";
         var found = false;
         var list = [];
