@@ -39,7 +39,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
     else if(selection == 'adversary'){
         // adversary is [name, escaltion diff, diff 1 ...]
         var correct = false;
-        while(correct){}
+        while(correct){
             let keys = Array.from(adversary.keys());
             let name = adversary.get(keys[Math.floor(Math.random() * keys.length)]);
 
