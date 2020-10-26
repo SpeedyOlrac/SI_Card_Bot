@@ -37,6 +37,12 @@ function Picking(selection, diffmin = 0, diffmax = 11){
         return  [spirits[n].name, spirits[n].emote, aspect];
     }    
     else if(selection == 'adversary'){
+        if(diffmax < diffmin){
+            return ["Diffculty Value are not Valid"];
+        }
+
+
+
         // adversary is [name, escaltion diff, diff 1 ...]
         var correct = true;
         let level = "";
