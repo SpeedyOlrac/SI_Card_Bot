@@ -30,6 +30,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
         let n = Math.floor(Math.random() * spirits.length);
         let a = Math.floor(Math.random() * spirits[n].aspect.length);
         let aspect = "";
+
         if (a > 0){
             aspect = spirits[n].aspect[a-1] ;
         }
@@ -39,25 +40,27 @@ function Picking(selection, diffmin = 0, diffmax = 11){
     else if(selection == 'adversary'){
         // adversary is [name, escaltion diff, diff 1 ...]
         var correct = false;
+        let level = "";
+        let n = 0;
+
         while(correct){
             let keys = Array.from(adversary.keys());
             let name = adversary.get(keys[Math.floor(Math.random() * keys.length)]);
 
             //console.log(name);
-            let n = Math.floor(Math.random() * 10);
+            n = Math.floor(Math.random() * 10);
+            if (n == 0){
+                level = "Base";
+            }
+            else{
+                level = n;
+            }
             if (name.diffculty[level] >= diffmin && name.diffculty[level] <= diffmax)
                 correct = true;
         }
 
-        let level = "";
-        if (n == 0){
-            level = "Base";
-        }
-        else{
-            level = n;
-        }
         let answer =name.name + " " + 
-                    level + " (diffculty " + name.diffculty[level] + ")";
+                    level + " (diffculty " + name.diffculty[n] + ")";
         return [answer, name.emote, "" ];
     }
     else {
