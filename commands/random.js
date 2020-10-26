@@ -40,11 +40,12 @@ function Picking(selection, diffmin = 0, diffmax = 11){
         // adversary is [name, escaltion diff, diff 1 ...]
 
         let keys = Array.from(adversary.keys());
+        console.log(keys);
         let name = keys[Math.floor(Math.random() * keys.length)];
 
         console.log(name);
         let level = "";
-        let n = Math.floor(Math.random() * adversary.length);
+        let n = Math.floor(Math.random() * 10);
         if (n == 0){
             level = "Base";
         }
