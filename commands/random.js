@@ -58,7 +58,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
             else{
                 level = n;
             }
-            if (name.diffculty[level] >= diffmin && name.diffculty[level] <= diffmax)
+            if (name.diffculty[n] >= diffmin && name.diffculty[n] <= diffmax)
                 correct = true;
         }
 
