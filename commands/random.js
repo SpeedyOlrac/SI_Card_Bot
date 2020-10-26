@@ -31,7 +31,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
         let a = Math.floor(Math.random() * spirits[n].aspect.length);
         let aspect = "";
         if (a > 0){
-            aspect = spirits[n].aspect[a-1];
+            aspect = spirits[n].aspect[a-1] ;
         }
 
         return  [spirits[n].name, spirits[n].emote, aspect];
@@ -39,6 +39,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
     else if(selection == 'adversary'){
         // adversary is [name, escaltion diff, diff 1 ...]
 
+        
         let name = adversary.random;
         console.log(name);
         let level = "";
