@@ -30,7 +30,7 @@ var england ={
 var france ={
     title: "france",
     name: 'The Kingdom of France ',
-    emote: '<:FlagRussia:742201076362641408>', 
+    emote: '<:FlagFrance:770129677440122901>', 
     diffculty: [ 2, 3, 5, 7, 8, 9, 10],
     panel: "https://imgur.com/S8lL3cA"    
 }
@@ -38,7 +38,7 @@ var france ={
 var habsburg ={
     title: "habsburg",
     name: 'The Habsburg Monarchy',
-    emote: '<:FlagRussia:742201076362641408>', 
+    emote: '<:FlagHabsburg:770131442268110888>',
     diffculty: [2, 3, 5, 6, 8, 9, 10],
     panel: "https://imgur.com/GtptfDJ"    
 }
@@ -46,7 +46,7 @@ var habsburg ={
 var russia ={
     title: "russia",
     name: 'The Tsardom of Russia',
-    emote: '<:FlagFrance:742199211340070955>', 
+    emote: '<:FlagRussia:742201076362641408>', 
     diffculty: [1, 3, 4, 6, 7, 9, 11],
     panel: "https://imgur.com/n16FmcP"    
 }
