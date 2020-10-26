@@ -39,7 +39,8 @@ function Picking(selection, diffmin = 0, diffmax = 11){
     else if(selection == 'adversary'){
         // adversary is [name, escaltion diff, diff 1 ...]
 
-        let name = Math.floor(Math.random() * adversary.length);
+        let name = adversary.random;
+        console.log(name);
         let level = "";
         let n = Math.floor(Math.random() * adversary.length);
         if (n == 0){
@@ -48,9 +49,9 @@ function Picking(selection, diffmin = 0, diffmax = 11){
         else{
             level = n;
         }
-        let answer = adversary[name].name +
-                    " " + level + " (diffculty " + adversary[name].diffculty[level] + ")";
-        return [answer, adversary[name].emote, "" ];
+        let answer =name.name + " " + 
+                    level + " (diffculty " + name.diffculty[level] + ")";
+        return [answer, name.emote, "" ];
     }
     else {
         return;
