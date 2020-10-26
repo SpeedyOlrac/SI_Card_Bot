@@ -40,8 +40,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
         // adversary is [name, escaltion diff, diff 1 ...]
 
         let keys = Array.from(adversary.keys());
-        console.log(keys);
-        let name = keys[Math.floor(Math.random() * keys.length)];
+        let name = adversary.get(keys[Math.floor(Math.random() * keys.length)]);
 
         console.log(name);
         let level = "";
