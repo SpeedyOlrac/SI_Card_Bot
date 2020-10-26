@@ -24,7 +24,6 @@ module.exports = {
             }
 }};
 
-
 function Picking(selection, diffmin = 0, diffmax = 11){
     if(selection == 'spirit'){
         let n = Math.floor(Math.random() * spirits.length);
@@ -51,7 +50,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
             name = adversary.get(keys[Math.floor(Math.random() * keys.length)]);
 
             //console.log(name);
-            n = Math.floor(Math.random() * 10);
+            n = Math.floor(Math.random() * 7);
             if (n == 0){
                 level = "Base";
             }
