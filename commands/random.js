@@ -42,10 +42,12 @@ function Picking(selection, diffmin = 0, diffmax = 11){
         var correct = false;
         let level = "";
         let n = 0;
-        let name = "";
+        let keys = Array.from(adversary.keys());
+        let name = keys[0];
+
 
         while(correct){
-            let keys = Array.from(adversary.keys());
+            
             name = adversary.get(keys[Math.floor(Math.random() * keys.length)]);
 
             //console.log(name);
