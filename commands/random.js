@@ -61,7 +61,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
             level = "Base ";
         }
         else{
-            level = n;
+            level = n + " ";
         }
 
         let answer =name.name + " " + 
