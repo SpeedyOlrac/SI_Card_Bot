@@ -42,7 +42,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
         let level = "";
         let n = 0;
         let keys = Array.from(adversary.keys());
-        let name = keys[0];
+        let name = adversary.get(keys[0]);
 
 
         while(correct){
