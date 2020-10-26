@@ -38,7 +38,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
     }    
     else if(selection == 'adversary'){
         // adversary is [name, escaltion diff, diff 1 ...]
-        var correct = false;
+        var correct = true;
         let level = "";
         let n = 0;
         let keys = Array.from(adversary.keys());
@@ -51,18 +51,21 @@ function Picking(selection, diffmin = 0, diffmax = 11){
 
             //console.log(name);
             n = Math.floor(Math.random() * 7);
-            if (n == 0){
-                level = "Base";
+
+            if (name.diffculty[n] >= diffmin && name.diffculty[n] <= diffmax){
+                correct = false;
             }
-            else{
-                level = n;
-            }
-            if (name.diffculty[n] >= diffmin && name.diffculty[n] <= diffmax)
-                correct = true;
+        }
+
+        if (n == 0){
+            level = "Base ";
+        }
+        else{
+            level = n;
         }
 
         let answer =name.name + " " + 
-                    level + " (diffculty " + name.diffculty[n] + ")";
+                    level + "(diffculty " + name.diffculty[n] + ")";
         return [answer, name.emote, "" ];
     }
     else {
