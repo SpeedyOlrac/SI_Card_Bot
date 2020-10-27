@@ -16,7 +16,7 @@ module.exports = {
             availableNames.push(element.name);
         }
 
-        var name = args.toString().replace(',', " ");
+        var name = args.toString();
         console.log(name);
 
         var results = getCardName(name, availableNames);
