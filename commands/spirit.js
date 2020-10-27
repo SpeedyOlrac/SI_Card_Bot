@@ -44,6 +44,7 @@ module.exports = {
                     if(name[t] == input[i]){
                         target = s;
                         found = true;
+                    }
                 }
             }
         }
@@ -74,6 +75,4 @@ function isSearchable(word){
         return false;
     }
     return true;
-
-
 }
