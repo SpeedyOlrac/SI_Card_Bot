@@ -1,5 +1,6 @@
+
 const adversary = require ('./AdversaryNames.js').adversary;
-const ad = require('./AdversaryNames.js').ad;
+//const ad = require('./AdversaryNames.js').ad;
 
 module.exports = {
 	name: 'adversary',
@@ -7,7 +8,7 @@ module.exports = {
 	public: true,
 	async execute(msg, args) {
 
-        console.log( ad + ` 1` );
+       // console.log( ad + ` 1` );
           
         var panel = "";
         var found = false;
