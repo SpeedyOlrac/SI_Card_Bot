@@ -10,7 +10,7 @@ module.exports = {
             if(args[0]){
               let answer = Picking(args[0], args[1], args[2]);
               let message = answer[0];
-              if (answer[1]){
+              if (answer.length > 2){
                   message = message + answer[2];
               }
               botMessage1 = msg.channel.send(message);
@@ -52,7 +52,6 @@ function Picking(selection, diffmin = 0, diffmax = 11){
         let n = 0;
         let keys = Array.from(adversary.keys());
         let name = adversary.get(keys[0]);
-
 
         while(correct){
             
