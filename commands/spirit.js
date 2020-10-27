@@ -15,8 +15,9 @@ module.exports = {
         for( var s = 0; s < spirits.length; s++){
                 availableNames.push(spirits[s].name);
             }
-        console.log(availableNames);
+       
         var results = getCardName(args, availableNames);
+        console.log(results);
         /* 
         
         outer_loop:
