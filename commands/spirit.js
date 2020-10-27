@@ -23,22 +23,18 @@ module.exports = {
         console.log(results);
 
         //msg.channel.send(spirits[target].title );
-        if(result != null){
-            for( var s = 0; s < spirits.length; s++){
-                if(spirits[s].name == results){
-                    target = s;
-                }
+        for( var s = 0; s < spirits.length; s++){
+            if(spirits[s].name == results){
+                target = s;
             }
+        }
 
-            if(args[0].toLowerCase() != 'back' && args[args.length -1].toLowerCase() != 'back'  ){
-                msg.channel.send(spirits[target].panel[0]);
-            }
-            if(args[0].toLowerCase() != 'front' && args[args.length -1].toLowerCase() != 'front' ){
-                msg.channel.send(spirits[target].panel[1]); 
-            }
+        if(args[0].toLowerCase() != 'back' && args[args.length -1].toLowerCase() != 'back'  ){
+            msg.channel.send(spirits[target].panel[0]);
         }
-        else{
-            msg.channel.send(target);
+        if(args[0].toLowerCase() != 'front' && args[args.length -1].toLowerCase() != 'front' ){
+            msg.channel.send(spirits[target].panel[1]); 
         }
+     
     }
 }
