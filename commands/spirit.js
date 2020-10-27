@@ -35,6 +35,7 @@ module.exports = {
             }
         }
         console.log(input);
+        
 
         //msg.channel.send(spirits[target].title );
         for(var s = 0; s < spirits.length; s++){
