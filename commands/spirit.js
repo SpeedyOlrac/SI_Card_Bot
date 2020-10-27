@@ -34,13 +34,16 @@ module.exports = {
             input.push(getCardName(args[a], shortNames, 0.5));
             }
         }
+        console.log(input);
 
         //msg.channel.send(spirits[target].title );
         for( var s = 0; s < spirits.length; s++){
-            for(var i = 0; i <input.length; i++){
-                if(spirits[s].name == input[i]){
-                    target = s;
-                    found = true;
+            var name = spirits[s].name.split(' ');
+            for(var t = 0; t < name.length; i++){
+                for(var i = 0; i <input.length; i++){
+                    if(name[t] == input[i]){
+                        target = s;
+                        found = true;
                 }
             }
         }
