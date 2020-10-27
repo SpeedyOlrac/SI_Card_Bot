@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 const to = require('await-to-js').default;
 const spirits = require ('./spiritNames.js').spirits;
+const getCardName = require ('./sendCardLink.js').getCardName;
 
 module.exports = {
 	name: 'spirit',
@@ -8,8 +9,15 @@ module.exports = {
 	public: true,
 	execute(msg, args) {
         var target = "Sorry could not find the spirit you where looking for.";
-        var found = false;
-       
+        //var found = false;
+
+        var availableNames = [];
+        for(const element in spirits){
+            availableNames.push(element.name);
+        }
+        var results = getCardName(Array.toString(args), availableNames);
+        /* 
+        
         outer_loop:
         for(var l = 0; l < args.length; l++){
             for( var s = 0; s < spirits.length; s++){
@@ -22,10 +30,16 @@ module.exports = {
                     } 
                 }
             }               
-        }
+        } */
 
         //msg.channel.send(spirits[target].title );
-        if(found){
+        if(results){
+            for( var s = 0; s < spirits.length; s++){
+                if(spirits[s].name == results){
+                    target = s;
+                }
+            }
+
             if(args[0].toLowerCase() != 'back' && args[args.length -1].toLowerCase() != 'back'  ){
                 msg.channel.send(spirits[target].panel[0]);
             }
