@@ -14,6 +14,7 @@ module.exports = {
         var availableNames = [];
         for(const element in spirits){
             availableNames.push(element.name);
+            console.log(element.name);
         }
         console.log(availableNames);
         var results = getCardName(args, availableNames);
