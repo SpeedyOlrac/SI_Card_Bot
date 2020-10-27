@@ -40,7 +40,7 @@ module.exports = {
         for( var s = 0; s < spirits.length; s++){
             var name = spirits[s].name.split(' ');
             for(var t = 0; t < name.length; i++){
-                for(var i = 0; i <input.length; i++){
+                for(var i = 0; i < input.length; i++){
                     if(isSearchable(input[i]) && name[t] == input[i] && !found){
                         target = s;
                         found = true;
@@ -48,7 +48,10 @@ module.exports = {
                 }
             }
         }
+
+
         console.log(target);
+
         if(found){
             if(args[0].toLowerCase() != 'back' && args[args.length -1].toLowerCase() != 'back'  ){
                 msg.channel.send(spirits[target].panel[0]);
@@ -64,7 +67,7 @@ module.exports = {
 }
 
 function isSearchable(word){
-    if(word > 2){
+    if(word < 2){
         return false;
     }
     if(word.toLowerCase == 'back'){
