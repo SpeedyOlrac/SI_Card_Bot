@@ -41,7 +41,7 @@ module.exports = {
             var name = spirits[s].name.split(' ');
             for(var t = 0; t < name.length; i++){
                 for(var i = 0; i <input.length; i++){
-                    if(name[t] == input[i]){
+                    if(isSearchable(input[i]) && name[t] == input[i] && !found){
                         target = s;
                         found = true;
                     }
