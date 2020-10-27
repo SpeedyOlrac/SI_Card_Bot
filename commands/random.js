@@ -9,9 +9,15 @@ module.exports = {
             //console.log(Names.spirits);
             if(args[0]){
               let answer = Picking(args[0], args[1], args[2]);
-              botMessage1 = msg.channel.send(answer[0] + answer[2]);
-              botMessage2 = msg.channel.send(answer[1]);
+              let message = answer[0];
+              if (answer[1]){
+                  message = message + answer[2];
+              }
+              botMessage1 = msg.channel.send(message);
 
+              if(answe[1]){
+                botMessage2 = msg.channel.send(answer[1]);
+              }
               /*  
               await delay(15);
               msg.delete();
