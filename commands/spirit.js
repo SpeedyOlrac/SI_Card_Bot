@@ -40,7 +40,7 @@ module.exports = {
         for(var s = 0; s < spirits.length; s++){
             var name = spirits[s].name.split(' ');
             console.log(name);
-            for(var n = 0; n < name.length; i++){
+            for(var n = 0; n < name.length; n++){
                 console.log(name[n]);
                 for(var i = 0; i < input.length; i++){
                     if(isSearchable(input[i]) && name[n] == input[i] && !found){
