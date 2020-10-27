@@ -67,14 +67,14 @@ module.exports = {
 }
 
 function isSearchable(word){
-    if(word < 2){
+    if(word < 3 ){
         return false;
     }
-    if(word.toLowerCase == 'back'){
+    if(word.toLowerCase() == 'back'){
         return false;
     }
 
-    if(word.toLowerCase == 'front'){
+    if(word.toLowerCase() == 'front'){
         return false;
     }
     return true;
