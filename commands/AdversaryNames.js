@@ -38,7 +38,7 @@ var france ={
 var habsburg ={
     title: "habsburg",
     name: 'The Habsburg Monarchy',
-    emote: '<:FlagHabsburg:770131442268110888>',
+    emote: '<:FlagHabsburg:742194656556744814>',
     diffculty: [2, 3, 5, 6, 8, 9, 10],
     panel: "https://imgur.com/GtptfDJ"    
 }
