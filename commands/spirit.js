@@ -12,10 +12,9 @@ module.exports = {
         //var found = false;
 
         var availableNames = [];
-        for(const element in spirits){
-            availableNames.push(element.name);
-            console.log(element.name);
-        }
+        for( var s = 0; s < spirits.length; s++){
+                availableNames.push(spirits[s].name);
+            }
         console.log(availableNames);
         var results = getCardName(args, availableNames);
         /* 
