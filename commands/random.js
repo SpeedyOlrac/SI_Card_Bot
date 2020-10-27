@@ -14,10 +14,7 @@ module.exports = {
                   message = message + answer[2];
               }
               botMessage1 = msg.channel.send(message);
-
-              if(answe[1]){
-                botMessage2 = msg.channel.send(answer[1]);
-              }
+              botMessage2 = msg.channel.send(answer[1]);
               /*  
               await delay(15);
               msg.delete();
@@ -44,7 +41,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
     }    
     else if(selection == 'adversary'){
         if(diffmax < diffmin){
-            return ["Diffculty Value are not Valid"];
+            return ["Diffculty Value are not Valid", ""];
         }
 
 
