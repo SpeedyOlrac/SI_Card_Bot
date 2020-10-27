@@ -35,3 +35,4 @@ function cleanInput(args){
 }
 
 module.exports = {sendCardLink, public: false};
+module.exports = {getCardName, public: false};
