@@ -7,7 +7,7 @@ var help = "List of commands: \
 	\n -event [event name] \
 	\n -fear [fear name] \
 	\n -faqs (search words) \
-	\n -random [spirit/adversary]   \
+	\n -random [spirit/adversary] (min Diffculty) (max Diffculty)  \
 	\n -spirit (front/back) [keywords] \
 	\n -adversary (name)";
 
