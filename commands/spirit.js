@@ -9,13 +9,16 @@ module.exports = {
 	public: true,
 	execute(msg, args) {
         var target = "Sorry could not find the spirit you where looking for.";
-        //var found = false;
+         var availableNames = [];
 
-        var availableNames = [];
+        if(args.length < 1){
+            msg.channel.send(target);
+            return;
+        }
+
         for( var s = 0; s < spirits.length; s++){
                 availableNames.push(spirits[s].name);
             }
-       
         var results = getCardName(args, availableNames);
         console.log(results);
         /* 
@@ -35,7 +38,7 @@ module.exports = {
         } */
 
         //msg.channel.send(spirits[target].title );
-        if(results){
+        if(result){
             for( var s = 0; s < spirits.length; s++){
                 if(spirits[s].name == results){
                     target = s;
