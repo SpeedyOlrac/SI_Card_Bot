@@ -1,6 +1,6 @@
 const levenshtein = require('js-levenshtein');
 
-function getCardName(input, availableNames)
+function getCardName(input, availableNames, wieghtOfSizediff = 0.8)
 {
   var result = null;
   var closestDistance = 999;
@@ -9,7 +9,7 @@ function getCardName(input, availableNames)
   for(var name of availableNames)
   {
     var sizeDiff = name.length > target.length ? name.length - target.length : 0;
-    var distance = levenshtein(target, name) - (sizeDiff * 0.8);
+    var distance = levenshtein(target, name) - (sizeDiff * wieghtOfSizediff);
     if(distance < closestDistance){
       closestDistance = distance;
       result = name;

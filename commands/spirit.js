@@ -19,7 +19,7 @@ module.exports = {
         for( var s = 0; s < spirits.length; s++){
                 availableNames.push(spirits[s].name);
             }
-        var results = getCardName(args, availableNames);
+        var results = getCardName(args, availableNames, 0.6);
         console.log(results);
 
         //msg.channel.send(spirits[target].title );
