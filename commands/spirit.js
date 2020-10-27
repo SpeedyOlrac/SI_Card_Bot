@@ -14,27 +14,63 @@ module.exports = {
             msg.channel.send(target);
             return;
         }
-
+        var shortNames= [];
         var availableNames = [];
+        var input = [];
+        var found = false;
+
+        //Making list of names to search
         for( var s = 0; s < spirits.length; s++){
-                availableNames.push(spirits[s].name);
+            availableNames.push(spirits[s].name);
+            var name = spirits[s].name.split(' ');
+            for(var i = 0; i < name.length; i++){
+                shortNames.push(name[i]);
             }
-        var results = getCardName(args, availableNames, 0.1);
-        console.log(results);
+        }
+
+        //finding words in args closer to target
+        for (var a = 0; a < args.length; a++){
+            if (isSearchable){
+            input.push(getCardName(args[a], shortNames, 0.5));
+            }
+        }
 
         //msg.channel.send(spirits[target].title );
         for( var s = 0; s < spirits.length; s++){
-            if(spirits[s].name == results){
-                target = s;
+            for(var i = 0; i <input.length; i++){
+                if(spirits[s].name == input[i]){
+                    target = s;
+                    found = true;
+                }
             }
         }
 
-        if(args[0].toLowerCase() != 'back' && args[args.length -1].toLowerCase() != 'back'  ){
-            msg.channel.send(spirits[target].panel[0]);
+        if(found){
+            if(args[0].toLowerCase() != 'back' && args[args.length -1].toLowerCase() != 'back'  ){
+                msg.channel.send(spirits[target].panel[0]);
+            }
+            if(args[0].toLowerCase() != 'front' && args[args.length -1].toLowerCase() != 'front' ){
+                msg.channel.send(spirits[target].panel[1]); 
+            }
         }
-        if(args[0].toLowerCase() != 'front' && args[args.length -1].toLowerCase() != 'front' ){
-            msg.channel.send(spirits[target].panel[1]); 
+        else{
+            return msg.channel.send(target);
         }
-     
     }
+}
+
+function isSearchable(word){
+    if(word > 2){
+        return false;
+    }
+    if(word.toLowerCase == 'back'){
+        return false;
+    }
+
+    if(word.toLowerCase == 'front'){
+        return false;
+    }
+    return true;
+
+
 }
