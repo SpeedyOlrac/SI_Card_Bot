@@ -34,15 +34,13 @@ module.exports = {
             input.push(getCardName(args[a], shortNames, 0.5));
             }
         }
-        console.log(input);
-        
+        //console.log(input);
+
 
         //msg.channel.send(spirits[target].title );
         for(var s = 0; s < spirits.length; s++){
             var name = spirits[s].name.split(' ');
-            console.log(name);
             for(var n = 0; n < name.length; n++){
-                console.log(name[n]);
                 for(var i = 0; i < input.length; i++){
                     if(isSearchable(input[i]) && name[n] == input[i] && !found){
                         target = s;
@@ -52,9 +50,6 @@ module.exports = {
                 }
             }
         }
-
-
-        console.log(target);
 
         if(found){
             if(args[0].toLowerCase() != 'back' && args[args.length -1].toLowerCase() != 'back'  ){
