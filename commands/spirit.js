@@ -15,8 +15,10 @@ module.exports = {
         for(const element in spirits){
             availableNames.push(element.name);
         }
+
+        //var name = Array.toString(args).replace(',', " ");
     
-        var results = getCardName(args.toString().replace(',', " "), availableNames);
+        var results = getCardName(Array.toString(args).replace(',', " "), availableNames);
         /* 
         
         outer_loop:
