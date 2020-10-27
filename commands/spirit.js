@@ -38,7 +38,7 @@ module.exports = {
         } */
 
         //msg.channel.send(spirits[target].title );
-        if(result){
+        if(result != null){
             for( var s = 0; s < spirits.length; s++){
                 if(spirits[s].name == results){
                     target = s;
