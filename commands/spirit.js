@@ -44,6 +44,7 @@ module.exports = {
                 for(var i = 0; i < input.length; i++){
                     if(isSearchable(input[i]) && name[n] == input[i] && !found){
                         target = s;
+                        console.log(s);
                         found = true;
                     }
                 }
