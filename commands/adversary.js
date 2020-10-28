@@ -14,18 +14,18 @@ module.exports = {
         var panel =  "Adversaries are \n Prussia, England, France, Habsburg, Russia, Scotland, Sweden";
         var found = false;
         var list = [];
-        //console.log(adversary)
+        console.log(adversary)
 
-        if (args.length == 0){
-
-        } 
+        if (args.length == 0){ } 
         else{
             for(const ad of adversary){
                 list.push(ad.title);
             }
-
+            console.log(list)
             panel = getcardname(args[0], list);
+            console.log(panel);
             var temp = adversary[adversary.indexOf(panel)];
+
             panel = temp.title;
             console.log(panel);
         //    for(const element in list){
