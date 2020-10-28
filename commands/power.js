@@ -1,4 +1,4 @@
-const s = require("./sendCardLink.js").sendCardLink;
+const s = require("./sendCardLink.js");
 const ImageNames = require ('./ImageNames.js');
 
 
@@ -9,6 +9,6 @@ module.exports = {
 
 	execute(msg, args) {
 		msg.channel.send(ImageNames.noJE);
-		msg.channel.send( s(msg, args, ImageNames.power, "https://sick.oberien.de/imgs/powers/"));
+		msg.channel.send( s.sendCardLink(msg, args, ImageNames.power, "https://sick.oberien.de/imgs/powers/"));
 	},
 };

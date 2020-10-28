@@ -14,7 +14,7 @@ module.exports = {
         var panel =  "Adversaries are \n Prussia, England, France, Habsburg, Russia, Scotland, Sweden";
         var found = false;
         var list = [];
-        console.log(adversary)
+        //console.log(adversary)
 
         if (args.length == 0){
 
