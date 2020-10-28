@@ -1,5 +1,5 @@
 
-const adversary = require ('./AdversaryNames.js');
+const adversary = require ('./AdversaryNames.js').adversary;
 const getcardname = require('./sendCardLink.js').getCardName;
 //const ad = require('./AdversaryNames.js').ad;
 
