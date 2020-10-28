@@ -1,6 +1,6 @@
 const levenshtein = require('js-levenshtein');
 
-function getCardName(input, availableNames, wieghtOfSizediff = "0.8")
+function getCardName(input, availableNames, wieghtOfSizediff = 0.8)
 {
   var result = null;
   var closestDistance = 999;
@@ -36,5 +36,7 @@ function cleanInput(args){
 }
 
 
-module.exports = {getCardName, public: false};
-module.exports = {sendCardLink, public: false};
+module.exports = {
+  getCardName:  getCardName,
+  sendCardLink: sendCardLink
+}
