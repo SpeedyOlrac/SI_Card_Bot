@@ -1,6 +1,6 @@
 const levenshtein = require('js-levenshtein');
 
-function getCardName(input, availableNames, wieghtOfSizediff = 0.8)
+function getCardName(input, availableNames, wieghtOfSizediff = "0.8")
 {
   var result = null;
   var closestDistance = 999;
@@ -22,10 +22,11 @@ function getCardName(input, availableNames, wieghtOfSizediff = 0.8)
 function sendCardLink(msg, input, availableNames, basePath)
 {
   var cardName = getCardName(input, availableNames);
+  console.log(cardName);
   if(cardName){
     return msg.channel.send(basePath + cardName  + '.webp');
   }else{
-   return msg.channel.send("Incorrect name, try using !search");
+    return msg.channel.send("Incorrect name, try using !search");
   }
 }
 
@@ -34,5 +35,6 @@ function cleanInput(args){
     return card_name.replace("-", "").replace("\'", "").replace(",", "_");
 }
 
-module.exports = {sendCardLink, public: false};
+
 module.exports = {getCardName, public: false};
+module.exports = {sendCardLink, public: false};
