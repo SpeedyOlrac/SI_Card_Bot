@@ -1,4 +1,4 @@
-spvar Green = {     
+var Green = {     
  name: 'A Spread of Rampant Green', 
  emote: '<:SpiritRampant:747558393295929475>', 
  panel: ['https://imgur.com/nlpGjjH' , 'https://imgur.com/iK9NTsz'],      
