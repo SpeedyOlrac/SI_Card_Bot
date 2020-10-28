@@ -34,4 +34,4 @@ module.exports = {
         }
 
         msg.channel.send(panel);
-    };
+    }};
