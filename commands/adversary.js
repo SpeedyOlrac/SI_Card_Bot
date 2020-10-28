@@ -24,15 +24,12 @@ module.exports = {
 
             panel = getcardname(args[0], list);
             console.log(panel);
-            var temp = adversary[adversary.indexOf(panel)];
-            console.log(temp);
-            panel = temp.title;
-            console.log(panel);
-        //    for(const element in list){
-        //        if(element == panel){
-        //          panel = adversary.get(panel).panel;
-        //        }
-        //     }
+
+           for(const element in adversary){
+               if(element.title == panel){
+                 panel = element.panel;
+               }
+            }
         }
 
         msg.channel.send(panel);
