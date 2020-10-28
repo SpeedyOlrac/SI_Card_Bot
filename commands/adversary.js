@@ -29,8 +29,9 @@ module.exports = {
            for(const element in list){
                if(element == panel){
                  panel = adversary.get(panel).panel;
+               }
             }
         }
 
         msg.channel.send(panel);
-    }};
+    };
