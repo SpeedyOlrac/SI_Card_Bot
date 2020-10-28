@@ -31,13 +31,15 @@ module.exports = {
         //finding words in args closer to target
         for (var a = 0; a < args.length; a++){
             if (isSearchable){
-            input.push(getCardName(args[a], shortNames, 0.5));
+            input.push(getCardName(args[a], shortNames, "0.5"));
             }
         }
         //console.log(input);
 
 
         //msg.channel.send(spirits[target].title );
+        name= nickNames(agrs[0]);
+
         for(var s = 0; s < spirits.length; s++){
             var name = spirits[s].name.split(' ');
             for(var n = 0; n < name.length; n++){
@@ -77,4 +79,16 @@ function isSearchable(word){
         return false;
     }
     return true;
+}
+
+function nickNames(name){
+    var nicknames = [['bodan', 'bringer' ]]
+
+    for(const n in nicknames){
+        if (name.toLowerCase == n[0]){
+            names = n[1]
+        }
+    }
+
+    return name;
 }
