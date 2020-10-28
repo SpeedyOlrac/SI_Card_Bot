@@ -7,6 +7,6 @@ module.exports = {
     public: true,
 
 	execute(msg, args) {
-		msg.channel.send(s.sendCardLink(msg, args, ImageNames.unique, "https://sick.oberien.de/imgs/powers/"));
+		s.sendCardLink(msg, args, ImageNames.unique, "https://sick.oberien.de/imgs/powers/");
 	},
 };
