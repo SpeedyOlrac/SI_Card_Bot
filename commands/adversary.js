@@ -25,7 +25,8 @@ module.exports = {
             }
 
             panel = getcardname(args[0], list);
-            panel = adversary[adversary.indexOf(panel)].panel;
+            var temp = adversary[adversary.indexOf(panel)];
+            panel = temp.title;
             console.log(panel);
         //    for(const element in list){
         //        if(element == panel){
