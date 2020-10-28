@@ -26,11 +26,11 @@ module.exports = {
             console.log(panel);
 
            for(const element in adversary){
+            console.log(element);
                if(element.title == panel){
                  panel = element.panel;
                }
             }
         }
-
         msg.channel.send(panel);
     }};
