@@ -27,8 +27,8 @@ module.exports = {
 
            for(const element in adversary){
             console.log(element);
-               if(element.title == panel){
-                 panel = element.panel;
+               if(adversary[element].title == panel){
+                 panel = adversary[element].panel;
                }
             }
         }
