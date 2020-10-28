@@ -27,11 +27,9 @@ module.exports = {
             panel = getcardname(args[0], list);
 
            for(const element in list){
-               if(element == panel);
-           }
-
-            adversary[].title
-            panel = adversary.get(panel).panel;
+               if(element == panel){
+                 panel = adversary.get(panel).panel;
+            }
         }
 
         msg.channel.send(panel);
