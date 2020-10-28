@@ -25,7 +25,7 @@ module.exports = {
             }
 
             panel = getcardname(args[0], list);
-            panel = adversary.get(panel).panel;
+            panel = adversary[adversary.indexOf(panel)].panel;
             console.log(panel);
         //    for(const element in list){
         //        if(element == panel){
