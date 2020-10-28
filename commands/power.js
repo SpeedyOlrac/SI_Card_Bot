@@ -1,4 +1,4 @@
-const s = require("./sendCardLink").sendCardLink();
+const s = require("./sendCardLink.js").sendCardLink;
 const ImageNames = require ('./ImageNames.js');
 
 

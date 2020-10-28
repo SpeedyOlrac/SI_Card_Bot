@@ -1,5 +1,6 @@
 
 const adversary = require ('./AdversaryNames.js').adversary;
+const getcardname = require('./sendCardLink.js').getCardName;
 //const ad = require('./AdversaryNames.js').ad;
 
 module.exports = {
@@ -10,21 +11,25 @@ module.exports = {
 
        // console.log( ad + ` 1` );
           
-        var panel = "";
+        var panel =  "Adversaries are \n Prussia, England, France, Habsburg, Russia, Scotland, Sweden";
         var found = false;
         var list = [];
-        if (args.length == 0){
-             panel = "Adversaries are \n Prussia, England, France, Habsburg, Russia, Scotland, Sweden";
-        }
+        console.log(adversary)
+
+        if (args.length == 0){} 
         else{
             for(const ad of adversary){
-                //  list.concat(ad.name);
-                //cardSearch.getcardname(args[0], list);
-                if(!found && ad.title == args[0].toLowerCase()){
-                    panel = ad.panel;
-                    found = true;
-                }
+                list.push(ad.title);
             }
+
+            panel = getcardname(args[0], list);
+
+           for(const element in list){
+               if(element == panel)
+           }
+
+            adversary[].title
+            panel = adversary.get(panel).panel;
         }
 
         msg.channel.send(panel);

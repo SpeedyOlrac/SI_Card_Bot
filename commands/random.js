@@ -44,8 +44,6 @@ function Picking(selection, diffmin = 0, diffmax = 11){
             return ["Diffculty values are not Valid", ""];
         }
 
-
-
         // adversary is [name, escaltion diff, diff 1 ...]
         var correct = true;
         let level = "";
