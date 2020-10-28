@@ -1,5 +1,5 @@
 
-const adversary = require ('./AdversaryNames.js').adversary;
+const adversary = require ('./AdversaryNames.js');
 const getcardname = require('./sendCardLink.js').getCardName;
 //const ad = require('./AdversaryNames.js').ad;
 
@@ -25,12 +25,13 @@ module.exports = {
             }
 
             panel = getcardname(args[0], list);
-
-           for(const element in list){
-               if(element == panel){
-                 panel = adversary.get(panel).panel;
-               }
-            }
+            panel = adversary.get(panel).panel;
+            console.log(panel);
+        //    for(const element in list){
+        //        if(element == panel){
+        //          panel = adversary.get(panel).panel;
+        //        }
+        //     }
         }
 
         msg.channel.send(panel);
