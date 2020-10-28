@@ -16,7 +16,9 @@ module.exports = {
         var list = [];
         console.log(adversary)
 
-        if (args.length == 0){} 
+        if (args.length == 0){
+
+        } 
         else{
             for(const ad of adversary){
                 list.push(ad.title);
@@ -25,7 +27,7 @@ module.exports = {
             panel = getcardname(args[0], list);
 
            for(const element in list){
-               if(element == panel)
+               if(element == panel);
            }
 
             adversary[].title
