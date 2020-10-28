@@ -38,7 +38,7 @@ module.exports = {
 
 
         //msg.channel.send(spirits[target].title );
-        name= nickNames(agrs[0]);
+        name= nickNames(args[0]);
 
         for(var s = 0; s < spirits.length; s++){
             var name = spirits[s].name.split(' ');
@@ -52,7 +52,7 @@ module.exports = {
                 }
             }
         }
-
+        
         if(found){
             if(args[0].toLowerCase() != 'back' && args[args.length -1].toLowerCase() != 'back'  ){
                 msg.channel.send(spirits[target].panel[0]);
