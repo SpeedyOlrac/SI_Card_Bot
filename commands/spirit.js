@@ -32,6 +32,7 @@ module.exports = {
 
         //finding words in args closer to target
         for (var a = 0; a < args.length; a++){
+            console.log(args[a]);
             input.push(getCardName(args[a], shortNames, "0.8"));
         }
 
@@ -72,7 +73,7 @@ function nickNames(name){
     name = name.filter(e => e.toLowerCase() != 'back');
     name = name.filter(e => e.toLowerCase() != 'front');
     name = name.filter(e => e.length > 3);
-    console.log(name);
+    
     for(var n = 0; n < name.length; n++){
         for (var m = 0; m < nicknames.length; m++){
             console. log(name[n].toLowerCase() +  + nicknames[m][0] );
