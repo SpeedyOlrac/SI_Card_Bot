@@ -13,7 +13,8 @@ module.exports = {
         var back = args.indexOf("back");
         console.log(front +" " + back);
 
-        args = nickNames(args).split(',');
+        args = nickNames(args);
+        args.split();
 
         if(args.length < 1){
             msg.channel.send(target);
