@@ -9,7 +9,7 @@ function getCardName(input, availableNames, wieghtOfSizediff = 0.8)
   for(var name of availableNames)
   {
     var sizeDiff = name.length > target.length ? name.length - target.length : 0;
-    var distance = levenshtein(target, name.toLowerCase()) - (sizeDiff * wieghtOfSizediff);
+    var distance = levenshtein(target, name) - (sizeDiff * wieghtOfSizediff);
     if(distance < closestDistance){
       closestDistance = distance;
       result = name;
