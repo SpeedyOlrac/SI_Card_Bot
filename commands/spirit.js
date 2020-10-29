@@ -91,7 +91,7 @@ function nickNames(name){
     name = name.filter(e => e.toLowerCase() !== 'back');
     name = name.filter(e => e.toLowerCase() !== 'front');
 
-    for(const n = 0; n < name.length; n++){
+    for(var n = 0; n < name.length; n++){
         if (name[n].toLowerCase == nicknames[0]){
             name[n] = nicknames[1];
         }
