@@ -15,7 +15,6 @@ module.exports = {
 
         var args = nickNames(args);
 
-
         if(args.length < 1){
             msg.channel.send(target);
             return;
@@ -28,12 +27,12 @@ module.exports = {
         //Making list of names to search
         for( var s = 0; s < spirits.length; s++){
             availableNames.push(spirits[s].name);
-            var shortNames = spirits[s].name.split(' ');
+            shortNames = spirits[s].name.split(' ');
         }
 
         //finding words in args closer to target
         for (var a = 0; a < args.length; a++){
-            input.push(getCardName(args[a], shortNames, "0.5"));
+            input.push(getCardName(args[a], shortNames, "0.8"));
         }
 
         console.log(input);
@@ -42,7 +41,7 @@ module.exports = {
         for(var s = 0; s < availableNames.length; s++){
             for(var n = 0; n < shortNames.length; n++){
                 for(var i = 0; i < input.length; i++){
-                    if (shortName[n] == input[i] && !found){
+                    if (shortNames[n] == input[i] && !found){
                         target = s;
                         console.log(s);
                         found = true;
