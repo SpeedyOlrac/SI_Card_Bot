@@ -13,7 +13,7 @@ module.exports = {
         var back = args.indexOf("back");
         console.log(front +" " + back);
 
-        args = nickNames(args);
+        args = nickNames(args).split(',');
 
         if(args.length < 1){
             msg.channel.send(target);
@@ -76,7 +76,7 @@ function nickNames(name){
     
     for(var n = 0; n < name.length; n++){
         for (var m = 0; m < nicknames.length; m++){
-            console. log(name[n].toLowerCase() +  + nicknames[m][0] );
+            console. log(name[n].toLowerCase() + " " + nicknames[m][0] );
             if (name[n].toLowerCase() == nicknames[m][0]){
                 name[n] = nicknames[m][1];
             }
