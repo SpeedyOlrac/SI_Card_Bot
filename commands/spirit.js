@@ -27,7 +27,7 @@ module.exports = {
         //Making list of names to search
         for( var s = 0; s < spirits.length; s++){
             availableNames.push(spirits[s].name);
-            shortNames = spirits[s].name.split(' ');
+            shortNames[s] = spirits[s].name.split(' ');
         }
 
         //finding words in args closer to target
@@ -39,7 +39,7 @@ module.exports = {
         //msg.channel.send(spirits[target].title );
      
         for(var s = 0; s < availableNames.length; s++){
-            for(var n = 0; n < shortNames.length; n++){
+            for(var n = 0; n < shortNames[s].length; n++){
                 for(var i = 0; i < input.length; i++){
                     if (shortNames[n] == input[i] && !found){
                         target = s;
@@ -50,6 +50,7 @@ module.exports = {
             }
         }
         
+        console.log()
         if(found){
             if(back > 0 ){
                 msg.channel.send(spirits[target].panel[0]);
