@@ -23,7 +23,6 @@ module.exports = {
         var shortNames= [];
         var availableNames = [];
         var input = [];
-       
         var found = false;
 
         //Making list of names to search
@@ -41,7 +40,7 @@ module.exports = {
         //msg.channel.send(spirits[target].title );
      
         for(var s = 0; s < availableNames.length; s++){
-            for(var n = 0; n < name.length; n++){
+            for(var n = 0; n < shortNames.length; n++){
                 for(var i = 0; i < input.length; i++){
                     if (shortName[n] == input[i] && !found){
                         target = s;
@@ -76,7 +75,8 @@ function nickNames(name){
 
     for(var n = 0; n < name.length; n++){
         for (var m = 0; m < nicknames.length; m++){
-             if (name[n].toLowerCase == nicknames[m][0]){
+            console. log(name[n].toLowerCase() +  + nicknames[m][0] );
+            if (name[n].toLowerCase() == nicknames[m][0]){
                 name[n] = nicknames[m][1];
             }
         }
