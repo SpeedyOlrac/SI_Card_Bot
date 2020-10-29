@@ -27,7 +27,7 @@ module.exports = {
         //Making list of names to search
         for( var s = 0; s < spirits.length; s++){
             availableNames.push(spirits[s].name);
-            shortNames[s] = spirits[s].name.split(' ');
+            shortNames.push( spirits[s].name.split(' '));
         }
 
         //finding words in args closer to target
