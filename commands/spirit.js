@@ -44,11 +44,12 @@ module.exports = {
             var name = spirits[s].name.split(' ');
             for(var n = 0; n < name.length; n++){
                 for(var i = 0; i < input.length; i++){
-                    if(isSearchable(input[i]) && name[n] == input[i] && !found){
+                    if (name[n] == input[i] && !found){
                         target = s;
                         console.log(s);
                         found = true;
                     }
+                       
                 }
             }
         }
@@ -82,11 +83,14 @@ function isSearchable(word){
 }
 
 function nickNames(name){
-    var nicknames = [['bodan', 'bringer' ]]
+    var nicknames = [['bodan', 'bringer' ]];
+   
+    name = name.filter(e => e.toLowerCase() !== 'back');
+    name = name.filter(e => e.toLowerCase() !== 'front');
 
-    for(const n in nicknames){
-        if (name.toLowerCase == n[0]){
-            names = n[1]
+    for(const n = 0; n < name.length; n++){
+        if (name[n].toLowerCase == nicknames[0]){
+            name[n] = nicknames[1];
         }
     }
 
