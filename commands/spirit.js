@@ -23,32 +23,27 @@ module.exports = {
         var shortNames= [];
         var availableNames = [];
         var input = [];
-        var name = [];
+       
         var found = false;
 
         //Making list of names to search
         for( var s = 0; s < spirits.length; s++){
             availableNames.push(spirits[s].name);
-            var name = spirits[s].name.split(' ');
-            for(var i = 0; i < name.length; i++){
-                shortNames.push(name[i]);
-            }
+            var shortNames = spirits[s].name.split(' ');
         }
 
         //finding words in args closer to target
         for (var a = 0; a < args.length; a++){
-            if (isSearchable){
             input.push(getCardName(args[a], shortNames, "0.5"));
-            }
         }
 
-        //console.log(input);
+        console.log(input);
         //msg.channel.send(spirits[target].title );
      
-        for(var s = 0; s < spirits.length; s++){
+        for(var s = 0; s < availableNames.length; s++){
             for(var n = 0; n < name.length; n++){
                 for(var i = 0; i < input.length; i++){
-                    if (name[n] == input[i] && !found){
+                    if (shortName[n] == input[i] && !found){
                         target = s;
                         console.log(s);
                         found = true;
@@ -71,29 +66,19 @@ module.exports = {
     }
 }
 
-function isSearchable(word){
-    if(word < 3 ){
-        return false;
-    }
-    if(word.toLowerCase() == 'back'){
-        return false;
-    }
-
-    if(word.toLowerCase() == 'front'){
-        return false;
-    }
-    return true;
-}
 
 function nickNames(name){
     var nicknames = [['bodan', 'bringer' ]];
    
     name = name.filter(e => e.toLowerCase() != 'back');
     name = name.filter(e => e.toLowerCase() != 'front');
+    name = name.filter(e => e.length > 3);
 
     for(var n = 0; n < name.length; n++){
-        if (name[n].toLowerCase == nicknames[0]){
-            name[n] = nicknames[1];
+        for (var m = 0; m < nicknames.length; m++){
+             if (name[n].toLowerCase == nicknames[m][0]){
+                name[n] = nicknames[m][1];
+            }
         }
     }
     console.log(name);
