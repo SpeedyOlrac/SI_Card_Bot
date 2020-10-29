@@ -26,7 +26,7 @@ module.exports = {
             console.log(panel);
 
            for(const element in adversary){
-            console.log(element);
+            //console.log(element);
                if(adversary[element].title == panel){
                  panel = adversary[element].panel;
                }

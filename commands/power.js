@@ -8,7 +8,9 @@ module.exports = {
     public: true,
 
 	execute(msg, args) {
+		var html = "https://sick.oberien.de/imgs/powers/";
+
 		msg.channel.send(ImageNames.noJE);
-		s.sendCardLink(msg, args, ImageNames.power, "https://sick.oberien.de/imgs/powers/");
+		s.sendCardLink(msg, args, ImageNames.power, html);
 	},
 };
