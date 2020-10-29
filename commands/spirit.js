@@ -14,7 +14,8 @@ module.exports = {
         console.log(front +" " + back);
 
         args = nickNames(args);
-        args.split();
+        console.log(args);
+        //args.split();
 
         if(args.length < 1){
             msg.channel.send(target);
