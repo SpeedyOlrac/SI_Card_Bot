@@ -9,6 +9,12 @@ module.exports = {
 	public: true,
 	execute(msg, args) {
         var target = "Sorry could not find the spirit you where looking for.";
+        var front = args.indexOf("front");
+        var back = args.indexOf("back");
+        console.log(front +" " + back);
+
+        var args = nickNames(args[0]);
+
 
         if(args.length < 1){
             msg.channel.send(target);
@@ -17,6 +23,7 @@ module.exports = {
         var shortNames= [];
         var availableNames = [];
         var input = [];
+        var name = [];
         var found = false;
 
         //Making list of names to search
@@ -34,31 +41,27 @@ module.exports = {
             input.push(getCardName(args[a], shortNames, "0.5"));
             }
         }
+
         //console.log(input);
-
-
         //msg.channel.send(spirits[target].title );
-        name= nickNames(args[0]);
-
+     
         for(var s = 0; s < spirits.length; s++){
-            var name = spirits[s].name.split(' ');
             for(var n = 0; n < name.length; n++){
                 for(var i = 0; i < input.length; i++){
                     if (name[n] == input[i] && !found){
                         target = s;
                         console.log(s);
                         found = true;
-                    }
-                       
+                    }   
                 }
             }
         }
         
         if(found){
-            if(args[0].toLowerCase() != 'back' && args[args.length -1].toLowerCase() != 'back'  ){
+            if(back > 0 ){
                 msg.channel.send(spirits[target].panel[0]);
             }
-            if(args[0].toLowerCase() != 'front' && args[args.length -1].toLowerCase() != 'front' ){
+            if(front > 0 ){
                 msg.channel.send(spirits[target].panel[1]); 
             }
         }
