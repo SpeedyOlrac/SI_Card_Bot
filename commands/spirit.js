@@ -34,7 +34,9 @@ module.exports = {
         //finding words in args closer to target
         for (var a = 0; a < args.length; a++){
             console.log(args[a]);
-            input.push(getCardName(args[a].splice(), shortNames, "0.8"));
+            var temp = args[a];
+            temp = temp.split();
+            input.push(getCardName(temp, shortNames, "0.8"));
         }
 
         console.log(input);
