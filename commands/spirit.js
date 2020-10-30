@@ -28,15 +28,13 @@ module.exports = {
         //Making list of names to search
         for( var s = 0; s < spirits.length; s++){
             availableNames.push(spirits[s].name);
-            shortNames.push( spirits[s].name.split(' '));
+            for(var t = 0; t < availableNames[s].length; t++){
+                shortNames.push( availableNames[t]);
+            }
         }
 
-        availableNames.split(' ');
         //finding words in args closer to target
         for (var a = 0; a < args.length; a++){
-            
-            var temp = [];
-            temp.push(args[a]); 
             console.log( availableNames );
 
             input.push(getCardName(temp, availableNames, "0.8"));
@@ -57,7 +55,6 @@ module.exports = {
             }
         }
         
-        console.log()
         if(found){
             if(back > 0 ){
                 msg.channel.send(spirits[target].panel[0]);
