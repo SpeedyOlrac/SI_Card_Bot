@@ -15,7 +15,6 @@ module.exports = {
 
         args = nickNames(args);
         console.log(args);
-        //args.split();
 
         if(args.length < 1){
             msg.channel.send(target);
@@ -35,7 +34,7 @@ module.exports = {
         //finding words in args closer to target
         for (var a = 0; a < args.length; a++){
             console.log(args[a]);
-            input.push(getCardName(args[a], shortNames, "0.8"));
+            input.push(getCardName(args[a].splice(), shortNames, "0.8"));
         }
 
         console.log(input);
