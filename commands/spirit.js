@@ -20,7 +20,7 @@ module.exports = {
             msg.channel.send(target);
             return;
         }
-        var shortNames= [];
+        var shortNames = [];
         var availableNames = [];
         var input = [];
         var found = false;
@@ -36,7 +36,8 @@ module.exports = {
             
             var temp = [];
             temp.push(args[a]); 
-            console.log(temp );
+        var availableNames = [];
+            console.log( shortNames );
 
             input.push(getCardName(temp, shortNames, "0.8"));
         }
