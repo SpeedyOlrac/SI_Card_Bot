@@ -33,9 +33,10 @@ module.exports = {
 
         //finding words in args closer to target
         for (var a = 0; a < args.length; a++){
-            console.log(args[a]);
+            
             var temp = args[a];
             temp = temp.split();
+            console.log(temp + " temp's value");
             input.push(getCardName(temp, shortNames, "0.8"));
         }
 
@@ -85,6 +86,5 @@ function nickNames(name){
             }
         }
     }
-    console.log(name);
     return name;
 }
