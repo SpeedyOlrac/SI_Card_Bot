@@ -31,21 +31,21 @@ module.exports = {
             shortNames.push( spirits[s].name.split(' '));
         }
 
+        availableNames.split(' ');
         //finding words in args closer to target
         for (var a = 0; a < args.length; a++){
             
             var temp = [];
             temp.push(args[a]); 
-        var availableNames = [];
-            console.log( shortNames );
+            console.log( availableNames );
 
-            input.push(getCardName(temp, shortNames, "0.8"));
+            input.push(getCardName(temp, availableNames, "0.8"));
         }
 
         console.log(input);
         //msg.channel.send(spirits[target].title );
      
-        for(var s = 0; s < availableNames.length; s++){
+        for(var s = 0; s < shortNames.length; s++){
             for(var n = 0; n < shortNames[s].length; n++){
                 for(var i = 0; i < input.length; i++){
                     if (shortNames[n] == input[i] && !found){
