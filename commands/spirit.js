@@ -36,7 +36,8 @@ module.exports = {
             
             var temp = [];
             temp.push(args[a]); 
-            console.log(temp + " temp's value");
+            console.log(temp );
+
             input.push(getCardName(temp, shortNames, "0.8"));
         }
 
