@@ -30,7 +30,7 @@ module.exports = {
 
         //finding words in args closer to target
         for (var a = 0; a < args.length; a++){
-            if (isSearchable){
+            if (isSearchable(args[a])){
             input.push(getCardName(args[a], shortNames, 0.5));
             }
         }
