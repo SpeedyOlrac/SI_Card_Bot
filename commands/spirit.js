@@ -9,18 +9,12 @@ module.exports = {
 	public: true,
 	execute(msg, args) {
         var target = "Sorry could not find the spirit you where looking for.";
-        var front = args.indexOf("front");
-        var back = args.indexOf("back");
-        console.log(front +" " + back);
-
-        args = nickNames(args);
-        console.log(args);
 
         if(args.length < 1){
             msg.channel.send(target);
             return;
         }
-        var shortNames = [];
+        var shortNames= [];
         var availableNames = [];
         var input = [];
         var found = false;
@@ -28,44 +22,45 @@ module.exports = {
         //Making list of names to search
         for( var s = 0; s < spirits.length; s++){
             availableNames.push(spirits[s].name);
-            for(var t = 0; t < availableNames[s].length; t++){
-                shortNames.push( availableNames[t]);
+            var name = spirits[s].name.split(' ');
+            for(var i = 0; i < name.length; i++){
+                shortNames.push(name[i]);
             }
         }
 
         //finding words in args closer to target
         for (var a = 0; a < args.length; a++){
-
             if (isSearchable){
             input.push(getCardName(args[a], shortNames, 0.5));
             }
         }
-        //console.log(input);
-
-            input.push(getCardName(shortNames, availableNames, "0.8"));
-        }
-
         console.log(input);
-        //msg.channel.send(spirits[target].title );
+        
 
+        //msg.channel.send(spirits[target].title );
         for(var s = 0; s < spirits.length; s++){
             var name = spirits[s].name.split(' ');
+            console.log(name);
             for(var n = 0; n < name.length; n++){
+                console.log(name[n]);
                 for(var i = 0; i < input.length; i++){
-                    if (shortNames[n] == input[i] && !found){
+                    if(isSearchable(input[i]) && name[n] == input[i] && !found){
                         target = s;
                         console.log(s);
                         found = true;
-                    }   
+                    }
                 }
             }
         }
-        
+
+
+        console.log(target);
+
         if(found){
-            if(back > 0 ){
+            if(args[0].toLowerCase() != 'back' && args[args.length -1].toLowerCase() != 'back'  ){
                 msg.channel.send(spirits[target].panel[0]);
             }
-            if(front > 0 ){
+            if(args[0].toLowerCase() != 'front' && args[args.length -1].toLowerCase() != 'front' ){
                 msg.channel.send(spirits[target].panel[1]); 
             }
         }
