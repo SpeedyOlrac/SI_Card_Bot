@@ -35,9 +35,9 @@ module.exports = {
 
         //finding words in args closer to target
         for (var a = 0; a < args.length; a++){
-            console.log( availableNames );
+            console.log( shortNames );
 
-            input.push(getCardName(temp, availableNames, "0.8"));
+            input.push(getCardName(shortNames, availableNames, "0.8"));
         }
 
         console.log(input);
