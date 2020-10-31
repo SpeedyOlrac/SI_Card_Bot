@@ -34,7 +34,7 @@ module.exports = {
             input.push(getCardName(args[a], shortNames, 0.5));
             }
         }
-        console.log(input);
+        console.log(shortNames);
         
 
         //msg.channel.send(spirits[target].title );
