@@ -35,30 +35,22 @@ module.exports = {
 
         //finding words in args closer to target
         for (var a = 0; a < args.length; a++){
-<<<<<<< HEAD
-            console.log( shortNames );
-=======
+
             if (isSearchable){
             input.push(getCardName(args[a], shortNames, 0.5));
             }
         }
         //console.log(input);
->>>>>>> parent of a158a48... Update spirit.js
 
             input.push(getCardName(shortNames, availableNames, "0.8"));
         }
 
         console.log(input);
         //msg.channel.send(spirits[target].title );
-<<<<<<< HEAD
-     
-        for(var s = 0; s < shortNames.length; s++){
-            for(var n = 0; n < shortNames[s].length; n++){
-=======
+
         for(var s = 0; s < spirits.length; s++){
             var name = spirits[s].name.split(' ');
             for(var n = 0; n < name.length; n++){
->>>>>>> parent of a158a48... Update spirit.js
                 for(var i = 0; i < input.length; i++){
                     if (shortNames[n] == input[i] && !found){
                         target = s;
@@ -83,25 +75,6 @@ module.exports = {
     }
 }
 
-<<<<<<< HEAD
-
-function nickNames(name){
-    var nicknames = [['bodan', 'bringer' ]];
-   
-    name = name.filter(e => e.toLowerCase() != 'back');
-    name = name.filter(e => e.toLowerCase() != 'front');
-    name = name.filter(e => e.length > 3);
-    
-    for(var n = 0; n < name.length; n++){
-        for (var m = 0; m < nicknames.length; m++){
-            console. log(name[n].toLowerCase() + " " + nicknames[m][0] );
-            if (name[n].toLowerCase() == nicknames[m][0]){
-                name[n] = nicknames[m][1];
-            }
-        }
-    }
-    return name;
-=======
 function isSearchable(word){
     if(word < 3 ){
         return false;
@@ -114,5 +87,4 @@ function isSearchable(word){
         return false;
     }
     return true;
->>>>>>> parent of a158a48... Update spirit.js
 }
