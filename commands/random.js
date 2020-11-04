@@ -27,7 +27,7 @@ module.exports = {
             }
 }};
 
-function Picking(selection, diffmin = 0, diffmax = 11){
+function Picking(selection, min = 0, max = 11){
     if(selection == 'spirit'){
         let n = Math.floor(Math.random() * spirits.length);
         let a = Math.floor(Math.random() * spirits[n].aspect.length);
@@ -40,6 +40,9 @@ function Picking(selection, diffmin = 0, diffmax = 11){
         return  [spirits[n].name, spirits[n].emote, aspect];
     }    
     else if(selection == 'adversary'){
+        var diffmax = parseInt(max);
+        var diffmin = parseInt(min);
+
         if(diffmax < diffmin || diffmax > 11 || diffmin < 0){
             return ["Diffculty values are not Valid", ""];
         }
@@ -51,8 +54,7 @@ function Picking(selection, diffmin = 0, diffmax = 11){
         let keys = Array.from(adversary.keys());
         let name = adversary.get(keys[0]);
 
-        while(correct){
-            
+        while(correct){  
             name = adversary.get(keys[Math.floor(Math.random() * keys.length)]);
 
             //console.log(name);
