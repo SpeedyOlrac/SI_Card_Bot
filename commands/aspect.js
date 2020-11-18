@@ -1,7 +1,7 @@
 const { getCardName } = require('./sendCardLink.js');
 
 const spirits = require('./spiritNames.js').spirits;
-const sendCardLink = require("./sendCardLink.js").sendCardLink;
+//const sendCardLink = require("./sendCardLink.js").sendCardLink;
 
 
 var spirits =[];
