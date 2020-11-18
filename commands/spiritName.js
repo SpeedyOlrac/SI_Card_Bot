@@ -4,7 +4,7 @@ var Green = {
  panel: 'https://imgur.com/nlpGjjH,https://imgur.com/iK9NTsz',      
  complexity: '',
  title: 'Green' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var BoDaN = {     
  name: 'Bringer of Dreams and Nightmares', 
@@ -12,7 +12,7 @@ var BoDaN = {
  panel: 'https://imgur.com/UxZyTv2,https://imgur.com/VUOjO0v',      
  complexity: '',
  title: 'BoDaN' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Downpour = {     
  name: 'Downpour Drenches the World', 
@@ -20,7 +20,7 @@ var Downpour = {
  panel: 'https://imgur.com/vZU2mVT,https://imgur.com/CShexIA',      
  complexity: '',
  title: 'Downpour' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Fractured = {     
  name: 'Fractured Days Split the Sky', 
@@ -28,7 +28,7 @@ var Fractured = {
  panel: 'https://imgur.com/MDqxo4i,https://imgur.com/7z7V6Ol',      
  complexity: '',
  title: 'Fractured' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Wildfire = {     
  name: 'Heart of the Wildfire', 
@@ -36,7 +36,7 @@ var Wildfire = {
  panel: 'https://imgur.com/A4FRUV5,https://imgur.com/Y8lVu5J',      
  complexity: '',
  title: 'Wildfire' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Finder = {     
  name: 'Finder of Paths Unseen', 
@@ -44,7 +44,7 @@ var Finder = {
  panel: 'https://imgur.com/T9HLW7e,https://imgur.com/JtdpxCr',      
  complexity: '',
  title: 'Finder' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Lightning = {     
  name: 'Lightning\'s Swift Strike', 
@@ -52,7 +52,7 @@ var Lightning = {
  panel: 'https://imgur.com/yXE6oHw,https://imgur.com/WLcU0w9',      
  complexity: '',
  title: 'Lightning' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Keeper = {     
  name: 'Keeper of the Forbidden Wilds', 
@@ -60,7 +60,7 @@ var Keeper = {
  panel: 'https://imgur.com/PBwq5KE,https://imgur.com/ZKAblG3',      
  complexity: '',
  title: 'Keeper' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Trickster = {     
  name: 'Grinning Trickster Stirs Up Trouble', 
@@ -68,7 +68,7 @@ var Trickster = {
  panel: 'https://imgur.com/D2geoaL,https://imgur.com/i6YLeWv',      
  complexity: '',
  title: 'Trickster' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Lure = {     
  name: 'Lure of the Deep Wilderness', 
@@ -76,7 +76,7 @@ var Lure = {
  panel: 'https://imgur.com/Zx3UcPD,https://imgur.com/wGPod8z',      
  complexity: '',
  title: 'Lure' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var ManyMinds = {     
  name: 'Many Minds Move as One', 
@@ -84,7 +84,7 @@ var ManyMinds = {
  panel: 'https://imgur.com/bA3Rmp8,https://imgur.com/XIG39qe',      
  complexity: '',
  title: 'ManyMinds' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Ocean = {     
  name: 'Ocean\'s Hungry Grasp', 
@@ -92,7 +92,7 @@ var Ocean = {
  panel: 'https://imgur.com/rrLWF5o,https://imgur.com/UVEIJfA',      
  complexity: '',
  title: 'Ocean' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Serpent = {     
  name: 'Serpent Slumbering Beneath the Island', 
@@ -100,7 +100,7 @@ var Serpent = {
  panel: 'https://imgur.com/PgT7Kyj,https://imgur.com/cE7YZ3L',      
  complexity: '',
  title: 'Serpent' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Fangs = {     
  name: 'Sharp Fangs Behind the Leaves', 
@@ -108,7 +108,7 @@ var Fangs = {
  panel: 'https://imgur.com/uxw6S5D,https://imgur.com/IoL5BHz',      
  complexity: '',
  title: 'Fangs' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Memory = {     
  name: 'Shifting Memory of Ages', 
@@ -116,7 +116,7 @@ var Memory = {
  panel: 'https://imgur.com/QbkXAHr,https://imgur.com/BB48p9Q',      
  complexity: '',
  title: 'Memory' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Mist = {     
  name: 'Shroud of Silent Mist', 
@@ -124,7 +124,7 @@ var Mist = {
  panel: 'https://imgur.com/AgBKUYl,https://imgur.com/sE5Iasm',      
  complexity: '',
  title: 'Mist' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Starlight = {     
  name: 'Starlight Seeks Its Form', 
@@ -132,7 +132,7 @@ var Starlight = {
  panel: 'https://imgur.com/fkB6Y05,https://imgur.com/pCuo4XJ',      
  complexity: '',
  title: 'Starlight' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Stone = {     
  name: 'Stone\'s Unyielding Defiance', 
@@ -140,7 +140,7 @@ var Stone = {
  panel: 'https://imgur.com/FhEIqB6,https://imgur.com/RqlC8ZP',      
  complexity: '',
  title: 'Stone' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Thunderspeaker = {     
  name: 'Thunderspeaker', 
@@ -148,7 +148,7 @@ var Thunderspeaker = {
  panel: 'https://imgur.com/5xnsvD8,https://imgur.com/PztVF5L',      
  complexity: '',
  title: 'Thunderspeaker' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Shadows = {     
  name: 'Shadows Flicker Like Flame', 
@@ -156,7 +156,7 @@ var Shadows = {
  panel: 'https://imgur.com/FmVImnv,https://imgur.com/oyk2ZwH',      
  complexity: '',
  title: 'Shadows' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var River = {     
  name: 'River Surges in Sunlight', 
@@ -164,7 +164,7 @@ var River = {
  panel: 'https://imgur.com/pmdjfxu,https://imgur.com/uv0mMRV',      
  complexity: '',
  title: 'River' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Vengeance = {     
  name: 'Vengeance as a Burning Plague', 
@@ -172,7 +172,7 @@ var Vengeance = {
  panel: 'https://imgur.com/EgzpSLC,https://imgur.com/4hnimN9',      
  complexity: '',
  title: 'Vengeance' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Earth = {     
  name: 'Vital Strength of the Earth', 
@@ -180,7 +180,7 @@ var Earth = {
  panel: 'https://imgur.com/wgs13CF,https://imgur.com/5iTl68l',      
  complexity: '',
  title: 'Earth' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 
 var Volcano = {     
  name: 'Volcano Looming High', 
@@ -188,7 +188,7 @@ var Volcano = {
  panel: 'https://imgur.com/sSs3uqa,https://imgur.com/XOC05vn',      
  complexity: '',
  title: 'Volcano' ,
- aspect: ''}; 
+ aspect: [ ] }; 
 /*
 var spirits = [ 
     Green, BoDaN, Downpour, Finder, Fractured, Trickster, Wildfire, Keeper, 

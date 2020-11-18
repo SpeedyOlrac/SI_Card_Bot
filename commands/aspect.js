@@ -1,12 +1,64 @@
-// can be used as template
-//save as command as commandName.js
+const { getCardName } = require('./sendCardLink.js');
+
+const spirits = require('./spiritNames.js').spirits;
+const sendCardLink = require("./sendCardLink.js").sendCardLink;
+
+
+var spirits =[];
+var aspectNames = [];
+var target = "Spirts aspects are: /n";
+
+for (const spirit in spirits){
+	if (spirit.aspect.length > 0){
+		aspects.push(spirit)
+	}
+}
+
+for(const spirit in spirits){
+	target += spirit.name + ": ";
+	var stop = 1;
+	for(const a in spirit){
+		target += a.name;
+		if (stop < aspect.length){
+			target += ", "
+		}
+		else{
+			target += "/n";
+		}
+		stop++;
+
+		aspectNames.push(a.name); 				
+	}
+}
 
 
 module.exports = {
 	name: 'aspect',
 	description: 'The ascpects of sprits',
-	public: false, //has to be true to show as a command
+	public: true, //has to be true to show as a command
 	execute(msg, args) {
-		msg.channel.send('output of command');
+		console.log(aspects);
+
+		if(args.length = 0){
+			msg.channel.send(target);
+		}
+
+		var found = false;
+		var name = getCardName(args, aspectNames);
+
+		for(const spirit in spirits){
+			for(const aspect in aspects){
+				if (!found && aspect.name == name){
+					target = spirit.name + ": " + aspect.name + " aspect /n" +
+						aspect.panel; 
+
+					msg.channel.send(target);
+					found = true;
+				}
+
+			}
+		}
+
+		
 	},
 };

@@ -4,7 +4,7 @@ var Green = {
  panel: ['https://imgur.com/nlpGjjH' , 'https://imgur.com/iK9NTsz'],      
  complexity: '',
  title: 'Green' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var BoDaN = {     
@@ -13,7 +13,7 @@ var BoDaN = {
  panel:[ 'https://imgur.com/UxZyTv2', 'https://imgur.com/VUOjO0v'],      
  complexity: '',
  title: 'BoDaN' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var Downpour = {     
@@ -22,7 +22,7 @@ var Downpour = {
  panel: ['https://imgur.com/vZU2mVT', 'https://imgur.com/CShexIA'],      
  complexity: '',
  title: 'Downpour' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var Fractured = {     
@@ -31,7 +31,7 @@ var Fractured = {
  panel: ['https://imgur.com/MDqxo4i', 'https://imgur.com/7z7V6Ol'],      
  complexity: '',
  title: 'Fractured' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var Wildfire = {     
@@ -40,7 +40,7 @@ var Wildfire = {
  panel: ['https://imgur.com/A4FRUV5', 'https://imgur.com/Y8lVu5J'],      
  complexity: '',
  title: 'Wildfire' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var Finder = {     
@@ -49,7 +49,7 @@ var Finder = {
  panel: ['https://imgur.com/T9HLW7e', 'https://imgur.com/JtdpxCr'],      
  complexity: '',
  title: 'Finder' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var Lightning = {     
@@ -58,7 +58,11 @@ var Lightning = {
  panel: ['https://imgur.com/yXE6oHw', 'https://imgur.com/WLcU0w9'],      
  complexity: '',
  title: 'Lightning' ,
- aspect: '',
+ aspect: [ 
+    {name: "Pandemonium", emote: "<:TStrife:>778714254982643762", panel: "https://i.imgur.com/1774mnW.jpg"},
+    {name: "Wind", emote: "<:ICFast:>778714634710286397", panel: "https://i.imgur.com/VwchE5U.jpg"},
+    {name: "", emote: "", panel: ""}
+ ],
  aspectIMG: ''}; 
 
 var Keeper = {     
@@ -67,7 +71,7 @@ var Keeper = {
  panel: ['https://imgur.com/PBwq5KE', 'https://imgur.com/ZKAblG3'],      
  complexity: '',
  title: 'Keeper' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var Trickster = {     
@@ -76,7 +80,7 @@ var Trickster = {
  panel: ['https://imgur.com/D2geoaL', 'https://imgur.com/i6YLeWv'],      
  complexity: '',
  title: 'Trickster' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var Lure = {     
@@ -85,7 +89,7 @@ var Lure = {
  panel: ['https://imgur.com/Zx3UcPD', 'https://imgur.com/wGPod8z'],      
  complexity: '',
  title: 'Lure' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var ManyMinds = {     
@@ -94,7 +98,7 @@ var ManyMinds = {
  panel: ['https://imgur.com/bA3Rmp8', 'https://imgur.com/XIG39qe'],      
  complexity: '',
  title: 'ManyMinds' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var Ocean = {     
@@ -103,7 +107,7 @@ var Ocean = {
  panel: ['https://imgur.com/rrLWF5o', 'https://imgur.com/UVEIJfA'],      
  complexity: '',
  title: 'Ocean' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var Serpent = {     
@@ -112,7 +116,7 @@ var Serpent = {
  panel: ['https://imgur.com/PgT7Kyj', 'https://imgur.com/cE7YZ3L'],      
  complexity: '',
  title: 'Serpent' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var Fangs = {     
@@ -121,7 +125,7 @@ var Fangs = {
  panel: ['https://imgur.com/uxw6S5D', 'https://imgur.com/IoL5BHz'],      
  complexity: '',
  title: 'Fangs' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var Memory = {     
@@ -130,7 +134,7 @@ var Memory = {
  panel: ['https://imgur.com/QbkXAHr', 'https://imgur.com/BB48p9Q'],      
  complexity: '',
  title: 'Memory' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var Mist = {     
@@ -139,7 +143,7 @@ var Mist = {
  panel: ['https://imgur.com/AgBKUYl', 'https://imgur.com/sE5Iasm'],      
  complexity: '',
  title: 'Mist' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var Starlight = {     
@@ -148,7 +152,7 @@ var Starlight = {
  panel: ['https://imgur.com/fkB6Y05', 'https://imgur.com/pCuo4XJ'],      
  complexity: '',
  title: 'Starlight' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var Stone = {     
@@ -157,7 +161,7 @@ var Stone = {
  panel: ['https://imgur.com/FhEIqB6', 'https://imgur.com/RqlC8ZP'],      
  complexity: '',
  title: 'Stone' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var Thunderspeaker = {     
@@ -166,7 +170,7 @@ var Thunderspeaker = {
  panel: ['https://imgur.com/5xnsvD8', 'https://imgur.com/PztVF5L'],      
  complexity: '',
  title: 'Thunderspeaker' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var Shadows = {     
@@ -175,7 +179,12 @@ var Shadows = {
  panel: ['https://imgur.com/FmVImnv', 'https://imgur.com/oyk2ZwH'],      
  complexity: '',
  title: 'Shadows' ,
- aspect: '',
+ aspect: [
+    {name: "Madness", spirit: 'Shadows Flicker Like Flame', emote: "<:FlowersMurmurUltimatums:>778709531311996948", panel: "https://i.imgur.com/sjjNNLB.jpg"},
+    {name: "Reach", spirit: 'Shadows Flicker Like Flame', emote: "<:IArrowRange:>778709531311996948", panel: "https://i.imgur.com/1oIYl5s.jpg"},
+    {name: "", spirit: 'Shadows Flicker Like Flame', emote: "", panel: ""},
+    {name: "", spirit: 'Shadows Flicker Like Flame', emote: "", panel: ""}
+],
  aspectIMG: ''}; 
 
 var River = {     
@@ -184,7 +193,11 @@ var River = {
  panel: ['https://imgur.com/pmdjfxu', 'https://imgur.com/uv0mMRV'],      
  complexity: '',
  title: 'River' ,
- aspect: '',
+ aspect: [
+    {name: "", emote: "", panel: ""},
+    {name: "", emote: "", panel: ""},
+    {name: "", emote: "", panel: ""}
+],
  aspectIMG: ''}; 
 
 var Vengeance = {     
@@ -193,7 +206,7 @@ var Vengeance = {
  panel:[ 'https://imgur.com/EgzpSLC','https://imgur.com/4hnimN9'],      
  complexity: '',
  title: 'Vengeance' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var Earth = {     
@@ -202,7 +215,10 @@ var Earth = {
  panel: ['https://imgur.com/wgs13CF', 'https://imgur.com/5iTl68l'],      
  complexity: '',
  title: 'Earth' ,
- aspect: '',
+ aspect: [
+    {name: "", emote: "", panel: ""},
+    {name: "", emote: "", panel: ""}
+  ],
  aspectIMG: ''}; 
 
 var Volcano = {     
@@ -211,7 +227,7 @@ var Volcano = {
  panel: ['https://imgur.com/sSs3uqa', 'https://imgur.com/XOC05vn'],      
  complexity: '',
  title: 'Volcano' ,
- aspect: '',
+ aspect: [ ],
  aspectIMG: ''}; 
 
 var spirits = [ 
