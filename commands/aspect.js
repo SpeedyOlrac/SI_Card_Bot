@@ -16,16 +16,17 @@ for(var i = 0; i < spiritsNames.length; i++){
 for(var i = 0; i < spirits[i].length; i++){
 	target += spirits[i].name + ": ";
 	var stop = 1;
+	var aspect = spirits[i].aspect[0][a];a
 	for (var a = 0; a < spirits[i].aspect; a++){
-		target += spirits[i].aspect[a].name;
-		if (stop < spirits[i].aspect[a].length){
+		target += spirits[i].aspect[0][a].name;
+		if (stop < spirits[i].aspect[0][a].length){
 			target += ", ";
 		}
 		else{
 			target += "\n";
 		}
 		stop++;
-		aspectNames.push(spirits[i].aspect[a].name); 
+		aspectNames.push(spirits[i].aspect[0]][a].name); 
 	}		
 }
 
@@ -48,7 +49,7 @@ module.exports = {
 
 		for(var i = 0; i < spirits.length; i++){
 			for(var a = 0; a < spirits[i].length; a++){
-				var aspect = spirits[i].aspect[a];
+				var aspect = spirits[i].aspect[0][a];
 				if (!found && aspect.name == name){
 					target = spirits[i].name + ": " + aspect.name + " aspect \n" +
 						aspect.panel; 
