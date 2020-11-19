@@ -8,7 +8,6 @@ var aspectNames = [ ];
 var target = "Spirts aspects are: \n";
 
 for(var i = 0; i < spiritsNames.length; i++){
-	console.log(spiritsNames[i].aspect);
 	if (spiritsNames[i].aspect != null){
 		spirits.push(spiritsNames[i]);
 	}
@@ -36,7 +35,7 @@ module.exports = {
 	public: true, //has to be true to show as a command
 	execute(msg, args) {
 
-		console.log(spiritsNames);
+		console.log(spirits);
 		console.log(target);		
 		console.log(aspectNames);
 
