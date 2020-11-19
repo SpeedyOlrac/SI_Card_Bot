@@ -7,25 +7,27 @@ var spirits = [ ];
 var aspectNames = [ ];
 var target = "Spirts aspects are: \n";
 
-for(const spirit in spiritsNames){
-	console.log(spirit.aspect);
-	if (spirit.aspect != null){
-		spirits.push(spirit);
+for(var i = 0; i < spiritsNames.length; i++){
+	console.log(spiritsNames[i].aspect);
+	if (spiritsNames[i].aspect != null){
+		spirits.push(spirit[i]);
 	}
+}
 
-	target += spirit.name + ": ";
+for(var i = 0; i < spirits[i].length; i++){
+	target += spirits[i].name + ": ";
 	var stop = 1;
-	for(const aspect in spirit){
-		target += aspect.name;
-		if (stop < aspect.length){
+	for (var a = 0; a < spirits[i].aspect; a++){
+		target += spirits[i].aspect[a].name;
+		if (stop < a[j].length){
 			target += ", ";
 		}
 		else{
 			target += "\n";
 		}
 		stop++;
-		aspectNames.push(aspect.name); 				
-	}
+		aspectNames.push(spirits[i].aspect[j].name); 
+	}		
 }
 
 module.exports = {
@@ -45,19 +47,17 @@ module.exports = {
 		var found = false;
 		var name = getCardName(args, aspectNames);
 
-		for(const spirit in spirits){
-			for(const aspect in aspects){
+		for(var i = 0; i < spirits.length; i++){
+			for(var a = 0; a < spirits[i].length; a++){
+				var aspect = spirits[i].aspect[a];
 				if (!found && aspect.name == name){
-					target = spirit.name + ": " + aspect.name + " aspect /n" +
+					target = spirits[i].name + ": " + aspect.name + " aspect \n" +
 						aspect.panel; 
 
 					msg.channel.send(target);
 					found = true;
 				}
-
 			}
 		}
-
-		
 	},
 };
