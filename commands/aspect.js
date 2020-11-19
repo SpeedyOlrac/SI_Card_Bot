@@ -30,13 +30,12 @@ for(const spirit in spiritsNames){
 	}
 }
 
-
 module.exports = {
 	name: 'aspect',
 	description: 'The ascpects of sprits',
 	public: true, //has to be true to show as a command
 	execute(msg, args) {
-		console.log(aspects);
+		console.log(aspectNames);
 
 		if(args.length = 0){
 			msg.channel.send(target);
