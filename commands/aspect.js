@@ -17,7 +17,7 @@ for(var i = 0; i < spirits[i].length; i++){
 	target += spirits[i].name + ": ";
 	var stop = 1;
 	for (var a = 0; a < spirits[i].aspect; a++){
-		console.log(spirits[i].aspect[a]);
+		console.log(spirits[i].aspect);
 
 		target += spirits[i].aspect[a].name;
 		if (stop < spirits[i].aspect[a].length){
