@@ -10,7 +10,8 @@ var target = "Spirts aspects are: /n";
 
 
 for(const spirit in spiritsNames){
-	if (spirit.aspect.length > 0){
+	console.log(spirit.aspect);
+	if (spirit.aspect == null){
 		aspects.push(spirit);
 	}
 
