@@ -11,8 +11,8 @@ var target = "Spirts aspects are: /n";
 
 for(const spirit in spiritsNames){
 	console.log(spirit.aspect);
-	if (spirit.aspect == null){
-		aspects.push(spirit);
+	if (spirit.aspect != null){
+		spirits.push(spirit);
 	}
 
 	target += spirit.name + ": ";
