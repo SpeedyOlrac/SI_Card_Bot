@@ -18,14 +18,14 @@ for(var i = 0; i < spirits[i].length; i++){
 	var stop = 1;
 	for (var a = 0; a < spirits[i].aspect; a++){
 		target += spirits[i].aspect[a].name;
-		if (stop < a[j].length){
+		if (stop < spirits[i].aspect[a].length){
 			target += ", ";
 		}
 		else{
 			target += "\n";
 		}
 		stop++;
-		aspectNames.push(spirits[i].aspect[j].name); 
+		aspectNames.push(spirits[i].aspect[a].name); 
 	}		
 }
 
