@@ -8,7 +8,7 @@ var aspectNames = [ ];
 var target = "Spirts aspects are: \n";
 
 for(var i = 0; i < spiritsNames.length; i++){
-	if (spiritsNames[i].aspect != null){
+	if (spiritsNames[i].aspect.length > 0){
 		spirits.push(spiritsNames[i]);
 	}
 }
