@@ -61,7 +61,7 @@ var Lightning = {
  aspect: [ 
     {name: "Pandemonium", emote: "<:TStrife:>778714254982643762", panel: "https://i.imgur.com/1774mnW.jpg"},
     {name: "Wind", emote: "<:ICFast:>778714634710286397", panel: "https://i.imgur.com/VwchE5U.jpg"},
-    {name: "", emote: "", panel: ""}
+    {name: "Imense", emote: "", panel: ""}
  ],
  aspectIMG: ''}; 
 
@@ -182,8 +182,8 @@ var Shadows = {
  aspect: [
     {name: "Madness", spirit: 'Shadows Flicker Like Flame', emote: "<:FlowersMurmurUltimatums:>778709531311996948", panel: "https://i.imgur.com/sjjNNLB.jpg"},
     {name: "Reach", spirit: 'Shadows Flicker Like Flame', emote: "<:IArrowRange:>778709531311996948", panel: "https://i.imgur.com/1oIYl5s.jpg"},
-    {name: "", spirit: 'Shadows Flicker Like Flame', emote: "", panel: ""},
-    {name: "", spirit: 'Shadows Flicker Like Flame', emote: "", panel: ""}
+    {name: "Forboding", spirit: 'Shadows Flicker Like Flame', emote: "", panel: ""},
+    {name: "Amorphous", spirit: 'Shadows Flicker Like Flame', emote: "", panel: ""}
 ],
  aspectIMG: ''}; 
 
@@ -194,9 +194,8 @@ var River = {
  complexity: '',
  title: 'River' ,
  aspect: [
-    {name: "", emote: "", panel: ""},
-    {name: "", emote: "", panel: ""},
-    {name: "", emote: "", panel: ""}
+    {name: "SunShine", emote: "", panel: ""},
+    {name: "Travel", emote: "", panel: ""},
 ],
  aspectIMG: ''}; 
 
@@ -216,8 +215,8 @@ var Earth = {
  complexity: '',
  title: 'Earth' ,
  aspect: [
-    {name: "", emote: "", panel: ""},
-    {name: "", emote: "", panel: ""}
+    {name: "Might", emote: "", panel: ""},
+    {name: "Resilence", emote: "", panel: ""}
   ],
  aspectIMG: ''}; 
 

@@ -1,11 +1,11 @@
 const { getCardName } = require('./sendCardLink.js');
 
-const spiritsNames = require('./spiritNames.js');
+const spiritsNames = require('./spiritNames.js').spirits;
 //const sendCardLink = require("./sendCardLink.js").sendCardLink;
 
 var spirits = [ ];
 var aspectNames = [ ];
-var target = "Spirts aspects are: /n";
+var target = "Spirts aspects are: \n";
 
 for(const spirit in spiritsNames){
 	console.log(spirit.aspect);
@@ -21,7 +21,7 @@ for(const spirit in spiritsNames){
 			target += ", ";
 		}
 		else{
-			target += "/n";
+			target += "\n";
 		}
 		stop++;
 		aspectNames.push(aspect.name); 				
