@@ -26,7 +26,7 @@ for(const spirit in spiritsNames){
 			target += "/n";
 		}
 		stop++;
-		aspectNames.push(a.name); 				
+		aspectNames.push(aspect.name); 				
 	}
 }
 
