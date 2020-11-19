@@ -16,9 +16,10 @@ for(var i = 0; i < spiritsNames.length; i++){
 for(var i = 0; i < spirits[i].length; i++){
 	target += spirits[i].name + ": ";
 	var stop = 1;
-	for (var a = 0; a < spirits[i].aspect; a++){
-		console.log(spirits[i].aspect);
+	console.log(spirits[i].aspect);
 
+	for (var a = 0; a < spirits[i].aspect; a++){
+		
 		target += spirits[i].aspect[a].name;
 		if (stop < spirits[i].aspect[a].length){
 			target += ", ";
