@@ -10,7 +10,7 @@ var target = "Spirts aspects are: \n";
 for(var i = 0; i < spiritsNames.length; i++){
 	console.log(spiritsNames[i].aspect);
 	if (spiritsNames[i].aspect != null){
-		spirits.push(spirit[i]);
+		spirits.push(spiritsNames[i]);
 	}
 }
 
