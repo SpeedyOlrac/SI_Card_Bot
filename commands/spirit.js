@@ -68,11 +68,13 @@ module.exports = {
             if(argContains(args, 'unique'))
             {
               var uniques = uniqueList[target];
-              for(var unique of uniques)
-              {
-                var basePath = "https://sick.oberien.de/imgs/powers/";
-
-                msg.channel.send(basePath + unique  + '.webp');
+              if(uniques){
+                for(var unique of uniques)
+                {
+                  var basePath = "https://sick.oberien.de/imgs/powers/";
+  
+                  msg.channel.send(basePath + unique  + '.webp');
+                }
               }
             }
         }
@@ -84,7 +86,7 @@ module.exports = {
 
 function argContains(args, word)
 {
-  return args[0].toLowerCase() != word && args[args.length -1].toLowerCase() != word
+  return args[0].toLowerCase() == word || args[args.length -1].toLowerCase() == word
 }
 
 function isSearchable(word){
