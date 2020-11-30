@@ -10,6 +10,7 @@ module.exports = {
 	public: true,
 	execute(msg, args) {
         var target = "Sorry could not find the spirit you where looking for.";
+        var targetName = '';
 
         if(args.length < 1){
             msg.channel.send(target);
@@ -47,6 +48,7 @@ module.exports = {
                 for(var i = 0; i < input.length; i++){
                     if(isSearchable(input[i]) && name[n] == input[i] && !found){
                         target = s;
+                        targetName = spirits[s].name;
                         //console.log(s);
                         found = true;
                     }
@@ -67,7 +69,8 @@ module.exports = {
             }
             if(argContains(args, 'unique'))
             {
-              var uniques = uniqueList[target];
+              var uniques = uniqueList[targetName];
+              console.log(uniques);
               if(uniques){
                 for(var unique of uniques)
                 {
