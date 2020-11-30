@@ -76,7 +76,7 @@ module.exports = {
                 {
                   var basePath = "https://sick.oberien.de/imgs/powers/";
   
-                  msg.channel.send(basePath + unique  + '.webp');
+                  //msg.channel.send(basePath + unique  + '.webp');
                 }
               }
             }
@@ -96,12 +96,11 @@ function isSearchable(word){
     if(word < 3 ){
         return false;
     }
-    if(word.toLowerCase() == 'back'){
+    if(word.toLowerCase() == 'unique'
+    || word.toLowerCase() == 'back'
+    || word.toLowerCase() == 'front'){
         return false;
     }
 
-    if(word.toLowerCase() == 'front'){
-        return false;
-    }
     return true;
 }
