@@ -54,6 +54,7 @@ var event = ["years_of_little_rain", "farmers_seek_the_dahan_for_aid", "new_spec
 
 var noJE = "";
 
+exports.uniqueList = uniqueList;
 exports.unique = unique;
 exports.minor = minor;
 exports.major = major;
