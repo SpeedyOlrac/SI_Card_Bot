@@ -2,6 +2,7 @@ const fetch = require("node-fetch");
 const to = require('await-to-js').default;
 const spirits = require ('./spiritNames.js').spirits;
 const getCardName = require ('./sendCardLink.js').getCardName;
+const uniqueList = require('./ImageNames.js').uniqueList;
 
 module.exports = {
 	name: 'spirit',
@@ -58,17 +59,32 @@ module.exports = {
 
 
         if(found){
-            if(args[0].toLowerCase() != 'back' && args[args.length -1].toLowerCase() != 'back'  ){
+            if(!argContains(args, 'back') && !argContains(args, 'unique')) {
                 msg.channel.send(spirits[target].panel[0]);
             }
-            if(args[0].toLowerCase() != 'front' && args[args.length -1].toLowerCase() != 'front' ){
+            if(!argContains(args, 'front') && !argContains(args, 'unique')){
                 msg.channel.send(spirits[target].panel[1]); 
+            }
+            if(argContains(args, 'unique'))
+            {
+              var uniques = uniqueList[target];
+              for(var unique of uniques)
+              {
+                var basePath = "https://sick.oberien.de/imgs/powers/";
+
+                msg.channel.send(basePath + unique  + '.webp');
+              }
             }
         }
         else{
             return msg.channel.send(target);
         }
     }
+}
+
+function argContains(args, word)
+{
+  return args[0].toLowerCase() != word && args[args.length -1].toLowerCase() != word
 }
 
 function isSearchable(word){
