@@ -15,8 +15,8 @@ module.exports = {
 	name: 'help',
 	description: 'lists of commands',
 	public: true,
-	execute(msg, args) {
-		msg.channel.send(help);
+	async execute(msg, args) {
+		await msg.channel.send(help);
 	},
 };
 

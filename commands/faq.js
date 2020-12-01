@@ -16,7 +16,7 @@ module.exports = {
                 cleanInput(args).replace(/,/g, '%20') + "%22%22" ;
         console.log(site_name);
         //if(await UrlExists(site_name)){
-            msg.channel.send(site_name);
+            await msg.channel.send(site_name);
         //}
         //else{
           //  msg.channel.send("Incorrect name, try again");

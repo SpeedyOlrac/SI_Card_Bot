@@ -17,14 +17,14 @@ module.exports = {
 	async execute(msg, args) {
 
         if(args[0] == 'help'){
-            return msg.channel.send(sHelp);
+            return await msg.channel.send(sHelp);
         }
 
         var site_name = "https://sick.oberien.de/?query=" + args.toString().replace(/,/g, "%20");
         //var url = await UrlExists(site_name);
         //console.log(url);
         //if (url){
-            msg.channel.send(site_name);
+            await msg.channel.send(site_name);
         //}
         // else{
         //     msg.channel.send("Incorrect Syntax, try !search help");
