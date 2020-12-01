@@ -13,8 +13,8 @@ module.exports = {
               if (answer.length > 2){
                   message = message + answer[2];
               }
-              botMessage1 = msg.channel.send(message);
-              botMessage2 = msg.channel.send(answer[1]);
+              botMessage1 = await msg.channel.send(message);
+              botMessage2 = await msg.channel.send(answer[1]);
               /*  
               await delay(15);
               msg.delete();
@@ -23,7 +23,7 @@ module.exports = {
               */
               }
             else{
-                msg.channel.send("Do you want a random [spirit] or [adversary]?")
+                await msg.channel.send("Do you want a random [spirit] or [adversary]?")
             }
 }};
 

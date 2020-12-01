@@ -5,7 +5,7 @@ module.exports = {
 	name: 'card',
 	description: 'Card Search',
 	public: true,
-	execute(msg, args) {
-		power.execute(msg, args);
+	async execute(msg, args) {
+		await power.execute(msg, args);
 	},
 };

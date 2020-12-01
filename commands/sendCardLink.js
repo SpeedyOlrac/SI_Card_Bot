@@ -19,14 +19,14 @@ function getCardName(input, availableNames, wieghtOfSizediff = 0.8)
 }
 
 
-function sendCardLink(msg, input, availableNames, basePath)
+async function sendCardLink(msg, input, availableNames, basePath)
 {
   var cardName = getCardName(input, availableNames);
   console.log(cardName);
   if(cardName){
-    return msg.channel.send(basePath + cardName  + '.webp');
+    return await msg.channel.send(basePath + cardName  + '.webp');
   }else{
-    return msg.channel.send("Incorrect name, try using !search");
+    return await msg.channel.send("Incorrect name, try using !search");
   }
 }
 

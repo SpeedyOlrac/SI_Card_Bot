@@ -8,12 +8,12 @@ module.exports = {
 	name: 'spirit',
 	description: 'Spirit Search',
 	public: true,
-	execute(msg, args) {
+	async execute(msg, args) {
         var target = "Sorry could not find the spirit you where looking for.";
         var targetName = '';
 
         if(args.length < 1){
-            msg.channel.send(target);
+            await msg.channel.send(target);
             return;
         }
         var shortNames= [];
@@ -62,10 +62,10 @@ module.exports = {
 
         if(found){
             if(!argContains(args, 'back') && !argContains(args, 'unique')) {
-                msg.channel.send(spirits[target].panel[0]);
+                await msg.channel.send(spirits[target].panel[0]);
             }
             if(!argContains(args, 'front') && !argContains(args, 'unique')){
-                msg.channel.send(spirits[target].panel[1]); 
+                await msg.channel.send(spirits[target].panel[1]); 
             }
             if(argContains(args, 'unique'))
             {
@@ -82,7 +82,7 @@ module.exports = {
             }
         }
         else{
-            return msg.channel.send(target);
+            return await msg.channel.send(target);
         }
     }
 }

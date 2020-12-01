@@ -5,11 +5,11 @@ const ImageNames = require ('./ImageNames.js');
 module.exports = {
 	name: 'power',
 	description: 'Power Search',
-    public: true,
+  public: true,
 
-	execute(msg, args) {
+	async execute(msg, args) {
 		var html = "https://sick.oberien.de/imgs/powers/";
 
-		s.sendCardLink(msg, args, ImageNames.power, html);
+		await s.sendCardLink(msg, args, ImageNames.power, html);
 	},
 };

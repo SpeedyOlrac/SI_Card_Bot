@@ -4,9 +4,9 @@ const ImageNames = require ('./ImageNames.js');
 module.exports = {
 	name: 'major',
 	description: 'Major card search',
-    public: true,
+  public: true,
 
-	execute(msg, args) {
-		s.sendCardLink(msg, args, ImageNames.major, "https://sick.oberien.de/imgs/powers/");
+	async execute(msg, args) {
+		await s.sendCardLink(msg, args, ImageNames.major, "https://sick.oberien.de/imgs/powers/");
 	},
 };

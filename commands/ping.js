@@ -5,7 +5,7 @@ module.exports = {
 	name: 'ping',
 	description: 'Ping!',
 	public: true,
-	execute(msg, args) {
-		msg.channel.send('Pong.');
+	async execute(msg, args) {
+		await msg.channel.send('Pong.');
 	},
 };
