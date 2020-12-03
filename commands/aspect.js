@@ -14,7 +14,7 @@ module.exports = {
 			args.push("");
 		}
 		else if(args.length == 1){
-			temp = args[0].toLowerCase;
+			temp = args[0].toLowerCase();
 			if (aspectNames.aspectsNames.find(temp) != -1){
 				args[0] = "skip";
 				args.push(temp);
@@ -23,7 +23,7 @@ module.exports = {
 				args.push("none");
 			}
 		}
-
+		
 		console.log(args[0] + " " + args[1]);
 		console.log(aspectsNames);
 		var message = execute(args[0], args[1]);

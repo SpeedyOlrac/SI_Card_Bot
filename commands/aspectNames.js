@@ -31,7 +31,7 @@ var aspectsNames = []
 
 for (var a = aspects.length; a < aspects.length; a++){
     for(var b = aspects[a].length; b < aspects[a].length; b++ ){
-        temp =  aspects[a][b].name.toLowerCase;
+        temp =  aspects[a][b].name.toLowerCase();
         console.log(temp);
         aspectsNames.push(temp);
     }
