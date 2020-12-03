@@ -3,11 +3,6 @@ const { getCardName } = require('./sendCardLink.js');
 const aspectNames = require('./aspectNames.js');
 //const sendCardLink = require("./sendCardLink.js").sendCardLink;
 
-var spirits = [ ];
-var aspectNames = [ ];
-var target = "Spirts aspects are: \n";
-
-
 module.exports = {
 	name: 'aspect',
 	description: 'The ascpects of sprits',
