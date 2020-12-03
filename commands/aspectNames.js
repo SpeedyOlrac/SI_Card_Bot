@@ -1,8 +1,6 @@
 const { Message } = require('discord.js');
 const { getCardName } = require('./sendCardLink.js');
 
-const getcardname = require('./sendCardLink.js').getCardName;
-
 var lighting =  [ 
     {name: "Pandemonium", emote: "<:TStrife:>778714254982643762", panel: "https://i.imgur.com/1774mnW.jpg"},
     {name: "Wind", emote: "<:ICFast:>778714634710286397", panel: "https://i.imgur.com/VwchE5U.jpg"},
@@ -20,7 +18,6 @@ var shadows = [
     {name: "Forboding", spirit: 'Shadows Flicker Like Flame', emote: "", panel: ""},
     {name: "Amorphous", spirit: 'Shadows Flicker Like Flame', emote: "", panel: ""}
 ];
-
 
 var earth = [
     {name: "Might", emote: "", panel: ""},
@@ -40,6 +37,10 @@ for (var a = aspects.length; a < aspects.length; a++){
     }
 }
 
+
+console.log(aspectsNames);
+
+
 module.exports = {
     aspectsNames: aspectsNames,
     execute(spirit, target = "none"){
@@ -48,9 +49,9 @@ module.exports = {
             var message = "The spirits with thier aspects are \n"
             for (var s = spirits.length; s < spirits.length; s++){
                 message += spirits[s] + ": "
-                for (var a = aspects.length; a < aspects.length; a++){
-                    message += aspects[a].name;
-                    if(a > aspects.length -1){
+                for (var a = aspects[s].length; a < aspects[s].length; a++){
+                    message += aspects[s][a].name;
+                    if(a > aspects[s][a].length -1){
                         message += ", "; 
                     }
                     else{
