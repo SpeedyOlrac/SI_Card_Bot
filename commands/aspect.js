@@ -25,7 +25,7 @@ module.exports = {
 		}
 
 		console.log(args[0] + " " + args[1]);
-		var message = aspectNames(args[0], args[1]);
+		var message = aspectNames.execute(args[0], args[1]);
 
 		msg.channel.send(message);
 
