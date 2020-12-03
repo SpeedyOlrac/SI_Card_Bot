@@ -15,7 +15,7 @@ var lighting =  [
 ];
 
 var shadows = [
-    {name: "Madness", spirit: , emote: "<:FlowersMurmurUltimatums:>778709531311996948", panel: "https://i.imgur.com/sjjNNLB.jpg"},
+    {name: "Madness", spirit: 'Shadows Flicker Like Flame' emote: "<:FlowersMurmurUltimatums:>778709531311996948", panel: "https://i.imgur.com/sjjNNLB.jpg"},
     {name: "Reach", spirit: 'Shadows Flicker Like Flame', emote: "<:IArrowRange:>778709531311996948", panel: "https://i.imgur.com/1oIYl5s.jpg"},
     {name: "Forboding", spirit: 'Shadows Flicker Like Flame', emote: "", panel: ""},
     {name: "Amorphous", spirit: 'Shadows Flicker Like Flame', emote: "", panel: ""}
