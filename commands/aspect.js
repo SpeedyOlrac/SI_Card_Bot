@@ -16,7 +16,7 @@ module.exports = {
 		}
 		else if(args.length == 1){
 			temp = args[0].toLowerCase();
-			if (aspectNames.find(temp) != -1){
+			if (aspectsNames.find(temp) != -1){
 				args[0] = "skip";
 				args.push(temp);
 			}
