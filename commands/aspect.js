@@ -1,5 +1,5 @@
 const { getCardName } = require('./sendCardLink.js');
-const { aspectsNames, execute } = require('./aspectNames.js');
+const { aspectsNames, spirits, aspects } = require('./aspectNames.js');
 
 module.exports = {
 	name: 'aspect',
@@ -7,24 +7,86 @@ module.exports = {
 	public: true, //has to be true to show as a command
 	execute(msg, args) {
 
+		var message = "";
+
+		//if spirit is blank
 		if(args.length == 0){
-			args.push("none");
-			args.push("");
+			var message = "The spirits with thier aspects are \n"
+			for (var s = 0; s < spirits.length; s++){
+				message += spirits[s] + ": "
+				message = listAspect(message, s);
+			}
 		}
+
+		//If first args is a Aspect
 		else if(args.length == 1){
+
 			temp = args[0].toLowerCase();
 			if (aspectsNames.find(temp) != -1){
-				args[0] = "skip";
-				args.push(temp);
+			//first args is an aspect
+			message = findAspect(temp).panel;
 			}
-			else{
-				args.push("none");
+			else {
+				//First args is not an aspect
+				var spirit = getSpiritName(args[0]);
+				var s = findSpirit(spirit);
+				message = "The aspects for " + spirit + "are: \n";
+				message = listAspect(message, s);   
 			}
 		}
-		
-		console.log(args[0] + " " + args[1]);
-		var message = execute(args[0], args[1], );
+		//Correcting name of spirit
+		else{	
+			message = searchSpiritAspect(args[1], args[0]);
+		}
 
+		console.log(message);		
 		msg.channel.send(message);
+	
+}};
+
+
+function listAspect(message, s){
+	for (var a = 0; a < aspects[s].length; a++){
+		message += aspects[s][a].name;
+		if(a < aspects[s].length-1){
+			message += ", "; 
+		}
+		else{
+			message += "\n"
+		}
 	}
-};
+	return message;
+}
+
+function findSpirit(target){
+	for (var s = 0; s < spirits.length; s++){
+		if(spirit == spirits[s]){
+			return s;
+		}
+	}
+}
+
+function findAspect(target, aspectList = aspects){
+	for (var a = 0; a < aspectList.length; a++){
+		for(var b = 0; b < aspectList[a].length; b++ ){
+			if (target == aspectList[a][b].name){
+				return aspectList[a][b];
+			}
+		}
+	}
+
+	
+}
+
+function searchSpiritAspect(aspect, spirit){
+	var aspectList = []
+	spirit = getCardName(args[0], spirits);
+	var s = findSpirit(spirit);
+
+	for (var a = 0; a < aspects[s].length; a++){
+		aspectList.push(aspect[s][a]);
+	}
+
+	aspect = getCardName(aspect, aspectList);
+	return findAspect(aspect, aspectList);
+}

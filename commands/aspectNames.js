@@ -33,7 +33,6 @@ for (var a = 0; a < aspects.length; a++){
     for (var b = 0; b < aspects[a].length; b++){
         var temp = aspects[a][b].name 
         aspectsNames.push(temp.toLowerCase());
-        console.log(temp.toLowerCase());
     }
 }
 
@@ -41,26 +40,12 @@ console.log(aspectsNames);
 
 module.exports = {
     aspectsNames: aspectsNames,
+    spirits: spirits,
     execute(spirit, target = "none"){
         //if spirit is blank
 
         console.log("AsepctNames " + spirit + ", " + target);
-        if(spirit == "none"){
-            var message = "The spirits with thier aspects are \n"
-            for (var s = 0; s < spirits.length; s++){
-                message += spirits[s] + ": "
-                for (var a = 0; a < aspects[s].length; a++){
-                    message += aspects[s][a].name;
-                    if(a < aspects[s].length-1){
-                        message += ", "; 
-                    }
-                    else{
-                        message += "\n"
-                    }
-                }
-            }
-            return message;
-        }
+       
 
         if(spirit != "skip"){
             spirit = getCardName(spirit, spirits)
