@@ -29,27 +29,25 @@ var spirits = ['Lightning', 'River', 'Shadows', 'Earth'];
 var aspects = [lighting, rivers, shadows, earth];
 var aspectsNames = []
 
-for (var a = aspects.length; a < aspects.length; a++){
-    for(var b = aspects[a].length; b < aspects[a].length; b++ ){
-        temp =  aspects[a][b].name.toLowerCase;
-        console.log(temp);
-        aspectsNames.push(temp);
+for (var a = 0; a < aspects.length; a++){
+    for (var b = 0; b < aspects[a].length; b++){
+        var temp = aspects[a][b].name 
+        aspectsNames.push(temp.toLowerCase());
+        console.log(temp.toLowerCase());
     }
 }
 
-
-console.log(aspects.length);
-
+console.log(aspectsNames);
 
 module.exports = {
     aspectsNames: aspectsNames,
-    execute(spirit, target = "none"){
+    execute(spirit, target = "none", aspectsNames){
         //if spirit is blank
         if(spirit == "none"){
             var message = "The spirits with thier aspects are \n"
-            for (var s = spirits.length; s < spirits.length; s++){
+            for (var s = 0; s < spirits.length; s++){
                 message += spirits[s] + ": "
-                for (var a = aspects[s].length; a < aspects[s].length; a++){
+                for (var a = 0; a < aspects[s].length; a++){
                     message += aspects[s][a].name;
                     if(a > aspects[s][a].length -1){
                         message += ", "; 
@@ -57,7 +55,6 @@ module.exports = {
                     else{
                         message += "\n"
                     }
-
                 }
             }
             return message;
@@ -71,10 +68,10 @@ module.exports = {
         if (target == "none"){    
             var message = "The aspects for " + spirit + "are: \n";
             
-            for (var s = spirits.length; s < spirits.length; s++){
+            for (var s = 0; s < spirits.length; s++){
                 if(spirit == spirits[s]){
                     var temp = aspects[s];
-                    for(var a = temp.length; a < temp.length; a++ ){
+                    for(var a = 0; a < temp.length; a++ ){
                         message += temp[a].name;
 
                         if(a > temp.length -1){
@@ -89,8 +86,8 @@ module.exports = {
         //if correct aspect
         target = getCardName(target, aspectsNames);
 
-        for (var a = aspects.length; a < aspects.length; a++){
-            for(var b = aspects[a].length; b < aspects[a].length; b++ ){
+        for (var a = 0; a < aspects.length; a++){
+            for(var b = 0; b < aspects[a].length; b++ ){
                 if (target == aspects[a][b].name){
                     return aspects[a][b].panel;
                 }

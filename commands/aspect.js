@@ -9,6 +9,7 @@ module.exports = {
 	description: 'The ascpects of sprits',
 	public: true, //has to be true to show as a command
 	execute(msg, args) {
+		
 		if(args.length == 0){
 			args.push("none");
 			args.push("");
