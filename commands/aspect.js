@@ -6,6 +6,10 @@ module.exports = {
 	description: 'The ascpects of sprits',
 	public: true, //has to be true to show as a command
 	execute(msg, args) {
+		console.log("aspect command");
+		console.log(aspectsNames);
+		console.log(spirits);
+		console.log(aspects);
 
 		var message = "";
 
@@ -41,11 +45,11 @@ module.exports = {
 
 		console.log(message);		
 		msg.channel.send(message);
-	
 }};
 
-
+//Functions
 function listAspect(message, s){
+	console.log(aspects[s]);
 	for (var a = 0; a < aspects[parseInt(s)].length; a++){
 		message += aspects[s][a].name;
 		if(a < aspects[s].length-1){
@@ -74,8 +78,6 @@ function findAspect(target, aspectList = aspects){
 			}
 		}
 	}
-
-	
 }
 
 function searchSpiritAspect(aspect, spirit){
