@@ -36,51 +36,11 @@ for (var a = 0; a < aspects.length; a++){
     }
 }
 
-console.log(aspectsNames);
-
 module.exports = {
     aspectsNames: aspectsNames,
     spirits: spirits,
-    execute(spirit, target = "none"){
-        //if spirit is blank
-
-        console.log("AsepctNames " + spirit + ", " + target);
-       
-
-        if(spirit != "skip"){
-            spirit = getCardName(spirit, spirits)
-        }
-
-        //if aspect is blank
-        if (target == "none"){    
-            var message = "The aspects for " + spirit + "are: \n";
-            
-            for (var s = 0; s < spirits.length; s++){
-                if(spirit == spirits[s]){
-                    var temp = aspects[s];
-                    for(var a = 0; a < temp.length; a++ ){
-                        message += temp[a].name;
-
-                        if(a > temp.length -1){
-                            message += ", "; 
-                        }
-                    }
-                }
-            }
-            return message;
-        }
-
-        //if correct aspect
-        target = getCardName(target, aspectsNames);
-
-        for (var a = 0; a < aspects.length; a++){
-            for(var b = 0; b < aspects[a].length; b++ ){
-                if (target == aspects[a][b].name){
-                    return aspects[a][b].panel;
-                }
-            }
-        }
-    }};
+    aspects: aspects
+};
 
 
 
