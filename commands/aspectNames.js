@@ -49,7 +49,7 @@ module.exports = {
                 message += spirits[s] + ": "
                 for (var a = 0; a < aspects[s].length; a++){
                     message += aspects[s][a].name;
-                    if(a < aspects[s][a].length-1){
+                    if(a < aspects[s].length-1){
                         message += ", "; 
                     }
                     else{
