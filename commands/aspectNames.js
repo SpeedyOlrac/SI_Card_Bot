@@ -41,8 +41,10 @@ console.log(aspectsNames);
 
 module.exports = {
     aspectsNames: aspectsNames,
-    execute(spirit, target = "none", aspectsNames){
+    execute(spirit, target = "none"){
         //if spirit is blank
+
+        console.log("AsepctNames " + spirit + ", " + target);
         if(spirit == "none"){
             var message = "The spirits with thier aspects are \n"
             for (var s = 0; s < spirits.length; s++){

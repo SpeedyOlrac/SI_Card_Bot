@@ -1,5 +1,5 @@
 const { getCardName } = require('./sendCardLink.js');
-const { aspectsNames, findAspect } = require('./aspectNames.js');
+const { aspectsNames, execute } = require('./aspectNames.js');
 
 module.exports = {
 	name: 'aspect',
@@ -23,7 +23,7 @@ module.exports = {
 		}
 		
 		console.log(args[0] + " " + args[1]);
-		var message = findAspect(args[0], args[1]);
+		var message = execute(args[0], args[1], );
 
 		msg.channel.send(message);
 	}
