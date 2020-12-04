@@ -14,7 +14,7 @@ module.exports = {
 			var message = "The spirits with thier aspects are \n"
 			for (var s = 0; s < spirits.length; s++){
 				message += spirits[s] + ": "
-				message = listAspect(message, s);
+				message = listAspect(message, parseInt(s));
 			}
 		}
 
@@ -31,7 +31,7 @@ module.exports = {
 				var spirit = getSpiritName(args[0]);
 				var s = findSpirit(spirit);
 				message = "The aspects for " + spirit + "are: \n";
-				message = listAspect(message, s);   
+				message = listAspect(message, parseInt(s));   
 			}
 		}
 		//Correcting name of spirit
