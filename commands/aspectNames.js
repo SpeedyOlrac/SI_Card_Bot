@@ -38,7 +38,7 @@ for (var a = aspects.length; a < aspects.length; a++){
 }
 
 
-console.log(aspects[0][0].name);
+console.log(aspects.length);
 
 
 module.exports = {
