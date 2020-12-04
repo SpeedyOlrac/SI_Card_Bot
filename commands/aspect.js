@@ -46,7 +46,7 @@ module.exports = {
 
 
 function listAspect(message, s){
-	for (var a = 0; a < aspects[s].length; a++){
+	for (var a = 0; a < aspects[parseInt(s)].length; a++){
 		message += aspects[s][a].name;
 		if(a < aspects[s].length-1){
 			message += ", "; 
