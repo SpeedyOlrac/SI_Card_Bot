@@ -6,6 +6,8 @@ function getCardName(input, availableNames, weightOfSizediff = 0.8)
 
   var perfectMatches = getPerfectMatch(target, availableNames);
 
+  console.log(target, perfectMatches);
+
   if(perfectMatches.length === 1)
   {
     return perfectMatches[0];
