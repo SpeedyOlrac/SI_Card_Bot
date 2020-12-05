@@ -3,7 +3,6 @@ const levenshtein = require('js-levenshtein');
 function getCardName(input, availableNames, weightOfSizediff = 0.8)
 {
   var target  = cleanInput(input);
-
   var perfectMatches = getPerfectMatch(target, availableNames);
 
   console.log(target, perfectMatches);
@@ -12,7 +11,7 @@ function getCardName(input, availableNames, weightOfSizediff = 0.8)
   {
     return perfectMatches[0];
   }
-  else if(perfectMatches > 1)
+  else if(perfectMatches.length > 1)
   {
     return getCardNameHelper(target, perfectMatches, weightOfSizediff);
   }
