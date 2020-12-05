@@ -30,6 +30,7 @@ module.exports = {
 			for (var a = 0; a < aspectsNames.length; a++ ){
 				if (aspectsNames[a].localeCompare(temp) == 0)
 					var aspect = findAspect(temp);
+					console.log(aspect);
 					message = aspect.panel;
 			}
 
