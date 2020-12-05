@@ -13,7 +13,7 @@ module.exports = {
 
 		//if spirit is blank
 		if(args.length == 0){
-			var message = "The spirits with thier aspects are \n"
+			message = "The spirits with thier aspects are \n"
 			for (var s = 0; s < spirits.length; s++){
 				message += spirits[s] + ": "
 				message = listAspect(message, parseInt(s));
@@ -22,13 +22,17 @@ module.exports = {
 
 		//If first args is a Aspect
 		else if(args.length == 1){
+			//first args is an aspect
 
 			temp = args[0].toLowerCase();
-			if (aspectsNames.find(temp) != -1){
-			//first args is an aspect
-			message = findAspect(temp).panel;
+			var found = false;
+
+			for (var a = 0; a < aspectsNames.length; a++ ){
+				if (aspectsNames[a].localeCompare(temp) == 0)
+					message = findAspect(temp).panel;
 			}
-			else {
+
+			if(!found) {
 				//First args is not an aspect
 				var spirit = getSpiritName(args[0]);
 				var s = findSpirit(spirit);
