@@ -29,7 +29,8 @@ module.exports = {
 
 			for (var a = 0; a < aspectsNames.length; a++ ){
 				if (aspectsNames[a].localeCompare(temp) == 0)
-					message = findAspect(temp).panel;
+					var aspect = findAspect(temp);
+					message = aspect.panel;
 			}
 
 			if(!found) {
