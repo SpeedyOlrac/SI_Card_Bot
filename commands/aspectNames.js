@@ -4,24 +4,24 @@ const { getCardName } = require('./sendCardLink.js');
 var lighting =  [ 
     {name: "Pandemonium", emote: "<:TStrife:>778714254982643762", panel: "https://i.imgur.com/1774mnW.jpg"},
     {name: "Wind", emote: "<:ICFast:>778714634710286397", panel: "https://i.imgur.com/VwchE5U.jpg"},
-    {name: "Imense", emote: "", panel: ""}
+    {name: "Imense", emote: "", panel: "https://i.imgur.com/YhXRPZK.jpg"}
  ];
 
  var rivers =   [
-    {name: "SunShine", emote: "", panel: ""},
-    {name: "Travel", emote: "", panel: ""},
+    {name: "SunShine", emote: "", panel: "https://i.imgur.com/AGZB0Bn.jpg"},
+    {name: "Travel", emote: "", panel: "https://i.imgur.com/lgC4gQ6.jpg"},
 ];
 
 var shadows = [
     {name: "Madness", spirit: 'Shadows Flicker Like Flame', emote: "<:FlowersMurmurUltimatums:>778709531311996948", panel: "https://i.imgur.com/sjjNNLB.jpg"},
     {name: "Reach", spirit: 'Shadows Flicker Like Flame', emote: "<:IArrowRange:>778709531311996948", panel: "https://i.imgur.com/1oIYl5s.jpg"},
-    {name: "Forboding", spirit: 'Shadows Flicker Like Flame', emote: "", panel: ""},
-    {name: "Amorphous", spirit: 'Shadows Flicker Like Flame', emote: "", panel: ""}
+    {name: "Forboding", spirit: 'Shadows Flicker Like Flame', emote: "", panel: "https://i.imgur.com/iUUnawK.jpg"},
+    {name: "Amorphous", spirit: 'Shadows Flicker Like Flame', emote: "", panel: "https://i.imgur.com/VIZa5cI.jpg"}
 ];
 
 var earth = [
-    {name: "Might", emote: "", panel: ""},
-    {name: "Resilence", emote: "", panel: ""}
+    {name: "Might", emote: "", panel: "https://i.imgur.com/dBOc7YI.jpg"},
+    {name: "Resilence", emote: "", panel: "https://i.imgur.com/jSgVfcH.jpg"}
   ];
 
 //'Lightning\'s Swift Strike', 'River Surges in Sunlight', 'Shadows Flicker Like Flame', 'Vital Strength of the Earth'
