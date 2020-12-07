@@ -32,6 +32,7 @@ module.exports = {
 					var aspect = findAspect(temp);
 					console.log(aspect);
 					message = aspect.panel;
+					found = true;
 			}
 
 			if(!found) {
@@ -68,13 +69,16 @@ function listAspect(message, s){
 
 function findSpirit(target){
 	for (var s = 0; s < spirits.length; s++){
-		if(spirit == spirits[s]){
+		if(target == spirits[s]){
 			return s;
 		}
 	}
 }
 
 function findAspect(target, aspectList = aspects){
+
+	console.log("FindAspects");
+
 	for (var a = 0; a < aspectList.length; a++){
 		for(var b = 0; b < aspectList[a].length; b++ ){
 			console.log(aspectList[a][b].name);
