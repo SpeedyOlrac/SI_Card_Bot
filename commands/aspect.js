@@ -28,11 +28,13 @@ module.exports = {
 			var found = false;
 
 			for (var a = 0; a < aspectsNames.length; a++ ){
-				if (aspectsNames[a].localeCompare(temp) == 0)
+				console.log(aspectsNames[a].localeCompare(temp));
+				if (aspectsNames[a].localeCompare(temp) == 0){
 					var aspect = findAspect(temp);
 					console.log(aspect);
 					message = aspect.panel;
 					found = true;
+				}
 			}
 
 			if(!found) {
