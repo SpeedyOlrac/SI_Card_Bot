@@ -7,8 +7,7 @@ module.exports = {
 	public: true, //has to be true to show as a command
 	execute(msg, args) {
 		console.log("aspect command");
-		console.log(aspects[0]);
-
+	
 		var message = "";
 
 		//if spirit is blank
@@ -79,12 +78,12 @@ function findSpirit(target){
 
 function findAspect(target, aspectList = aspects){
 
-	console.log("FindAspects");
+	console.log("FindAspect:" + target);
 
 	for (var a = 0; a < aspectList.length; a++){
 		for(var b = 0; b < aspectList[a].length; b++ ){
 			console.log(aspectList[a][b].name);
-			if (target == aspectList[a][b].name){
+			if (target == aspectList[a][b].name.toLowerCase()){
 				return aspectList[a][b];
 			}
 		}
