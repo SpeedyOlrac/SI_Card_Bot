@@ -77,11 +77,13 @@ function findSpirit(target){
 function findAspect(target, aspectList = aspects){
 	for (var a = 0; a < aspectList.length; a++){
 		for(var b = 0; b < aspectList[a].length; b++ ){
+			console.log(aspectList[a][b].name);
 			if (target == aspectList[a][b].name){
 				return aspectList[a][b];
 			}
 		}
 	}
+	console.log("failed find aspect")
 }
 
 function searchSpiritAspect(aspect, spirit){
