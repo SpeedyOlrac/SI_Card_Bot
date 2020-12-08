@@ -38,7 +38,7 @@ module.exports = {
 
 			if(!found) {
 				//First args is not an aspect
-				var spirit = getSpiritName(args[0]);
+				var spirit = getCardName(args[0], spirits);
 				var s = findSpirit(spirit);
 				message = "The aspects for " + spirit + "are: \n";
 				message = listAspect(message, parseInt(s));   
@@ -46,7 +46,7 @@ module.exports = {
 		}
 		//Correcting name of spirit
 		else{	
-			message = searchSpiritAspect(args[1], args[0]);
+			message = searchSpiritAspect(args[1], args[0]).panel;
 		}
 
 		console.log(message);		
@@ -93,7 +93,7 @@ function findAspect(target, aspectList = aspects){
 
 function searchSpiritAspect(aspect, spirit){
 	var aspectList = []
-	spirit = getCardName(args[0], spirits);
+	spirit = getCardName(spirit, spirits);
 	var s = findSpirit(spirit);
 
 	for (var a = 0; a < aspects[s].length; a++){
