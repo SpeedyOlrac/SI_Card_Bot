@@ -101,5 +101,5 @@ function searchSpiritAspect(aspect, spirit){
 	}
 
 	aspect = getCardName(aspect, aspectList);
-	return findAspect(aspect, aspectList);
+	return findAspect(aspect);
 }
