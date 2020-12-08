@@ -40,7 +40,7 @@ module.exports = {
 				//First args is not an aspect
 				var spirit = getCardName(args[0], spirits);
 				var s = findSpirit(spirit);
-				message = "The aspects for " + spirit + "are: \n";
+				message = "The aspects for " + spirit + " are: \n";
 				message = listAspect(message, parseInt(s));   
 			}
 		}
@@ -97,7 +97,7 @@ function searchSpiritAspect(aspect, spirit){
 	var s = findSpirit(spirit);
 
 	for (var a = 0; a < aspects[s].length; a++){
-		aspectList.push(aspect[s][a]);
+		aspectList.push(aspects[s][a].name);
 	}
 
 	aspect = getCardName(aspect, aspectList);
