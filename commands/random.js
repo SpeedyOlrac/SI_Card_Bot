@@ -37,7 +37,7 @@ function Picking(selection, min = 0, max = 11){
             aspect = spirits[n].aspect[a-1] ;
         }
         */
-        return  [spirits[n].name, spirits[n].emote, aspect];
+        return  [spirits[n].name, spirits[n].emote];
     }    
     else if(selection == 'adversary'){
         var diffmax = parseInt(max);
