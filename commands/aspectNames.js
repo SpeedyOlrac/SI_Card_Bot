@@ -4,7 +4,7 @@ const { getCardName } = require('./sendCardLink.js');
 var lighting =  [ 
     {name: "Pandemonium", emote: "<:TStrife:>778714254982643762", panel: "https://i.imgur.com/1774mnW.jpg"},
     {name: "Wind", emote: "<:ICFast:>778714634710286397", panel: "https://i.imgur.com/VwchE5U.jpg"},
-    {name: "Imense", emote: "", panel: "https://i.imgur.com/YhXRPZK.jpg"}
+    {name: "Immense", emote: "", panel: "https://i.imgur.com/YhXRPZK.jpg"}
  ];
 
  var rivers =   [
