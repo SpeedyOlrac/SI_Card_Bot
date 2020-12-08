@@ -30,13 +30,13 @@ module.exports = {
 function Picking(selection, min = 0, max = 11){
     if(selection == 'spirit'){
         let n = Math.floor(Math.random() * spirits.length);
-        let a = Math.floor(Math.random() * spirits[n].aspect.length);
+        /*let a = Math.floor(Math.random() * spirits[n].aspect.length);
         let aspect = "";
 
         if (a > 0){
             aspect = spirits[n].aspect[a-1] ;
         }
-
+        */
         return  [spirits[n].name, spirits[n].emote, aspect];
     }    
     else if(selection == 'adversary'){
