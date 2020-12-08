@@ -30,7 +30,7 @@ module.exports = {
 				console.log(aspectsNames[a].localeCompare(temp));
 				if (aspectsNames[a].localeCompare(temp) == 0){
 					var aspect = findAspect(temp);
-					console.log(aspect);
+					//console.log(aspect);
 					message = aspect.panel;
 					found = true;
 				}
@@ -46,7 +46,15 @@ module.exports = {
 		}
 		//Correcting name of spirit
 		else{	
-			message = searchSpiritAspect(args[1], args[0]).panel;
+			var temp = searchSpiritAspect(args[1], args[0]);
+
+			if (temp ==  null){
+				console.log(temp);
+				message = "Aspect could not be found";
+			}
+			else{
+				message = temp.panel;
+			}
 		}
 
 		console.log(message);		
@@ -78,17 +86,18 @@ function findSpirit(target){
 
 function findAspect(target, aspectList = aspects){
 
-	console.log("FindAspect:" + target);
+	console.log("FindAspect: " + target);
 
 	for (var a = 0; a < aspectList.length; a++){
 		for(var b = 0; b < aspectList[a].length; b++ ){
-			console.log(aspectList[a][b].name);
 			if (target == aspectList[a][b].name.toLowerCase()){
 				return aspectList[a][b];
 			}
 		}
 	}
 	console.log("failed find aspect")
+
+	return null
 }
 
 function searchSpiritAspect(aspect, spirit){
@@ -101,5 +110,6 @@ function searchSpiritAspect(aspect, spirit){
 	}
 
 	aspect = getCardName(aspect, aspectList);
+
 	return findAspect(aspect);
 }
