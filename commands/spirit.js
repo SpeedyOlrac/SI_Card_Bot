@@ -64,7 +64,7 @@ module.exports = {
             if(!argContains(args, 'back') && !argContains(args, 'unique')) {
                 await msg.channel.send(spirits[target].panel[0]);
             }
-            if(!argContains(args, 'front') && !argContains(args, 'unique')){
+            if(argContains(args, 'back') && !argContains(args, 'unique')){
                 await msg.channel.send(spirits[target].panel[1]); 
             }
             if(argContains(args, 'unique'))
