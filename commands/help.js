@@ -9,7 +9,8 @@ var help = "List of commands: \
 	\n -faqs (search words) \
 	\n -random [spirit/adversary] (min Diffculty) (max Diffculty)  \
 	\n -spirit (front/back) [keywords] \
-	\n -adversary (name)";
+	\n -adversary (name) \
+	\n -aspect (spirit or aspect) [aspect keywords]";
 
 module.exports = {
 	name: 'help',

@@ -8,14 +8,14 @@ var lighting =  [
  ];
 
  var rivers =   [
-    {name: "SunShine", emote: "", panel: "https://i.imgur.com/AGZB0Bn.jpg"},
+    {name: "Sunshine", emote: "", panel: "https://i.imgur.com/AGZB0Bn.jpg"},
     {name: "Travel", emote: "", panel: "https://i.imgur.com/lgC4gQ6.jpg"},
 ];
 
 var shadows = [
     {name: "Madness", spirit: 'Shadows Flicker Like Flame', emote: "<:FlowersMurmurUltimatums:>778709531311996948", panel: "https://i.imgur.com/sjjNNLB.jpg"},
     {name: "Reach", spirit: 'Shadows Flicker Like Flame', emote: "<:IArrowRange:>778709531311996948", panel: "https://i.imgur.com/1oIYl5s.jpg"},
-    {name: "Forboding", spirit: 'Shadows Flicker Like Flame', emote: "", panel: "https://i.imgur.com/iUUnawK.jpg"},
+    {name: "Foreboding", spirit: 'Shadows Flicker Like Flame', emote: "", panel: "https://i.imgur.com/iUUnawK.jpg"},
     {name: "Amorphous", spirit: 'Shadows Flicker Like Flame', emote: "", panel: "https://i.imgur.com/VIZa5cI.jpg"}
 ];
 
