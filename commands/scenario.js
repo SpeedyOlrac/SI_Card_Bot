@@ -15,8 +15,10 @@ module.exports = {
         var names = [];
         var side = "";
 
-        for (var s in scenario){
-            names.push(s.name);
+        for (const s in scenario){
+            console.log(s.name);
+            names.push(s.name); 
+            
         }
 
 
@@ -29,7 +31,7 @@ module.exports = {
             side = args.pop;
         }
 
-        panel = getcardname(args, names);
+        panel = getCardName(args, names);
 
         for (const s in scenario){
             if (s.name == panel){
