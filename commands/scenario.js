@@ -19,6 +19,7 @@ module.exports = {
             names.push(s.name);
         }
 
+        
         if (args.length == 0){
             msg.channel.send("Scenarios are: \n" + names);
             return;
