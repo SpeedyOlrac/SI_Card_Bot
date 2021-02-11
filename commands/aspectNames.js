@@ -21,7 +21,7 @@ var shadows = [
 
 var earth = [
     {name: "Might", emote: "", panel: "https://i.imgur.com/dBOc7YI.jpg"},
-    {name: "Resilence", emote: "", panel: "https://i.imgur.com/jSgVfcH.jpg"}
+    {name: "Resilience", emote: "", panel: "https://i.imgur.com/jSgVfcH.jpg"}
   ];
 
 //'Lightning\'s Swift Strike', 'River Surges in Sunlight', 'Shadows Flicker Like Flame', 'Vital Strength of the Earth'

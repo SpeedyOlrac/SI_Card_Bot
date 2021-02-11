@@ -126,6 +126,8 @@ var title =
 ];
 
 
+}
+
 var role ="React to this message with the :FlagBlank: emoji to be assigned \
      the @LFG Role and be notified of games in #looking-for-a-game";
 
