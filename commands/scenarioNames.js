@@ -1,91 +1,91 @@
 var blitz = {
     name: "Blitz",
-    front: "",
-    back: "",
+    front: "front",
+    back: "back",
     diffculty: "0"
 }
 
 var GtIH = {
     name: "Guard the Isle's Heart",
-    front: "",
-    back: "",
+    front: "front",
+    back: "back",
     diffculty: "0"
 }
 
 var RoT ={
     name: "Rituals of Terror",
-    front: "",
-    back: "",
+    front: "front",
+    back: "back",
     diffculty: "3"
 }
 
 var DI = {
     name: "Dahan Insurrection",
-    front: "",
-    back: "",
+    front: "front",
+    back: "back",
     diffculty: "4"
 }
 
 var SW = {
     name: "Second Wave",
-    front: "",
-    back: "",
+    front: "front",
+    back: "back",
     diffculty: "1"
 }
 
 var PLF = {
     name: "Powers Long Forgotten",
-    front: "",
-    back: "",
+    front: "front",
+    back: "back",
     diffculty: "1"
 }
 
 var WtS = {
     name: "Ward the Shores",
-    front: "",
-    back: "",
+    front: "front",
+    back: "back",
     diffculty: "2"
 }
 
 var RotDF = {
     name: "Rituals of the Destroying Flame",
-    front: "",
-    back: "",
+    front: "front",
+    back: "back",
     diffculty: "3"
 }
 
 var EI = {
     name: "Elemental Invocation",
-    front: "",
-    back: "",
+    front: "front",
+    back: "back",
     diffculty: "1"
 }
 
 var DT = {
     name: "Despicable Theft",
-    front: "",
-    back: "",
+    front: "front",
+    back: "back",
     diffculty: "2"
 }
 
 var TGR = {
     name: "The Great River",
-    front: "",
-    back: "",
+    front: "front",
+    back: "back",
     diffculty: "3"
 }
 
 var ADoS = {
     name: "A Diversity of Spirits",
-    front: "",
-    back: "",
+    front: "front",
+    back: "back",
     diffculty: "0"
 }
 
 var VT = {
     name: "Varied Terrains",
-    front: "",
-    back: "",
+    front: "front",
+    back: "back",
     diffculty: "2"
 }
 

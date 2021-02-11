@@ -23,7 +23,7 @@ module.exports = {
 
 
         if (args.length == 0){
-            msg.channel.send("Scenarios are: \n" + names);
+            msg.channel.send("Scenarios are: \n" + names.join(', '));
             return;
         }
 
@@ -33,8 +33,9 @@ module.exports = {
 
         panel = getCardName(args, names);
 
-        for (const s of scenario){
+        scenario.forEach(function(s){
             if (s.name == panel){
+                console.log("sending scenario")
                 if(side == "front"){
                     msg.channel.send(s.front);   
                 }
@@ -42,6 +43,6 @@ module.exports = {
                     msg.channel.send(s.back);
                 }   
             }
-        }
+        });
 	},
 };
