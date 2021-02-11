@@ -33,14 +33,14 @@ var SW = {
     diffculty: "1"
 }
 
-var PLF: = {
+var PLF = {
     name: "Powers Long Forgotten",
     front: "",
     back: "",
     diffculty: "1"
 }
 
-var WtS: ={
+var WtS = {
     name: "Ward the Shores",
     front: "",
     back: "",
@@ -54,7 +54,7 @@ var RotDF = {
     diffculty: "3"
 }
 
-var EI: = {
+var EI = {
     name: "Elemental Invocation",
     front: "",
     back: "",
