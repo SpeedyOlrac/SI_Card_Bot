@@ -15,11 +15,11 @@ module.exports = {
         var names = [];
         var side = "";
 
-        for (const s in scenario){
+        scenario.forEach(function(s){
             console.log(s.name);
             names.push(s.name); 
-            
-        }
+         });
+
 
 
         if (args.length == 0){
@@ -33,7 +33,7 @@ module.exports = {
 
         panel = getCardName(args, names);
 
-        for (const s in scenario){
+        for (const s of scenario){
             if (s.name == panel){
                 if(side == "front"){
                     msg.channel.send(s.front);   
