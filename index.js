@@ -47,7 +47,7 @@ bot.on('message', async msg => {
 	if (!bot.commands.has(command)) return console.log("command not in list");
 
 	try {
-		await bot.commands.get(command).execute(msg, args);
+		await bot.commands.get(command).execute(msg, args, Discord, bot);
 	} catch (error) {
 		console.error(error);
 		//msg.reply('there was an error trying to execute that command!');
