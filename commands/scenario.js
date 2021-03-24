@@ -37,10 +37,10 @@ module.exports = {
             if (s.name == panel){
                 console.log("sending scenario")
                 if(side == "front"){
-                    msg.channel.send(s.front);   
+                    msg.channel.send(s.link);   
                 }
                 else{
-                    msg.channel.send(s.back);
+                    msg.channel.send(s.linkBack);
                 }   
             }
         });
