@@ -54,7 +54,7 @@ bot.on('message', async msg => {
 	}
 });
 
-
+/*
 const adminID = '176329826641117186';
 const messageID = ['747806738308268075', '747220369857052842']; //747517049433227327 
 const roleID = ['743228206806728766', '498865006297743362'];//743228206806728766
@@ -151,5 +151,5 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     }
 });
 
-
+*/
 bot.login();
