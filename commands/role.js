@@ -12,6 +12,7 @@ const roleMessage = "The Dahan seek aid! React using <:FlagBlank:742199330018164
 module.exports = {
     name: 'reactionrole',
     description: "Sets up a reaction role message!",
+    public: true,
     async execute(message, args, Discord, client) {
         const channel = '743227873875329137';
         const LFGRole = message.guild.roles.cache.find(role => role.name === "LFG");
