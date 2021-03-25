@@ -23,11 +23,7 @@ module.exports = {
 
 
         }
-        if(args == ){
-            msg.channel.send('cards.minor');
-            list = getRandom(cards.minor, 4);
 
-        }
 
 
 
