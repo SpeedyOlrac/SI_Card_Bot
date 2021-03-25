@@ -6,11 +6,24 @@ const cards = require ("./ImageNames.js")
 module.exports = {
 	name: 'draw',
 	description: 'draw 4 random cards',
-	public: false, //has to be true to show as a command
+	public: true, //has to be true to show as a command
 	async execute(msg, args) {
 
         let list = [];
-        if(args == 'minor'){
+
+        switch(args){
+            case 'minor':        
+                 msg.channel.send('cards.minor');
+                 list = getRandom(cards.minor, 4);
+                 break;
+            case 'major':
+                msg.channel.send('cards.major');
+                list = getRandom(cards.major, 4);
+                break;
+
+
+        }
+        if(args == ){
             msg.channel.send('cards.minor');
             list = getRandom(cards.minor, 4);
 
