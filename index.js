@@ -47,12 +47,70 @@ bot.on('message', async msg => {
 	if (!bot.commands.has(command)) return console.log("command not in list");
 
 	try {
-		await bot.commands.get(command).execute(msg, args, Discord, bot);
+		await bot.commands.get(command).execute(msg, args, Discord);
 	} catch (error) {
 		console.error(error);
 		//msg.reply('there was an error trying to execute that command!');
 	}
 });
+
+
+
+bot.on('messageReactionAdd', async (reaction, user) => {
+    const channel = '743227873875329137';
+    const LFGRole = message.guild.roles.cache.find(role => role.name === "LFG");
+    //const blueTeamRole = message.guild.roles.cache.find(role => role.name === "YOUR_ROLE");
+
+    const lfgEmote = 'FlagBlank';
+    //const blueTeamEmoji = 'YOUR_EMOJI';
+
+    if (reaction.message.partial) await reaction.message.fetch();
+    if (reaction.partial) await reaction.fetch();
+    if (user.bot) return;
+    if (!reaction.message.guild) return;
+
+    if (reaction.message.channel.id == channel) {
+        if (reaction.emoji.name === lfgEmote) {
+            await reaction.message.guild.members.cache.get(user.id).roles.add(LFGRole);
+        }
+        if (reaction.emoji.name === blueTeamEmoji) {
+            await reaction.message.guild.members.cache.get(user.id).roles.add(blueTeamRole);
+        }
+    } else {
+        return;
+    }
+
+});
+
+bot.on('messageReactionRemove', async (reaction, user) => {
+
+    const channel = '743227873875329137';
+    const LFGRole = message.guild.roles.cache.find(role => role.name === "LFG");
+    //const blueTeamRole = message.guild.roles.cache.find(role => role.name === "YOUR_ROLE");
+
+    const lfgEmote = 'FlagBlank';
+    //const blueTeamEmoji = 'YOUR_EMOJI';
+
+    if (reaction.message.partial) await reaction.message.fetch();
+    if (reaction.partial) await reaction.fetch();
+    if (user.bot) return;
+    if (!reaction.message.guild) return;
+
+
+    if (reaction.message.channel.id == channel) {
+        if (reaction.emoji.name === lfgEmote) {
+            await reaction.message.guild.members.cache.get(user.id).roles.remove(LFGRole);
+        }
+        if (reaction.emoji.name === blueTeamEmoji) {
+            await reaction.message.guild.members.cache.get(user.id).roles.remove(blueTeamRole);
+        }
+    } else {
+        return;
+    }
+});
+}
+
+
 
 /*
 const adminID = '176329826641117186';

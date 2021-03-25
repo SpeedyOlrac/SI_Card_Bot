@@ -24,10 +24,10 @@ module.exports = {
             case 'minor':
                 console.log('cards.minor');
 
-                //var num = (args.length == 1) ? args[1] : 4;
-                 //console.log(num);
-                 list = getRandom(cards.minor,  4 );
-                 //list = capitalizeTheFirstLetterOfEachWord(list);
+                var num = (args.length == 1) ? args[1] : 4;
+                 console.log(num);
+                 list = getRandom(cards.minor, parseInt(num) );
+                 list = capitalizeTheFirstLetterOfEachWord(list);
                  break;
             case 'major':
                 console.log('cards.major');
@@ -75,10 +75,15 @@ function getRandom(arr, n) {
 
 function capitalizeTheFirstLetterOfEachWord(list) {
 
-    var separateWord = words.toLowerCase().split(' ');
-    for (var i = 0; i < separateWord.length; i++) {
-       separateWord[i] = separateWord[i].charAt(0).toUpperCase() +
-       separateWord[i].substring(1);
-    }
-        separateWord.join(' ');
-     }
+    for (var i = 0; i < list.length; i++){
+
+        var separateWord = list[i].toLowerCase().split(' ');
+        for (var i = 0; i < separateWord.length; i++) {
+            separateWord[i] = separateWord[i].charAt(0).toUpperCase() +
+            separateWord[i].substring(1);
+        }
+           list[i] = separateWord.join(' ');
+    } 
+    console.log(list);
+    return list;
+}
