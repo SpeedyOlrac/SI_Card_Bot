@@ -13,7 +13,7 @@ module.exports = {
         console.log(args);
 
         switch(args[0]){
-            case 'minor':        
+            case 'minor':
             cards
                 console.log('cards.minor');
                  list = getRandom(cards.minor, 4);
@@ -37,7 +37,7 @@ module.exports = {
         }
 
 
-		//await msg.channel.send(list);
+		await msg.channel.send(list);
 	},
 };
 
