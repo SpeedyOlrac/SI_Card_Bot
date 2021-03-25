@@ -87,6 +87,7 @@ function camelCase(str) {
       .replace('/\s[a-z]/g', upperCase) //convert first char of each word to UPPERCASE
       .replace('/\s+/g', "") //remove spaces
       .replace('/^[A-Z]/g', lowerCase); //convert first char to lowercase
+      console.log(str);
     return str;
   
 }
