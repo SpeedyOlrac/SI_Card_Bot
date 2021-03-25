@@ -24,26 +24,26 @@ module.exports = {
             case 'minor':
                 console.log('cards.minor');
 
-                var num = (args.length == 2) ? args[1] : 4;
+                //var num = (args.length == 1) ? args[1] : 4;
                  console.log(num);
                  list = getRandom(cards.minor, num = 4 );
                  //list = capitalizeTheFirstLetterOfEachWord(list);
                  break;
             case 'major':
                 console.log('cards.major');
-                var num = (args.length == 2) ? args[1] : 4;
+               // var num = (args.length == 1) ? args[1] : 4;
                 list = getRandom(cards.major, num = 4 );
                 //list = capitalizeTheFirstLetterOfEachWord(list);
                 break;
             case 'fear':
                 console.log('cards.fear');
-                var num = (args.length == 2) ? args[1] : 1;
+                //var num = (args.length == 1) ? args[1] : 1;
                 list = getRandom(cards.fear, num =1 );
                 //list = capitalizeTheFirstLetterOfEachWord(list);
                 break;
             case 'event':
                 console.log('cards.event');
-                var num = (args.length == 2) ? args[1] : 1;
+                //var num = (args.length == 1) ? args[1] : 1;
                 list = getRandom(cards.event, num = 1);
                 //list = capitalizeTheFirstLetterOfEachWord(list);
                 break;
@@ -67,13 +67,13 @@ function getRandom(arr, n) {
         throw new RangeError("getRandom: more elements taken than available");
     while (n--) {
         var x = Math.floor(Math.random() * len);
-        result[n] = capitalizeTheFirstLetterOfEachWord( arr[x in taken ? taken[x] : x]);
+        result[n] = arr[x in taken ? taken[x] : x] ;
         taken[x] = --len in taken ? taken[len] : len;
     }
     return result;
 }
 
-function capitalizeTheFirstLetterOfEachWord(words) {
+function capitalizeTheFirstLetterOfEachWord(list) {
 
     var separateWord = words.toLowerCase().split(' ');
     for (var i = 0; i < separateWord.length; i++) {
