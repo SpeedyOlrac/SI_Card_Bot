@@ -24,7 +24,7 @@ module.exports = {
             cards
                 console.log('cards.minor');
                 var num = (args.length == 1) ? args[1]: 4;
-                 console.log(mun);
+                 console.log(num);
                  list = getRandom(cards.minor, num);
                 // list = scrubList(list);
                  break;
@@ -68,6 +68,7 @@ function getRandom(arr, n) {
         var x = Math.floor(Math.random() * len);
         result[n] = arr[x in taken ? taken[x] : x];
         taken[x] = --len in taken ? taken[len] : len;
+        console.log(result);
     }
     return result;
 }
