@@ -15,7 +15,7 @@ require('dotenv').config();
 const fs = require('fs');
 const Discord = require('discord.js');
 const bot = new Discord.Client({
-    partials: ['MESSAGE', 'REACTION']
+    partials: ['MESSAGE', 'CHANNEL', 'REACTION']
 });
 
 bot.commands = new Discord.Collection();
@@ -60,16 +60,28 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 
     const channel = '743227873875329137';
     const LFGRole = message.guild.roles.cache.find(role => role.name === "LFG");
+    //74322
     //const blueTeamRole = message.guild.roles.cache.find(role => role.name === "YOUR_ROLE");
 
     const lfgEmote = 'FlagBlank';
     const messageId ='824390516048134185';
     //const blueTeamEmoji = 'YOUR_EMOJI';
 
-    if (reaction.message.partial) await reaction.message.fetch();
-    if (reaction.partial) await reaction.fetch();
-    if (user.bot) return;
-    if (!reaction.message.guild) return;
+    if (reaction.partial) {
+		// If the message this reaction belongs to was removed the fetching might result in an API error, which we need to handle
+		try {
+			await reaction.fetch();
+		} catch (error) {
+			console.error('Something went wrong when fetching the message: ', error);
+			// Return as `reaction.message.author` may be undefined/null
+			return;
+		}
+	}
+
+    // if (reaction.message.partial) await reaction.message.fetch();
+    // if (reaction.partial) await reaction.fetch();
+    // if (user.bot) return;
+    // if (!reaction.message.guild) return;
 
     console.log(LFGRole + "LFGRole ID");
     console.log(reaction.message.channel.id + "channel ID");
@@ -98,10 +110,21 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     const lfgEmote = 'FlagBlank';
     //const blueTeamEmoji = 'YOUR_EMOJI';
 
-    if (reaction.message.partial) await reaction.message.fetch();
-    if (reaction.partial) await reaction.fetch();
-    if (user.bot) return;
-    if (!reaction.message.guild) return;
+    if (reaction.partial) {
+		// If the message this reaction belongs to was removed the fetching might result in an API error, which we need to handle
+		try {
+			await reaction.fetch();
+		} catch (error) {
+			console.error('Something went wrong when fetching the message: ', error);
+			// Return as `reaction.message.author` may be undefined/null
+			return;
+		}
+	}
+
+    // if (reaction.message.partial) await reaction.message.fetch();
+    // if (reaction.partial) await reaction.fetch();
+    // if (user.bot) return;
+    // if (!reaction.message.guild) return;
 
     console.log(LFGRole + "LFGRole ID");
     console.log(reaction.message.channel.id + "channel ID");
