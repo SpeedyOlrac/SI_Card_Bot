@@ -107,7 +107,7 @@ bot.on('messageReactionRemove', async (reaction, user) => {
         return;
     }
 });
-}
+
 
 
 

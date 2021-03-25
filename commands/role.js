@@ -30,8 +30,8 @@ module.exports = {
         messageEmbed.react(lfgEmote);
         //messageEmbed.react(blueTeamEmoji);
  
-        
-}   
+    }
+};   
 
 
 
