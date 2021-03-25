@@ -62,9 +62,9 @@ function getRandom(arr, n) {
 
 function camelCase (str){
     str = str.replace('_', ' ');
-    const regExp = /[-_]\w/ig;
+    const regExp = '/[-_]\w/ig';
     return str.replace(regExp,(match) => {
-        return match[1].toUppercase()
+        return match[1].toUppercase();
      });
 
 }
