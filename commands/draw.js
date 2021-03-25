@@ -26,25 +26,25 @@ module.exports = {
 
                 //var num = (args.length == 1) ? args[1] : 4;
                  console.log(num);
-                 list = getRandom(cards.minor, num = 4 );
+                 list = getRandom(cards.minor,  4 );
                  //list = capitalizeTheFirstLetterOfEachWord(list);
                  break;
             case 'major':
                 console.log('cards.major');
                // var num = (args.length == 1) ? args[1] : 4;
-                list = getRandom(cards.major, num = 4 );
+                list = getRandom(cards.major,  4 );
                 //list = capitalizeTheFirstLetterOfEachWord(list);
                 break;
             case 'fear':
                 console.log('cards.fear');
                 //var num = (args.length == 1) ? args[1] : 1;
-                list = getRandom(cards.fear, num =1 );
+                list = getRandom(cards.fear, 1 );
                 //list = capitalizeTheFirstLetterOfEachWord(list);
                 break;
             case 'event':
                 console.log('cards.event');
                 //var num = (args.length == 1) ? args[1] : 1;
-                list = getRandom(cards.event, num = 1);
+                list = getRandom(cards.event,  1);
                 //list = capitalizeTheFirstLetterOfEachWord(list);
                 break;
             default:
