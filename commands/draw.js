@@ -12,7 +12,7 @@ module.exports = {
         let list = [];
         console.log(args);
 
-        switch(args){
+        switch(args[0]){
             case 'minor':        
             cards
                 console.log('cards.minor');
@@ -26,10 +26,13 @@ module.exports = {
                 console.log('cards.fear');
                 list = getRandom(cards.fear, 1);
                 break;
-                case 'fear':
+            case 'event':
                 console.log('cards.event');
                 list = getRandom(cards.event, 1);
                 break;
+            default:
+                var message = "Draw a Minor, Major, Fear or Event card.";
+                list[0] = message;
 
         }
 
