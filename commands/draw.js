@@ -36,6 +36,9 @@ module.exports = {
 
         }
 
+        for (var i = 0; i > list.length; i++ ){
+            list[i] = camelCase(list[i]);
+        }
 
 		await msg.channel.send(list);
 	},
@@ -63,5 +66,4 @@ function camelCase (str){
         return match[1].toUppercase()
      });
 
-    return str;
 }
