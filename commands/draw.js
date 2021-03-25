@@ -55,3 +55,13 @@ function getRandom(arr, n) {
     }
     return result;
 }
+
+function camelCase (str){
+    str = str.replace('_', ' ');
+    const regExp = /[-_]\w/ig;
+    return str.replace(regExp,(match) => {
+        return match[1].toUppercase()
+     });
+
+    return str;
+}
