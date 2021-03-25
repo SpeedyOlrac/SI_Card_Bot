@@ -38,7 +38,7 @@ module.exports = {
             case 'fear':
                 console.log('cards.fear');
                 var num = (args.length == 1) ? args[1] : "1";
-                list = getRandom(cards.fear, num ;
+                list = getRandom(cards.fear, num );
                 //list = scrubList(list);
                 break;
             case 'event':
