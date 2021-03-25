@@ -10,6 +10,7 @@ module.exports = {
 	async execute(msg, args) {
 
         let list = [];
+        console.log(args);
 
         switch(args){
             case 'minor':        
@@ -33,7 +34,7 @@ module.exports = {
         }
 
 
-		await msg.channel.send(list);
+		//await msg.channel.send(list);
 	},
 };
 
