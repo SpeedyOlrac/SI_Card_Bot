@@ -55,7 +55,6 @@ bot.on('message', async msg => {
 });
 
 
-
 bot.on('messageReactionAdd', async (reaction, user) => {
     const channel = '743227873875329137';
     const LFGRole = message.guild.roles.cache.find(role => role.name === "LFG");
