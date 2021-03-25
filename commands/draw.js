@@ -76,7 +76,7 @@ function getRandom(arr, n) {
 function scrubList(list){
     
     for (var i = 0; i < list.length; i++){
-        list[i] = camelCase[i];
+        list[i] = camelCase(list[i]);
     }
     console.log(list);
     return list;
@@ -84,10 +84,9 @@ function scrubList(list){
 
 
 function camelCase(str) {
-    str = str.replace(/\-/g, " ") //convert all hyphens to spaces
+    str = str
+      .replace('/\-/g', " ") //convert all hyphens to spaces
       .replace(/\s[a-z]/g, upperCase) //convert first char of each word to UPPERCASE
-      .replace(/\s+/g, "") //remove spaces
-      .replace(/^[A-Z]/g, lowerCase); //convert first char to lowercase
       console.log(str);
     return str;
   
