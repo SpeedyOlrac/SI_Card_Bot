@@ -1,6 +1,7 @@
 // can be used as template
 //save as command as commandName.js
-const cards = require ("./ImageNames.js")
+const cards = require ("./ImageNames.js");
+const card = require ("./card.js");
 
 
 module.exports = {
@@ -21,7 +22,6 @@ module.exports = {
 
         switch(args[0]){
             case 'minor':
-            cards
                 console.log('cards.minor');
                 var num = (args.length == 1) ? args[1]: "4";
                  console.log(num);
