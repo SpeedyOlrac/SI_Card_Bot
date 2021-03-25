@@ -25,7 +25,7 @@ module.exports = {
                 console.log('cards.minor');
 
                 //var num = (args.length == 1) ? args[1] : 4;
-                 console.log(num);
+                 //console.log(num);
                  list = getRandom(cards.minor,  4 );
                  //list = capitalizeTheFirstLetterOfEachWord(list);
                  break;
