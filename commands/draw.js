@@ -13,18 +13,24 @@ module.exports = {
 
         switch(args){
             case 'minor':        
-                 msg.channel.send('cards.minor');
+            cards
+                console.log('cards.minor');
                  list = getRandom(cards.minor, 4);
                  break;
             case 'major':
-                msg.channel.send('cards.major');
+                console.log('cards.major');
                 list = getRandom(cards.major, 4);
                 break;
-
+            case 'fear':
+                console.log('cards.fear');
+                list = getRandom(cards.fear, 1);
+                break;
+                case 'fear':
+                console.log('cards.event');
+                list = getRandom(cards.event, 1);
+                break;
 
         }
-
-
 
 
 		await msg.channel.send(list);
