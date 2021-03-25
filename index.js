@@ -78,11 +78,6 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 		}
 	}
 
-    // if (reaction.message.partial) await reaction.message.fetch();
-    // if (reaction.partial) await reaction.fetch();
-    // if (user.bot) return;
-    // if (!reaction.message.guild) return;
-
     console.log(LFGRole + "LFGRole ID");
     console.log(reaction.message.channel.id + "channel ID");
     if (reaction.message.channel.id == channel) {
@@ -91,14 +86,14 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 
             await reaction.message.guild.members.cache.get(user.id).roles.add(LFGRole);
         }
-        if (reaction.emoji.name === blueTeamEmoji) {
-            await reaction.message.guild.members.cache.get(user.id).roles.add(blueTeamRole);
-        }
+
     } else {
         return;
     }
 
 });
+
+
 
 bot.on('messageReactionRemove', async (reaction, user) => {
     
@@ -110,7 +105,6 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     const lfgEmote = 'FlagBlank';
     //const blueTeamEmoji = 'YOUR_EMOJI';
 
-    console.log("Reaction role add " + LFGRole) ;
 
     if (reaction.partial) {
 		// If the message this reaction belongs to was removed the fetching might result in an API error, which we need to handle
@@ -123,20 +117,14 @@ bot.on('messageReactionRemove', async (reaction, user) => {
 		}
 	}
 
-    // if (reaction.message.partial) await reaction.message.fetch();
-    // if (reaction.partial) await reaction.fetch();
-    // if (user.bot) return;
-    // if (!reaction.message.guild) return;
+    console.log(LFGRole + " LFGRole ID");
+    console.log(reaction.message.channel.id + " Channel ID");
 
-    console.log(LFGRole + "LFGRole ID");
-    console.log(reaction.message.channel.id + "channel ID");
     if (reaction.message.channel.id == channel) {
         if (reaction.emoji.name === lfgEmote) {
             await reaction.message.guild.members.cache.get(user.id).roles.remove(LFGRole);
         }
-        if (reaction.emoji.name === blueTeamEmoji) {
-            await reaction.message.guild.members.cache.get(user.id).roles.remove(blueTeamRole);
-        }
+
     } else {
         return;
     }
