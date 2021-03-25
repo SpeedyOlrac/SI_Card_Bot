@@ -72,7 +72,7 @@ function getRandom(arr, n) {
 }
 
 function scrubList(list){
-
+    console.log(list);
     for (var i = 0; i < list.length; i++){
         list[i] = camelCase[i];
     }
