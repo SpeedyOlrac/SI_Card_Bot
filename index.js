@@ -61,6 +61,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     //const blueTeamRole = message.guild.roles.cache.find(role => role.name === "YOUR_ROLE");
 
     const lfgEmote = 'FlagBlank';
+    const messageId ='824390516048134185';
     //const blueTeamEmoji = 'YOUR_EMOJI';
 
     if (reaction.message.partial) await reaction.message.fetch();
@@ -68,8 +69,12 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     if (user.bot) return;
     if (!reaction.message.guild) return;
 
+    console.log(LFGRole + "LFGRole ID");
+    console.log(reaction.message.channel.id + "channel ID");
     if (reaction.message.channel.id == channel) {
+        console.log(reaction.emoji.name + "emojiID");
         if (reaction.emoji.name === lfgEmote) {
+
             await reaction.message.guild.members.cache.get(user.id).roles.add(LFGRole);
         }
         if (reaction.emoji.name === blueTeamEmoji) {
@@ -94,8 +99,9 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     if (reaction.partial) await reaction.fetch();
     if (user.bot) return;
     if (!reaction.message.guild) return;
-
-
+    
+    console.log(LFGRole + "LFGRole ID");
+    console.log(reaction.message.channel.id + "channel ID");
     if (reaction.message.channel.id == channel) {
         if (reaction.emoji.name === lfgEmote) {
             await reaction.message.guild.members.cache.get(user.id).roles.remove(LFGRole);
