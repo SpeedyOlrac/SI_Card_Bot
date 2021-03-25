@@ -36,8 +36,9 @@ module.exports = {
 
         }
 
-        for (var i = 0; i > list.length; i++ ){
+        for (var i = 0; i < list.length; i++ ){
             list[i] = camelCase(list[i]);
+            console.log(list[i]);
         }
 
 		await msg.channel.send(list);
