@@ -23,10 +23,11 @@ module.exports = {
         switch(args[0]){
             case 'minor':
                 console.log('cards.minor');
+
                 var num = (args.length == 1) ? args[1]: "4";
                  console.log(num);
                  list = getRandom(cards.minor, num);
-                // list = scrubList(list);
+                 list = scrubList(list);
                  break;
             case 'major':
                 console.log('cards.major');
