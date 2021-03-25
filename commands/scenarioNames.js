@@ -13,8 +13,8 @@ var GtIH = {
     front: "front",
     back: "back",
     diffculty: "0",
-    link: "https://i/imgur.com/gaQAMPy",
-    linkBack: "https://i/imgur.com/sarg4rv"
+    link: "https://i.imgur.com/gaQAMPy",
+    linkBack: "https://i.imgur.com/sarg4rv"
 }
 
 var RoT ={
@@ -22,8 +22,8 @@ var RoT ={
     front: "front",
     back: "back",
     diffculty: "3",
-    link: "https://i/imgur.com/ynAA7aW",
-    linkBack: "https://i/imgur.com/NIOiZUI"
+    link: "https://i.imgur.com/ynAA7aW",
+    linkBack: "https://i.imgur.com/NIOiZUI"
 }
 
 var DI = {
@@ -31,8 +31,8 @@ var DI = {
     front: "front",
     back: "back",
     diffculty: "4",
-    link: "https://i/imgur.com/gSQuYq7",  
-    linkBack: "https://i/imgur.com/9zzKSqe"
+    link: "https://i.imgur.com/gSQuYq7",  
+    linkBack: "https://i.imgur.com/9zzKSqe"
 }
 
 var SW = {
@@ -40,8 +40,8 @@ var SW = {
     front: "front",
     back: "back",
     diffculty: "1",
-    link: "https://i/imgur.com/ybHof3q",
-    linkBack: "https://i/imgur.com/DkJoMTi"
+    link: "https://i.imgur.com/ybHof3q",
+    linkBack: "https://i.imgur.com/DkJoMTi"
 }
 
 var PLF = {                                             
@@ -49,8 +49,8 @@ var PLF = {
     front: "front",
     back: "back",
     diffculty: "1",
-    link: "https://i/imgur.com/XvKFi2N",
-    linkBack: "https://i/imgur.com/KBTIdfs"
+    link: "https://i.imgur.com/XvKFi2N",
+    linkBack: "https://i.imgur.com/KBTIdfs"
 }
 
 var WtS = {
@@ -58,8 +58,8 @@ var WtS = {
     front: "front",
     back: "back",
     diffculty: "2",
-    link: "https://i/imgur.com/Y8om7Bb",
-    linkBack: "https://i/imgur.com/5dd2xP0"
+    link: "https://i.imgur.com/Y8om7Bb",
+    linkBack: "https://i.imgur.com/5dd2xP0"
 }
 
 var RotDF = {
@@ -67,8 +67,8 @@ var RotDF = {
     front: "front",
     back: "back",
     diffculty: "3",
-    link: "https://i/imgur.com/S2oxMkF",
-    linkBack: "https://i/imgur.com/L4zMjtC"
+    link: "https://i.imgur.com/S2oxMkF",
+    linkBack: "https://i.imgur.com/L4zMjtC"
 }
 
 var EI = {
@@ -76,8 +76,8 @@ var EI = {
     front: "front",
     back: "back",
     diffculty: "1",
-    link: "https://i/imgur.com/haOq62U",
-    linkBack: "https://i/imgur.com/4wTQqjQ"
+    link: "https://i.imgur.com/haOq62U",
+    linkBack: "https://i.imgur.com/4wTQqjQ"
 }
 
 var DT = {
@@ -85,8 +85,8 @@ var DT = {
     front: "front",
     back: "back",
     diffculty: "2",
-    link: "https://i/imgur.com/RTEQFIQ",
-    linkBack: "https://i/imgur.com/VLyEXFg"
+    link: "https://i.imgur.com/RTEQFIQ",
+    linkBack: "https://i.imgur.com/VLyEXFg"
 }
 
 var TGR = {
@@ -94,8 +94,8 @@ var TGR = {
     front: "front",
     back: "back",
     diffculty: "3",
-    link: "https://i/imgur.com/xEgVnVE",
-    linkBack: "https://i/imgur.com/R9oOeXL"
+    link: "https://i.imgur.com/xEgVnVE",
+    linkBack: "https://i.imgur.com/R9oOeXL"
 }
 
 var ADoS = {
@@ -103,8 +103,8 @@ var ADoS = {
     front: "front",
     back: "back",
     diffculty: "0",
-    link: "https://i/imgur.com/24wwuun",
-    linkBack: "https://i/imgur.com/iF15h8W"
+    link: "https://i.imgur.com/24wwuun",
+    linkBack: "https://i.imgur.com/iF15h8W"
 }
 
 var VT = {
@@ -112,8 +112,8 @@ var VT = {
     front: "front",
     back: "back",
     diffculty: "2",
-    link: "https://i/imgur.com/XbGRf3Z",
-    linkBack: "https://i/imgur.com/rOg2M2t"
+    link: "https://i.imgur.com/XbGRf3Z",
+    linkBack: "https://i.imgur.com/rOg2M2t"
 }
 
 exports.scenario =[blitz, GtIH, RoT, DI, 
