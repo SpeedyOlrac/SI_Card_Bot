@@ -26,26 +26,26 @@ module.exports = {
 
                 var num = (args.length == 1) ? args[1] : 4;
                  console.log(num);
-                 list = getRandom(cards.minor, num );
-                 list = scrubList(list);
+                 list = getRandom(cards.minor, num = 4 );
+                 //list = capitalizeTheFirstLetterOfEachWord(list);
                  break;
             case 'major':
                 console.log('cards.major');
                 var num = (args.length == 1) ? args[1] : 4;
-                list = getRandom(cards.major, num );
-                //list = scrubList(list);
+                list = getRandom(cards.major, num = 4 );
+                //list = capitalizeTheFirstLetterOfEachWord(list);
                 break;
             case 'fear':
                 console.log('cards.fear');
                 var num = (args.length == 1) ? args[1] : 1;
-                list = getRandom(cards.fear, num );
-                //list = scrubList(list);
+                list = getRandom(cards.fear, num =1 );
+                //list = capitalizeTheFirstLetterOfEachWord(list);
                 break;
             case 'event':
                 console.log('cards.event');
                 var num = (args.length == 1) ? args[1] : 1;
-                list = getRandom(cards.event, num );
-                //list = scrubList(list);
+                list = getRandom(cards.event, num = 1);
+                //list = capitalizeTheFirstLetterOfEachWord(list);
                 break;
             default:
                 var message = "Draw a Minor, Major, Fear or Event card.";
@@ -67,27 +67,18 @@ function getRandom(arr, n) {
         throw new RangeError("getRandom: more elements taken than available");
     while (n--) {
         var x = Math.floor(Math.random() * len);
-        result[n] = arr[x in taken ? taken[x] : x];
+        result[n] = capitalizeTheFirstLetterOfEachWord( arr[x in taken ? taken[x] : x]);
         taken[x] = --len in taken ? taken[len] : len;
     }
     return result;
 }
 
-function scrubList(list){
-    
-    for (var i = 0; i < list.length; i++){
-        list[i] = camelCase(list[i]);
+function capitalizeTheFirstLetterOfEachWord(list) {
+
+    var separateWord = words.toLowerCase().split(' ');
+    for (var i = 0; i < separateWord.length; i++) {
+       separateWord[i] = separateWord[i].charAt(0).toUpperCase() +
+       separateWord[i].substring(1);
     }
-    console.log(list);
-    return list;
-}
-
-
-function camelCase(str) {
-    str = str
-      .replace('/\-/g', " ") //convert all hyphens to spaces
-      .replace(/\s[a-z]/g, upperCase) //convert first char of each word to UPPERCASE
-      console.log(str);
-    return str;
-  
-}
+        separateWord.join(' ');
+     }
