@@ -56,6 +56,8 @@ bot.on('message', async msg => {
 
 
 bot.on('messageReactionAdd', async (reaction, user) => {
+    console.log("Reaction role add");
+
     const channel = '743227873875329137';
     const LFGRole = message.guild.roles.cache.find(role => role.name === "LFG");
     //const blueTeamRole = message.guild.roles.cache.find(role => role.name === "YOUR_ROLE");
@@ -87,7 +89,8 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 });
 
 bot.on('messageReactionRemove', async (reaction, user) => {
-
+    console.log("Reaction role add");
+    
     const channel = '743227873875329137';
     const LFGRole = message.guild.roles.cache.find(role => role.name === "LFG");
     //const blueTeamRole = message.guild.roles.cache.find(role => role.name === "YOUR_ROLE");
@@ -99,7 +102,7 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     if (reaction.partial) await reaction.fetch();
     if (user.bot) return;
     if (!reaction.message.guild) return;
-    
+
     console.log(LFGRole + "LFGRole ID");
     console.log(reaction.message.channel.id + "channel ID");
     if (reaction.message.channel.id == channel) {
