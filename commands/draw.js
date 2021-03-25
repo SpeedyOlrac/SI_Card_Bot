@@ -10,25 +10,40 @@ module.exports = {
 	async execute(msg, args) {
 
         let list = [];
+        length =  0;
         console.log(args);
+        if (args.length == 1){
+            if (args[1] > 10){
+                return msg.channel.send("Can not draw more than 10 cards");
+            }
+        }
+
 
         switch(args[0]){
             case 'minor':
             cards
                 console.log('cards.minor');
-                 list = getRandom(cards.minor, 4);
+                var num = (args.length == 1) ? args[1]: 4;
+                 list = getRandom(cards.minor, num);
+                 list = scrubList(list);
                  break;
             case 'major':
                 console.log('cards.major');
-                list = getRandom(cards.major, 4);
+                var num = (args.length == 1) ? args[1]: 4;
+                list = getRandom(cards.major, num);
+                list = scrubList(list);
                 break;
             case 'fear':
                 console.log('cards.fear');
-                list = getRandom(cards.fear, 1);
+                var num = (args.length == 1) ? args[1]: 1;
+                list = getRandom(cards.fear, num);
+                list = scrubList(list);
                 break;
             case 'event':
                 console.log('cards.event');
+                var num = (args.length == 1) ? args[1]: 1;
                 list = getRandom(cards.event, 1);
+                list = scrubList(list);
                 break;
             default:
                 var message = "Draw a Minor, Major, Fear or Event card.";
@@ -36,10 +51,6 @@ module.exports = {
 
         }
 
-        for (var i = 0; i < list.length; i++ ){
-            list[i] = camelCase(list[i]);
-            console.log(list[i]);
-        }
 
 		await msg.channel.send(list);
 	},
@@ -60,11 +71,27 @@ function getRandom(arr, n) {
     return result;
 }
 
-function camelCase (str){
-    str = str.replace('_', ' ');
-    const regExp = '/[-_]\w/ig';
-    return str.replace(regExp,(match) => {
-        return match[1].toUppercase();
-     });
+function scrubList(list){
 
+    for (var i = 0; i < list.length; i++){
+        list[i] = camelCase[i];
+    }
+
+    return list;
 }
+
+
+function camelCase(str) {
+    str = removeNonWord(str)
+      .replace('/\-/g', " ") //convert all hyphens to spaces
+      .replace('/\s[a-z]/g', upperCase) //convert first char of each word to UPPERCASE
+      .replace('/\s+/g', "") //remove spaces
+      .replace('/^[A-Z]/g', lowerCase); //convert first char to lowercase
+    return str;
+  
+}
+
+function removeNonWord(str) {
+    return str.replace(/[^0-9a-zA-Z\xC0-\xFF \-]/g, "");
+
+ }
