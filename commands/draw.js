@@ -12,7 +12,7 @@ module.exports = {
         let list = [];
         length =  0;
         console.log(args);
-        if (args.length == 1){
+        if (args.length == 2){
             if (args[1] > 10){
                 return msg.channel.send("Can not draw more than 10 cards");
             }
@@ -51,7 +51,7 @@ module.exports = {
 
         }
 
-
+        console.log(list);
 		await msg.channel.send(list);
 	},
 };
