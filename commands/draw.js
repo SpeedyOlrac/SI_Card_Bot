@@ -23,26 +23,26 @@ module.exports = {
             case 'minor':
             cards
                 console.log('cards.minor');
-                var num = (args.length == 1) ? args[1]: 4;
+                var num = (args.length == 1) ? args[1]: "4";
                  console.log(num);
                  list = getRandom(cards.minor, num);
                 // list = scrubList(list);
                  break;
             case 'major':
                 console.log('cards.major');
-                var num = (args.length == 1) ? args[1]: 4;
+                var num = (args.length == 1) ? args[1]: "4";
                 list = getRandom(cards.major, num);
                 //list = scrubList(list);
                 break;
             case 'fear':
                 console.log('cards.fear');
-                var num = (args.length == 1) ? args[1]: 1;
+                var num = (args.length == 1) ? args[1]: "1";
                 list = getRandom(cards.fear, num);
                 //list = scrubList(list);
                 break;
             case 'event':
                 console.log('cards.event');
-                var num = (args.length == 1) ? args[1]: 1;
+                var num = (args.length == 1) ? args[1]: "1";
                 list = getRandom(cards.event, 1);
                 //list = scrubList(list);
                 break;
