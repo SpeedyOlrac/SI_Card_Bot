@@ -36,7 +36,7 @@ for (const file of commandFiles) {
 bot.once('ready', async() => {
 	console.log('This bot is online');
 
-    var channel = bot.channels.get("id", '743227873875329137');
+    var channel = bot.get_channel("id", '743227873875329137');
     var message = await channel.send('test');
     message.react('FlagBlank');
     message.delete();
