@@ -32,8 +32,13 @@ for (const file of commandFiles) {
 
 //console.log(bot.commands);
 
-bot.once('ready', () => {
+bot.once('ready', async() => {
 	console.log('This bot is online');
+
+    var channel = '743227873875329137';
+    var message = await channel.send('test');
+    message.react('FlagBlank');
+    message.delete();
 });
 
 bot.on('message', async msg => {
