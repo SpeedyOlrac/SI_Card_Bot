@@ -36,7 +36,7 @@ for (const file of commandFiles) {
 bot.once('ready', async() => {
 	console.log('This bot is online');
 
-    var channel = bot.channels.get('743227873875329137');
+    var channel = bot.channels.get("id", '743227873875329137');
     var message = await channel.send('test');
     message.react('FlagBlank');
     message.delete();
@@ -84,8 +84,6 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 		}
 	}
 
-    console.log(LFGRole + "LFGRole ID");
-    console.log(reaction.message.channel.id + "channel ID");
     if (reaction.message.channel.id == channel) {
         console.log(reaction.emoji.name + "emojiID");
         if (reaction.emoji.name === lfgEmote) {
