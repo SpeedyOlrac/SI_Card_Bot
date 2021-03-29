@@ -24,28 +24,28 @@ module.exports = {
             case 'minor':
                 console.log('cards.minor');
 
-                var num = (args.length == 1) ? args[1] : 4;
+                var num = (args.length == 2) ? args[1] : 4;
                  console.log(num);
                  list = getRandom(cards.minor, parseInt(num) );
                  list = capitalizeTheFirstLetterOfEachWord(list);
                  break;
             case 'major':
                 console.log('cards.major');
-               // var num = (args.length == 1) ? args[1] : 4;
+                var num = (args.length == 2) ? args[1] : 4;
                 list = getRandom(cards.major,  4 );
-                //list = capitalizeTheFirstLetterOfEachWord(list);
+                list = capitalizeTheFirstLetterOfEachWord(list);
                 break;
             case 'fear':
                 console.log('cards.fear');
-                //var num = (args.length == 1) ? args[1] : 1;
+                var num = (args.length == 2) ? args[1] : 1;
                 list = getRandom(cards.fear, 1 );
-                //list = capitalizeTheFirstLetterOfEachWord(list);
+                list = capitalizeTheFirstLetterOfEachWord(list);
                 break;
             case 'event':
                 console.log('cards.event');
-                //var num = (args.length == 1) ? args[1] : 1;
+                var num = (args.length == 2) ? args[1] : 1;
                 list = getRandom(cards.event,  1);
-                //list = capitalizeTheFirstLetterOfEachWord(list);
+                list = capitalizeTheFirstLetterOfEachWord(list);
                 break;
             default:
                 var message = "Draw a Minor, Major, Fear or Event card.";
@@ -60,6 +60,7 @@ module.exports = {
 
 
 function getRandom(arr, n) {
+    console.log(n) + " this is n";
     var result = new Array(n),
         len = arr.length,
         taken = new Array(len);

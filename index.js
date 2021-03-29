@@ -6,7 +6,8 @@
         Expan Search to other commands
     Version 2.0.2 role bot
 
-    Additional work by Gudradain
+    
+
 
 */
 
@@ -35,7 +36,7 @@ for (const file of commandFiles) {
 bot.once('ready', async() => {
 	console.log('This bot is online');
 
-    var channel = '743227873875329137';
+    var channel = bot.channels.get('743227873875329137');
     var message = await channel.send('test');
     message.react('FlagBlank');
     message.delete();
