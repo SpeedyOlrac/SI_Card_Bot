@@ -78,7 +78,7 @@ function capitalizeTheFirstLetterOfEachWord(list) {
 
     for (var i = 0; i < list.length; i++){
 
-        var separateWord = list[i].toLowerCase().split(' ');
+        var separateWord = list[i].toLowerCase().split('_');
         for (var j = 0; j < separateWord.length; j++) {
             separateWord[j] = separateWord[j].charAt(0).toUpperCase() +
             separateWord[j].substring(1);
