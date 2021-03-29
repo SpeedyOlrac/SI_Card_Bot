@@ -73,14 +73,15 @@ function getRandom(arr, n) {
     return result;
 }
 
+
 function capitalizeTheFirstLetterOfEachWord(list) {
 
     for (var i = 0; i < list.length; i++){
 
         var separateWord = list[i].toLowerCase().split(' ');
-        for (var i = 0; i < separateWord.length; i++) {
-            separateWord[i] = separateWord[i].charAt(0).toUpperCase() +
-            separateWord[i].substring(1);
+        for (var j = 0; j < separateWord.length; j++) {
+            separateWord[j] = separateWord[j].charAt(0).toUpperCase() +
+            separateWord[j].substring(1);
         }
            list[i] = separateWord.join(' ');
     } 
