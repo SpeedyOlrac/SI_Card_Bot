@@ -86,6 +86,6 @@ function capitalizeTheFirstLetterOfEachWord(list) {
         }
            list[i] = separateWord.join(' ');
     } 
-    console.log(list);
+    
     return list;
 }
