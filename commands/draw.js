@@ -32,19 +32,19 @@ module.exports = {
             case 'major':
                 console.log('cards.major');
                 var num = (args.length == 2) ? args[1] : 4;
-                list = getRandom(cards.major,  4 );
+                list = getRandom(cards.major,  num );
                 list = capitalizeTheFirstLetterOfEachWord(list);
                 break;
             case 'fear':
                 console.log('cards.fear');
                 var num = (args.length == 2) ? args[1] : 1;
-                list = getRandom(cards.fear, 1 );
+                list = getRandom(cards.fear, num );
                 list = capitalizeTheFirstLetterOfEachWord(list);
                 break;
             case 'event':
                 console.log('cards.event');
                 var num = (args.length == 2) ? args[1] : 1;
-                list = getRandom(cards.event,  1);
+                list = getRandom(cards.event,  num);
                 list = capitalizeTheFirstLetterOfEachWord(list);
                 break;
             default:
