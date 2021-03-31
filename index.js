@@ -67,7 +67,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     const channel = '743227873875329137';
     const LFGRole = reaction.message.guild.roles.cache.find(role => role.name === "LFG");
     //74322
-    const PBProle = message.guild.roles.cache.find(role => role.name === "PBP");
+    const PBPRole = message.guild.roles.cache.find(role => role.name === "PBP");
 
     const lfgEmote = 'FlagBlank';
     //const messageId ='824390516048134185';
@@ -92,7 +92,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
         }
         if (reaction.emoji.name === PBPEmote) {
 
-            await reaction.message.guild.members.cache.get(user.id).roles.add(PBProle);
+            await reaction.message.guild.members.cache.get(user.id).roles.add(PBPRole);
         }
 
 
@@ -108,7 +108,7 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     
     const channel = '743227873875329137';
     const LFGRole = reaction.message.guild.roles.cache.find(role => role.name === "LFG");
-    const PBPRole = message.guild.roles.cache.find(role => role.name === "PBP");
+    const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "PBP");
 
     const lfgEmote = 'FlagBlank';
     const PBPEmote = '5SpeedSlow';
@@ -134,9 +134,8 @@ bot.on('messageReactionRemove', async (reaction, user) => {
         }
         if (reaction.emoji.name === PBPEmote) {
 
-            await reaction.message.guild.members.cache.get(user.id).roles.remove(PBProle);
+            await reaction.message.guild.members.cache.get(user.id).roles.remove(PBPRole);
         }
-
 
     } else {
         return;
