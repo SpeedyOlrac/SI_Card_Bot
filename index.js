@@ -70,8 +70,8 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     const PBProle = message.guild.roles.cache.find(role => role.name === "PBP");
 
     const lfgEmote = 'FlagBlank';
-    const messageId ='824390516048134185';
-    const PBPEmote = 'YOUR_EMOJI';
+    //const messageId ='824390516048134185';
+    const PBPEmote = '5SpeedSlow';
 
     if (reaction.partial) {
 		// If the message this reaction belongs to was removed the fetching might result in an API error, which we need to handle
@@ -109,10 +109,10 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     
     const channel = '743227873875329137';
     const LFGRole = reaction.message.guild.roles.cache.find(role => role.name === "LFG");
-    //const blueTeamRole = message.guild.roles.cache.find(role => role.name === "YOUR_ROLE");
+    const PBPRole = message.guild.roles.cache.find(role => role.name === "PBP");
 
     const lfgEmote = 'FlagBlank';
-    //const blueTeamEmoji = 'YOUR_EMOJI';
+    const PBPEmote = '5SpeedSlow';
 
 
     if (reaction.partial) {
