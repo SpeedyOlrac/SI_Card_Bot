@@ -103,7 +103,6 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 });
 
 
-
 bot.on('messageReactionRemove', async (reaction, user) => {
     
     
