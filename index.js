@@ -66,8 +66,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 
     const channel = '743227873875329137';
     const LFGRole = reaction.message.guild.roles.cache.find(role => role.name === "LFG");
-    //74322
-    const PBPRole = message.guild.roles.cache.find(role => role.name === "PBP");
+    const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "PBP");
 
     const lfgEmote = 'FlagBlank';
     //const messageId ='824390516048134185';
