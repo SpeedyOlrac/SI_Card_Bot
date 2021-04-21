@@ -65,12 +65,21 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     console.log("Reaction role add");
 
     const channel = '743227873875329137';
+
+    if (reaction.message.channel.channel_id != channel){
+        return;
+    }
+
     const LFGRole = reaction.message.guild.roles.cache.find(role => role.name === "LFG");
     const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "PBP");
+    const AmoungUsRole = reaction.message.guild.roles.cache.find(role => role.name === "Among Us");
 
     const lfgEmote = 'FlagBlank';
-    //const messageId ='824390516048134185';
     const PBPEmote = '5SpeedSlow';
+    const amoungUsEmote = ":0AmongUs";
+
+    const role = [LFGRole, PBPRole, AmoungUsRole];
+    const emote = ['FlagBlank', '5SpeedSlow', ":0AmongUs"];
 
     if (reaction.partial) {
 		// If the message this reaction belongs to was removed the fetching might result in an API error, which we need to handle
@@ -85,16 +94,11 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 
     if (reaction.message.channel.id == channel) {
         console.log(reaction.emoji.name + "emojiID");
-        if (reaction.emoji.name === lfgEmote) {
-
-            await reaction.message.guild.members.cache.get(user.id).roles.add(LFGRole);
+        for (var i = 0; i < role.length; i++){
+            if (emote[i] == reaction.emoji.name ){
+                await reaction.message.guild.members.cache.get(user.id).roles.add(role[i]);
+            }
         }
-        if (reaction.emoji.name === PBPEmote) {
-
-            await reaction.message.guild.members.cache.get(user.id).roles.add(PBPRole);
-        }
-
-
     } else {
         return;
     }
@@ -104,13 +108,22 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 
 bot.on('messageReactionRemove', async (reaction, user) => {
     
-    
     const channel = '743227873875329137';
+
+    if (reaction.message.channel.channel_id != channel){
+        return;
+    }
+
     const LFGRole = reaction.message.guild.roles.cache.find(role => role.name === "LFG");
     const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "PBP");
+    const AmoungUsRole = reaction.message.guild.roles.cache.find(role => role.name === "Among Us");
 
     const lfgEmote = 'FlagBlank';
     const PBPEmote = '5SpeedSlow';
+    const amoungUsEmote = "<824390516048134185>";
+
+    const role = [LFGRole, PBPRole, AmoungUsRole];
+    const emote = ['FlagBlank', '5SpeedSlow', ":0AmongUs"];
 
 
     if (reaction.partial) {
@@ -128,13 +141,19 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     console.log(reaction.message.channel.id + " Channel ID");
 
     if (reaction.message.channel.id == channel) {
-        if (reaction.emoji.name === lfgEmote) {
-            await reaction.message.guild.members.cache.get(user.id).roles.remove(LFGRole);
-        }
-        if (reaction.emoji.name === PBPEmote) {
 
-            await reaction.message.guild.members.cache.get(user.id).roles.remove(PBPRole);
+        for (var i = 0; i < role.length; i++){
+            if (emote[i] == reaction.emoji.name ){
+                await reaction.message.guild.members.cache.get(user.id).roles.remove(role[i]);
+            }
         }
+        // if (reaction.emoji.name === lfgEmote) {
+        //     await reaction.message.guild.members.cache.get(user.id).roles.remove(LFGRole);
+        // }
+        // if (reaction.emoji.name === PBPEmote) {
+
+        //     await reaction.message.guild.members.cache.get(user.id).roles.remove(PBPRole);
+        // }
 
     } else {
         return;
@@ -143,103 +162,4 @@ bot.on('messageReactionRemove', async (reaction, user) => {
 
 
 
-
-/*
-const adminID = '176329826641117186';
-const messageID = ['747806738308268075', '747220369857052842']; //747517049433227327 
-const roleID = ['743228206806728766', '498865006297743362'];//743228206806728766
-const emojiID = ['742199330018164776', '411249545394126854'];//742199330018164776
-
-bot.on('messageReactionAdd', async (reaction, user) => {
-    
-    let applyRole = async () => {
-        if (messageID.indexOf(reaction.message.id) == -1) return console.log('incorrect message: ' + reaction.message.id);
-
-        let emojiName = reaction.emoji.id;
-		let role = roleID[emojiID.indexOf(emojiName)];
-		let member = reaction.message.guild.members.cache.find(member => member.id === user.id);
-        try {
-
-            if(role && member ) {
-                console.log("Role and member found.");
-                await member.roles.add(role);
-                console.log("Done.");
-            }
-        }
-        catch(err) {
-            console.log(err);
-        }
-    }
-    if(reaction.message.partial)
-    {
-        try {
-            let msg = await reaction.message.fetch(); 
-            console.log(msg.id);
-            if(messageID.indexOf(reaction.message.id ))
-            {
-                console.log("Cached")
-                applyRole();
-            }
-        }
-        catch(err) {
-            console.log(err);
-        }
-    }
-    else 
-    {
-        console.log("Not a partial.");
-        if(messageID.indexOf(reaction.message.id ) != -1) {
-            console.log(true);
-            applyRole();
-        }
-    }
-});
-
-bot.on('messageReactionRemove', async (reaction, user) => {
-    
-    let removeRole = async () => {
-        if (messageID.indexOf(reaction.message.id) == -1) return console.log('incorrect message: ' + reaction.message.id);
-
-    
-        let emojiName = reaction.emoji.id;
-		let role = roleID[emojiID.indexOf(emojiName)];
-		let member = reaction.message.guild.members.cache.find(member => member.id === user.id);
-        try {
-            if(roleID && member) {
-                console.log("Role and member found.");
-                await member.roles.remove(role);
-                console.log("Done.");
-            }
-        }
-        catch(err) {
-            console.log(err);
-        }
-    }
-    if(reaction.message.partial)
-    {
-        try {
-            let msg = await reaction.message.fetch(); 
-            console.log(msg.id);
-            if(msg.id === messageID)
-            {
-                console.log("Cached")
-                removeRole();
-            }
-        }
-        catch(err) {
-            console.log(err);
-        }
-    }
-    else 
-    {
-        console.log("Not a partial.");
-        console.log(messageID.indexOf(reaction.message.id ) + " " + reaction.message.id)
-        if(messageID.indexOf(reaction.message.id != -1 )) {
-            console.log(true);
-            removeRole();
-        }
-    }
-});
-
-*/
 bot.login();
