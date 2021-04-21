@@ -20,7 +20,7 @@ module.exports = {
         }
  
         const fetched = await msg.channel.fetchMessages({limit: 99});
-        msg.channel.bulkDelete(fetched);
+        message.channel.bulkDelete(fetched);
 
         const lfgChannel = "<#739893703099023472>";
         const ruleChannel = "<#693569012075855872>"
