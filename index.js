@@ -13,12 +13,12 @@
 require('dotenv').config(); 
 const fs = require('fs');
 const Discord = require('discord.js');
-const { delete } = require('request');
 const bot = new Discord.Client({
     partials: ['MESSAGE', 'CHANNEL', 'REACTION']
 });
 
 bot.commands = new Discord.Collection();
+
 const PREFIX = "-";
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -37,7 +37,6 @@ bot.once('ready', async() => {
     client.channels.fetch('743227873875329137')
     .then(channel => {
         channel.send("Hello here!").delete()});
-
     // var channel = bot.get_channel("id", '743227873875329137');
     // var message = await channel.send('test');
     // message.react('FlagBlank');
