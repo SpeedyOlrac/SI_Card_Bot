@@ -14,7 +14,9 @@ module.exports = {
         if (message.channel.id != channel){
             return console.log("Reaction role was sent to the wrong channel " + message.channel.id);
         }
- 
+        
+        const landingChannel = message.channel;
+        mess
         //await message.channel.messages.fetch({ limit: 100}).then(messages =>{
         //    message.channel.bulkDelete(messages)
 
@@ -24,6 +26,8 @@ module.exports = {
         const LFGEmote = message.guild.emojis.cache.find(emoji => emoji.name === 'FlagBlank');
         const PBPEmote = message.guild.emojis.cache.find(emoji => emoji.name === '5SpeedSlow');
         const AmoungUsEmote = message.guild.emojis.cache.find(emoji => emoji.name === '0AmongUs');
+        
+        message.delete();
         
         let embed = new Discord.MessageEmbed()
             .setColor('#49087a')
@@ -38,7 +42,7 @@ module.exports = {
                 { name: 'Rules Question', value: "Visit the rules Channel " + ruleChannel }
             );
  
-        let messageEmbed = await message.channel.send(embed);
+        let messageEmbed = await landingChannel.send(embed);
         
 		await messageEmbed.react(LFGEmote);
 		await messageEmbed.react(PBPEmote);
