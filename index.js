@@ -76,10 +76,10 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 
     const lfgEmote = 'FlagBlank';
     const PBPEmote = '5SpeedSlow';
-    const amoungUsEmote = ":0AmongUs";
+    const amoungUsEmote = "0AmongUs";
 
     const role = [LFGRole, PBPRole, AmoungUsRole];
-    const emote = ['FlagBlank', '5SpeedSlow', ":0AmongUs"];
+    const emote = ['FlagBlank', '5SpeedSlow', "0AmongUs"];
 
     if (reaction.partial) {
 		// If the message this reaction belongs to was removed the fetching might result in an API error, which we need to handle

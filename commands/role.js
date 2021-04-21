@@ -28,13 +28,13 @@ module.exports = {
 
         const LFGEmote = 'FlagBlank';
         const PBPEmote = '5SpeedSlow';
-        const AmoungUsEmote = ":0AmongUs";
+        const AmoungUsEmote = "0AmongUs";
         
         let embed = new Discord.MessageEmbed()
             .setColor('#49087a')
             .setTitle('Welcome to the Spirit Island Discord!')
             .setDescription("The Dahan seek aid!")
-            .setThumbnail('https://imgur.com/QbkXAHr')
+            .setThumbnail('https://i.imgur.com/QbkXAHr.jpg?1')
             .addFields(
                 { name: 'Looking for Group', value: "React using "+ LFGEmote + 
                 "to receive the @LFG role, then post in " + lfgChannel+" to find other players." },
