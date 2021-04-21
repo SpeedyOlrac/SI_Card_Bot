@@ -34,7 +34,7 @@ for (const file of commandFiles) {
 bot.once('ready', async() => {
 	console.log('This bot is online');
 
-    client.channels.fetch('743227873875329137')
+    bot.channels.fetch('743227873875329137')
     .then(channel => {
         channel.send("Hello here!").delete()});
 

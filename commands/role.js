@@ -23,9 +23,9 @@ module.exports = {
         const lfgChannel = "<#739893703099023472>";
         const ruleChannel = "<#693569012075855872>"
 
-        const LFGEmote = ":FlagBlank:834496282734624828";
-        const PBPEmote = ":5SpeedSlow:834496282734624828";
-        const AmoungUsEmote = ":0AmongUs:834496282734624828";
+        const LFGEmote = "<:FlagBlank:834496282734624828>";
+        const PBPEmote = "<:5SpeedSlow:834496282734624828>";
+        const AmoungUsEmote = "<:0AmongUs:834496282734624828>";
         
        // message.delete();
 
