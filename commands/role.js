@@ -52,24 +52,7 @@ module.exports = {
 			console.error('One of the emojis failed to react.');
         //messageEmbed.react(blueTeamEmoji);
  
-    }
-};   
+        }
+    } 
+} 
 
-
-
-/*
-module.exports = {
-	name: 'role',
-	description: 'adding a role',
-	public: true, //has to be true to show as a command
-	async execute(msg, args) {
-
-        if(msg.author == adminID){
-                
-            (await msg.channel.send(roleMessage)).react(LFG);
-            await msg.delete();
-    }       
-	},
-};
-
-*/
