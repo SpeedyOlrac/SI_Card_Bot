@@ -74,12 +74,12 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "PBP");
     const AmoungUsRole = reaction.message.guild.roles.cache.find(role => role.name === "Among Us");
 
-    const lfgEmote = 'FlagBlank';
-    const PBPEmote = '5SpeedSlow';
-    const amoungUsEmote = "0AmongUs";
+    const lfgEmote = reaction.message.guild.emojis.cache.find(emoji => emoji.name === 'FlagBlank');
+    const PBPEmote = reaction.message.guild.emojis.cache.find(emoji => emoji.name === '5SpeedSlow');
+    const AmoungUsEmote = reaction.message.guild.emojis.cache.find(emoji => emoji.name === '0AmongUs');
 
     const role = [LFGRole, PBPRole, AmoungUsRole];
-    const emote = ['FlagBlank', '5SpeedSlow', "0AmongUs"];
+    const emote = [ lfgEmote, PBPEmote, AmoungUsEmote];
 
     if (reaction.partial) {
 		// If the message this reaction belongs to was removed the fetching might result in an API error, which we need to handle

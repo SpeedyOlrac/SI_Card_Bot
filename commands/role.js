@@ -26,9 +26,9 @@ module.exports = {
         const lfgChannel = "<#739893703099023472>";
         const ruleChannel = "<#693569012075855872>"
 
-        const LFGEmote = 'FlagBlank';
-        const PBPEmote = '5SpeedSlow';
-        const AmoungUsEmote = "0AmongUs";
+        const LFGEmote = reaction.message.guild.emojis.cache.find(emoji => emoji.name === 'FlagBlank');
+        const PBPEmote = reaction.message.guild.emojis.cache.find(emoji => emoji.name === '5SpeedSlow');
+        const AmoungUsEmote = reaction.message.guild.emojis.cache.find(emoji => emoji.name === '0AmongUs');
         
         let embed = new Discord.MessageEmbed()
             .setColor('#49087a')
@@ -40,19 +40,18 @@ module.exports = {
                 "to receive the @LFG role, then post in " + lfgChannel+" to find other players." },
                 { name: 'Play by Post', value: "React with the " + PBPEmote+ " to join the play by post section." },
                 { name: 'Amoung Us', value: "React with the "+ AmoungUsEmote + " to join the Amoung us group." },
-                { name: 'Rules Question', value: "Visit the rules Channel " + ruleChannel },
+                { name: 'Rules Question', value: "Visit the rules Channel " + ruleChannel }
             );
  
         let messageEmbed = await message.channel.send(embed);
-        try {
-			await messageEmbed.react(LFGEmote);
-			await messageEmbed.react(PBPEmote);
-			await messageEmbed.react(AmoungUsEmote);
-		} catch (error) {
-			console.error('One of the emojis failed to react.');
+        
+		await messageEmbed.react(LFGEmote);
+		await messageEmbed.react(PBPEmote);
+		await messageEmbed.react(AmoungUsEmote);
+
         //messageEmbed.react(blueTeamEmoji);
  
-        }
+        
     } 
 } 
 
