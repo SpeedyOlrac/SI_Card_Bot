@@ -21,33 +21,32 @@ module.exports = {
             return console.log("Reaction role was sent to the wrong channel " + message.channel.id);
         }
  
-        const lfgEmote = "<:FlagBlank:742199330018164776 >";
-        const pbpEmote = "<:5SpeedSlow:824390516048134185>";
-        const amoungUsEmote = "<824390516048134185>";
-      
+        const LFGRole = message.guild.roles.cache.find(role => role.name === "LFG");
+        const PBPRole = message.guild.roles.cache.find(role => role.name === "PBP");
+        const AmoungUsRole = message.guild.roles.cache.find(role => role.name === "Among Us");
+    
         const lfgChannel = "<#739893703099023472>";
         const ruleChannel = "<#693569012075855872>"
 
         
-        const roleMessage = "The Dahan seek aid! React using "+ lfgEmote + 
-            "to receive the @LFG role,\
-            then post in " + lfgChannel+" to find other players. \n\
-            React with the " + pbpEmote+ " to join the play by post section. \n\
-            React with the "+ amoungUsEmote + " to join the Amoung us group.\
-            \nGot rule questions? " + ruleChannel; 
-
-
- 
         let embed = new Discord.MessageEmbed()
             .setColor('#49087a')
             .setTitle('Welcome to the Spirit Island Discord!')
-            .setDescription(roleMessage);
+            .setDescription("The Dahan seek aid!")
+            .setThumbnail('https://imgur.com/QbkXAHr')
+            .addFields(
+                { name: 'Looking for Group', value: "React using "+ lfgEmote + 
+                "to receive the @LFG role, then post in " + lfgChannel+" to find other players." },
+                { name: 'Play by Post', value: "React with the " + pbpEmote+ " to join the play by post section." },
+                { name: 'Amoung Us', value: "React with the "+ amoungUsEmote + " to join the Amoung us group." },
+                { name: 'Rules Question', value: "Visit the rules Channel " + ruleChannel },
+            );
  
         let messageEmbed = await message.channel.send(embed);
         try {
-			await embed.react(lfgChannel);
+			await embed.react(lfgEmote);
 			await embed.react(pbpEmote);
-			await embed.react(amoungUsEmote);
+			await embed.react(AmoungUsEmote);
 		} catch (error) {
 			console.error('One of the emojis failed to react.');
         //messageEmbed.react(blueTeamEmoji);
