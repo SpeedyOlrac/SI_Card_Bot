@@ -79,6 +79,8 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     const role = [LFGRole, PBPRole, AmoungUsRole];
     const emote = [ lfgEmote, PBPEmote, AmoungUsEmote];
 
+    console.log(role, emote);
+    console.log(reaction.emoji.name)
 
 
     if (reaction.message.channel.id == channel) {
@@ -86,7 +88,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
         for (var i = 0; i < role.length; i++){
             if (emote[i] == reaction.emoji.name ){
                 await reaction.message.guild.members.cache.get(user.id).roles.add(role[i]);
-                console.log("added " + role[i])
+                console.log("added " + reaction[i])
             }
         }
     } else {
@@ -106,13 +108,13 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     if (user.bot) return;
     if (!reaction.message.guild) return;
 
+    const LFGRole = reaction.message.guild.roles.cache.find(role => role.name === "LFG");
+    const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "PBP");
+    const AmoungUsRole = reaction.message.guild.roles.cache.find(role => role.name === "Among Us");
+
     const lfgEmote = 'FlagBlank';
     const PBPEmote = '5SpeedSlow';
     const AmoungUsEmote = '0AmongUs';
-
-    const lfgEmote = reaction.message.guild.emojis.cache.find(emoji => emoji.name === 'FlagBlank');
-    const PBPEmote = reaction.message.guild.emojis.cache.find(emoji => emoji.name === '5SpeedSlow');
-    const AmoungUsEmote = reaction.message.guild.emojis.cache.find(emoji => emoji.name === '0AmongUs');
 
     const role = [LFGRole, PBPRole, AmoungUsRole];
     const emote = [lfgEmote, PBPEmote, AmoungUsEmote]
@@ -126,13 +128,6 @@ bot.on('messageReactionRemove', async (reaction, user) => {
 
             }
         }
-        // if (reaction.emoji.name === lfgEmote) {
-        //     await reaction.message.guild.members.cache.get(user.id).roles.remove(LFGRole);
-        // }
-        // if (reaction.emoji.name === PBPEmote) {
-
-        //     await reaction.message.guild.members.cache.get(user.id).roles.remove(PBPRole);
-        // }
 
     } else {
         return console.log("Wrong Channel " + reaction.message.channel.id);
