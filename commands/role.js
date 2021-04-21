@@ -16,7 +16,7 @@ module.exports = {
         }
         
         const landingChannel = message.channel;
-        mess
+        
         //await message.channel.messages.fetch({ limit: 100}).then(messages =>{
         //    message.channel.bulkDelete(messages)
 
@@ -28,7 +28,7 @@ module.exports = {
         const AmoungUsEmote = message.guild.emojis.cache.find(emoji => emoji.name === '0AmongUs');
         
         message.delete();
-        
+
         let embed = new Discord.MessageEmbed()
             .setColor('#49087a')
             .setTitle('Welcome to the Spirit Island Discord!')
