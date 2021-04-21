@@ -37,6 +37,7 @@ bot.once('ready', async() => {
     client.channels.fetch('743227873875329137')
     .then(channel => {
         channel.send("Hello here!").delete()});
+
     // var channel = bot.get_channel("id", '743227873875329137');
     // var message = await channel.send('test');
     // message.react('FlagBlank');
@@ -63,7 +64,7 @@ bot.on('message', async msg => {
 
 
 bot.on('messageReactionAdd', async (reaction, user) => {
-    console.log("Reaction role add " + reaction.message.channel.id);
+    //console.log("Reaction role add " + reaction.message.channel.id);
 
     if (reaction.message.partial) await reaction.message.fetch();
     if (reaction.partial) await reaction.fetch();
@@ -82,12 +83,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     const role = [LFGRole, PBPRole, AmoungUsRole];
     const emote = [ lfgEmote, PBPEmote, AmoungUsEmote];
 
-    console.log(role, emote);
-    console.log(reaction.emoji.name)
-
-
     if (reaction.message.channel.id == channel) {
-        console.log(reaction.emoji.name + "emojiID");
         for (var i = 0; i < role.length; i++){
             if (emote[i] == reaction.emoji.name ){
                 await reaction.message.guild.members.cache.get(user.id).roles.add(role[i]);
