@@ -19,7 +19,7 @@ module.exports = {
             return console.log("Reaction role was sent to the wrong channel " + message.channel.id);
         }
  
-        message.channel.messages.fetch({ limit: 100}).then(messages =>{
+        await message.channel.messages.fetch({ limit: 100}).then(messages =>{
             message.channel.bulkDelete(messages)
 
         const lfgChannel = "<#739893703099023472>";
