@@ -60,14 +60,14 @@ bot.on('message', async msg => {
 
 
 bot.on('messageReactionAdd', async (reaction, user) => {
-    console.log("Reaction role add " +reaction.message.channel.id);
+    console.log("Reaction role add " + reaction.message.channel.id);
+
+    if (reaction.message.partial) await reaction.message.fetch();
+    if (reaction.partial) await reaction.fetch();
+    if (user.bot) return;
+    if (!reaction.message.guild) return;
 
     const channel = '743227873875329137';
-
-    if (reaction.message.channel.id != channel){
-        return  console.log(reaction.emoji.name + "emojiID");
-    }
-
     const LFGRole = reaction.message.guild.roles.cache.find(role => role.name === "LFG");
     const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "PBP");
     const AmoungUsRole = reaction.message.guild.roles.cache.find(role => role.name === "Among Us");
@@ -113,9 +113,10 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     
     const channel = '743227873875329137';
 
-    if (reaction.message.channel.id != channel){
-        return;
-    }
+    if (reaction.message.partial) await reaction.message.fetch();
+    if (reaction.partial) await reaction.fetch();
+    if (user.bot) return;
+    if (!reaction.message.guild) return;
 
     const LFGRole = reaction.message.guild.roles.cache.find(role => role.name === "LFG");
     const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "PBP");
@@ -126,19 +127,8 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     const AmoungUsEmote = reaction.message.guild.emojis.cache.find(emoji => emoji.name === '0AmongUs');
 
     const role = [LFGRole, PBPRole, AmoungUsRole];
-    const emote = [lfgEmote, PBPEmote, AmoungUsEmote];
+    const emote = [lfgEmote, PBPEmote, AmoungUsEmote]
 
-
-    if (reaction.partial) {
-		// If the message this reaction belongs to was removed the fetching might result in an API error, which we need to handle
-		try {
-			await reaction.fetch();
-		} catch (error) {
-			console.error('Something went wrong when fetching the message: ', error);
-			// Return as `reaction.message.author` may be undefined/null
-			return;
-		}
-	}
 
     if (reaction.message.channel.id == channel) {
 
