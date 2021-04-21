@@ -67,7 +67,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     const channel = '743227873875329137';
 
     if (reaction.message.channel.id != channel){
-        return;
+        return  console.log(reaction.emoji.name + "emojiID");
     }
 
     const LFGRole = reaction.message.guild.roles.cache.find(role => role.name === "LFG");
