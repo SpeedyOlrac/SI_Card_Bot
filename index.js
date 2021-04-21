@@ -66,7 +66,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 
     const channel = '743227873875329137';
 
-    if (reaction.message.channel.channel_id != channel){
+    if (reaction.message.channel.id != channel){
         return;
     }
 
@@ -101,7 +101,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
         }
     } else {
-        return;
+        return console.log("did not get any emotes");
     }
 
 });
@@ -111,7 +111,7 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     
     const channel = '743227873875329137';
 
-    if (reaction.message.channel.channel_id != channel){
+    if (reaction.message.channel.id != channel){
         return;
     }
 
