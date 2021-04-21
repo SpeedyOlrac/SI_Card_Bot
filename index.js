@@ -34,9 +34,11 @@ for (const file of commandFiles) {
 bot.once('ready', async() => {
 	console.log('This bot is online');
 
-    bot.channels.fetch('743227873875329137')
+    const msg = await bot.channels.fetch('743227873875329137')
     .then(channel => {
-        channel.send("Hello here!").delete()});
+        channel.send("Hello here!")});
+    
+    msg.delete();
 
     // var channel = bot.get_channel("id", '743227873875329137');
     // var message = await channel.send('test');
