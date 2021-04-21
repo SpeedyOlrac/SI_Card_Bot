@@ -79,26 +79,14 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     const role = [LFGRole, PBPRole, AmoungUsRole];
     const emote = [ lfgEmote, PBPEmote, AmoungUsEmote];
 
-    console.log(role, emote);
-    console.log(reaction.emoji.name)
 
-    if (reaction.partial) {
-		// If the message this reaction belongs to was removed the fetching might result in an API error, which we need to handle
-		try {
-			await reaction.fetch();
-		} catch (error) {
-			console.error('Something went wrong when fetching the message: ', error);
-			// Return as `reaction.message.author` may be undefined/null
-			return;
-		}
-	}
 
     if (reaction.message.channel.id == channel) {
         console.log(reaction.emoji.name + "emojiID");
         for (var i = 0; i < role.length; i++){
             if (emote[i] == reaction.emoji.name ){
                 await reaction.message.guild.members.cache.get(user.id).roles.add(role[i]);
-                console.log("added " + reaction[i])
+                console.log("added " + role[i])
             }
         }
     } else {
