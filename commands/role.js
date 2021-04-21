@@ -19,10 +19,9 @@ module.exports = {
             return console.log("Reaction role was sent to the wrong channel " + message.channel.id);
         }
  
-        const LFGRole = message.guild.roles.cache.find(role => role.name === "LFG");
-        const PBPRole = message.guild.roles.cache.find(role => role.name === "PBP");
-        const AmoungUsRole = message.guild.roles.cache.find(role => role.name === "Among Us");
-    
+        const fetched = await msg.channel.fetchMessages({limit: 99});
+        msg.channel.bulkDelete(fetched);
+
         const lfgChannel = "<#739893703099023472>";
         const ruleChannel = "<#693569012075855872>"
 
