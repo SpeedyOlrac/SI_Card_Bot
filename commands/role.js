@@ -26,6 +26,9 @@ module.exports = {
         const lfgChannel = "<#739893703099023472>";
         const ruleChannel = "<#693569012075855872>"
 
+        const LFGEmote = 'FlagBlank';
+        const PBPEmote = '5SpeedSlow';
+        const AmoungUsEmote = ":0AmongUs";
         
         let embed = new Discord.MessageEmbed()
             .setColor('#49087a')
@@ -42,8 +45,8 @@ module.exports = {
  
         let messageEmbed = await message.channel.send(embed);
         try {
-			await messageEmbed.react(lfgEmote);
-			await messageEmbed.react(pbpEmote);
+			await messageEmbed.react(LFGEmote);
+			await messageEmbed.react(PBPEmote);
 			await messageEmbed.react(AmoungUsEmote);
 		} catch (error) {
 			console.error('One of the emojis failed to react.');
