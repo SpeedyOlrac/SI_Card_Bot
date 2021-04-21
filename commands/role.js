@@ -3,10 +3,6 @@
 
 
 
-//const LFG = '747806738308268075';  
-
-
-
 module.exports = {
     name: 'reactionrole',
     description: "Sets up a reaction role message!",
@@ -19,8 +15,8 @@ module.exports = {
             return console.log("Reaction role was sent to the wrong channel " + message.channel.id);
         }
  
-        await message.channel.messages.fetch({ limit: 100}).then(messages =>{
-            message.channel.bulkDelete(messages)
+        //await message.channel.messages.fetch({ limit: 100}).then(messages =>{
+        //    message.channel.bulkDelete(messages)
 
         const lfgChannel = "<#739893703099023472>";
         const ruleChannel = "<#693569012075855872>"
