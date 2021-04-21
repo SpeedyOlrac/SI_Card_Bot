@@ -18,7 +18,7 @@ module.exports = {
         //const blueTeamRole = message.guild.roles.cache.find(role => role.name === "YOUR_ROLE");
 
         if (message.channel.channel_id != channel){
-            return console.log("Reaction role was sent to the wrong channel " + channel);
+            return console.log("Reaction role was sent to the wrong channel " + message.channel.channel_id);
         }
  
         const lfgEmote = "<:FlagBlank:742199330018164776 >";
