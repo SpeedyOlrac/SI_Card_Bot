@@ -14,8 +14,6 @@ module.exports = {
     async execute(message, args, Discord) {
         const channel = '743227873875329137';
         const adminID = '176329826641117186';
-        const LFGRole = message.guild.roles.cache.find(role => role.name === "LFG");
-        //const blueTeamRole = message.guild.roles.cache.find(role => role.name === "YOUR_ROLE");
 
         if (message.channel.id != channel){
             return console.log("Reaction role was sent to the wrong channel " + message.channel.id);
@@ -44,9 +42,9 @@ module.exports = {
  
         let messageEmbed = await message.channel.send(embed);
         try {
-			await embed.react(lfgEmote);
-			await embed.react(pbpEmote);
-			await embed.react(AmoungUsEmote);
+			await messageEmbed.react(lfgEmote);
+			await messageEmbed.react(pbpEmote);
+			await messageEmbed.react(AmoungUsEmote);
 		} catch (error) {
 			console.error('One of the emojis failed to react.');
         //messageEmbed.react(blueTeamEmoji);
