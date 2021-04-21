@@ -16,7 +16,7 @@ module.exports = {
         }
         
         const landingChannel = message.channel;
-        
+
         //await message.channel.messages.fetch({ limit: 100}).then(messages =>{
         //    message.channel.bulkDelete(messages)
 
@@ -27,7 +27,7 @@ module.exports = {
         const PBPEmote = message.guild.emojis.cache.find(emoji => emoji.name === '5SpeedSlow');
         const AmoungUsEmote = message.guild.emojis.cache.find(emoji => emoji.name === '0AmongUs');
         
-        message.delete();
+       // message.delete();
 
         let embed = new Discord.MessageEmbed()
             .setColor('#49087a')
