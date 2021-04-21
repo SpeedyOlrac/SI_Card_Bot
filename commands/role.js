@@ -36,10 +36,10 @@ module.exports = {
             .setDescription("The Dahan seek aid!")
             .setThumbnail('https://imgur.com/QbkXAHr')
             .addFields(
-                { name: 'Looking for Group', value: "React using "+ lfgEmote + 
+                { name: 'Looking for Group', value: "React using "+ LFGEmote + 
                 "to receive the @LFG role, then post in " + lfgChannel+" to find other players." },
-                { name: 'Play by Post', value: "React with the " + pbpEmote+ " to join the play by post section." },
-                { name: 'Amoung Us', value: "React with the "+ amoungUsEmote + " to join the Amoung us group." },
+                { name: 'Play by Post', value: "React with the " + PBPEmote+ " to join the play by post section." },
+                { name: 'Amoung Us', value: "React with the "+ AmoungUsEmote + " to join the Amoung us group." },
                 { name: 'Rules Question', value: "Visit the rules Channel " + ruleChannel },
             );
  
