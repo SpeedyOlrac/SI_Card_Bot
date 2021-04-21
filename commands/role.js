@@ -25,9 +25,9 @@ module.exports = {
         const lfgChannel = "<#739893703099023472>";
         const ruleChannel = "<#693569012075855872>"
 
-        const LFGEmote = reaction.message.guild.emojis.cache.find(emoji => emoji.name === 'FlagBlank');
-        const PBPEmote = reaction.message.guild.emojis.cache.find(emoji => emoji.name === '5SpeedSlow');
-        const AmoungUsEmote = reaction.message.guild.emojis.cache.find(emoji => emoji.name === '0AmongUs');
+        const LFGEmote = message.guild.emojis.cache.find(emoji => emoji.name === 'FlagBlank');
+        const PBPEmote = message.guild.emojis.cache.find(emoji => emoji.name === '5SpeedSlow');
+        const AmoungUsEmote = message.guild.emojis.cache.find(emoji => emoji.name === '0AmongUs');
         
         let embed = new Discord.MessageEmbed()
             .setColor('#49087a')
