@@ -23,9 +23,9 @@ module.exports = {
         const lfgChannel = "<#739893703099023472>";
         const ruleChannel = "<#693569012075855872>"
 
-        const LFGEmote = message.guild.emojis.cache.find(emoji => emoji.name === 'FlagBlank');
-        const PBPEmote = message.guild.emojis.cache.find(emoji => emoji.name === '5SpeedSlow');
-        const AmoungUsEmote = message.guild.emojis.cache.find(emoji => emoji.name === '0AmongUs');
+        const LFGEmote = ":FlagBlank:834496282734624828";
+        const PBPEmote = ":5SpeedSlow:834496282734624828";
+        const AmoungUsEmote = ":0AmongUs:834496282734624828";
         
        // message.delete();
 
@@ -35,7 +35,7 @@ module.exports = {
             .setDescription("The Dahan seek aid!")
             .setThumbnail('https://i.imgur.com/QbkXAHr.jpg?1')
             .addFields(
-                { name: 'Looking for Group', value: "React using "+ LFGEmote + 
+                { name: 'Looking for Group', value: " React using "+ LFGEmote + 
                 "to receive the @LFG role, then post in " + lfgChannel+" to find other players." },
                 { name: 'Play by Post', value: "React with the " + PBPEmote+ " to join the play by post section." },
                 { name: 'Amoung Us', value: "React with the "+ AmoungUsEmote + " to join the Among Us group." },
