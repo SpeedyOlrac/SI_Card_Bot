@@ -105,8 +105,8 @@ bot.on('messageReactionAdd', async (reaction, user) => {
         }
     } else {
         return console.log("Wrong Channel " + reaction.message.channel.id);
-    };
     }
+    
 
 });
 
