@@ -81,6 +81,9 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     const role = [LFGRole, PBPRole, AmoungUsRole];
     const emote = [ lfgEmote, PBPEmote, AmoungUsEmote];
 
+    console.log(role, emote);
+    console.log(reaction.emoji.name)
+
     if (reaction.partial) {
 		// If the message this reaction belongs to was removed the fetching might result in an API error, which we need to handle
 		try {
@@ -96,12 +99,13 @@ bot.on('messageReactionAdd', async (reaction, user) => {
         console.log(reaction.emoji.name + "emojiID");
         for (var i = 0; i < role.length; i++){
             if (emote[i] == reaction.emoji.name ){
-                await reaction.message.guild.members.cache.get(user.id).roles.add(emote[i]);
+                await reaction.message.guild.members.cache.get(user.id).roles.add(role[i]);
                 console.log("added " + reaction[i])
             }
         }
     } else {
-        return console.log("did not get any emotes");
+        return console.log("Wrong Channel " + reaction.message.channel.id);
+    };
     }
 
 });
@@ -126,6 +130,7 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     const role = [LFGRole, PBPRole, AmoungUsRole];
     const emote = [lfgEmote, PBPEmote, AmoungUsEmote];
 
+    
 
     if (reaction.partial) {
 		// If the message this reaction belongs to was removed the fetching might result in an API error, which we need to handle
@@ -142,7 +147,7 @@ bot.on('messageReactionRemove', async (reaction, user) => {
 
         for (var i = 0; i < role.length; i++){
             if (emote[i] == reaction.emoji.name ){
-                await reaction.message.guild.members.cache.get(user.id).roles.remove(emote[i]);
+                await reaction.message.guild.members.cache.get(user.id).roles.remove(role[i]);
 
             }
         }
@@ -155,7 +160,7 @@ bot.on('messageReactionRemove', async (reaction, user) => {
         // }
 
     } else {
-        return;
+        return console.log("Wrong Channel " + reaction.message.channel.id);
     }
 });
 
