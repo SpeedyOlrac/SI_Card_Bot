@@ -36,10 +36,10 @@ for (const file of commandFiles) {
 bot.once('ready', async() => {
 	console.log('This bot is online');
 
-    var channel = bot.get_channel("id", '743227873875329137');
-    var message = await channel.send('test');
-    message.react('FlagBlank');
-    message.delete();
+    // var channel = bot.get_channel("id", '743227873875329137');
+    // var message = await channel.send('test');
+    // message.react('FlagBlank');
+    // message.delete();
 });
 
 bot.on('message', async msg => {
@@ -136,9 +136,6 @@ bot.on('messageReactionRemove', async (reaction, user) => {
 			return;
 		}
 	}
-
-    console.log(LFGRole + " LFGRole ID");
-    console.log(reaction.message.channel.id + " Channel ID");
 
     if (reaction.message.channel.id == channel) {
 
