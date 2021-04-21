@@ -96,7 +96,8 @@ bot.on('messageReactionAdd', async (reaction, user) => {
         console.log(reaction.emoji.name + "emojiID");
         for (var i = 0; i < role.length; i++){
             if (emote[i] == reaction.emoji.name ){
-                await reaction.message.guild.members.cache.get(user.id).roles.add(role[i]);
+                await reaction.message.guild.members.cache.get(user.id).roles.add(emote[i]);
+                console.log("added " + reaction[i])
             }
         }
     } else {
@@ -118,12 +119,12 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "PBP");
     const AmoungUsRole = reaction.message.guild.roles.cache.find(role => role.name === "Among Us");
 
-    const lfgEmote = 'FlagBlank';
-    const PBPEmote = '5SpeedSlow';
-    const amoungUsEmote = "<824390516048134185>";
+    const lfgEmote = reaction.message.guild.emojis.cache.find(emoji => emoji.name === 'FlagBlank');
+    const PBPEmote = reaction.message.guild.emojis.cache.find(emoji => emoji.name === '5SpeedSlow');
+    const AmoungUsEmote = reaction.message.guild.emojis.cache.find(emoji => emoji.name === '0AmongUs');
 
     const role = [LFGRole, PBPRole, AmoungUsRole];
-    const emote = ['FlagBlank', '5SpeedSlow', ":0AmongUs"];
+    const emote = [lfgEmote, PBPEmote, AmoungUsEmote];
 
 
     if (reaction.partial) {
@@ -141,7 +142,8 @@ bot.on('messageReactionRemove', async (reaction, user) => {
 
         for (var i = 0; i < role.length; i++){
             if (emote[i] == reaction.emoji.name ){
-                await reaction.message.guild.members.cache.get(user.id).roles.remove(role[i]);
+                await reaction.message.guild.members.cache.get(user.id).roles.remove(emote[i]);
+
             }
         }
         // if (reaction.emoji.name === lfgEmote) {
