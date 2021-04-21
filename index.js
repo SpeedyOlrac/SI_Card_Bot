@@ -7,8 +7,6 @@
     Version 2.0.2 role bot
 
     
-
-
 */
 
 
@@ -62,7 +60,7 @@ bot.on('message', async msg => {
 
 
 bot.on('messageReactionAdd', async (reaction, user) => {
-    console.log("Reaction role add");
+    console.log("Reaction role add " +reaction.message.channel.id);
 
     const channel = '743227873875329137';
 
@@ -130,7 +128,6 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     const role = [LFGRole, PBPRole, AmoungUsRole];
     const emote = [lfgEmote, PBPEmote, AmoungUsEmote];
 
-    
 
     if (reaction.partial) {
 		// If the message this reaction belongs to was removed the fetching might result in an API error, which we need to handle
