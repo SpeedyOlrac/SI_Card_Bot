@@ -16,10 +16,9 @@ module.exports = {
         var side = "";
 
         scenario.forEach(function(s){
-            console.log(s.name);
+            //console.log(s.name);
             names.push(s.name); 
          });
-
 
 
         if (args.length == 0){

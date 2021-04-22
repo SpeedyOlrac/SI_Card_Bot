@@ -1,4 +1,4 @@
-const levenshtein = require('js-levenshtein');
+ const levenshtein = require('js-levenshtein');
 
 function getCardName(input, availableNames, weightOfSizediff = 0.8)
 {

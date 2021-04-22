@@ -19,6 +19,7 @@ module.exports = {
         else{
             for(const ad of adversary){
                 list.push(ad.title);
+                
             }
             //console.log(list)
 

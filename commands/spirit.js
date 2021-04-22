@@ -38,7 +38,6 @@ module.exports = {
         }
         //console.log(shortNames);
         
-
         //msg.channel.send(spirits[target].title );
         for(var s = 0; s < spirits.length; s++){
             var name = spirits[s].name.split(' ');
@@ -54,11 +53,9 @@ module.exports = {
                     }
                 }
             }
-        }
-
+        } 
 
         console.log(target);
-
 
         if(found){
             if(!argContains(args, 'back') && !argContains(args, 'unique')) {
