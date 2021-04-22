@@ -113,7 +113,7 @@ var Fangs = {
 var Memory = {     
  name: 'Shifting Memory of Ages', 
  emote: '<:SpiritShifting:747558402959605857>', 
- panel: ['https://imgur.com/QbkXAHr', 'https://imgur.com/BB48p9Q'],      
+ panel: ['https://i.imgur.com/1C7h4gG.jpg ', 'https://imgur.com/BB48p9Q'],      
  complexity: '',
  title: 'Memory' 
  }; 
