@@ -77,19 +77,19 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     if (!reaction.message.guild) return;
 
     //const channel = '743227873875329137';
-    const channel ="847068912234922004";
+    const channel ="847266147120316456";
 
     
     const LFGRole = reaction.message.guild.roles.cache.find(role => role.name === "LFG");
     const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "PBP");
-    const AmoungUsRole = reaction.message.guild.roles.cache.find(role => role.name === "Among Us");
+    //const AmoungUsRole = reaction.message.guild.roles.cache.find(role => role.name === "Among Us");
 
     const lfgEmote = 'Fast';
     const PBPEmote = 'Slow';
-    const AmoungUsEmote = '0AmongUs';
+    //const AmoungUsEmote = '0AmongUs';
 
-    const role = [LFGRole, PBPRole, AmoungUsRole];
-    const emote = [ lfgEmote, PBPEmote, AmoungUsEmote];
+    const role = [LFGRole, PBPRole];
+    const emote = [ lfgEmote, PBPEmote];
 
     if (reaction.message.channel.id == channel) {
         for (var i = 0; i < role.length; i++){
@@ -108,7 +108,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 bot.on('messageReactionRemove', async (reaction, user) => {
     
     //const channel = '743227873875329137';
-    const channel ="847068912234922004";
+    const channel ="847266147120316456";
 
 
     if (reaction.message.partial) await reaction.message.fetch();
@@ -117,15 +117,15 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     if (!reaction.message.guild) return;
 
     const LFGRole = reaction.message.guild.roles.cache.find(role => role.name === "LFG");
-    const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "PBP");
-    const AmoungUsRole = reaction.message.guild.roles.cache.find(role => role.name === "Among Us");
+    const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "pbp");
+    //const AmoungUsRole = reaction.message.guild.roles.cache.find(role => role.name === "Among Us");
 
     const lfgEmote = 'Fast';
     const PBPEmote = 'Slow';
-    const AmoungUsEmote = '0AmongUs';
+    //const AmoungUsEmote = '0AmongUs';
 
-    const role = [LFGRole, PBPRole, AmoungUsRole];
-    const emote = [lfgEmote, PBPEmote, AmoungUsEmote]
+    const role = [LFGRole, PBPRole];
+    const emote = [lfgEmote, PBPEmote]
 
 
     if (reaction.message.channel.id == channel) {

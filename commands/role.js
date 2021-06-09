@@ -31,9 +31,9 @@ module.exports = {
             .setDescription("The Dahan seek aid!")
             .setThumbnail('https://i.imgur.com/QbkXAHr.jpg?1')
             .addFields(
-                { name: 'Looking for Group', value: " React with <:FlagBlank:>" +" to receive the @LFG role, then post in " + 
+                { name: 'Looking for Group', value: " React with Fast" +" to receive the @LFG role, then post in " + 
                  "the LFG Channel to find other players." },
-                { name: 'Play by Post', value: "React with <:Slow:>" + " to join the play by post section." },
+                { name: 'Play by Post', value: "React with Slow Icon" + " to join the play by post section." },
                 //{ name: 'Among Us', value: "React with <:0AmongUs:>" + " to join the Among Us group." },
                 { name: 'Rules Question', value: "Visit the rules Channel " }
             );
