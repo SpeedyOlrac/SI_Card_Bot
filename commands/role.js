@@ -9,7 +9,7 @@ module.exports = {
     public: true,
     async execute(message, args, Discord) {
         //const channel = '743227873875329137';
-        const channel = "847068912234922004";
+        const channel = "847266147120316456";
         const adminID = '176329826641117186';
 
         if (message.channel.id != channel){
