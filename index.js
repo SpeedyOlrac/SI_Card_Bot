@@ -34,10 +34,12 @@ for (const file of commandFiles) {
 bot.once('ready', async() => {
 	console.log('This bot is online');
 
-    await bot.channels.fetch('743227873875329137')
+    const LFGEmote = message.guild.emojis.cache.find(emoji => emoji.name === 'Fast');
+
+    await bot.channels.fetch('847266147120316456')
     .then(channel => {
         //var msg = channel.send("Hello here!");
-        msg.react(LFG)
+        msg.react(LFGEmote)
         msg.delete();
     });
     
@@ -81,7 +83,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 
     
     const LFGRole = reaction.message.guild.roles.cache.find(role => role.name === "LFG");
-    const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "PBP");
+    const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "pbp");
     //const AmoungUsRole = reaction.message.guild.roles.cache.find(role => role.name === "Among Us");
 
     const lfgEmote = 'Fast';
