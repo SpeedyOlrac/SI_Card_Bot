@@ -9,7 +9,7 @@ module.exports = {
     public: true,
     async execute(message, args, Discord) {
         //const channel = '743227873875329137';
-        const channel = "847266147120316456";
+        const LFGchannel = "847266147120316456";
         const adminID = '176329826641117186';
 
         if (message.channel.id != channel){
@@ -38,7 +38,7 @@ module.exports = {
                 { name: 'Rules Question', value: "Visit the rules Channel " }
             );
  
-        let messageEmbed = await channel.send(embed);
+        let messageEmbed = await LFGchannel.send(embed);
         
 		await messageEmbed.react(LFGEmote);
 		await messageEmbed.react(PBPEmote);
