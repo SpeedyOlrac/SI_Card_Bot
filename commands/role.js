@@ -9,10 +9,10 @@ module.exports = {
     public: true,
     async execute(message, args, Discord) {
         //const channel = '743227873875329137';
-        const LFGchannel = "847266147120316456";
+        const landingChannel = "847266147120316456";
         const adminID = '176329826641117186';
 
-        if (message.channel.id != channel){
+        if (message.channel.id != landingChannel){
             return console.log("Reaction role was sent to the wrong channel " + message.channel.id);
         }
 
@@ -38,7 +38,7 @@ module.exports = {
                 { name: 'Rules Question', value: "Visit the rules Channel " }
             );
  
-        let messageEmbed = await LFGchannel.send(embed);
+        let messageEmbed = await landingChannel.send(embed);
         
 		await messageEmbed.react(LFGEmote);
 		await messageEmbed.react(PBPEmote);
