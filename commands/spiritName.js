@@ -152,7 +152,7 @@ var Thunderspeaker = {
 
 var Shadows = {     
  name: 'Shadows Flicker Like Flame', 
- emote: '<:SpiritShadows:747571324418916393>', 
+ emote: '<:SpiritShadowsFlickerLikeFlame: >', 
  panel: 'https://imgur.com/FmVImnv,https://imgur.com/oyk2ZwH',      
  complexity: '',
  title: 'Shadows' ,

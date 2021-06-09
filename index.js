@@ -34,11 +34,14 @@ for (const file of commandFiles) {
 bot.once('ready', async() => {
 	console.log('This bot is online');
 
-    var msg = await bot.channels.fetch('743227873875329137')
+    await bot.channels.fetch('743227873875329137')
     .then(channel => {
-        channel.send("Hello here!")});
+        var msg = channel.send("Hello here!");
+        msg.react(LFG)
+        msg.delete();
+    });
     
-    msg.delete();
+   
 
     // var channel = bot.get_channel("id", '743227873875329137');
     // var message = await channel.send('test');
@@ -73,13 +76,16 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     if (user.bot) return;
     if (!reaction.message.guild) return;
 
-    const channel = '743227873875329137';
+    //const channel = '743227873875329137';
+    const channel ="847068912234922004";
+
+    
     const LFGRole = reaction.message.guild.roles.cache.find(role => role.name === "LFG");
     const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "PBP");
     const AmoungUsRole = reaction.message.guild.roles.cache.find(role => role.name === "Among Us");
 
-    const lfgEmote = 'FlagBlank';
-    const PBPEmote = '5SpeedSlow';
+    const lfgEmote = 'Fast';
+    const PBPEmote = 'Slow';
     const AmoungUsEmote = '0AmongUs';
 
     const role = [LFGRole, PBPRole, AmoungUsRole];
@@ -101,7 +107,9 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 
 bot.on('messageReactionRemove', async (reaction, user) => {
     
-    const channel = '743227873875329137';
+    //const channel = '743227873875329137';
+    const channel ="847068912234922004";
+
 
     if (reaction.message.partial) await reaction.message.fetch();
     if (reaction.partial) await reaction.fetch();
@@ -112,8 +120,8 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "PBP");
     const AmoungUsRole = reaction.message.guild.roles.cache.find(role => role.name === "Among Us");
 
-    const lfgEmote = 'FlagBlank';
-    const PBPEmote = '5SpeedSlow';
+    const lfgEmote = 'Fast';
+    const PBPEmote = 'Slow';
     const AmoungUsEmote = '0AmongUs';
 
     const role = [LFGRole, PBPRole, AmoungUsRole];
