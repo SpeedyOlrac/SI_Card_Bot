@@ -36,7 +36,7 @@ bot.once('ready', async() => {
 
     await bot.channels.fetch('743227873875329137')
     .then(channel => {
-        var msg = channel.send("Hello here!");
+        //var msg = channel.send("Hello here!");
         msg.react(LFG)
         msg.delete();
     });
