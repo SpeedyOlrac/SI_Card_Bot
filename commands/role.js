@@ -38,7 +38,7 @@ module.exports = {
                 { name: 'Rules Question', value: "Visit the rules Channel " }
             );
  
-        let messageEmbed = await landingChannel.send(embed);
+        let messageEmbed = await message.channel.send(embed);
         
 		await messageEmbed.react(LFGEmote);
 		await messageEmbed.react(PBPEmote);
