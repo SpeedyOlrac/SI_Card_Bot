@@ -25,7 +25,7 @@ var Downpour = {
  complexity: '',
  title: 'Downpour',
  uniques: ["unbearable_deluge", "foundations_sink_into_mud", "gift_of_abundance", "dark_skies_loose_a_stinging_rain"],
- aliases: []
+ aliases: ['bird']
  }; 
 
 var Fractured = {     
@@ -55,7 +55,7 @@ var Finder = {
  complexity: '',
  title: 'Finder',
  uniques: ["travelers_boon", "paths_tied_by_nature", "a_circuitous_and_wending_journey", "offer_passage_between_worlds", "ways_of_shore_and_heartland", "aid_from_the_spiritspeakers"],
- aliases: []
+ aliases: ['bird']
  }; 
 
 var Lightning = {     
@@ -65,7 +65,7 @@ var Lightning = {
  complexity: '',
  title: 'Lightning',
  uniques: ["harbingers_of_the_lightning", "lightnings_boon", "shatter_homesteads", "raging_storm"],
- aliases: []
+ aliases: ['bird']
  }; 
 
 var Keeper = {     
@@ -105,7 +105,7 @@ var ManyMinds = {
  complexity: '',
  title: 'ManyMinds',
  uniques: ["pursue_with_scratches_pecks_and_stings", "a_dreadful_tide_of_scurrying_flesh", "boon_of_swarming_bedevilment", "guide_the_way_on_feathered_wings", "evermultiplying_swarm"],
- aliases: []
+ aliases: ['bird']
  }; 
 
 var Ocean = {     
@@ -125,7 +125,7 @@ var Serpent = {
  complexity: '',
  title: 'Serpent',
  uniques: ["gift_of_the_primordial_deeps", "gift_of_flowing_power", "elemental_aegis", "absorb_essence"],
- aliases: []
+ aliases: ['snake', 'snek']
  }; 
 
 var Fangs = {     
