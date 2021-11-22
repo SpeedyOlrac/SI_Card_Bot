@@ -1,5 +1,6 @@
  const levenshtein = require('js-levenshtein');
 
+
 function getCardName(input, availableNames, weightOfSizediff = 0.8)
 {
   var target  = cleanInput(input);
