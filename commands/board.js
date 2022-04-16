@@ -12,7 +12,6 @@ module.exports = {
         if(args[0].toLowerCase() ==  "help" ){
 
             await msg.channel.send("Type the board name. -help [a,b,c,d,e,f,NE, NW, East, West, SE,SW].");
-
         }
         else{
 
