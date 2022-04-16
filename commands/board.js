@@ -9,7 +9,7 @@ module.exports = {
 	public: true, //has to be true to show as a command
 	async execute(msg, args) {
 
-        if(args[0].toLowerCase() ==  "help" ){
+        if(args[0] ==  "help" ){
 
             await msg.channel.send("Type the board name. -help [a,b,c,d,e,f,NE, NW, East, West, SE,SW].");
         }
