@@ -41,10 +41,10 @@ bot.on('message', async msg => {
     let command = args.shift().toLowerCase();
     console.log(command);
 
-    if (!isNaN(parseInt(command))) {
-        args = [command]
-        command = "choose"
-    }
+    // if (!isNaN(parseInt(command))) {
+    //     args = [command]
+    //     command = "choose"
+    // }
 
     if (!bot.commands.has(command)) return console.log("command not in list");
 
