@@ -4,9 +4,7 @@
         Now has random Spirit and adversary fuctions.
         Creates link to the Spirit ISland FAQ page.
         Expan Search to other commands
-    Version 2.0.2 role bot
-
-    
+    Version 2.0.2 role bot  
 */
 
 
@@ -24,71 +22,53 @@ const PREFIX = "-";
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
-	const command = require(`./commands/${file}`);
-		if(command.public){
-		bot.commands.set(command.name, command);
+    const command = require(`./commands/${file}`);
+        if(command.public){
+        bot.commands.set(command.name, command);
 }};
 
-//console.log(bot.commands);
-
 bot.once('ready', async() => {
-	console.log('This bot is online');
-
-    const LFGEmote = message.guild.emojis.cache.find(emoji => emoji.name === 'Fast');
-
-    await bot.channels.fetch('847266147120316456')
-    .then(channel => {
-        //var msg = channel.send("Hello here!");
-        msg.react(LFGEmote)
-        msg.delete();
-    });
-    
-   
-
-    // var channel = bot.get_channel("id", '743227873875329137');
-    // var message = await channel.send('test');
-    // message.react('FlagBlank');
-    // message.delete();
+    console.log('This bot is online');
 });
 
 bot.on('message', async msg => {
 
-	if (!msg.content.startsWith(PREFIX)) return;
+    if (!msg.content.startsWith(PREFIX)) return;
 
-	const args = msg.content.slice(PREFIX.length).trim().split(' ');
-	const command = args.shift().toLowerCase();
-	console.log(command);
-	
-	if (!bot.commands.has(command)) return console.log("command not in list");
+    let args = msg.content.slice(PREFIX.length).trim().split(' ');
+    let command = args.shift().toLowerCase();
+    console.log(command);
 
-	try {
-		await bot.commands.get(command).execute(msg, args, Discord);
-	} catch (error) {
-		console.error(error);
-		//msg.reply('there was an error trying to execute that command!');
-	}
+    if (!isNaN(parseInt(command))) {
+        args = [command]
+        command = "choose"
+    }
+
+    if (!bot.commands.has(command)) return console.log("command not in list");
+
+    try {
+        await bot.commands.get(command).execute(msg, args, Discord);
+    } catch (error) {
+        console.error(error);
+    }
 });
 
 
 bot.on('messageReactionAdd', async (reaction, user) => {
-    //console.log("Reaction role add " + reaction.message.channel.id);
 
     if (reaction.message.partial) await reaction.message.fetch();
     if (reaction.partial) await reaction.fetch();
     if (user.bot) return;
     if (!reaction.message.guild) return;
 
-    //const channel = '743227873875329137';
     const channel ="847266147120316456";
 
     
     const LFGRole = reaction.message.guild.roles.cache.find(role => role.name === "LFG");
     const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "pbp");
-    //const AmoungUsRole = reaction.message.guild.roles.cache.find(role => role.name === "Among Us");
 
     const lfgEmote = 'Fast';
     const PBPEmote = 'Slow';
-    //const AmoungUsEmote = '0AmongUs';
 
     const role = [LFGRole, PBPRole];
     const emote = [ lfgEmote, PBPEmote];
@@ -109,7 +89,6 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 
 bot.on('messageReactionRemove', async (reaction, user) => {
     
-    //const channel = '743227873875329137';
     const channel ="847266147120316456";
 
 
@@ -120,11 +99,9 @@ bot.on('messageReactionRemove', async (reaction, user) => {
 
     const LFGRole = reaction.message.guild.roles.cache.find(role => role.name === "LFG");
     const PBPRole = reaction.message.guild.roles.cache.find(role => role.name === "pbp");
-    //const AmoungUsRole = reaction.message.guild.roles.cache.find(role => role.name === "Among Us");
 
     const lfgEmote = 'Fast';
     const PBPEmote = 'Slow';
-    //const AmoungUsEmote = '0AmongUs';
 
     const role = [LFGRole, PBPRole];
     const emote = [lfgEmote, PBPEmote]
