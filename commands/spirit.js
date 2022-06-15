@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+
 const spirits = require ('./spiritNames.js').spirits;
 const levenshtein = require('js-levenshtein');
 const globals = require('../globals.js')
