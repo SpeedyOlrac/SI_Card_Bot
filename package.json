@@ -22,7 +22,13 @@
     "request": "2.81.0"
     
   },
+<<<<<<< HEAD
   
+=======
+  "devDependencies": {
+    "cryptiles": ">=4.1.3"
+  },
+>>>>>>> d6fdb4e2b78b16372140a0c2871e5248d8b39e1e
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SpeedyOlrac/SI_Card_Bot.git"
