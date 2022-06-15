@@ -8,17 +8,14 @@ const { PartialTypes } = require('../../util/Constants');
 { user_id: 'id',
      message_id: 'id',
      emoji: { name: '�', id: null },
-     channel_id: 'id',
-     // If originating from a guild
-     guild_id: 'id',
-     member: { ..., user: { ... } } }
+     channel_id: 'id' } }
 */
 
 class MessageReactionAdd extends Action {
   handle(data) {
     if (!data.emoji) return false;
 
-    const user = this.getUserFromMember(data);
+    const user = this.getUser(data);
     if (!user) return false;
 
     // Verify channel
@@ -31,8 +28,6 @@ class MessageReactionAdd extends Action {
 
     // Verify reaction
     if (message.partial && !this.client.options.partials.includes(PartialTypes.REACTION)) return false;
-    const existing = message.reactions.cache.get(data.emoji.id || data.emoji.name);
-    if (existing && existing.users.cache.has(user.id)) return { message, reaction: existing, user };
     const reaction = message.reactions.add({
       emoji: data.emoji,
       count: message.partial ? null : 0,
