@@ -12,10 +12,11 @@
 require('dotenv').config(); 
 const fs = require('fs');
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const { Client, Collection } = require('discord.js');
+const bot = new Client();
 const PREFIX = "-";
 
-bot.commands = new Discord.Collection();
+bot.commands = new Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 
