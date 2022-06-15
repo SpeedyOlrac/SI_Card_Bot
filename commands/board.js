@@ -87,6 +87,6 @@ function searchBoards(b)
             return "https://spiritislandwiki.com/images/6/64/Piece_je_board_south_west.png";
     break;
     default:
-        msg.channel.send("Type the board name. -board [a,b,c,d,e,f,NE, NW, East, West, SE,SW].");
+       return "Type the board name. -board [a,b,c,d,e,f,NE, NW, East, West, SE,SW]."; 
     }
 }
