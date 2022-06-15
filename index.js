@@ -29,7 +29,7 @@ for (const file of commandFiles) {
 bot.once('ready', async() => {
     console.log('This bot is online');
 
-    bot.command.forEach(element => {
+    bot.commands.forEach(element => {
         console.log(element.name);
     });
    
