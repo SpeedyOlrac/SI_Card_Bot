@@ -9,13 +9,13 @@ module.exports = {
 	public: true, //has to be true to show as a command
 	async execute(msg, args) {
 
-        if(args[0] ==  "help" ){
+        if(args[0] ==  "help" || args[0] == "" ){
 
-            await msg.channel.send("Type the board name. -help [a,b,c,d,e,f,NE, NW, East, West, SE,SW].");
+            await msg.channel.send("Type the board name. -board [a,b,c,d,e,f,NE, NW, East, West, SE,SW].");
         }
         else{
 
-            await msg.channel.send(search(args[0]));
+            await msg.channel.send(searchBoards(args[0]));
         }
 
 	},
@@ -25,7 +25,7 @@ module.exports = {
 function searchBoards(b)
 {
 
-    switch (args[0]){
+    switch (b){
         case "a":
         case "A":
             return "https://spiritislandwiki.com/images/e/e2/Piece_core_board_a.png";
