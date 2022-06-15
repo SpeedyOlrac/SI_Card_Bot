@@ -1,9 +1,9 @@
 {
   "name": "si_bot",
-  "version": "2.0.2",
+  "version": "2.2.2",
   "description": "Spirit Island Catalong bot",
   "main": "index.js",
-  "scripts": {
+  "scripts": {.
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
@@ -22,9 +22,7 @@
     "request": "2.81.0"
     
   },
-  "devDependencies": {
-    "cryptiles": ">=4.1.2"
-  },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SpeedyOlrac/SI_Card_Bot.git"
