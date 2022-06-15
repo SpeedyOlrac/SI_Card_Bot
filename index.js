@@ -8,6 +8,7 @@
 */
 
 
+
 require('dotenv').config(); 
 const fs = require('fs');
 const Discord = require('discord.js');
@@ -45,6 +46,7 @@ bot.on('message', async msg => {
     //     args = [command]
     //     command = "choose"
     // }
+    //
 
     if (!bot.commands.has(command)) return console.log("command not in list");
 
