@@ -29,9 +29,9 @@ for (const file of commandFiles) {
 bot.once('ready', async() => {
     console.log('This bot is online');
 
-    bot.commands.forEach(element => {
-        console.log(element.name);
-    });
+   
+        console.log(bot.commands.get("spirit").name);
+   
    
 
 });
