@@ -3,7 +3,7 @@
   "version": "2.8.2",
   "description": "Spirit Island Catalong bot",
   "main": "index.js",
-  "scripts": {.
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },

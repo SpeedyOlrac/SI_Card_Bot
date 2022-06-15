@@ -29,6 +29,8 @@ for (const file of commandFiles) {
 
 bot.once('ready', async() => {
     console.log('This bot is online');
+    console.log(bot.command);
+
 });
 
 bot.on('message', async msg => {
