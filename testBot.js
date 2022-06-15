@@ -24,6 +24,7 @@ bot.once('ready', () => {
 
 bot.on('message', async msg => {
 
+    console.log(commands);
 	if (!msg.content.startsWith(PREFIX)) return;
 
 	const args = msg.content.slice(PREFIX.length).trim().split(' ');
