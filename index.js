@@ -3,8 +3,8 @@
     Desciption: THis bot is made to help spirit island card and spirit panel look ups.
         Now has random Spirit and adversary fuctions.
         Creates link to the Spirit ISland FAQ page.
-        Expan Search to other commands
-    Version 2.0.2 role bot  
+        Expand Search to other commands
+    Version 2.8.2 role bot  
 */
 
 
@@ -17,7 +17,7 @@ const PREFIX = "-";
 
 bot.commands = new Discord.Collection();
 
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
