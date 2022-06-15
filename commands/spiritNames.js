@@ -1,6 +1,6 @@
 var Green = {     
  name: 'A Spread of Rampant Green', 
- emote: '<:SpiritRampant:747558393295929475>', 
+ emote: '<:SpiritSpreadRampantGreen:852365959149912095>', 
  panel: ['https://imgur.com/nlpGjjH' , 'https://imgur.com/iK9NTsz'],      
  complexity: '',
  title: 'Green',
@@ -10,7 +10,7 @@ var Green = {
 
 var BoDaN = {     
  name: 'Bringer of Dreams and Nightmares', 
- emote: '<:SpiritBodan:747570910751621121>', 
+ emote: '<:SpiritBodanBringerDreamsNightmar:852365960370454528>', 
  panel:[ 'https://imgur.com/UxZyTv2', 'https://imgur.com/VUOjO0v'],      
  complexity: '',
  title: 'BoDaN',
@@ -20,7 +20,7 @@ var BoDaN = {
 
 var Downpour = {     
  name: 'Downpour Drenches the World', 
- emote: '<:SpiritDownpour:747558401638268999>', 
+ emote: '<:SpiritDownpourDrenchesWorld:852365957744689153>', 
  panel: ['https://imgur.com/vZU2mVT', 'https://imgur.com/CShexIA'],      
  complexity: '',
  title: 'Downpour',
@@ -30,7 +30,7 @@ var Downpour = {
 
 var Fractured = {     
  name: 'Fractured Days Split the Sky', 
- emote: '<:SpiritFractured:747558406318981191>', 
+ emote: '<:SpiritFracturedDaysSplitSky:852365961800712252>', 
  panel: ['https://imgur.com/MDqxo4i', 'https://imgur.com/7z7V6Ol'],      
  complexity: '',
  title: 'Fractured',
@@ -40,7 +40,7 @@ var Fractured = {
 
 var Wildfire = {     
  name: 'Heart of the Wildfire', 
- emote: '<:SpiritWildfire:747558405282988103>', 
+ emote: '<:SpiritHeartWildfire:852365962286989343>', 
  panel: ['https://imgur.com/A4FRUV5', 'https://imgur.com/Y8lVu5J'],      
  complexity: '',
  title: 'Wildfire',
@@ -50,7 +50,7 @@ var Wildfire = {
 
 var Finder = {     
  name: 'Finder of Paths Unseen', 
- emote: '<:SpiritFinder:747558403810787359>', 
+ emote: '<:SpiritFinderPathsUnseen:852365960236236811>', 
  panel: ['https://imgur.com/T9HLW7e', 'https://imgur.com/JtdpxCr'],      
  complexity: '',
  title: 'Finder',
@@ -60,7 +60,7 @@ var Finder = {
 
 var Lightning = {     
  name: 'Lightning\'s Swift Strike', 
- emote: '<:SpiritLightning:747558396546252944>', 
+ emote: '<:SpiritLightningSwiftStrike:852365958839664691> ', 
  panel: ['https://imgur.com/yXE6oHw', 'https://imgur.com/WLcU0w9'],      
  complexity: '',
  title: 'Lightning',
@@ -70,7 +70,7 @@ var Lightning = {
 
 var Keeper = {     
  name: 'Keeper of the Forbidden Wilds', 
- emote: '<:SpiritKeeper:747558404943380491>', 
+ emote: '<:SpiritKeeperForbiddenWilds:852365961420210216>', 
  panel: ['https://imgur.com/PBwq5KE', 'https://imgur.com/ZKAblG3'],      
  complexity: '',
  title: 'Keeper',
@@ -80,7 +80,7 @@ var Keeper = {
 
 var Trickster = {     
  name: 'Grinning Trickster Stirs Up Trouble', 
- emote: '<:SpiritTrickster:747570905709936723>', 
+ emote: '<:SpiritGrinningTricksterStirsTrou:852365959540899911>', 
  panel: ['https://imgur.com/D2geoaL', 'https://imgur.com/i6YLeWv'],      
  complexity: '',
  title: 'Trickster',
@@ -90,7 +90,7 @@ var Trickster = {
 
 var Lure = {     
  name: 'Lure of the Deep Wilderness', 
- emote: '<:SpiritLure:747558396403646605>', 
+ emote: '<:SpiritLureDeepWilderness:852365959237992458>>', 
  panel: ['https://imgur.com/Zx3UcPD', 'https://imgur.com/wGPod8z'],      
  complexity: '',
  title: 'Lure',
@@ -100,7 +100,7 @@ var Lure = {
 
 var ManyMinds = {     
  name: 'Many Minds Move as One', 
- emote: '<:SpiritManyMinds:747558400400818319>', 
+ emote: '<:SpiritManyMindsMoveOne:852365959334854666>', 
  panel: ['https://imgur.com/bA3Rmp8', 'https://imgur.com/XIG39qe'],      
  complexity: '',
  title: 'ManyMinds',
@@ -110,7 +110,7 @@ var ManyMinds = {
 
 var Ocean = {     
  name: 'Ocean\'s Hungry Grasp', 
- emote: '<:SpiritOceans:747558407292190820>', 
+ emote: '<:SpiritOceanHungryGrasp:852365961617211403>', 
  panel: ['https://imgur.com/rrLWF5o', 'https://imgur.com/UVEIJfA'],      
  complexity: '',
  title: 'Ocean',
@@ -120,7 +120,7 @@ var Ocean = {
 
 var Serpent = {     
  name: 'Serpent Slumbering Beneath the Island', 
- emote: '<:SpiritSnek:747558396705767424>', 
+ emote: '<:SpiritSnekSerpentSlumbering:852365959989428264>', 
  panel: ['https://imgur.com/PgT7Kyj', 'https://imgur.com/cE7YZ3L'],      
  complexity: '',
  title: 'Serpent',
@@ -130,7 +130,7 @@ var Serpent = {
 
 var Fangs = {     
  name: 'Sharp Fangs Behind the Leaves', 
- emote: '<:SpiritFangs:747570910524997743>', 
+ emote: '<:SpiritSharpFangsLeaves:852365962292494346>', 
  panel: ['https://imgur.com/uxw6S5D', 'https://imgur.com/IoL5BHz'],      
  complexity: '',
  title: 'Fangs',
@@ -140,7 +140,7 @@ var Fangs = {
 
 var Memory = {     
  name: 'Shifting Memory of Ages', 
- emote: '<:SpiritShifting:747558402959605857>', 
+ emote: '<:SpiritShiftingMemoryAges:852365960593932318>', 
  panel: ['https://i.imgur.com/1C7h4gG.jpg ', 'https://imgur.com/BB48p9Q'],      
  complexity: '',
  title: 'Memory',
@@ -150,7 +150,7 @@ var Memory = {
 
 var Mist = {     
  name: 'Shroud of Silent Mist', 
- emote: '<:SpiritShroud:747558393123962957>', 
+ emote: '<:SpiritShroudSilentMist:852365959183204402>', 
  panel: ['https://imgur.com/AgBKUYl', 'https://imgur.com/sE5Iasm'],      
  complexity: '',
  title: 'Mist',
@@ -160,7 +160,7 @@ var Mist = {
 
 var Starlight = {     
  name: 'Starlight Seeks Its Form', 
- emote: '<:SpiritStarlight:747558401424490588>', 
+ emote: '<:SpiritStarlightSeeksForm:852365959801077782>', 
  panel: ['https://imgur.com/fkB6Y05', 'https://imgur.com/pCuo4XJ'],      
  complexity: '',
  title: 'Starlight',
@@ -170,7 +170,7 @@ var Starlight = {
 
 var Stone = {     
  name: 'Stone\'s Unyielding Defiance', 
- emote: '<:SpiritStone:747558407200047246>', 
+ emote: '<:SpiritStoneUnyieldingDefiance:852365962187374632>', 
  panel: ['https://imgur.com/FhEIqB6', 'https://imgur.com/RqlC8ZP'],      
  complexity: '',
  title: 'Stone',
@@ -180,7 +180,7 @@ var Stone = {
 
 var Thunderspeaker = {     
  name: 'Thunderspeaker', 
- emote: '<:SpiritThunderspeaker:747558392603738244>', 
+ emote: '<:SpiritThunderspeaker:852365958789857342>', 
  panel: ['https://imgur.com/5xnsvD8', 'https://imgur.com/PztVF5L'],      
  complexity: '',
  title: 'Thunderspeaker',
@@ -190,7 +190,7 @@ var Thunderspeaker = {
 
 var Shadows = {     
  name: 'Shadows Flicker Like Flame', 
- emote: '<:SpiritShadows:747571324418916393>', 
+ emote: '<:SpiritShadowsFlickerFlame:852365960286568479>', 
  panel: ['https://imgur.com/FmVImnv', 'https://imgur.com/oyk2ZwH'],      
  complexity: '',
  title: 'Shadows',
@@ -200,7 +200,7 @@ var Shadows = {
 
 var River = {     
  name: 'River Surges in Sunlight', 
- emote: '<:SpiritRivers:747558402850422804>', 
+ emote: '<:SpiritRiverSurgesSunlight:852365960916762635>', 
  panel: ['https://imgur.com/pmdjfxu', 'https://imgur.com/uv0mMRV'],      
  complexity: '',
  title: 'River',
@@ -210,7 +210,7 @@ var River = {
 
 var Vengeance = {     
  name: 'Vengeance as a Burning Plague', 
- emote: '<:SpiritVengeance:747558391572070520>', 
+ emote: '<:SpiritVengeanceBurningPlague:852365959222263868>', 
  panel:[ 'https://imgur.com/EgzpSLC','https://imgur.com/4hnimN9'],      
  complexity: '',
  title: 'Vengeance' ,
@@ -221,7 +221,7 @@ var Vengeance = {
 
 var Earth = {     
  name: 'Vital Strength of the Earth', 
- emote: '<:SpiritEarth:747558396009512960>', 
+ emote: '<:SpiritVitalStrengthEarth:852365958593118269>', 
  panel: ['https://imgur.com/wgs13CF', 'https://imgur.com/5iTl68l'],      
  complexity: '',
  title: 'Earth',
@@ -231,7 +231,7 @@ var Earth = {
 
 var Volcano = {     
  name: 'Volcano Looming High', 
- emote: '<:SpiritVolcano:747558401139146834>', 
+ emote: '<<:SpiritVolcanoLoomingHigh:852365959879983135>', 
  panel: ['https://imgur.com/sSs3uqa', 'https://imgur.com/XOC05vn'],      
  complexity: '',
  title: 'Volcano',
