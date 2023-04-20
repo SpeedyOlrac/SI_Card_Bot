@@ -90,7 +90,7 @@ var Trickster = {
 
 var Lure = {     
  name: 'Lure of the Deep Wilderness', 
- emote: '<:SpiritLureDeepWilderness:852365959237992458>>', 
+ emote: '<:SpiritLureDeepWilderness:852365959237992458>', 
  panel: ['https://imgur.com/Zx3UcPD', 'https://imgur.com/wGPod8z'],      
  complexity: '',
  title: 'Lure',
@@ -231,7 +231,7 @@ var Earth = {
 
 var Volcano = {     
  name: 'Volcano Looming High', 
- emote: '<<:SpiritVolcanoLoomingHigh:852365959879983135>', 
+ emote: '<:SpiritVolcanoLoomingHigh:852365959879983135>', 
  panel: ['https://imgur.com/sSs3uqa', 'https://imgur.com/XOC05vn'],      
  complexity: '',
  title: 'Volcano',
