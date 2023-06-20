@@ -4,10 +4,11 @@ var help = "List of commands: \
 	\n -minor [card name] \
 	\n -major [card name] \
 	\n -unique [card name] \
+	\n -blight [card name] \
 	\n -event [event name] \
 	\n -fear [fear name] \
 	\n -faqs (search words) \
-	\n -random [spirit/adversary] (min Diffculty) (max Diffculty)  \
+	\n -random [spirit/adversary] (min difficulty) (max difficulty)  \
 	\n -spirit (front/back) [keywords] \
 	\n -adversary (name) \
 	\n -aspect (spirit or aspect) [aspect keywords]";
@@ -20,6 +21,7 @@ module.exports = {
 		await msg.channel.send(help);
 	},
 };
+
 
 
 
