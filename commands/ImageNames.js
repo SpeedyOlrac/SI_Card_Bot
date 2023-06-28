@@ -9,9 +9,12 @@ To update the name list:
 var imageList = document.querySelectorAll('.front img');
 var result = [];
 for(var item of imageList){
-    result.push(item.src.replace(/.jpg/gi, '').replace(/https:\/\/sick.oberien.de\/imgs\/(powers|events|fears)\//gi, ''));
+    result.push(item.src.replace(/.jpg/gi, '').replace(/https:\/\/sick.oberien.de\/imgs\/(powers|events|fears|blights)\//gi, ''));
 }
 result
+
+#3. Note that currently SICK cannot filter on JUST blight cards, so you may need to manually sanitise the results to exclude
+blighted island events if you're adding more blight cards
 
 */
 
@@ -24,6 +27,28 @@ var fear = ["fear_of_the_unseen", "scapegoats", "emigration_accelerates", "dahan
 
 var event = ["years_of_little_rain", "farmers_seek_the_dahan_for_aid", "new_species_spread", "war_touches_the_islands_shores", "sacred_sites_under_threat", "outpaced", "missionaries_arrive", "a_strange_madness_among_the_beasts", "seeking_the_interior", "wave_of_reconnaissance", "interesting_discoveries", "strange_tales_attract_explorers", "cultural_assimilation", "investigation_of_dangers", "distant_exploration", "rising_interest_in_the_island", "putting_down_roots", "search_for_new_lands", "invaders_surge_inland", "tightknit_communities", "wellprepared_explorers", "population_rises", "urban_development", "heavy_farming", "promising_farmland", "slave_rebellion", "lesser_spirits_imperiled", "remnants_of_a_spirits_heart", "numinous_crisis", "hardworking_settlers", "dahan_trade_with_the_invaders", "lifes_balance_tilts", "harvest_bounty_harvest_dust", "invested_aristocracy", "mapmakers_chart_the_wild", "no_bravery_without_numbers", "smaller_ports_spring_up", "the_frontier_calls", "seek_new_farmland", "gradual_corruption", "fortuneseekers", "provincial_seat", "cities_rise", "thriving_trade", "wounded_lands_attract_explorers", "coastal_town_multiply", "civic_engagement", "sprawl_contained_by_the_wilds", "the_struggles_of_growth", "eager_explorers", "bureaucrats_adjust_funding", "resourceful_populace", "relentless_optimism", "pull_together_in_adversity", "temporary_truce", "overconfidence"]
 
+var blightedIsland = [
+    "downward_spiral",
+    "memory_fades_to_dust",
+    "back_against_the_wall",
+    "promising_farmlands",
+    "disintegrating_ecosystem",
+    "aid_from_lesser_spirits",
+    "tipping_point",
+    "erosion_of_will",
+    "a_pall_upon_the_land",
+    "unnatural_proliferation",
+    "all_things_weaken",
+    "thriving_communities",
+    "power_corrodes_the_spirit",
+    "untended_land_crumbles"
+]
+
+var stillHealthyIsland = [
+    "invaders_find_the_land_to_their_liking",
+    "strong_earth_shatters_slowly"
+]
+
 var noJE = "";
 
 
@@ -35,3 +60,6 @@ exports.power = [].concat(unique).concat(minor).concat(major);
 exports.fear = fear;
 exports.event = event;
 exports.noJE = noJE;
+exports.blightedIsland = blightedIsland;
+exports.stillHealthyIsland = stillHealthyIsland;
+exports.allBlightCards = [].concat(blightedIsland).concat(stillHealthyIsland)
