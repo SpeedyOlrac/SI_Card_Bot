@@ -19,7 +19,7 @@ module.exports = {
 			}
 		}
 
-		//If first args is a Aspect
+		//if first args is a Aspect
 		else if(args.length == 1){
 			//first args is an aspect
 			temp = args[0].toLowerCase();
@@ -41,6 +41,35 @@ module.exports = {
 				var s = findSpirit(spirit);
 				message = spirit + " has the following aspects: \n";
 				message = listAspect(message, parseInt(s));   
+			}
+		}
+
+		else if(args.length == 2){
+			numAspectCard = args[1].toLowerCase();
+			temp = args[0].toLowerCase();
+			// check if the FIRST argument is an aspect
+			aspect = findAspect(temp);
+			if (aspect){
+				// if it is, check if it has >1 aspect card
+				if (aspect.panel.length == 1){
+					// if it doesn't, return the first aspect card
+					message = aspect.panel[0];
+				}
+				// if it does, return that chosen aspect card
+				else{
+					// sanitising input
+					console.log(numAspectCard,aspect.panel.length);
+					if (!Number.isInteger(numAspectCard) || numAspectCard > aspect.panel.length || numAspectCard < 0){
+						message = aspect.panel[0];
+					}
+					else{
+						message = aspect.panel[numAspectCard];
+					}
+				}
+			}
+			// otherwise, message saying that this aspect does not exist
+			else{
+				message = "Aspect could not be found";
 			}
 		}
 		//Correcting name of spirit
