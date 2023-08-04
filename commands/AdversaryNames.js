@@ -94,5 +94,5 @@ ad.set('scotland', scotland);
 ad.set('sweden', sweden);
 ad.set('habsburgmining', habsburgmining);
 
-// exports.ad = ad;
+exports.ad = ad;
 exports.adversaries = [prussia, england, france, habsburg, habsburgmining, russia, scotland, sweden];
