@@ -45,7 +45,8 @@ module.exports = {
 		}
 
 		else if(args.length == 2){
-			numAspectCard = args[1].toLowerCase();
+			let numAspectCard = parseInt(args[1]);
+			console.log(numAspectCard);
 			temp = args[0].toLowerCase();
 			// check if the FIRST argument is an aspect
 			aspect = findAspect(temp);
@@ -58,12 +59,11 @@ module.exports = {
 				// if it does, return that chosen aspect card
 				else{
 					// sanitising input
-					console.log(numAspectCard,aspect.panel.length);
-					if (!Number.isInteger(numAspectCard) || numAspectCard > aspect.panel.length || numAspectCard < 0){
+					if (numAspectCard == NaN || numAspectCard > aspect.panel.length || numAspectCard < 1){
 						message = aspect.panel[0];
 					}
 					else{
-						message = aspect.panel[numAspectCard];
+						message = aspect.panel[numAspectCard - 1];
 					}
 				}
 			}
