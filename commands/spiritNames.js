@@ -286,7 +286,7 @@ var SunBright = {
     panel: ["https://imgur.com/bTNvNzt", "https://imgur.com/MP7zaBA"],
     complexity: 'Low',
     title: 'SunBright',
-    uniques: ['call_on_herders_for_aid', 'gift_of_searing_heat', 'stinging_sandstorm', 'sweltering_exhaustion'],
+    uniques: ['gift_of_the_sunlit_air', 'gift_of_windsped_steps', 'scatter_to_the_winds', 'tempest_of_leaves_and_branches'],
     aliases: ['whirlwind', 'kitty', 'sunkitty']
 }
 
