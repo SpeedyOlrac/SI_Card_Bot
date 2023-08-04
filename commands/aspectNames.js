@@ -61,7 +61,7 @@ var green = [
 ];
 
 var keeper = [
-    {name:"Spreading Hostility", emote:"", panel: "https://i.imgur.com/cBY9Hmb.png"}
+    {name:"SpreadingHostility", emote:"", panel: "https://i.imgur.com/cBY9Hmb.png"}
 ];
 
 var mists = [
