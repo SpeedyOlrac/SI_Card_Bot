@@ -5,7 +5,7 @@ var lightning =  [
     {name: "Pandemonium", emote: "<:TStrife:>778714254982643762", panel:["https://i.imgur.com/1774mnW.jpg"]},
     {name: "Wind", emote: "<:ICFast:>778714634710286397", panel:["https://i.imgur.com/VwchE5U.jpg"]},
     {name: "Immense", emote: "", panel:["https://i.imgur.com/YhXRPZK.jpg"]},
-    {name: "Sparking", emote: "", panel:["https://i.imgur.com/4jyHApi.png", "https://i.imgur.com/SGlXMGB.png"]} //p2 ]https://i.imgur.com/SGlXMGB.png
+    {name: "Sparking", emote: "", panel:["https://i.imgur.com/4jyHApi.png", "https://i.imgur.com/SGlXMGB.png"]}
  ];
 
  var rivers =   [
@@ -29,7 +29,7 @@ var earth = [
   ];
 
 var ocean = [
-    {name: "Deeps", emote: "", panel:["https://i.imgur.com/V9qIQ1y.png", "https://imgur.com/tZ0U4rx"]} // p2 ]https://imgur.com/tZ0U4rx
+    {name: "Deeps", emote: "", panel:["https://i.imgur.com/V9qIQ1y.png", "https://imgur.com/tZ0U4rx"]}
 ];
 
 var fangs = [
@@ -52,12 +52,12 @@ var lure = [
 ];
 
 var serpent = [
-    {name:"Locus", emote:"", panel:["https://i.imgur.com/YugqMW5.png", "https://i.imgur.com/RwIk5e4.png"]} //p2 ]https://i.imgur.com/RwIk5e4.png
+    {name:"Locus", emote:"", panel:["https://i.imgur.com/YugqMW5.png", "https://i.imgur.com/RwIk5e4.png"]}
 ];
 
 var green = [
     {name:"Regrowth", emote:"", panel:["https://i.imgur.com/jQWp7vu.png"]},
-    {name:"Tangles", emote:"", panel:["https://i.imgur.com/mnlOFdh.png", "https://i.imgur.com/ygTTqbq.png"]} //p2 ]https://i.imgur.com/ygTTqbq.png
+    {name:"Tangles", emote:"", panel:["https://i.imgur.com/mnlOFdh.png", "https://i.imgur.com/ygTTqbq.png"]}
 ];
 
 var keeper = [
