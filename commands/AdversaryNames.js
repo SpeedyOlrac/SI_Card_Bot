@@ -17,7 +17,7 @@ var habsburgmining ={
     emote: '<:FlagHabsburg:742194656556744814>:pick:',
     diffculty: [2, 3, 5, 6, 8, 9, 10],
     panel: "https://i.imgur.com/xzXF6vu.png",
-    alias: ['<:FlagHabsburg:742194656556744814>:pick:', "hme", 'saltburg', 'mining-expedition', 'mining']    
+    alias: ['<:FlagHabsburg:742194656556744814>:pick:', ':pick:', "hme", 'saltburg', 'mining-expedition', 'mining']    
 }
 
 var prussia ={
@@ -53,7 +53,7 @@ var habsburg ={
     emote: '<:FlagHabsburg:742194656556744814>',
     diffculty: [2, 3, 5, 6, 8, 9, 10],
     panel: "https://imgur.com/GtptfDJ",
-    alias: ['<:FlagHabsburg:742194656556744814>', "hlc", 'cowburg', "livestock-colony", 'livestock']    
+    alias: ['<:FlagHabsburg:742194656556744814>', '🐮', 'monarchy', "hlc", 'cowburg', "livestock-colony", 'livestock']    
 }
 
 var habsburgmining ={
@@ -62,7 +62,7 @@ var habsburgmining ={
     emote: '<:FlagHabsburg:742194656556744814>:pick:',
     diffculty: [2, 3, 5, 6, 8, 9, 10],
     panel: "https://i.imgur.com/xzXF6vu.png",
-    alias: ['<:FlagHabsburg:742194656556744814>:pick:', "hme", 'saltburg', 'mining-expedition', 'mining']    
+    alias: ['<:FlagHabsburg:742194656556744814>:pick:', '🧂', '⛏️', "hme", 'saltburg', 'mining-expedition', 'mining']    
 }
 
 var russia ={
