@@ -48,7 +48,7 @@ var memory = [
 ];
 
 var lure = [
-    {name:"Lure", emote:"", panel:["https://i.imgur.com/dzPtyxm.png"]}
+    {name:"Lair", emote:"", panel:["https://i.imgur.com/dzPtyxm.png"]}
 ];
 
 var serpent = [
