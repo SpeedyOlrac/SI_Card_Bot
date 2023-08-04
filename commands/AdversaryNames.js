@@ -8,8 +8,17 @@ var adversary = [
     ['The Tsardom of Russia', '<:FlagFrance:742199211340070955> ' , 1, 3, 4, 6, 7, 9, 11],
     ['The Kingdom of Scotland', '<:FlagScotland:742201184164773891>',1, 4, 6, 7, 8, 10],
     ['The Kingdom of Sweden','<:FlagSweden:742194408325382174>',  1, 2, 3, 5, 6, 7, 8 ]
+    ['Habsburg Mining Expedition', '<:FlagHabsburg:742194656556744814>:pick:', 2, 3, 5, 6, 8, 9, 10]
 ];
 
+var habsburgmining ={
+    title: "habsburg_mining",
+    name: 'Habsburg Mining Expedition',
+    emote: '<:FlagHabsburg:742194656556744814>:pick:',
+    diffculty: [2, 3, 5, 6, 8, 9, 10],
+    panel: "https://i.imgur.com/xzXF6vu.png",
+    alias: ['<:FlagHabsburg:742194656556744814>:pick:', "hme", 'saltburg', 'mining-expedition', 'mining']    
+}
 
 var prussia ={
     title: "prussia",
