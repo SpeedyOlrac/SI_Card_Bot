@@ -13,12 +13,6 @@ module.exports = {
         
         if (args.length != 0){
            const searchString = args[0].toLowerCase();
-           console.log("/n");
-
-           console.log(ad.adversaries);
-           console.log("_____________");
-
-           console.log(ad.adversaries[0].name.toLowerCase());
            for(const adversary of ad.adversaries){
                 console.log(adversary);
                 // direct match
