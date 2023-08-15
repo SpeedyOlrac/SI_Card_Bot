@@ -239,10 +239,62 @@ var Volcano = {
  aliases: []
  }; 
 
+// horizons spirits
+var Fathomless = {
+    name: "Fathomless Mud of the Swamp",
+    emote: '<:SpiritOtterFathomlessMud:1037130366345039872>',
+    panel: ["https://imgur.com/n0PVQ2V","https://imgur.com/UQkHym4"],
+    complexity: 'Low',
+    title: 'Fathomless',
+    uniques: ["exaltation_of_tangled_growth", "foul_vapors_and_fetid_muck", "intractable_thickets_and_thorns", "open_shifting_waterways"],
+    aliases: ["otter", '🦦']
+};
+
+var Devouring = {
+    name: "Devouring Teeth Lurk Underfoot",
+    emote: ':<SpiritChompDevouringTeeth:1037129924877762601>',
+    panel: ["https://imgur.com/wHjhdPI", "https://imgur.com/eTvswqd"],
+    complexity: 'Low',
+    title: 'Devouring',
+    uniques: ['ferocious_rampage', 'gift_of_furious_might', 'herd_towards_the_lurking_maw', 'mark_territory_with_scars_and_teeth'],
+    aliases: ['chomp']
+};
+
+var Eyes = {
+    name: "Eyes Watch From The Trees",
+    emote: ':<:SpiritEyesWatchTrees:1037130040053342378>',
+    panel: ["https://imgur.com/zLFBZYe", "https://imgur.com/BCI4u81"],
+    complexity: 'Low',
+    title: 'Eyes',
+    uniques: ['boon_of_watchful_guarding', 'eerie_noises_and_moving_trees','mysterious_abductions','whispered_guidance_through_the_night'],
+    aliases: ['👀']
+}
+
+var Rising = {
+    name: "Rising Heat of Stone and Sand",
+    emote: ':<:SpiritRisingHeatStoneSand:1037455831018516492>',
+    panel: ["https://imgur.com/z1JoESZ","https://imgur.com/O5MYo40"],
+    complexity: 'Low',
+    title: 'Rising',
+    uniques: ['call_on_herders_for_aid', 'gift_of_searing_heat', 'stinging_sandstorm', 'sweltering_exhaustion'],
+    aliases: ['heat', 'stone and sand']
+}
+
+var SunBright = {
+    name: "Sun-Bright Whirlwind",
+    emote: ':<:SpiritKittySunBrightWhirlwind:1037130011997655050>',
+    panel: ["https://imgur.com/bTNvNzt", "https://imgur.com/MP7zaBA"],
+    complexity: 'Low',
+    title: 'SunBright',
+    uniques: ['gift_of_the_sunlit_air', 'gift_of_windsped_steps', 'scatter_to_the_winds', 'tempest_of_leaves_and_branches'],
+    aliases: ['whirlwind', 'kitty', 'sunkitty']
+}
+
 var spirits = [ 
     Green, BoDaN, Downpour, Finder, Fractured, Trickster, Wildfire, Keeper, 
     Lightning, Lure, ManyMinds, Ocean, River, Serpent, Shadows, Fangs, Memory, 
-    Mist, Starlight, Stone, Thunderspeaker, Vengeance, Earth, Volcano];
+    Mist, Starlight, Stone, Thunderspeaker, Vengeance, Earth, Volcano,
+    Fathomless, Devouring, Eyes, Rising, SunBright];
 
 exports.spirits = spirits;
 
