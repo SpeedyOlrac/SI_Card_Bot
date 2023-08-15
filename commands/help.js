@@ -11,7 +11,7 @@ var help = "List of commands: \
 	\n -random [spirit/adversary] (min difficulty) (max difficulty)  \
 	\n -spirit (front/back) [keywords] \
 	\n -adversary (name) \
-	\n -aspect (spirit or aspect) [aspect keywords]";
+	\n -aspect (spirit or aspect) [aspect keywords] [number of card (i.e. Locus part 1/2)]";
 
 module.exports = {
 	name: 'help',

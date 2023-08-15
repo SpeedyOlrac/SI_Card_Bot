@@ -3,7 +3,7 @@ const { aspectsNames, spirits, aspects } = require('./aspectNames.js');
 
 module.exports = {
 	name: 'aspect',
-	description: 'The ascpects of sprits',
+	description: 'Lists all aspects for a given spirit or shows any cards for a given aspect.',
 	public: true, //has to be true to show as a command
 	execute(msg, args) {
 		console.log("aspect command");
@@ -12,17 +12,16 @@ module.exports = {
 
 		//if spirit is blank
 		if(args.length == 0){
-			message = "The spirits with thier aspects are \n"
+			message = "Currently, the following spirits have aspects: \n"
 			for (var s = 0; s < spirits.length; s++){
 				message += spirits[s] + ": "
 				message = listAspect(message, parseInt(s));
 			}
 		}
 
-		//If first args is a Aspect
+		//if first args is a Aspect
 		else if(args.length == 1){
 			//first args is an aspect
-
 			temp = args[0].toLowerCase();
 			var found = false;
 
@@ -40,8 +39,37 @@ module.exports = {
 				//First args is not an aspect
 				var spirit = getCardName(args[0], spirits);
 				var s = findSpirit(spirit);
-				message = "The aspects for " + spirit + " are: \n";
+				message = spirit + " has the following aspects: \n";
 				message = listAspect(message, parseInt(s));   
+			}
+		}
+
+		else if(args.length == 2){
+			let numAspectCard = parseInt(args[1]);
+			console.log(numAspectCard);
+			temp = args[0].toLowerCase();
+			// check if the FIRST argument is an aspect
+			aspect = findAspect(temp);
+			if (aspect){
+				// if it is, check if it has >1 aspect card
+				if (aspect.panel.length == 1){
+					// if it doesn't, return the first aspect card
+					message = aspect.panel[0];
+				}
+				// if it does, return that chosen aspect card
+				else{
+					// sanitising input
+					if (numAspectCard == NaN || numAspectCard > aspect.panel.length || numAspectCard < 1){
+						message = aspect.panel[0];
+					}
+					else{
+						message = aspect.panel[numAspectCard - 1];
+					}
+				}
+			}
+			// otherwise, message saying that this aspect does not exist
+			else{
+				message = "Aspect could not be found";
 			}
 		}
 		//Correcting name of spirit

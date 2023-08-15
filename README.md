@@ -10,18 +10,21 @@ Bot Commands
  -minor [card name]
  -major [card name]
  -unique [card name]
+ -blight [card name]
  -event [event name]
  -fear [fear name]
  -faqs (search words)
- -random [spirit/adversary]
+ -random [spirit/adversary] (min difficulty) (max difficulty)  \
  -spirit (front/back) [keywords]
+ -adversary (name)
+ -aspect (spirit or aspect) [aspect keywords] [number of card (i.e. Locus part 1/2)]";
  
  
  
 
 
 TODO
-Impliment levenshtein to all card search
+Implement levenshtein to all card search
 Make a reaction bot.
 clean up code a bit.
 Deleting -random message after 15 secs
