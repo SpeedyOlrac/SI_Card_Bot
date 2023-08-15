@@ -1,37 +1,34 @@
 
-const adversary = require ('./AdversaryNames.js').adversary;
+const ad = require ('./AdversaryNames.js')
 const getcardname = require('./sendCardLink.js').getCardName;
-//const ad = require('./AdversaryNames.js').ad;
 
 module.exports = {
 	name: 'adversary',
-	description: 'Get an adversaries',
+	description: 'Get an adversary',
 	public: true,
-	async execute(msg, args) {
-
-       // console.log( ad + ` 1` );
-          
-        var panel =  "Adversaries are \n Prussia, England, France, Habsburg, Russia, Scotland, Sweden";
+	async execute(msg, args) {          
+        var panel =  "Adversaries are \nPrussia, England, France, Habsburg (Livestock-Colony, HLC, Cowburg), Habsburg (Mining-Expedition, HME, Saltburg), Russia, Scotland, Sweden";
         var found = false;
         var list = [];
-
-        if (args.length == 0){ } 
-        else{
-            for(const ad of adversary){
-                list.push(ad.title);
-                
-            }
-            //console.log(list)
-
-            panel = getcardname(args[0], list);
-            console.log(panel);
-
-           for(const element in adversary){
-            //console.log(element);
-               if(adversary[element].title == panel){
-                 panel = adversary[element].panel;
-               }
+        
+        if (args.length != 0){
+           const searchString = args[0].toLowerCase();
+           for(const adversary of ad.adversaries){
+                console.log(adversary);
+                // direct match
+                if(adversary.name.toLowerCase().indexOf(searchString) >= 0) {
+                    panel = adversary.panel;
+                }
+                // alias
+                else{
+                    for (const alias of adversary.alias){
+                        if (alias.toLowerCase().indexOf(searchString) >= 0){
+                            panel = adversary.panel;
+                        }
+                    }
+                }
             }
         }
+
         msg.channel.send(panel);
     }};
