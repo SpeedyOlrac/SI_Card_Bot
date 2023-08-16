@@ -44,7 +44,7 @@ function Picking(selection, min = 0, max = 11){
         var diffmin = parseInt(min);
 
         if(diffmax < diffmin || diffmax > 11 || diffmin < 0){
-            return ["Diffculty values are not Valid", ""];
+            return ["difficulty values are not Valid", ""];
         }
 
         // adversary is [name, escaltion diff, diff 1 ...]
@@ -60,7 +60,7 @@ function Picking(selection, min = 0, max = 11){
             //console.log(name);
             n = Math.floor(Math.random() * 7);
 
-            if (name.diffculty[n] >= diffmin && name.diffculty[n] <= diffmax){
+            if (name.difficulty[n] >= diffmin && name.difficulty[n] <= diffmax){
                 correct = false;
             }
         }
@@ -73,7 +73,7 @@ function Picking(selection, min = 0, max = 11){
         }
 
         let answer =name.name + " " + 
-                    level + "(diffculty " + name.diffculty[n] + ")";
+                    level + "(difficulty " + name.difficulty[n] + ")";
         return [answer, name.emote, "" ];
     }
     else {
