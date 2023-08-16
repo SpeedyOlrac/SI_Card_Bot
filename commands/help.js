@@ -8,12 +8,12 @@ var help = "List of commands: \
 	\n -event [event name] \
 	\n -fear [fear name] \
 	\n -faqs (search words) \
-	\n -random [spirit/adversary] (min difficulty) (max difficulty)  \
+	\n -random [spirit/adversary/scenario] (min difficulty) (max difficulty)  \
 	\n -spirit (front/back) [keywords] \
 	\n -adversary (name) \
 	\n -aspect (spirit or aspect) [aspect keywords] [number of card (i.e. Locus part 1/2)] \
-	\n healing [keyword] \
-	\n incarna [keyword] (front/back)";
+	\n -healing [keyword] \
+	\n -incarna [keyword] (front/back)";
 
 module.exports = {
 	name: 'help',
