@@ -5,19 +5,21 @@ Invite code: https://discord.com/api/oauth2/authorize?client_id=7228006603025285
 
 
 Bot Commands 
- -search [search words]
- -power [card name]
- -minor [card name]
- -major [card name]
- -unique [card name]
- -blight [card name]
- -event [event name]
- -fear [fear name]
- -faqs (search words)
- -random [spirit/adversary] (min difficulty) (max difficulty)  \
- -spirit (front/back) [keywords]
- -adversary (name)
- -aspect (spirit or aspect) [aspect keywords] [number of card (i.e. Locus part 1/2)]";
+- -search [search words]
+- -power [card name]
+- -minor [card name]
+- -major [card name]
+- -unique [card name]
+- -blight [card name]
+- -event [event name]
+- -fear [fear name]
+- -faqs (search words)
+- -random [spirit/adversary/scenario] (min difficulty) (max difficulty)  \
+- -spirit (front/back) [keywords]
+- -adversary (name)
+- -aspect (spirit or aspect) [aspect keywords] [number of card (i.e. Locus part 1/2)]";
+- -healing [keyword]
+- -incarna [keyword] (front/back)
  
  
  
