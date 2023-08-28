@@ -13,7 +13,9 @@ var help = "List of commands: \
 	\n -adversary (name) \
 	\n -aspect (spirit or aspect) [aspect keywords] [number of card (i.e. Locus part 1/2)] \
 	\n -healing [keyword] \
-	\n -incarna [keyword] (front/back)";
+	\n -incarna [keyword] (front/back) \
+	\n -scenario (front/back) [keywords] \
+	"
 
 module.exports = {
 	name: 'help',

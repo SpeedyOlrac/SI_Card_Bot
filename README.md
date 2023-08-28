@@ -14,20 +14,21 @@ Bot Commands
 - -event [event name]
 - -fear [fear name]
 - -faqs (search words)
-- -random [spirit/adversary/scenario] (min difficulty) (max difficulty)  \
+- -random [spirit/adversary/scenario] (min difficulty) (max difficulty)
 - -spirit (front/back) [keywords]
 - -adversary (name)
-- -aspect (spirit or aspect) [aspect keywords] [number of card (i.e. Locus part 1/2)]";
+- -aspect (spirit or aspect) [aspect keywords] [number of card (i.e. Locus part 1/2)]
 - -healing [keyword]
 - -incarna [keyword] (front/back)
+- -scenario (front/back) [keywords]
  
  
  
 
 
 TODO
-Implement levenshtein to all card search
-Make a reaction bot.
-clean up code a bit.
-Deleting -random message after 15 secs
-getting async to work right
+- Implement levenshtein to all card search
+- Make a reaction bot.
+- clean up code a bit.
+- Deleting -random message after 15 secs
+- getting async to work right
