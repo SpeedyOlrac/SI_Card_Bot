@@ -293,7 +293,7 @@ var Green = {
    // nature incarnate spirits
    var Breath = {
        name: "Breath of Darkness Down Your Spine",
-       emote: ':SpiritBreathOfDarkness:',
+       emote: '<:SpiritBreathOfDarknessBoDDYS:1135936717879255040>',
        panel: ["https://imgur.com/dnCA76w", "https://imgur.com/FklO8qt"],
        complexity: 'High',
        title: 'Breath',
@@ -303,7 +303,7 @@ var Green = {
    
    var Dances = {
        name: "Dances Up Earthquakes",
-       emote: ':SpiritDancesUpEarthquakes:',
+       emote: '<:SpiritDancesUpEarthquakes:1135936722623004822>',
        panel: ['https://imgur.com/ELBbtJF', 'https://imgur.com/8hR01wO'],
        complexity: 'Very High',
        title: 'Dances',
@@ -313,7 +313,7 @@ var Green = {
    
    var Ember = {
        name: "Ember-Eyed Behemoth",
-       emote: ':SpiritEmberEyedBehemoth:',
+       emote: '<:SpiritEmberEyedBehemoth:1135936720110637177>',
        panel: ['https://imgur.com/phk0d4t', 'https://imgur.com/8431mg2'],
        complexity: 'Moderate',
        title: "Ember",
@@ -323,7 +323,7 @@ var Green = {
    
    var Hearth = {
        name: "Hearth Vigil",
-       emote: ':SpiritHearthVigil:',
+       emote: '<:SpiritHearthVigil:1135936715652079678>',
        panel: ['https://imgur.com/ctBCS2U', 'https://imgur.com/26T68Am'],
        complexity: 'Moderate',
        title : "Hearth",
@@ -333,7 +333,7 @@ var Green = {
    
    var Relentless = {
        name: "Relentless Gaze of the Sun",
-       emote: ":SpiritRelentlessGaze",
+       emote: "<:SpiritRelentlessGaze:1135936712934183042>",
        panel: ['https://imgur.com/vb7nHtJ', 'https://imgur.com/N7WIyDi'],
        complexity : 'High',
        title: 'Relentless',
@@ -343,7 +343,7 @@ var Green = {
    
    var Towering = {
        name: "Towering Roots of the Jungle",
-       emote: ':SpiritToweringRoots:',
+       emote: '<:SpiritToweringRoots:1136003165528010752>',
        panel: ['https://imgur.com/Au4IaEs', 'https://imgur.com/FtU2Ts2'],
        title: 'Towering',
        uniques: ['radiant_and_hallowed_grove', 'entwine_the_fates_of_all','boon_of_resilient_power','blooming_of_the_rocks_and_trees'],
@@ -352,7 +352,7 @@ var Green = {
    
    var Voice = {
        name: "Wandering Voice Keens Delirium",
-       emote: ":SpiritWanderingVoice",
+       emote: "<:SpiritWanderingVoice:1135936709893300224>",
        panel: ['https://imgur.com/dKMG0wN', 'https://imgur.com/FzrFUYO'],
        title: 'Voice',
        uniques: ['twist_perceptions', 'turmoils_touch','frightful_keening','exhale_confusion_and_delirium'],
@@ -361,7 +361,7 @@ var Green = {
    
    var Wounded = {
        name: 'Wounded Waters Bleeding',
-       emote: ':SpiritWoundedWaters',
+       emote: '<:SpiritWoundedWaters:1139940631414845551>',
        panel: ['https://imgur.com/hWH0aXs', 'https://imgur.com/cx2dLde'],
        title: 'Wounded',
        uniques: ['blood_water_and_bloodlust', 'boon_of_corrupted_blood', 'draw_to_the_waters_edge', 'wrack_with_pain_and_grief'],
