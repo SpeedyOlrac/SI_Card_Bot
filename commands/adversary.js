@@ -15,8 +15,9 @@ module.exports = {
         if (args.length != 0){
            const searchString = args[0].toLowerCase();
            for(const adversary of ad.adversaries){
-                // direct match
-                if(adversary.name.toLowerCase().indexOf(searchString) >= 0) {
+                // if there is a panel with that string in the title, return it
+                // checks for exact title matches to avoid Prussia - Russia problem
+                if(adversary.title.toLowerCase() == searchString) {
                     panel = adversary.panel;
                     found = true;
                     break;
@@ -35,9 +36,9 @@ module.exports = {
         }
         // if no match found or no argument provided, assume they want a list of adversaries
         if (args.length == 0 | !found){
-            panel = "Choose an adversary: (aliases) \n";
+            panel = "Choose an adversary: \n";
             for (const adversary of ad.adversaries){
-                panel += "* " + adversary.name + " (" + adversary.alias.join(" , ") + ")\n";
+                panel += "* " + adversary.name + " (" + adversary.title + ", " + adversary.alias.join(" , ") + ")\n";
             }
         }
 
