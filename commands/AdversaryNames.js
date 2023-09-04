@@ -35,7 +35,7 @@ var england ={
     emote: '<:FlagEngland:742199440126771250>', 
     difficulty: [ 1, 3, 4, 6, 7, 9, 10],
     panel: "https://imgur.com/c5KzcIq",
-    alias: ["<:FlagEngland:742199440126771250>'"]   
+    alias: ["<:FlagEngland:742199440126771250>"]   
 }
 
 var france ={
