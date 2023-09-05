@@ -14,7 +14,9 @@ Bot Commands
 - -event [event name]
 - -fear [fear name]
 - -faqs (search words)
-- -random [spirit/adversary/scenario] (min difficulty) (max difficulty)
+- -random [spirit] (max complexity (low/moderate/high/vhc))
+- -random [adversary] (min difficulty) (max difficulty)
+- -random [scenario]
 - -spirit (front/back) [keywords]
 - -adversary (name)
 - -aspect (spirit or aspect) [aspect keywords] [number of card (i.e. Locus part 1/2)]

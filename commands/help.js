@@ -8,7 +8,9 @@ var help = "List of commands: \
 	\n -event [event name] \
 	\n -fear [fear name] \
 	\n -faqs (search words) \
-	\n -random [spirit/adversary/scenario] (min difficulty) (max difficulty)  \
+	\n -random [spirit] (max complexity (low/moderate/high/vhc)) \
+	\n -random [adversary] (min difficulty) (max difficulty) \
+	\n -random [scenario] \
 	\n -spirit (front/back) [keywords] \
 	\n -adversary (name) \
 	\n -aspect (spirit or aspect) [aspect keywords] [number of card (i.e. Locus part 1/2)] \
