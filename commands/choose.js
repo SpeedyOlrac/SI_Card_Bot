@@ -6,7 +6,6 @@ module.exports = {
 	public: true,
 	async execute(msg, args) {
         if (args.length == 1) {
-            console.log(globals.choices);
             if (!(globals.choices === undefined || globals.choices == 0)){
                 const idx = parseInt(args[0]) - 1;
                 if (idx > -1 && idx < globals.choices.length) {
@@ -15,7 +14,7 @@ module.exports = {
                     return await msg.channel.send(choice.value);   
                 }
                 else {
-                    return await msg.channel.send("An invalid option was chosen, please choose a value between 1 and " + globals.choices.length);
+                    return await msg.channel.send("An invalid option was chosen, please choose a value between 1 and " + globals.choices.length + " .");
                 }
             }
             else{
