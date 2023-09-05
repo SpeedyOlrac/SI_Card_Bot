@@ -2,6 +2,7 @@ const { scenario } = require('./scenarioNames.js');
 
 const adversary = require('./AdversaryNames.js').ad;
 const spirits = require ('./spiritNames.js').spirits;
+const complexities = require('./complexities.js').complexities;
 
 module.exports = {
 	name: 'random',
@@ -12,7 +13,8 @@ module.exports = {
                 let command = args[0];
                 switch (command){
                     case 'spirit':
-                        let maxComplexity = args[1] ? args[1] : 4;
+                        // turning word definition into corresponding number
+                        let maxComplexity = complexities.has(args[1]) ? complexities.get(args[1]) : 4;
                         answer = chooseSpirit(maxComplexity);
                         await sendMessage(msg, answer);
                         break;
