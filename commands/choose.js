@@ -5,11 +5,10 @@ module.exports = {
 	description: 'Choose from previously found results',
 	public: true,
 	async execute(msg, args) {
-
         if (args.length == 1) {
-            const idx = parseInt(args[0])-1;
-            if (idx > 0 && idx < globals.choices.length) {
-                let choice = globals.choices[parseInt(args[0])-1];
+            const idx = parseInt(args[0]) - 1;
+            if (idx > -1 && idx < globals.choices.length) {
+                let choice = globals.choices[idx];
                 globals.choices = [];
                 return await msg.channel.send(choice.value);   
             }
