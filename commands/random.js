@@ -13,13 +13,16 @@ module.exports = {
                 let command = args[0];
                 switch (command){
                     case 'spirit':
-                        // turning word definition into corresponding number
+                        // turning word definition into corresponding number (4 chooses from all spirits)
                         let maxComplexity = complexities.has(args[1]) ? complexities.get(args[1]) : 4;
                         answer = chooseSpirit(maxComplexity);
                         await sendMessage(msg, answer);
                         break;
                     case 'adversary':
-                        answer = chooseAdversary();
+                        // checking if the user has passed a valid numerical input before passing to the adversary function
+                        let minDifficulty = parseInt(args[1]) ? parseInt(args[1]) : 0;
+                        let maxDifficulty = parseInt(args[2]) ? parseInt(args[2]) : 11;
+                        answer = chooseAdversary(minDifficulty, maxDifficulty);
                         await sendMessage(msg, answer);
                         break;
                     case 'scenario':
@@ -55,25 +58,20 @@ async function sendMessage(msg, answer){
  * returns a spirit bounded by maximum complexity
  */
 function chooseSpirit(maxComplexity = 4){
-    console.log(spirits[0].complexity);
     let validSpirits = spirits.filter((spirit) => spirit.complexity <= maxComplexity);
-
     let x = Math.floor(Math.random() * validSpirits.length);
     return  [validSpirits[x].name, validSpirits[x].emote];
 }
 
 /**
- * returns an adversary
- * @param {*} min 
- * @param {*} max 
+ * returns an adversary within the given difficulty bounds
+ * @param {int} minDifficulty 
+ * @param {int} maxDifficulty 
  * @returns 
  */
-function chooseAdversary(min, max){
-    var diffmax = parseInt(max);
-    var diffmin = parseInt(min);
-
-    if(diffmax < diffmin || diffmax > 11 || diffmin < 0){
-        return ["For a single adversary, specify a difficulty range between 0 and 11.", ""];
+function chooseAdversary(minDifficulty=0, maxDifficulty=11){
+    if(maxDifficulty < minDifficulty || maxDifficulty > 11 || minDifficulty < 0){
+        return ["For a single adversary, specify a difficulty range between 0 and 11.", "Difficulty should be specified as an integer greater or equal to 0 followed by an integer less than or equal to 11."];
     }
 
     // adversary is [name, escalation diff, diff 1 ...]
@@ -87,7 +85,7 @@ function chooseAdversary(min, max){
         name = adversary.get(keys[Math.floor(Math.random() * keys.length)]);
         n = Math.floor(Math.random() * 7);
 
-        if (name.difficulty[n] >= diffmin && name.difficulty[n] <= diffmax){
+        if (name.difficulty[n] >= minDifficulty && name.difficulty[n] <= maxDifficulty){
             correct = false;
         }
     }
