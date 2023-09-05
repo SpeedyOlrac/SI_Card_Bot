@@ -40,7 +40,7 @@ var england ={
 
 var france ={
     title: "france",
-    name: 'The Kingdom of France ',
+    name: 'The Kingdom of France',
     emote: '<:FlagFrance:742199211340070955>', 
     difficulty: [ 2, 3, 5, 7, 8, 9, 10],
     panel: "https://imgur.com/S8lL3cA"  ,
