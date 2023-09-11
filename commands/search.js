@@ -12,7 +12,7 @@ var sHelp = "Examples: \
 
 module.exports = {
 	name: 'search',
-	description: 'search the SICK librabry!',
+	description: 'search the SICK library',
 	public: true,
 	async execute(msg, args) {
 

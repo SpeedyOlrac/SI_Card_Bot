@@ -8,7 +8,6 @@ module.exports = {
     description: "Sets up a reaction role message!",
     public: true,
     async execute(message, args, Discord) {
-        //const channel = '743227873875329137';
         const landingChannel = "847266147120316456";
         const adminID = '176329826641117186';
 
@@ -16,14 +15,8 @@ module.exports = {
             return console.log("Reaction role was sent to the wrong channel " + message.channel.id);
         }
 
-        //await message.channel.messages.fetch({ limit: 100}).then(messages =>{
-        //    message.channel.bulkDelete(messages)
-
         const LFGEmote = message.guild.emojis.cache.find(emoji => emoji.name === 'Fast');
         const PBPEmote = message.guild.emojis.cache.find(emoji => emoji.name === 'Slow');
-        //const AmoungUsEmote = message.guild.emojis.cache.find(emoji => emoji.name === '0AmongUs');
-        
-       // message.delete();
 
         let embed = new Discord.MessageEmbed()
             .setColor('#49087a')
@@ -34,7 +27,6 @@ module.exports = {
                 { name: 'Looking for Group', value: " React with Fast" +" to receive the @LFG role, then post in " + 
                  "the LFG Channel to find other players." },
                 { name: 'Play by Post', value: "React with Slow Icon" + " to join the play by post section." },
-                //{ name: 'Among Us', value: "React with <:0AmongUs:>" + " to join the Among Us group." },
                 { name: 'Rules Question', value: "Visit the rules Channel " }
             );
  
@@ -42,11 +34,6 @@ module.exports = {
         
 		await messageEmbed.react(LFGEmote);
 		await messageEmbed.react(PBPEmote);
-		//await messageEmbed.react(AmoungUsEmote);
-
-    
- 
-        
     } 
 } 
 
