@@ -1,5 +1,6 @@
 var help = "List of commands: \
 	\n -search [search words]\
+	\n -draw [card type] [amount (<=10)]\
 	\n -power [card name] \
 	\n -minor [card name] \
 	\n -major [card name] \

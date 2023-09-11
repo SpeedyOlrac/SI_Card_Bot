@@ -6,6 +6,7 @@ Invite code: https://discord.com/api/oauth2/authorize?client_id=7228006603025285
 
 Bot Commands 
 - -search [search words]
+- -draw [card type] [amount (<=10)]
 - -power [card name]
 - -minor [card name]
 - -major [card name]
