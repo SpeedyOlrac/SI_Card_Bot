@@ -1,95 +1,95 @@
 const Discord = require('discord.js');
 
 var adversary = [
-    ['The Kingdom of Brandenburg-Prussia', '<:FlagPrussia:742198907332853831>', 1, 2, 4, 6, 7, 9, 10  ],
-    ['The Kingdom of England', '<:FlagEngland:742199440126771250>', 1, 3, 4, 6, 7, 9, 10, ],
-    ['The Kingdom of France ', '<:FlagRussia:742201076362641408>', 2, 3, 5, 7, 8, 9, 10 ],
-    ['The Habsburg Monarchy', '<:FlagHabsburg:742194656556744814>', 2, 3, 5, 6, 8, 9, 10],
-    ['The Tsardom of Russia', '<:FlagFrance:742199211340070955> ' , 1, 3, 4, 6, 7, 9, 11],
-    ['The Kingdom of Scotland', '<:FlagScotland:742201184164773891>',1, 4, 6, 7, 8, 10],
-    ['The Kingdom of Sweden','<:FlagSweden:742194408325382174>',  1, 2, 3, 5, 6, 7, 8 ]
-    ['Habsburg Mining Expedition', '<:FlagHabsburg:742194656556744814>:pick:', 2, 3, 5, 6, 8, 9, 10]
+    ['The Kingdom of Brandenburg-Prussia', '<:FlagBrandenburgPrussia:852366012846309406>', 1, 2, 4, 6, 7, 9, 10  ],
+    ['The Kingdom of England', '<:FlagEngland:852366012175482900>', 1, 3, 4, 6, 7, 9, 10, ],
+    ['The Kingdom of France ', '<:FlagRussia:852366012639739945>', 2, 3, 5, 7, 8, 9, 10 ],
+    ['The Habsburg Monarchy', '<:FlagHabsburg:852366013638639636>', 2, 3, 5, 6, 8, 9, 10],
+    ['The Tsardom of Russia', '<:FlagFrance:852366013243981885> ' , 1, 3, 4, 6, 7, 9, 11],
+    ['The Kingdom of Scotland', '<:FlagScotland:852366013621207040>',1, 4, 6, 7, 8, 10],
+    ['The Kingdom of Sweden','<:FlagSweden:852366014434770963>',  1, 2, 3, 5, 6, 7, 8 ]
+    ['Habsburg Mining Expedition', '<:FlagHabsburg:852366013638639636>:pick:', 2, 3, 5, 6, 8, 9, 10]
 ];
 
 var habsburgmining ={
     title: "habsburg_mining",
     name: 'Habsburg Mining Expedition',
-    emote: '<:FlagHabsburg:742194656556744814>:pick:',
+    emote: '<:FlagHabsburg:852366013638639636>:pick:',
     difficulty: [2, 3, 5, 6, 8, 9, 10],
     panel: "https://i.imgur.com/xzXF6vu.png",
-    alias: ['<:FlagHabsburg:742194656556744814>:pick:', ':pick:', "hme", 'saltburg', 'mining-expedition', 'mining']    
+    alias: ['<:FlagHabsburg:852366013638639636>:pick:', ':pick:', "hme", 'saltburg', 'mining-expedition', 'mining']    
 }
 
 var prussia ={
     title: "prussia",
     name: 'The Kingdom of Brandenburg-Prussia',
-    emote: '<:FlagPrussia:742198907332853831>',
+    emote: '<:FlagBrandenburgPrussia:852366012846309406>',
     difficulty: [ 1, 2, 4, 6, 7, 9, 10 ],
     panel: "https://imgur.com/KdyfP3C",
-    alias: ["<:FlagPrussia:742198907332853831>"]    
+    alias: ["<:FlagBrandenburgPrussia:852366012846309406>", "bp"]    
 }
 
 var england ={
     title: "england",
     name: 'The Kingdom of England',
-    emote: '<:FlagEngland:742199440126771250>', 
+    emote: '<:FlagEngland:852366012175482900>', 
     difficulty: [ 1, 3, 4, 6, 7, 9, 10],
     panel: "https://imgur.com/c5KzcIq",
-    alias: ["<:FlagEngland:742199440126771250>"]   
+    alias: ["<:FlagEngland:852366012175482900>", "🏴󠁧󠁢󠁥󠁮󠁧󠁿"]   
 }
 
 var france ={
     title: "france",
     name: 'The Kingdom of France',
-    emote: '<:FlagFrance:742199211340070955>', 
+    emote: '<:FlagFrance:852366013243981885>', 
     difficulty: [ 2, 3, 5, 7, 8, 9, 10],
     panel: "https://imgur.com/S8lL3cA"  ,
-    alias: ['<:FlagFrance:742199211340070955>'],   
+    alias: ['<:FlagFrance:852366013243981885>', '🇫🇷'],   
 }
 
 var habsburg ={
     title: "habsburg_livestock",
     name: 'The Habsburg Monarchy',
-    emote: '<:FlagHabsburg:742194656556744814>',
+    emote: '<:FlagHabsburg:852366013638639636>',
     difficulty: [2, 3, 5, 6, 8, 9, 10],
     panel: "https://imgur.com/GtptfDJ",
-    alias: ['<:FlagHabsburg:742194656556744814>', '🐮', 'monarchy', "hlc", 'cowburg', "livestock-colony", 'livestock']    
+    alias: ['<:FlagHabsburg:852366013638639636>', '🐮', 'monarchy', "hlc", 'cowburg', "livestock-colony", 'livestock', 'habsburger']    
 }
 
 var habsburgmining ={
     title: "habsburg_mining",
     name: 'Habsburg Mining Expedition',
-    emote: '<:FlagHabsburg:742194656556744814>:pick:',
+    emote: '<:FlagHabsburg:852366013638639636>:pick:',
     difficulty: [2, 3, 5, 6, 8, 9, 10],
     panel: "https://i.imgur.com/xzXF6vu.png",
-    alias: ['<:FlagHabsburg:742194656556744814>:pick:', '🧂', '⛏️', "hme", 'saltburg', 'mining-expedition', 'mining']    
+    alias: ['<:FlagHabsburg:852366013638639636>:pick:', '🧂', '⛏️', "hme", 'saltburg', 'salzburg', 'mining-expedition', 'mining']    
 }
 
 var russia ={
     title: "russia",
     name: 'The Tsardom of Russia',
-    emote: '<:FlagRussia:742201076362641408>', 
+    emote: '<:FlagRussia:852366012639739945>', 
     difficulty: [1, 3, 4, 6, 7, 9, 11],
     panel: "https://imgur.com/n16FmcP",
-    alias: ['<:FlagRussia:742201076362641408>']  
+    alias: ['<:FlagRussia:852366012639739945>','🇷🇺']  
 }
 
 var scotland ={
     title: "scotland",
     name: 'The Kingdom of Scotland',
-    emote: '<:FlagScotland:742201184164773891>', 
+    emote: '<:FlagScotland:852366013621207040>', 
     difficulty: [1, 4, 6, 7, 8, 10],
     panel: "https://imgur.com/A5HccZx",
-    alias: ['<:FlagScotland:742201184164773891>']    
+    alias: ['<:FlagScotland:852366013621207040>', '🏴󠁧󠁢󠁳󠁣󠁴󠁿']    
 }
 
 var sweden ={
     title: "sweden",
     name: 'The Kingdom of Sweden',
-    emote: '<:FlagSweden:742194408325382174>', 
+    emote: '<:FlagSweden:852366014434770963>', 
     difficulty: [1, 2, 3, 5, 6, 7, 8],
     panel: "https://imgur.com/D6ZeLOV",
-    alias: ['<:FlagSweden:742194408325382174>']    
+    alias: ['<:FlagSweden:852366014434770963>', '🇸🇪']    
 }
 
 let ad = new Discord.Collection;
