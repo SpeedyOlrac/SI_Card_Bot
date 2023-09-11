@@ -80,13 +80,13 @@ var panel = [
 ];
 
 var adversary = [
-    ['The Kingdom of Brandenburg-Prussia', '<:FlagPrussia:742198907332853831>', 1, 2, 4, 6, 7, 9, 10  ],
-    ['The Kingdom of England', '<:FlagEngland:742199440126771250>', 1, 3, 4, 6, 7, 9, 10, ],
-    ['The Kingdom of France ', '<:FlagRussia:742201076362641408>', 2, 3, 5, 7, 8, 9, 10 ],
-    ['The Habsburg Monarchy', '<:FlagHabsburg:742194656556744814>', 2, 3, 5, 6, 8, 9, 10],
-    ['The Tsardom of Russia', '<:FlagFrance:742199211340070955> ' , 1, 3, 4, 6, 7, 9, 11],
-    ['The Kingdom of Scotland', '<:FlagScotland:742201184164773891>',1, 4, 6, 7, 8, 10],
-    ['The kingdom of Sweden','<:FlagSweden:742194408325382174>',  1, 2, 3, 5, 6, 7, 8 ]
+    ['The Kingdom of Brandenburg-Prussia', '<:FlagBrandenburgPrussia:852366012846309406>', 1, 2, 4, 6, 7, 9, 10  ],
+    ['The Kingdom of England', '<:FlagEngland:852366012175482900>', 1, 3, 4, 6, 7, 9, 10, ],
+    ['The Kingdom of France ', '<:FlagRussia:852366012639739945>', 2, 3, 5, 7, 8, 9, 10 ],
+    ['The Habsburg Monarchy', '<:FlagHabsburg:852366013638639636>', 2, 3, 5, 6, 8, 9, 10],
+    ['The Tsardom of Russia', '<:FlagFrance:852366013243981885> ' , 1, 3, 4, 6, 7, 9, 11],
+    ['The Kingdom of Scotland', '<:FlagScotland:852366013621207040>',1, 4, 6, 7, 8, 10],
+    ['The kingdom of Sweden','<:FlagSweden:852366014434770963>',  1, 2, 3, 5, 6, 7, 8 ]
 
 ];
 
