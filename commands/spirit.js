@@ -29,9 +29,10 @@ module.exports = {
         const searchString = args.join(" ").toLowerCase();
 
         // stops people searching for small strings that could return all the spirits
-        if (searchString.length < 3){
-            return await msg.channel.send("Please provide at least 3 letters to query with.");
-        }
+        // TODO: get this safety check to work while not breaking emoji name support
+        // if (searchString.length < 3){
+        //     return await msg.channel.send("Please provide at least 3 letters to query with.");
+        // }
 
         let foundSpirits = [];
         
