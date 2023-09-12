@@ -37,7 +37,7 @@ var fangs = [
     {name:"Unconstrained", emote:"", panel:["https://i.imgur.com/xcWtW6D.png"]}
 ];
 
-var bodan = [
+var bringer = [
     {name:"Enticing", emote: "", panel:["https://i.imgur.com/EdgkVJ6.png"]},
     {name:"Violence", emote: "", panel:["https://i.imgur.com/mm85SO0.png"]}
 ];
@@ -61,7 +61,7 @@ var green = [
 ];
 
 var keeper = [
-    {name:"SpreadingHostility", emote:"", panel:["https://i.imgur.com/cBY9Hmb.png"]}
+    {name:"Spreading Hostility", emote:"", panel:["https://i.imgur.com/cBY9Hmb.png"]}
 ];
 
 var mists = [
@@ -74,11 +74,11 @@ var thunderspeaker = [
 ];
 
 var wildfire = [
-    {name:"Transforming", emote:"", panel:["https://i.imgur.com/rbmRVHp.png"]}
+    {name:"Transforming", emote:"🏳️‍⚧️", panel:["https://i.imgur.com/rbmRVHp.png"]}
 ];
 
-var spirits = ['Lightning', 'River', 'Shadows', 'Earth', 'Ocean', 'Fangs', 'BoDaN', 'Memory', 'Lure', 'Serpent', 'Green', 'Keeper', 'Mists', 'Thunderspeaker', 'Wildfire'];
-var aspects = [lightning, rivers, shadows, earth, ocean, fangs, bodan, memory, lure, serpent, green, keeper, mists, thunderspeaker, wildfire];
+var spirits = ['Lightning', 'River', 'Shadows', 'Earth', 'Ocean', 'Fangs', 'Bringer', 'Memory', 'Lure', 'Serpent', 'Green', 'Keeper', 'Mists', 'Thunderspeaker', 'Wildfire'];
+var aspects = [lightning, rivers, shadows, earth, ocean, fangs, bringer, memory, lure, serpent, green, keeper, mists, thunderspeaker, wildfire];
 var aspectsNames = []
 
 for (var a = 0; a < aspects.length; a++){

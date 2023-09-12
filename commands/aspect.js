@@ -10,7 +10,6 @@ module.exports = {
 	
 		var message = "";
 
-		//if spirit is blank
 		if(args.length == 0){
 			message = "Currently, the following spirits have aspects: \n"
 			for (var s = 0; s < spirits.length; s++){
@@ -19,35 +18,42 @@ module.exports = {
 			}
 		}
 
-		//if first args is a Aspect
 		else if(args.length == 1){
-			//first args is an aspect
+			// check if argument is a valid aspect
 			temp = args[0].toLowerCase();
 			var found = false;
 
 			for (var a = 0; a < aspectsNames.length; a++ ){
-				console.log(aspectsNames[a].localeCompare(temp));
 				if (aspectsNames[a].localeCompare(temp) == 0){
 					var aspect = findAspect(temp);
-					//console.log(aspect);
 					message = aspect.panel;
 					found = true;
 				}
 			}
 
+			// if not a valid aspect, check for the closest spirit name and return their aspects
 			if(!found) {
-				//First args is not an aspect
 				var spirit = getCardName(args[0], spirits);
 				var s = findSpirit(spirit);
-				message = spirit + " has the following aspects: \n";
-				message = listAspect(message, parseInt(s));   
+				// if that spirit only has one aspect, send the panels
+				if (aspects[s].length == 1){
+					message = aspects[s][0].panel;
+				}
+				// otherwise, list them
+				else{
+					message = spirit + " has the following aspects: \n";
+					message = listAspect(message, parseInt(s));  
+				} 
 			}
 		}
+		else{
+			// if the last argument is a number, pop it and use it to query for a specific aspect card
+			if (!isNaN(args[args.length - 1])){
+				var numAspectCard = parseInt(args.pop());
+			}
 
-		else if(args.length == 2){
-			let numAspectCard = parseInt(args[1]);
-			console.log(numAspectCard);
-			temp = args[0].toLowerCase();
+			// then, concat the remaining arguments and search for an aspect with that name
+			temp = args.join(' ').toLowerCase();
 			// check if the FIRST argument is an aspect
 			aspect = findAspect(temp);
 			if (aspect){
@@ -72,24 +78,15 @@ module.exports = {
 				message = "Aspect could not be found";
 			}
 		}
-		//Correcting name of spirit
-		else{	
-			var temp = searchSpiritAspect(args[1], args[0]);
-
-			if (temp ==  null){
-				console.log(temp);
-				message = "Aspect could not be found";
-			}
-			else{
-				message = temp.panel;
-			}
-		}
-
-		console.log(message);		
 		msg.channel.send(message);
 }};
 
-//Functions
+/**
+ * Returns a string list of all aspects for a given spirit
+ * @param {*} message 
+ * @param {*} s -> spirit object to list aspects for
+ * @returns 
+ */
 function listAspect(message, s){
 	console.log(aspects[s]);
 	for (var a = 0; a < aspects[parseInt(s)].length; a++){
@@ -104,14 +101,26 @@ function listAspect(message, s){
 	return message;
 }
 
+/**
+ * Returns the index for a given spirit in the list of spirits with aspects, or null if there is no spirit
+ * @param {*} target 
+ * @returns 
+ */
 function findSpirit(target){
 	for (var s = 0; s < spirits.length; s++){
 		if(target == spirits[s]){
 			return s;
 		}
 	}
+	return null;
 }
 
+/**
+ * Returns the aspect object for a given title or null if none are found
+ * @param {*} target -> name of aspect to query for
+ * @param {*} aspectList -> list of objects to iterate through
+ * @returns 
+ */
 function findAspect(target, aspectList = aspects){
 
 	console.log("FindAspect: " + target);
@@ -128,6 +137,12 @@ function findAspect(target, aspectList = aspects){
 	return null
 }
 
+/**
+ * Finds the closest spirit to the input string and returns the aspect closest to the aspect search string for that spirit
+ * @param {*} aspect -> string of aspect to find
+ * @param {*} spirit -> string of spirit to find
+ * @returns 
+ */
 function searchSpiritAspect(aspect, spirit){
 	var aspectList = []
 	spirit = getCardName(spirit, spirits);

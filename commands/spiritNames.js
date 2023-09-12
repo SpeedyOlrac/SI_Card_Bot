@@ -382,7 +382,7 @@ var Green = {
        name: "Relentless Gaze of the Sun",
        emote: "<:SpiritRelentlessGaze:1135936712934183042>",
        panel: ['https://imgur.com/vb7nHtJ', 'https://imgur.com/N7WIyDi'],
-       complexity : 'high',
+       complexity : 3,
        title: 'Relentless',
        uniques: ['blinding_glare', 'focus_the_suns_rays', 'unbearable_gaze','wither_bodies_scar_stones'],
        aliases: ['gaze','🏳️‍🌈'],
