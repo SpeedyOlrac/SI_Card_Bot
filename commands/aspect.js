@@ -35,8 +35,15 @@ module.exports = {
 			if(!found) {
 				var spirit = getCardName(args[0], spirits);
 				var s = findSpirit(spirit);
-				message = spirit + " has the following aspects: \n";
-				message = listAspect(message, parseInt(s));   
+				// if that spirit only has one aspect, send the panels
+				if (aspects[s].length == 1){
+					message = aspects[s][0].panel;
+				}
+				// otherwise, list them
+				else{
+					message = spirit + " has the following aspects: \n";
+					message = listAspect(message, parseInt(s));  
+				} 
 			}
 		}
 		else{
@@ -71,8 +78,6 @@ module.exports = {
 				message = "Aspect could not be found";
 			}
 		}
-
-		console.log(message);		
 		msg.channel.send(message);
 }};
 
@@ -96,7 +101,11 @@ function listAspect(message, s){
 	return message;
 }
 
-
+/**
+ * Returns the index for a given spirit in the list of spirits with aspects, or null if there is no spirit
+ * @param {*} target 
+ * @returns 
+ */
 function findSpirit(target){
 	for (var s = 0; s < spirits.length; s++){
 		if(target == spirits[s]){
@@ -106,6 +115,12 @@ function findSpirit(target){
 	return null;
 }
 
+/**
+ * Returns the aspect object for a given title or null if none are found
+ * @param {*} target -> name of aspect to query for
+ * @param {*} aspectList -> list of objects to iterate through
+ * @returns 
+ */
 function findAspect(target, aspectList = aspects){
 
 	console.log("FindAspect: " + target);
@@ -122,6 +137,12 @@ function findAspect(target, aspectList = aspects){
 	return null
 }
 
+/**
+ * Finds the closest spirit to the input string and returns the aspect closest to the aspect search string for that spirit
+ * @param {*} aspect -> string of aspect to find
+ * @param {*} spirit -> string of spirit to find
+ * @returns 
+ */
 function searchSpiritAspect(aspect, spirit){
 	var aspectList = []
 	spirit = getCardName(spirit, spirits);
