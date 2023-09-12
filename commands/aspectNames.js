@@ -19,7 +19,7 @@ var shadows = [
     {name: "Reach", spirit: 'Shadows Flicker Like Flame', emote: "<:IArrowRange:>778709531311996948", panel:["https://i.imgur.com/1oIYl5s.jpg"]},
     {name: "Foreboding", spirit: 'Shadows Flicker Like Flame', emote: "", panel:["https://i.imgur.com/iUUnawK.jpg"]},
     {name: "Amorphous", spirit: 'Shadows Flicker Like Flame', emote: "", panel:["https://i.imgur.com/VIZa5cI.jpg"]},
-    {name: "DarkFire", spirit: 'Shadows Flicker Like Flame', emote: "", panel:["https://imgur.com/0xBcref.png"]}
+    {name: "Dark Fire", spirit: 'Shadows Flicker Like Flame', emote: "", panel:["https://imgur.com/0xBcref.png"]}
 ];
 
 var earth = [
