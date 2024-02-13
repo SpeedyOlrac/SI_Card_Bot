@@ -12,6 +12,7 @@ Bot Commands
 - -major [card name]
 - -unique [card name]
 - -blight [card name]
+- -board [board letter/name]
 - -event [event name]
 - -fear [fear name]
 - -faqs (search words)
