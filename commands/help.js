@@ -6,6 +6,7 @@ var help = "List of commands: \
 	\n -major [card name] \
 	\n -unique [card name] \
 	\n -blight [card name] \
+	\n -board [board letter/name] \
 	\n -event [event name] \
 	\n -fear [fear name] \
 	\n -faqs (search words) \
