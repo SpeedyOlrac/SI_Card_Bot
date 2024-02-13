@@ -24,7 +24,6 @@ module.exports = {
 
 function searchBoards(b)
 {
-
     switch (b){
         case "a":
         case "A":
@@ -55,14 +54,22 @@ function searchBoards(b)
         case "F":
             return "https://spiritislandwiki.com/images/0/0b/Piece_je_board_f.png";
     break;
+
+        case "g":
+        case "G":
+            return "https://spiritislandwiki.com/images/d/d4/Piece_horizons_board_g.png";
+
+    break;
+        case "h":
+        case "H":
+            return "https://spiritislandwiki.com/images/4/4a/Piece_horizons_board_h.png";
     
-    //Themtic boards
+    //Thematic boards
         case "NE":
         case "ne":
             return "https://spiritislandwiki.com/images/f/f9/Piece_core_board_north_east.png";
     break;
-    
-    case "NW":
+        case "NW":
         case "nw":
             return "https://spiritislandwiki.com/index.php?title=File:Piece_core_board_east.png";
     break;
@@ -81,12 +88,11 @@ function searchBoards(b)
         case "se":
             return "https://spiritislandwiki.com/images/c/cc/Piece_je_board_south_east.png";
     break;
-    
         case "SW":
         case "sw":
             return "https://spiritislandwiki.com/images/6/64/Piece_je_board_south_west.png";
     break;
     default:
-       return "Type the board name. -board [a,b,c,d,e,f,NE, NW, East, West, SE,SW]."; 
+       return "Type the board name. -board [a, b, c, d, e, f, g, h, NE, NW, East, West, SE, SW]."; 
     }
 }
