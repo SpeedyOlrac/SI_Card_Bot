@@ -29,11 +29,17 @@ for (const file of commandFiles) {
 
 bot.once('ready', async() => {
     console.log('This bot is online');
-
-   
-        console.log(bot.commands.get("spirit").name);
-   
-   
+ 
+    // Set bot's presence
+    bot.user.setPresence({
+        status: 'online',
+        activity: {
+            name: 'for -help', // e.g., 'playing Spirit Island'
+            type: 'WATCHING' // You can also use 'STREAMING', 'LISTENING', or 'WATCHING'
+        }
+    });
+ 
+    console.log(bot.commands.get("spirit").name);
 
 });
 
