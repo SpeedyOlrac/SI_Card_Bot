@@ -7,13 +7,33 @@
     Version 2.8.2 role bot  
 */
 
-
-
 require('dotenv').config(); 
 const fs = require('fs');
 const Discord = require('discord.js');
-const { Client, Collection } = require('discord.js');
-const bot = new Client();
+
+const { Client, Collection, GatewayIntentBits, Intents} = require('discord.js');
+//const allIntents = new Intents(7796);
+
+//const allIntents = new Intents({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+
+//const bot = new Client({ intents: allIntents });
+
+//const intents = new Intents(342016);
+//const bot = new Discord.Client({ intents });
+
+//const bot = new Client({ intents: 342016 }); // Correct usage
+
+const bot = new Client({
+	intents: [
+		GatewayIntentBits.Guilds,
+		GatewayIntentBits.GuildMessages,
+		GatewayIntentBits.MessageContent,
+		GatewayIntentBits.GuildMembers,
+	],
+});/**/
+
+//const { Client, Collection} = require('discord.js');
+//const bot = new Client();
 const PREFIX = "-";
 
 bot.commands = new Collection();
