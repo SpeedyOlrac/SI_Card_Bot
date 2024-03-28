@@ -6,6 +6,7 @@ Discord App for Spirit island
 ### How to run the bot - 
 
 - Clone this repo
+- Copy `.env.template` into `.env` and fill in the variables 
 - `npm install` to install all pre-requisites
 - `npm start` to run the bot
 
