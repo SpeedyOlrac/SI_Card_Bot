@@ -11,18 +11,7 @@ require('dotenv').config();
 const fs = require('fs');
 const Discord = require('discord.js');
 
-const { Client, Collection, GatewayIntentBits, Intents} = require('discord.js');
-//const allIntents = new Intents(7796);
-
-//const allIntents = new Intents({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
-
-//const bot = new Client({ intents: allIntents });
-
-//const intents = new Intents(342016);
-//const bot = new Discord.Client({ intents });
-
-//const bot = new Client({ intents: 342016 }); // Correct usage
-
+const { Client, Collection, GatewayIntentBits, Intents, ActivityType} = require('discord.js');
 const bot = new Client({
 	intents: [
 		GatewayIntentBits.Guilds,
@@ -30,10 +19,8 @@ const bot = new Client({
 		GatewayIntentBits.MessageContent,
 		GatewayIntentBits.GuildMembers,
 	],
-});/**/
+});
 
-//const { Client, Collection} = require('discord.js');
-//const bot = new Client();
 const PREFIX = "-";
 
 bot.commands = new Collection();
@@ -52,18 +39,15 @@ bot.once('ready', async() => {
  
     // Set bot's presence
     bot.user.setPresence({
-        status: 'online',
-        activity: {
-            name: 'for -help', // e.g., 'playing Spirit Island'
-            type: 'WATCHING' // You can also use 'STREAMING', 'LISTENING', or 'WATCHING'
-        }
-    });
- 
+        activities: [{ name: `for -help`, type: ActivityType.Watching }],
+        status: 'for -help',
+      });
+
     console.log(bot.commands.get("spirit").name);
 
 });
 
-bot.on('message', async msg => {
+bot.on('messageCreate', async msg => {
 
     if (!msg.content.startsWith(PREFIX)) return;
 

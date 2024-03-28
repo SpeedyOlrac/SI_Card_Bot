@@ -11,9 +11,9 @@ var help = "See [Github link](<https://github.com/SpeedyOlrac/SI_Card_Bot>) for 
 	\n -event [event name] \
 	\n -fear [fear name] \
 	\n -faqs (search words) \
-	\n -random [spirit] (max complexity (low/moderate/high/vhc)) \
-	\n -random [adversary] (min difficulty) (max difficulty) \
-	\n -random [scenario] \
+	\n -random spirit (max complexity (low/moderate/high/vhc)) \
+	\n -random adversary (min difficulty) (max difficulty) \
+	\n -random scenario \
 	\n -spirit (front/back) [keywords] \
 	\n -adversary (name) \
 	\n -aspect (spirit or aspect) [aspect keywords] [number of card (i.e. Locus part 1/2)] \
