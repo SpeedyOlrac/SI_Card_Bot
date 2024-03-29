@@ -1,10 +1,16 @@
 # SI_Card_Bot
 Discord App for Spirit island
 
-Invite code: https://discord.com/api/oauth2/authorize?client_id=722800660302528533&permissions=342016&scope=bot
+**Invite code**: https://discord.com/api/oauth2/authorize?client_id=722800660302528533&permissions=342016&scope=bot
 
+### How to run the bot - 
 
-Bot Commands 
+- Clone this repo
+- Copy `.env.template` into `.env` and fill in the variables 
+- `npm install` to install all pre-requisites
+- `npm start` to run the bot
+
+### Bot Commands 
 - -search [search words]
 - -draw [card type] [amount (<=10)]
 - -power [card name]
@@ -16,9 +22,9 @@ Bot Commands
 - -event [event name]
 - -fear [fear name]
 - -faqs (search words)
-- -random [spirit] (max complexity (low/moderate/high/vhc))
-- -random [adversary] (min difficulty) (max difficulty)
-- -random [scenario]
+- -random spirit (max complexity (low/moderate/high/vhc))
+- -random adversary (min difficulty) (max difficulty)
+- -random scenario
 - -spirit (front/back) [keywords]
 - -adversary (name)
 - -aspect (spirit or aspect) [aspect keywords] [number of card (i.e. Locus part 1/2)]
@@ -26,11 +32,7 @@ Bot Commands
 - -incarna [keyword] (front/back)
 - -scenario (front/back) [keywords]
  
- 
- 
-
-
-TODO
+### TODO
 - Implement levenshtein to all card search
 - Make a reaction bot.
 - clean up code a bit.

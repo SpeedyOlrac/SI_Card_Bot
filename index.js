@@ -7,13 +7,20 @@
     Version 2.8.2 role bot  
 */
 
-
-
 require('dotenv').config(); 
 const fs = require('fs');
 const Discord = require('discord.js');
-const { Client, Collection } = require('discord.js');
-const bot = new Client();
+
+const { Client, Collection, GatewayIntentBits, Intents, ActivityType} = require('discord.js');
+const bot = new Client({
+	intents: [
+		GatewayIntentBits.Guilds,
+		GatewayIntentBits.GuildMessages,
+		GatewayIntentBits.MessageContent,
+		GatewayIntentBits.GuildMembers,
+	],
+});
+
 const PREFIX = "-";
 
 bot.commands = new Collection();
@@ -29,15 +36,18 @@ for (const file of commandFiles) {
 
 bot.once('ready', async() => {
     console.log('This bot is online');
+ 
+    // Set bot's presence
+    bot.user.setPresence({
+        activities: [{ name: `for -help`, type: ActivityType.Watching }],
+        status: 'for -help',
+      });
 
-   
-        console.log(bot.commands.get("spirit").name);
-   
-   
+    console.log(bot.commands.get("spirit").name);
 
 });
 
-bot.on('message', async msg => {
+bot.on('messageCreate', async msg => {
 
     if (!msg.content.startsWith(PREFIX)) return;
 
