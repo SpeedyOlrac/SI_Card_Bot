@@ -79,7 +79,6 @@ module.exports = {
 			}
 		}
 
-		//console.log(messages);
 		if(Array.isArray(messages))
 		{	
 			for (const message_ind of messages) {
