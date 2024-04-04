@@ -20,6 +20,7 @@ var help = "See [Github link](<https://github.com/SpeedyOlrac/SI_Card_Bot>) for 
 	\n -healing [keyword] \
 	\n -incarna [keyword] (front/back) \
 	\n -scenario (front/back) [keywords] \
+	\n -pin (to pin a message) \
 	```\
 	"
 
