@@ -1,5 +1,6 @@
 const { getCardName } = require('./sendCardLink.js');
 const { aspectsNames, spirits, aspects } = require('./aspectNames.js');
+const { DiscordAPIError } = require('discord.js');
 
 module.exports = {
 	name: 'aspect',
@@ -8,16 +9,15 @@ module.exports = {
 	execute(msg, args) {
 		console.log("aspect command");
 	
-		var message = "";
+		var messages = "";
 
 		if(args.length == 0){
-			message = "Currently, the following spirits have aspects: \n"
+			messages = "Currently, the following spirits have aspects: \n"
 			for (var s = 0; s < spirits.length; s++){
-				message += spirits[s] + ": "
-				message = listAspect(message, parseInt(s));
+				messages += spirits[s] + ": "
+				messages = listAspect(messages, parseInt(s));
 			}
 		}
-
 		else if(args.length == 1){
 			// check if argument is a valid aspect
 			temp = args[0].toLowerCase();
@@ -26,7 +26,7 @@ module.exports = {
 			for (var a = 0; a < aspectsNames.length; a++ ){
 				if (aspectsNames[a].localeCompare(temp) == 0){
 					var aspect = findAspect(temp);
-					message = aspect.panel;
+					messages = aspect.panel;
 					found = true;
 				}
 			}
@@ -37,12 +37,12 @@ module.exports = {
 				var s = findSpirit(spirit);
 				// if that spirit only has one aspect, send the panels
 				if (aspects[s].length == 1){
-					message = aspects[s][0].panel;
+					messages = aspects[s][0].panel;
 				}
 				// otherwise, list them
 				else{
-					message = spirit + " has the following aspects: \n";
-					message = listAspect(message, parseInt(s));  
+					messages = spirit + " has the following aspects: \n";
+					messages = listAspect(messages, parseInt(s));  
 				} 
 			}
 		}
@@ -60,45 +60,55 @@ module.exports = {
 				// if it is, check if it has >1 aspect card
 				if (aspect.panel.length == 1){
 					// if it doesn't, return the first aspect card
-					message = aspect.panel[0];
+					messages = aspect.panel[0];
 				}
 				// if it does, return that chosen aspect card
 				else{
 					// sanitising input
 					if (numAspectCard == NaN || numAspectCard > aspect.panel.length || numAspectCard < 1){
-						message = aspect.panel[0];
+						messages = aspect.panel[0];
 					}
 					else{
-						message = aspect.panel[numAspectCard - 1];
+						messages = aspect.panel[numAspectCard - 1];
 					}
 				}
 			}
-			// otherwise, message saying that this aspect does not exist
+			// otherwise, messages saying that this aspect does not exist
 			else{
-				message = "Aspect could not be found";
+				messages = "Aspect could not be found";
 			}
 		}
-		msg.channel.send(message);
+
+		if(Array.isArray(messages))
+		{	
+			for (const message_ind of messages) {
+				msg.channel.send(message_ind);
+			}
+		}
+		else
+		{
+			msg.channel.send(messages);
+		}
 }};
 
 /**
  * Returns a string list of all aspects for a given spirit
- * @param {*} message 
+ * @param {*} messages 
  * @param {*} s -> spirit object to list aspects for
  * @returns 
  */
-function listAspect(message, s){
+function listAspect(messages, s){
 	console.log(aspects[s]);
 	for (var a = 0; a < aspects[parseInt(s)].length; a++){
-		message += aspects[s][a].name;
+		messages += aspects[s][a].name;
 		if(a < aspects[s].length-1){
-			message += ", "; 
+			messages += ", "; 
 		}
 		else{
-			message += "\n"
+			messages += "\n"
 		}
 	}
-	return message;
+	return messages;
 }
 
 /**
