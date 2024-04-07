@@ -29,7 +29,6 @@ module.exports = {
                 }
 
                 result = draw.getRandomDraws(drawnType, 1);
-                console.log(drawnType, ImageNames[drawnType]);
                 await s.sendCardLink(msg, result, ImageNames[drawnType], `https://sick.oberien.de/imgs/${urlStub}/`);
             }
             else{
