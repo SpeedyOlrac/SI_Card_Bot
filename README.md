@@ -13,7 +13,7 @@ Discord App for Spirit island
 ### Bot Commands 
 - -search [search words]
 - -draw [card type] [amount (<=10)]
-- -draw [card type]\
+- -take [card type]\
 - -power [card name]
 - -minor [card name]
 - -major [card name]
