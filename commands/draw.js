@@ -1,17 +1,15 @@
 // can be used as template
 //save as command as commandName.js
 const cards = require ("./ImageNames.js");
-const card = require ("./card.js");
-
 
 module.exports = {
 	name: 'draw',
-	description: 'draw up to 10 random cards',
+	description: 'Draw up to 10 random cards. For only taking a single card, use -take instead.',
 	public: true, //has to be true to show as a command
 	async execute(msg, args) {
         try {
             if (args.length < 1){
-                throw new Error('Please specify a type of card to draw (minor, major, fear or event) (defaults to 4 cards drawn).');
+                throw new Error('Please specify a type of card to draw (minor, major, fear or event) (defaults to 4 cards drawn). For only taking a single card, use -take instead.');
             }
             drawnType = args[0].toLowerCase();
             if (args.length > 1){
@@ -40,7 +38,7 @@ function getRandomDraws(drawnType, drawAmount = 4){
     if (drawnType == null){
         throw new Error('Please specify a type of card to draw (minor, major, fear or event).');
     }
-    if (drawAmount == null || !(Number.isInteger(drawAmount)) || drawAmount < 0){
+    if (drawAmount == null || !(Number.isInteger(drawAmount)) || drawAmount < 1 || drawAmount > 10){
         throw new Error('Please specify a positive integer of cards to draw between 1 and 10.');
     }
 
@@ -51,13 +49,21 @@ function getRandomDraws(drawnType, drawAmount = 4){
 
     if (drawableCards.includes(drawnType)){
         list = capitalizeTheFirstLetterOfEachWord(sampleFromArray(cards[drawnType], drawAmount));
+        console.log(list);
         if(Array.isArray(list))
         {
-            var message = "";
-            for (const message_ind of list){
-                message += "* " + message_ind + "\n";
+            // if there is more than one card drawn, return the formatted message
+            if (list.length > 1){
+                var message = "";
+                for (const message_ind of list){
+                    message += "* " + message_ind + "\n";
+                }
+                return message;
             }
-            return message;
+            // otherwise, just return the first result
+            else{
+                return list[0];
+            }
         }
         else{
             return list;
