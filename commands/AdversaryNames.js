@@ -8,16 +8,16 @@ var adversary = [
     ['The Tsardom of Russia', '<:FlagFrance:852366013243981885> ' , 1, 3, 4, 6, 7, 9, 11],
     ['The Kingdom of Scotland', '<:FlagScotland:852366013621207040>',1, 4, 6, 7, 8, 10],
     ['The Kingdom of Sweden','<:FlagSweden:852366014434770963>',  1, 2, 3, 5, 6, 7, 8 ]
-    ['Habsburg Mining Expedition', '<:FlagHabsburg:852366013638639636>:pick:', 2, 3, 5, 6, 8, 9, 10]
+    ['Habsburg Mining Expedition', '<:FlagHabsburgMining:1181395803479212103>', 2, 3, 5, 6, 8, 9, 10]
 ];
 
 var habsburgmining ={
     title: "habsburg_mining",
     name: 'Habsburg Mining Expedition',
-    emote: '<:FlagHabsburg:852366013638639636>:pick:',
+    emote: '<:FlagHabsburgMining:1181395803479212103>',
     difficulty: [2, 3, 5, 6, 8, 9, 10],
     panel: "https://i.imgur.com/xzXF6vu.png",
-    alias: ['<:FlagHabsburg:852366013638639636>:pick:', ':pick:', "hme", 'saltburg', 'mining-expedition', 'mining']    
+    alias: ['<:FlagHabsburgMining:1181395803479212103>', ':pick:', "hme", 'saltburg', 'mining-expedition', 'mining']    
 }
 
 var prussia ={
@@ -54,15 +54,6 @@ var habsburg ={
     difficulty: [2, 3, 5, 6, 8, 9, 10],
     panel: "https://imgur.com/GtptfDJ",
     alias: ['<:FlagHabsburg:852366013638639636>', '🐮', 'monarchy', "hlc", 'cowburg', "livestock-colony", 'livestock', 'habsburger']    
-}
-
-var habsburgmining ={
-    title: "habsburg_mining",
-    name: 'Habsburg Mining Expedition',
-    emote: '<:FlagHabsburg:852366013638639636>:pick:',
-    difficulty: [2, 3, 5, 6, 8, 9, 10],
-    panel: "https://i.imgur.com/xzXF6vu.png",
-    alias: ['<:FlagHabsburg:852366013638639636>:pick:', '🧂', '⛏️', "hme", 'saltburg', 'salzburg', 'mining-expedition', 'mining']    
 }
 
 var russia ={
