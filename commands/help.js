@@ -2,7 +2,7 @@ var help = "See [Github link](<https://github.com/SpeedyOlrac/SI_Card_Bot>) for 
 	\n\nList of commands: \
 	``` -search [search words]\
 	\n -draw [card type] [amount (<=10)]\
-	\n -draw [card type]\
+	\n -take [card type]\
 	\n -power [card name] \
 	\n -minor [card name] \
 	\n -major [card name] \
