@@ -9,41 +9,63 @@ module.exports = {
 	description: 'draw up to 10 random cards',
 	public: true, //has to be true to show as a command
 	async execute(msg, args) {
-        if (args.length < 1){
-            return msg.channel.send('Please specify a type of card to draw (minor, major, fear or event).');
-        }
-
-        let drawnType = args[0].toLowerCase();
-        let drawableCards = ["minor", "major", "fear", "event"];
-
-        let list = [];
-        length = 0;
-        if (args.length == 2){
-            if (args[1] > 10){
-                return msg.channel.send("Can not draw more than 10 cards");
+        try {
+            if (args.length < 1){
+                throw new Error('Please specify a type of card to draw (minor, major, fear or event) (defaults to 4 cards drawn).');
             }
-        }
-
-        if (drawableCards.includes(drawnType)){
-            var drawAmount = (args.length == 2) ? parseInt(args[1]) : 4;
-            list = capitalizeTheFirstLetterOfEachWord(getRandom(cards[drawnType], drawAmount));
-            if(Array.isArray(list))
-            {
-                var message = "";
-                for (const message_ind of list){
-                    message += "* " + message_ind + "\n";
-                }
-                return msg.channel.send(message);
+            drawnType = args[0].toLowerCase();
+            if (args.length > 1){
+                drawAmount = parseInt(args[1]);
+                return msg.channel.send(getRandomDraws(drawnType, drawAmount));
             }
             else{
-                return msg.channel.send(list);
+                return msg.channel.send(getRandomDraws(drawnType));
             }
         }
-        else{
-            return msg.channel.send('Please specify a type of card to draw (minor, major, fear or event).');
+        catch (e){
+            console.log(e);
+            return msg.channel.send(e.toString());
         }
 	},
 };
+
+/**
+ * Sends a message containing a list of drawAmount cards of drawnType
+ * @param {*} drawnType 
+ * @param {*} drawAmount 
+ * @returns 
+ */
+function getRandomDraws(drawnType, drawAmount = 4){
+    if (drawnType == null){
+        throw new Error('Please specify a type of card to draw (minor, major, fear or event).');
+    }
+    if (drawAmount == null || !(Number.isInteger(drawAmount)) || drawAmount < 0){
+        throw new Error('Please specify a positive integer of cards to draw between 1 and 10.');
+    }
+
+    let drawableCards = ["minor", "major", "fear", "event"];
+
+    let list = [];
+    length = 0;
+
+    if (drawableCards.includes(drawnType)){
+        list = capitalizeTheFirstLetterOfEachWord(sampleFromArray(cards[drawnType], drawAmount));
+        if(Array.isArray(list))
+        {
+            var message = "";
+            for (const message_ind of list){
+                message += "* " + message_ind + "\n";
+            }
+            return message;
+        }
+        else{
+            return list;
+        }
+    }
+    else{
+        throw new Error('Please specify a type of card to draw (minor, major, fear or event) (defaults to 4 cards drawn).');
+    }
+}
 
 /**
  * returns an array of n samples from the input array
@@ -51,7 +73,7 @@ module.exports = {
  * @param {*} n -> number of samples returned
  * @returns 
  */
-function getRandom(arr, n) {
+function sampleFromArray(arr, n) {
     var result = new Array(n),
         len = arr.length,
         taken = new Array(len);
