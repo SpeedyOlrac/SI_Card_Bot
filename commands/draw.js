@@ -27,6 +27,7 @@ module.exports = {
             return msg.channel.send(e.toString());
         }
 	},
+    getRandomDraws,
 };
 
 /**
