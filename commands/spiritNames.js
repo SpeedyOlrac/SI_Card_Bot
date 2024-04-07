@@ -102,7 +102,7 @@ var Green = {
    
    var Trickster = {     
     name: 'Grinning Trickster Stirs Up Trouble', 
-    emote: '<:SpiritGrinningTricksterStirsTrou:852365959540899911>', 
+    emote: '<:SpiritGrinningTrickster:1182312575988416583>', 
     panel: ['https://imgur.com/D2geoaL', 'https://imgur.com/i6YLeWv'],      
     complexity: 2,
     title: 'Trickster',
@@ -291,7 +291,7 @@ var Green = {
    
    var Devouring = {
        name: "Devouring Teeth Lurk Underfoot",
-       emote: '<SpiritChompDevouringTeeth:1037129924877762601>',
+       emote: '<:SpiritChompDevouringTeeth:1037129924877762601>',
        panel: ["https://imgur.com/wHjhdPI", "https://imgur.com/eTvswqd"],
        complexity: 1,
        title: 'Devouring',
@@ -302,7 +302,7 @@ var Green = {
    
    var Eyes = {
        name: "Eyes Watch From The Trees",
-       emote: '<:SpiritEyesWatchTrees:1037130040053342378>',
+       emote: '<:SpiritEyesWatchTrees:1182821769711734834>',
        panel: ["https://imgur.com/zLFBZYe", "https://imgur.com/BCI4u81"],
        complexity: 1,
        title: 'Eyes',
