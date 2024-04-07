@@ -6,61 +6,52 @@ const card = require ("./card.js");
 
 module.exports = {
 	name: 'draw',
-	description: 'draw 4 random cards',
+	description: 'draw up to 10 random cards',
 	public: true, //has to be true to show as a command
 	async execute(msg, args) {
+        if (args.length < 1){
+            return msg.channel.send('Please specify a type of card to draw (minor, major, fear or event).');
+        }
+
+        let drawnType = args[0].toLowerCase();
+        let drawableCards = ["minor", "major", "fear", "event"];
 
         let list = [];
-        length =  0;
-        console.log(args);
+        length = 0;
         if (args.length == 2){
             if (args[1] > 10){
                 return msg.channel.send("Can not draw more than 10 cards");
             }
         }
 
-
-        switch(args[0]){
-            case 'minor':
-                console.log('cards.minor');
-
-                var num = (args.length == 2) ? args[1] : 4;
-                 console.log(num);
-                 list = getRandom(cards.minor, parseInt(num) );
-                 list = capitalizeTheFirstLetterOfEachWord(list);
-                 break;
-            case 'major':
-                console.log('cards.major');
-                var num = (args.length == 2) ? args[1] : 4;
-                list = getRandom(cards.major,  num );
-                list = capitalizeTheFirstLetterOfEachWord(list);
-                break;
-            case 'fear':
-                console.log('cards.fear');
-                var num = (args.length == 2) ? args[1] : 1;
-                list = getRandom(cards.fear, num );
-                list = capitalizeTheFirstLetterOfEachWord(list);
-                break;
-            case 'event':
-                console.log('cards.event');
-                var num = (args.length == 2) ? args[1] : 1;
-                list = getRandom(cards.event,  num);
-                list = capitalizeTheFirstLetterOfEachWord(list);
-                break;
-            default:
-                var message = "Draw a Minor, Major, Fear or Event card.";
-                list[0] = message;
-
+        if (drawableCards.includes(drawnType)){
+            var drawAmount = (args.length == 2) ? parseInt(args[1]) : 4;
+            list = capitalizeTheFirstLetterOfEachWord(getRandom(cards[drawnType], drawAmount));
+            if(Array.isArray(list))
+            {
+                var message = "";
+                for (const message_ind of list){
+                    message += "* " + message_ind + "\n";
+                }
+                return msg.channel.send(message);
+            }
+            else{
+                return msg.channel.send(list);
+            }
         }
-
-        console.log(list);
-		await msg.channel.send(list);
+        else{
+            return msg.channel.send('Please specify a type of card to draw (minor, major, fear or event).');
+        }
 	},
 };
 
-
+/**
+ * returns an array of n samples from the input array
+ * @param {*} arr -> array to randomly sample from
+ * @param {*} n -> number of samples returned
+ * @returns 
+ */
 function getRandom(arr, n) {
-    console.log(n) + " this is n";
     var result = new Array(n),
         len = arr.length,
         taken = new Array(len);
@@ -74,11 +65,14 @@ function getRandom(arr, n) {
     return result;
 }
 
-
+/**
+ * returns a capitalised version of the input string
+ * TODO: move this to a collection of other relevant string manipulation methods
+ * @param {*} list 
+ * @returns 
+ */
 function capitalizeTheFirstLetterOfEachWord(list) {
-
     for (var i = 0; i < list.length; i++){
-
         var separateWord = list[i].toLowerCase().split('_');
         for (var j = 0; j < separateWord.length; j++) {
             separateWord[j] = separateWord[j].charAt(0).toUpperCase() +
@@ -86,6 +80,5 @@ function capitalizeTheFirstLetterOfEachWord(list) {
         }
            list[i] = separateWord.join(' ');
     } 
-    
     return list;
 }
