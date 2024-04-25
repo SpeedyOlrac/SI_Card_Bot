@@ -123,7 +123,7 @@ module.exports = {
 function listAspect(messages, s){
 	console.log(aspects[s]);
 	for (var a = 0; a < aspects[parseInt(s)].length; a++){
-		messages += aspects[s][a].name;
+		messages += `${aspects[s][a].name} (${aspects[s][a].emote})`;
 		if(a < aspects[s].length-1){
 			messages += ", "; 
 		}
