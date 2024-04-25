@@ -7,6 +7,8 @@ module.exports = {
 	description: 'Lists all aspects for a given spirit or shows any cards for a given aspect.',
 	public: true, //has to be true to show as a command
 	execute(msg, args) {
+		// TODO: refactor this whole command to be a bit cleaner, the logic's tangled and could easily be
+		// extrapolated into separate function calls and add exception handling
 		console.log("aspect command");
 	
 		var messages = "";
@@ -20,19 +22,40 @@ module.exports = {
 		}
 		else if(args.length == 1){
 			// check if argument is a valid aspect
-			temp = args[0].toLowerCase();
+			aspectQuery = args[0];
 			var found = false;
 
-			for (var a = 0; a < aspectsNames.length; a++ ){
-				if (aspectsNames[a].localeCompare(temp) == 0){
-					var aspect = findAspect(temp);
-					messages = aspect.panel;
-					found = true;
+			// if the param contains any emoji OR starts with <, assume it's an emoji
+			if (/\p{Extended_Pictographic}/u.test(aspectQuery) || (aspectQuery.charAt(0) == '<')){
+				console.log(`emoji search ${aspectQuery}`);
+				for (var a = 0; a < aspects.length; a++ ){
+					const spiritAspectsCollection = aspects[a];
+					const emojiMatch = spiritAspectsCollection.filter(aspect => aspect.emote == aspectQuery);
+					if (emojiMatch.length != 0){
+						var aspect = emojiMatch[0];
+						console.log(aspect);
+						messages = aspect.panel;
+						found = true;
+					}
+				}
+			}
+			else{
+				// lowercase the string because emoji search is case sensitive, explicit name search shouldn't be
+				aspectQuery = aspectQuery.toLowerCase();
+				console.log("Doing aspect name search");
+				// otherwise, assume you're searching by aspect name
+				for (var a = 0; a < aspectsNames.length; a++ ){
+					if (aspectsNames[a].localeCompare(aspectQuery) == 0){
+						var aspect = findAspect(aspectQuery);
+						messages = aspect.panel;
+						found = true;
+					}
 				}
 			}
 
-			// if not a valid aspect, check for the closest spirit name and return their aspects
+			// if not a valid emoji or aspect, check for the closest spirit name and return their aspects
 			if(!found) {
+				console.log("Doing spirit name search");
 				var spirit = getCardName(args[0], spirits);
 				var s = findSpirit(spirit);
 				// if that spirit only has one aspect, send the panels
@@ -53,9 +76,9 @@ module.exports = {
 			}
 
 			// then, concat the remaining arguments and search for an aspect with that name
-			temp = args.join(' ').toLowerCase();
+			aspectQuery = args.join(' ').toLowerCase();
 			// check if the FIRST argument is an aspect
-			aspect = findAspect(temp);
+			aspect = findAspect(aspectQuery);
 			if (aspect){
 				// if it is, check if it has >1 aspect card
 				if (aspect.panel.length == 1){
@@ -100,7 +123,7 @@ module.exports = {
 function listAspect(messages, s){
 	console.log(aspects[s]);
 	for (var a = 0; a < aspects[parseInt(s)].length; a++){
-		messages += aspects[s][a].name;
+		messages += `${aspects[s][a].name} (${aspects[s][a].emote})`;
 		if(a < aspects[s].length-1){
 			messages += ", "; 
 		}
