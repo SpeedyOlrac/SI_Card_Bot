@@ -77,10 +77,16 @@ var wildfire = [
     {name:"Transforming", emote:"🏳️‍⚧️", panel:["https://i.imgur.com/rbmRVHp.png"]}
 ];
 
+// TODO: rework spirit short names to be consistent across commands/implement
+// spirit levenstein search across commands
 var spirits = ['Lightning', 'River', 'Shadows', 'Earth', 'Ocean', 'Fangs', 'Bringer', 'Memory', 'Lure', 'Serpent', 'Green', 'Keeper', 'Mists', 'Thunderspeaker', 'Wildfire'];
 var aspects = [lightning, rivers, shadows, earth, ocean, fangs, bringer, memory, lure, serpent, green, keeper, mists, thunderspeaker, wildfire];
-var aspectsNames = []
+var aspectsNames = [];
 
+// TODO: rework how this collection is accessed, would be nice to have a 
+// collection that you can filter by aspect name, spirit name or emoji
+// the whole data structure could do with rethinking and/or putting into a 
+// database realistically
 for (var a = 0; a < aspects.length; a++){
     for (var b = 0; b < aspects[a].length; b++){
         var temp = aspects[a][b].name 
