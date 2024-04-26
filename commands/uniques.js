@@ -21,11 +21,8 @@ module.exports = {
             // if levenshtein returns a single spirit, return that
             if (possibleSpirits.length === 1) {
                 const spirit = possibleSpirits[0];
-                
                 const spiritUniques = draw.capitalizeTheFirstLetterOfEachWord(spirit.uniques)
                 message = `${spirit.name} (${spirit.emote}) has the following uniques: \n`
-                console.log(spirit);
-                console.log(spirit.uniques);
                 for (var s = 0; s < spiritUniques.length; s++){
                     message += `* ${spiritUniques[s]} \n`;
                 }
@@ -33,11 +30,8 @@ module.exports = {
                 
             }
             else {
-                    throw new Error("Try again with a more specific string.");
+                throw new Error("Try again with a more specific string.");
             }
-            // assuming there IS a spirit that matches, then generates a markdown bulletpointed list of all the uniques
-            // formatted in card style
-
         }
         catch (e){
             console.log(e);

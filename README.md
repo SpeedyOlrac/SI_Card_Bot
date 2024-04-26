@@ -18,6 +18,7 @@ Discord App for Spirit island
 - -minor [card name]
 - -major [card name]
 - -unique [card name]
+- -uniques [spirit name] \
 - -blight [card name]
 - -board [board letter/name]
 - -event [event name]
@@ -35,7 +36,5 @@ Discord App for Spirit island
  
 ### TODO
 - Implement levenshtein to all card search
-- Make a reaction bot.
 - clean up code a bit.
 - Deleting -random message after 15 secs
-- getting async to work right

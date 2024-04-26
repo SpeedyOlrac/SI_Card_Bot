@@ -7,6 +7,7 @@ var help = "See [Github link](<https://github.com/SpeedyOlrac/SI_Card_Bot>) for 
 	\n -minor [card name] \
 	\n -major [card name] \
 	\n -unique [card name] \
+	\n -uniques [spirit name] \
 	\n -blight [card name] \
 	\n -board [board letter/name] \
 	\n -event [event name] \
