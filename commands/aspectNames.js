@@ -2,7 +2,7 @@ const { Message } = require('discord.js');
 const { getCardName } = require('./sendCardLink.js');
 
 var lightning =  [ 
-    {name: "Pandemonium", emote: "�", panel:["https://i.imgur.com/1774mnW.jpg"]},
+    {name: "Pandemonium", emote: "🐼", panel:["https://i.imgur.com/1774mnW.jpg"]},
     {name: "Wind", emote: "<:EAir:852604219210727434>", panel:["https://i.imgur.com/VwchE5U.jpg"]},
     {name: "Immense", emote: "<:MajorPower:852589108164821031>", panel:["https://i.imgur.com/YhXRPZK.jpg"]},
     {name: "Sparking", emote: "✨", panel:["https://i.imgur.com/4jyHApi.png", "https://i.imgur.com/SGlXMGB.png"]}
