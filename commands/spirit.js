@@ -10,9 +10,9 @@ module.exports = {
 	async execute(msg, args) {
         try{
             if (args.length < 1) {
-                return await msg.channel.send("Please provide at least 3 letters to query with.");
+                throw new Error("Please provide at least 3 letters to query with.");
             }
-    
+
             // Handle result-modifying args
             const mods = {
                 'front': false,
@@ -35,26 +35,15 @@ module.exports = {
                 return await sendSpirit(mods, msg, possibleSpirits[0]);
             }
             else {
-                    // if they somehow have multiple matches default to the choices option
-                    globals.choices = foundSpirits.map((spirit) => {
-                        return {
-                            "label": `${spirit.emote} ${spirit.name}`,
-                            "value": mods.back ? spirit.panel[1]: spirit.panel[0]
-                        }
-                    });
-                    let message = "Multiple matching spirits found. Select one with _-choose <num>_ (e.g. _-choose 2_)\n"
-                    for (choiceIdx in globals.choices) {
-                        let choice = globals.choices[choiceIdx];
-                        message += `\n${parseInt(choiceIdx) + 1}) ${choice.label}`
-                    }
-                    return await msg.channel.send(message);
-                }
+                    throw new Error("Try again with a more specific string.");
+            }
         }
         catch (e){
             console.log(e);
             return msg.channel.send(e.toString());
         }
-    }
+    },
+    searchForSpirit
 }
 
 /**
@@ -99,6 +88,8 @@ function searchForSpirit(searchStringParam){
             }
         }
     }
+
+    console.log(foundSpirits);
 
     // if levenshtein returns a single spirit, return that
     if (foundSpirits.length === 1) {
