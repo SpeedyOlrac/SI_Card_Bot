@@ -26,6 +26,7 @@ Discord App for Spirit island
 - -faqs (search words)
 - -random spirit (max complexity (low/moderate/high/vhc))
 - -random adversary (min difficulty) (max difficulty)
+- -random double (min difficulty) (max difficulty)
 - -random scenario
 - -spirit (front/back) [keywords]
 - -adversary (name)
