@@ -15,6 +15,7 @@ var help = "See [Github link](<https://github.com/SpeedyOlrac/SI_Card_Bot>) for 
 	\n -faqs (search words) \
 	\n -random spirit (max complexity (low/moderate/high/vhc)) \
 	\n -random adversary (min difficulty) (max difficulty) \
+	\n -random double (min difficulty) (max difficulty) \
 	\n -random scenario \
 	\n -spirit (front/back) [keywords] \
 	\n -adversary (name) \

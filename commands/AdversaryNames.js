@@ -24,7 +24,7 @@ var prussia ={
     title: "prussia",
     name: 'The Kingdom of Brandenburg-Prussia',
     emote: '<:FlagBrandenburgPrussia:852366012846309406>',
-    difficulty: [ 1, 2, 4, 6, 7, 9, 10 ],
+    difficulty: [1, 2, 4, 6, 7, 9, 10 ],
     panel: "https://imgur.com/KdyfP3C",
     alias: ["<:FlagBrandenburgPrussia:852366012846309406>", "bp"]    
 }
@@ -33,7 +33,7 @@ var england ={
     title: "england",
     name: 'The Kingdom of England',
     emote: '<:FlagEngland:852366012175482900>', 
-    difficulty: [ 1, 3, 4, 6, 7, 9, 10],
+    difficulty: [1, 3, 4, 6, 7, 9, 10],
     panel: "https://imgur.com/c5KzcIq",
     alias: ["<:FlagEngland:852366012175482900>", "🏴󠁧󠁢󠁥󠁮󠁧󠁿"]   
 }
@@ -42,7 +42,7 @@ var france ={
     title: "france",
     name: 'The Kingdom of France',
     emote: '<:FlagFrance:852366013243981885>', 
-    difficulty: [ 2, 3, 5, 7, 8, 9, 10],
+    difficulty: [2, 3, 5, 7, 8, 9, 10],
     panel: "https://imgur.com/S8lL3cA"  ,
     alias: ['<:FlagFrance:852366013243981885>', '🇫🇷'],   
 }
@@ -69,7 +69,7 @@ var scotland ={
     title: "scotland",
     name: 'The Kingdom of Scotland',
     emote: '<:FlagScotland:852366013621207040>', 
-    difficulty: [1, 4, 6, 7, 8, 10],
+    difficulty: [1, 3, 4, 6, 7, 8, 10],
     panel: "https://imgur.com/A5HccZx",
     alias: ['<:FlagScotland:852366013621207040>', '🏴󠁧󠁢󠁳󠁣󠁴󠁿']    
 }
