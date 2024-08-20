@@ -8,7 +8,7 @@
     "start": "node index.js"
   },
   "engines": {
-    "npm": "*",
+    "npm": "10.x",
     "node": "20.x"
   },
   "author": "SpeedyOlrac",
