@@ -52,11 +52,14 @@ function getPerfectMatch(input, availableNames)
   return result;
 }
 
-async function sendCardLink(msg, input, availableNames, basePath)
+async function sendCardLink(msg, input, availableNames, basePath, aliases = {})
 {
-  var cardName = getCardName(input, availableNames);
+  var cardName = getCardName(input, [].concat(availableNames).concat(Object.keys(aliases)));
   console.log(cardName);
   if(cardName){
+    if (cardName in aliases) {
+      cardName = aliases[cardName];
+    }
     return await msg.channel.send(basePath + cardName  + '.webp');
   }else{
     return await msg.channel.send("Incorrect name, try using !search");

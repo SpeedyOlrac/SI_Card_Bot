@@ -8,21 +8,21 @@
     "start": "node index.js"
   },
   "engines": {
-    "node": "12.18.1",
-    "npm": "*"
+    "npm": "10.x",
+    "node": "20.x"
   },
   "author": "SpeedyOlrac",
   "license": "ISC",
   "dependencies": {
     "await-to-js": "^2.1.1",
-    "discord.js": "^12.2.0",
+    "discord.js": "^14.14.1",
     "dotenv": "^8.2.0",
     "js-levenshtein": "^1.1.6",
-    "node-fetch": "^2.6.7",
-    "request": "2.88.2"
-    
+
+    "node-fetch": "^3.2.6",
+    "request": "^2.88.2"
+
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SpeedyOlrac/SI_Card_Bot.git"

@@ -5,16 +5,20 @@ module.exports = {
 	description: 'Choose from previously found results',
 	public: true,
 	async execute(msg, args) {
-
         if (args.length == 1) {
-            const idx = parseInt(args[0])-1;
-            if (idx > 0 && idx < globals.choices.length) {
-                let choice = globals.choices[parseInt(args[0])-1];
-                globals.choices = [];
-                return await msg.channel.send(choice.value);   
+            if (!(globals.choices === undefined || globals.choices == 0)){
+                const idx = parseInt(args[0]) - 1;
+                if (idx > -1 && idx < globals.choices.length) {
+                    let choice = globals.choices[idx];
+                    globals.choices = [];
+                    return await msg.channel.send(choice.value);   
+                }
+                else {
+                    return await msg.channel.send("An invalid option was chosen, please choose a value between 1 and " + globals.choices.length + " .");
+                }
             }
-            else {
-                return await msg.channel.send("An invalid option was chosen, please try again");
+            else{
+                return await msg.channel.send("Please use this command after being prompted by the bot.");
             }
         }
         else {
