@@ -6,6 +6,6 @@ module.exports = {
 	description: 'Event Search',
 	public: true,
 	async execute(msg, args) {
-    await msg.channel.send(s.sendCardLink(msg, args, ImageNames.event, "https://sick.oberien.de/imgs/events/"));
+    await msg.channel.send(s.sendCardLink(msg, args, ImageNames.event, "https://sick.oberien.de/imgs/events/", ImageNames.eventAliases));
 	},
 };

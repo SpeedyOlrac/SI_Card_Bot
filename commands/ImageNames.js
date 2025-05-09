@@ -483,6 +483,58 @@ var event = [
     "terror_spikes_upwards"
   ];
 
+var eventAliases = {
+  blight_deepens: "the_struggles_of_growth",
+  blight_spreads: "tightknit_communities",
+  // blight_spreads: "wellprepared_explorers",
+  cooperation_among_towns: "coastal_towns_multiply",
+  courage_of_the_crowd: "no_bravery_without_numbers",
+  cultures_mix_and_clash: "relentless_optimism",
+  depleted_soil: "cities_rise",
+  destroy_the_unnatural: "investigation_of_dangers",
+  devastated_shores: "search_for_new_lands",
+  dissolution_threatens: "sprawl_contained_by_the_wilds",
+  essence_disperses: "focused_farming",
+  extensive_building: "smaller_ports_spring_up",
+  fearful_mobs: "distant_exploration",
+  festering_pits_of_blight: "urban_development",
+  final_harvest: "terror_spikes_upwards",
+  foreign_dignitaries_visit: "invested_aristocracy",
+  fortification: "strange_tales_attract_explorers",
+  increasing_aggression: "interesting_discoveries",
+  // increasing_aggression: "mapmakers_chart_the_wild",
+  lands_hollow_of_promise: "provincial_seat",
+  lethargy_and_degeneration: "influx_of_settlers",
+  lifes_web_torn_asunder: "civic_engagement",
+  local_diaspora: "seeking_the_interior",
+  new_cash_crops_take_hold: "promising_farmland",
+  overcrowded_cities: "heavy_farming",
+  partitioned_wilderness: "thriving_trade",
+  power_fades: "population_rises",
+  purge_the_land_with_salt_and_fire: "pull_together_in_adversity",
+  ransack_and_run: "bureaucrats_adjust_funding",
+  ravaged_wilderness: "gradual_corruption",
+  reprisal_against_the_dahan: "cultural_assimilation",
+  selfsacrifice_buys_time: "the_frontier_calls",
+  strip_the_land_bare: "resourceful_populace",
+  temporary_caution: "temporary_truce",
+  terror_breeds_aggression: "overconfidence",
+  the_center_crumbles: "putting_down_roots",
+  the_lands_bounty_exhausted: "fortuneseekers",
+  the_worlds_vibrance_fades: "wounded_lands_attract_explorers",
+  // the_worlds_vibrance_fades: "accumulated_devastation",
+  urbanization: "wave_of_reconnaissance",
+  voracious_consumption: "seek_new_farmland",
+  wavering_resolve: "an_ominous_dawn",
+  widening_destruction: "invaders_surge_inland",
+  widespread_clearcutting: "harvest_bounty_harvest_dust",
+  widespread_hunting: "search_for_unclaimed_land",
+  xenophobia: "eager_explorers",
+
+  // TODO: Token events
+  // TODO: Dahan events
+};
+
 var blightedIsland = [
     "downward_spiral",
     "memory_fades_to_dust",
@@ -518,6 +570,7 @@ exports.major = major;
 exports.power = [].concat(unique).concat(minor).concat(major);
 exports.fear = fear;
 exports.event = event;
+exports.eventAliases = eventAliases;
 exports.blightedIsland = blightedIsland;
 exports.stillHealthyIsland = stillHealthyIsland;
 exports.allBlightCards = [].concat(blightedIsland).concat(stillHealthyIsland)
