@@ -4,14 +4,14 @@ const { getCardName } = require('./sendCardLink.js');
 var lightning =  [ 
     {name: "Pandemonium", emote: "🐼", panel:["https://i.imgur.com/1774mnW.jpg"]},
     {name: "Wind", emote: "<:EAir:852604219210727434>", panel:["https://i.imgur.com/VwchE5U.jpg"]},
-    {name: "Immense", emote: "<:MajorPower:852589108164821031>", panel:["https://i.imgur.com/YhXRPZK.jpg"]},
+    {name: "Immense", emote: "<:Major:1386718312876216451>", panel:["https://i.imgur.com/YhXRPZK.jpg"]},
     {name: "Sparking", emote: "✨", panel:["https://i.imgur.com/4jyHApi.png", "https://i.imgur.com/SGlXMGB.png"]}
  ];
 
  var rivers =   [
     {name: "Sunshine", emote: "<:ESun:852590484353843200>", panel:["https://i.imgur.com/AGZB0Bn.jpg"]},
     {name: "Travel", emote: "🚕", panel:["https://i.imgur.com/lgC4gQ6.jpg"]},
-    {name: "Haven", emote: "<:Defend:852589108161544242>", panel:["https://i.imgur.com/UlkeNZC.png"]}
+    {name: "Haven", emote: "<:Defend:1386718325694005350>", panel:["https://i.imgur.com/UlkeNZC.png"]}
 ];
 
 var shadows = [
@@ -48,15 +48,15 @@ var memory = [
 ];
 
 var lure = [
-    {name:"Lair", emote:"<:IncarnaLureDeepWildernessLair:1200887147956277288>", panel:["https://i.imgur.com/dzPtyxm.png"]}
+    {name:"Lair", emote:"<:IncarnaLair:1386717472102682784>", panel:["https://i.imgur.com/dzPtyxm.png"]}
 ];
 
 var serpent = [
-    {name:"Locus", emote:"<:IncarnaSnekSerpentSlumberinLocus:1200887149973741619>", panel:["https://i.imgur.com/YugqMW5.png", "https://i.imgur.com/RwIk5e4.png"]}
+    {name:"Locus", emote:"<:IncarnaLocus:1386717477903532113>", panel:["https://i.imgur.com/YugqMW5.png", "https://i.imgur.com/RwIk5e4.png"]}
 ];
 
 var green = [
-    {name:"Regrowth", emote:"<:DestroyedPresence:1142269602815017080>", panel:["https://i.imgur.com/jQWp7vu.png"]},
+    {name:"Regrowth", emote:"<:DestroyedPresence:1386717215302353037>", panel:["https://i.imgur.com/jQWp7vu.png"]},
     {name:"Tangles", emote:"<:TokenWilds:852366051832102993>", panel:["https://i.imgur.com/mnlOFdh.png", "https://i.imgur.com/ygTTqbq.png"]}
 ];
 
@@ -65,12 +65,12 @@ var keeper = [
 ];
 
 var mists = [
-    {name: "Stranded", emote:"<:Isolate:852589108592115844>", panel:["https://i.imgur.com/bgKkiKH.png"]}
+    {name: "Stranded", emote:"<:Isolate:1386718311030587435>", panel:["https://i.imgur.com/bgKkiKH.png"]}
 ];
 
 var thunderspeaker = [
     {name:"Tactician", emote:"🗺️", panel:["https://i.imgur.com/RTDZICL.png"]},
-    {name:"Warrior", emote:"<:IncarnaThunderspeakerWarrior:1200887157791916052>", panel:["https://i.imgur.com/oG4ybBt.png"]}
+    {name:"Warrior", emote:"<:IncarnaWarrior:1386717491287560365>", panel:["https://i.imgur.com/oG4ybBt.png"]}
 ];
 
 var wildfire = [
